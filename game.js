@@ -1117,6 +1117,9 @@ class Game {
                 const btnConnect = document.getElementById('btn-connect');
                 if (btnConnect) btnConnect.classList.remove('hidden');
 
+                const jackpotStatus = document.getElementById('jackpot-status');
+                if (jackpotStatus) jackpotStatus.classList.remove('hidden');
+
                 // Try to auto-connect if they have accounts
                 if (window.ethereum) {
                     window.ethereum.request({ method: 'eth_accounts' }).then(accounts => {
