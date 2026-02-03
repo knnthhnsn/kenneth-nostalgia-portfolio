@@ -11,10 +11,14 @@ contract PepecoinArcade {
     address public owner;
     address public pepecoinAddress = 0xA9E8aCf069C58aEc8825542845Fd754e41a9489A;
     
-    uint256 public constant ENTRY_FEE = 1 * 10**18; // Assuming 18 decimals
+    uint256 public constant ENTRY_FEE = 1 * 10**18; 
     uint256 public constant CYCLE_SIZE = 60;
-    uint256 public constant WINNER_PAYOUT = 50 * 10**18;
-    uint256 public constant OWNER_PAYOUT = 10 * 10**18;
+    
+    // Payout split: 25 (1st), 10 (2nd), 5 (3rd), 20 (Dev) = 60 total
+    uint256 public constant PAYOUT_1ST = 25 * 10**18;
+    uint256 public constant PAYOUT_2ND = 10 * 10**18;
+    uint256 public constant PAYOUT_3RD = 5 * 10**18;
+    uint256 public constant PAYOUT_DEV = 20 * 10**18;
 
     struct Player {
         address addr;
@@ -22,18 +26,18 @@ contract PepecoinArcade {
         string name;
     }
 
-    Player public topPlayer;
+    // Top 3 Leaderboard
+    Player[3] public topPlayers;
     uint256 public gameCount;
 
     event GamePlayed(address indexed player, uint256 totalGames);
-    event PayoutTriggered(address indexed winner, uint256 score, uint256 amount);
-    event NewHighScore(address indexed player, uint256 score);
+    event PayoutTriggered(address indexed p1, address indexed p2, address indexed p3, uint256 totalAmount);
+    event NewHighScore(address indexed player, uint256 score, uint256 rank);
 
     constructor() {
         owner = 0xAfBDfCDfa5454E45aa9AeE833DF87cC3Ec511d1b;
     }
 
-    // Function to play a game - user must have approved the contract to spend 1 PEPECOIN
     function playGame() external {
         require(IERC20(pepecoinAddress).transferFrom(msg.sender, address(this), ENTRY_FEE), "Transfer failed");
         
@@ -45,39 +49,66 @@ contract PepecoinArcade {
         }
     }
 
-    // Simple submission - In a production app, this should be signed by an authorized server
-    // to prevent fake score submissions.
     function submitScore(uint256 score, string memory name) external {
-        if (score > topPlayer.score) {
-            topPlayer = Player(msg.sender, score, name);
-            emit NewHighScore(msg.sender, score);
+        // Find if score fits in Top 3
+        int8 rank = -1;
+        if (score > topPlayers[0].score) {
+            rank = 0;
+        } else if (score > topPlayers[1].score) {
+            rank = 1;
+        } else if (score > topPlayers[2].score) {
+            rank = 2;
         }
+
+        if (rank >= 0) {
+            _updateLeaderboard(uint8(rank), msg.sender, score, name);
+            emit NewHighScore(msg.sender, score, uint256(uint8(rank) + 1));
+        }
+    }
+
+    function _updateLeaderboard(uint8 rank, address addr, uint256 score, string memory name) internal {
+        // Shift lower ranks down
+        if (rank == 0) {
+            topPlayers[2] = topPlayers[1];
+            topPlayers[1] = topPlayers[0];
+        } else if (rank == 1) {
+            topPlayers[2] = topPlayers[1];
+        }
+        
+        // Insert new score
+        topPlayers[rank] = Player(addr, score, name);
     }
 
     function _triggerPayout() internal {
-        address winner = topPlayer.addr;
-        uint256 score = topPlayer.score;
-
-        // If no games were played with submitted scores, owner gets it all as fallback or it stays in contract
-        // In this logic, if topPlayer is address(0), we payout to owner.
-        if (winner == address(0)) {
-            winner = owner;
+        // Distribute to Top 3
+        if (topPlayers[0].addr != address(0)) {
+            IERC20(pepecoinAddress).transfer(topPlayers[0].addr, PAYOUT_1ST);
+        } else {
+            IERC20(pepecoinAddress).transfer(owner, PAYOUT_1ST);
         }
 
-        // Payout to winner
-        IERC20(pepecoinAddress).transfer(winner, WINNER_PAYOUT);
-        
-        // Payout to owner
-        IERC20(pepecoinAddress).transfer(owner, OWNER_PAYOUT);
+        if (topPlayers[1].addr != address(0)) {
+            IERC20(pepecoinAddress).transfer(topPlayers[1].addr, PAYOUT_2ND);
+        } else {
+            IERC20(pepecoinAddress).transfer(owner, PAYOUT_2ND);
+        }
 
-        emit PayoutTriggered(winner, score, WINNER_PAYOUT);
+        if (topPlayers[2].addr != address(0)) {
+            IERC20(pepecoinAddress).transfer(topPlayers[2].addr, PAYOUT_3RD);
+        } else {
+            IERC20(pepecoinAddress).transfer(owner, PAYOUT_3RD);
+        }
 
-        // Reset cycle
+        // Distribute Dev share
+        IERC20(pepecoinAddress).transfer(owner, PAYOUT_DEV);
+
+        emit PayoutTriggered(topPlayers[0].addr, topPlayers[1].addr, topPlayers[2].addr, 60 * 10**18);
+
+        // Reset
         gameCount = 0;
-        topPlayer = Player(address(0), 0, "");
+        delete topPlayers;
     }
 
-    // Allow owner to withdraw accidentally sent tokens or stuck funds
     function emergencyWithdraw() external {
         require(msg.sender == owner, "Not owner");
         uint256 balance = IERC20(pepecoinAddress).balanceOf(address(this));

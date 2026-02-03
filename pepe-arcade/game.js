@@ -16,9 +16,9 @@ const ARCADE_ABI = [
     "function playGame() public",
     "function submitScore(uint256 score, string memory name) public",
     "function gameCount() public view returns (uint256)",
-    "function topPlayer() public view returns (address addr, uint256 score, string memory name)",
+    "function topPlayers(uint256 index) public view returns (address addr, uint256 score, string memory name)",
     "event GamePlayed(address indexed player, uint256 totalGames)",
-    "event PayoutTriggered(address indexed winner, uint256 score, uint256 amount)"
+    "event PayoutTriggered(address indexed p1, address indexed p2, address indexed p3, uint256 totalAmount)"
 ];
 
 // Animation Config (Assuming sprite sheet layout)
