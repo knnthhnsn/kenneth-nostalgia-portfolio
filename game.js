@@ -1280,7 +1280,7 @@ class Game {
                     resolve(false);
                 } finally {
                     payBtn.disabled = false;
-                    payBtn.innerText = "PAY 100 $PEPE";
+                    payBtn.innerText = "PAY 100 $PEPECOIN";
                 }
             };
             payBtn.ontouchstart = (e) => {
