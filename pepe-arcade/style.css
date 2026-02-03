@@ -1728,16 +1728,46 @@ input[type="checkbox"]:checked::after {
     line-height: 1.5;
 }
 
+.payment-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
 .pay-btn {
-    padding: 15px 30px;
+    padding: 15px 25px;
     background: #ff4444;
     color: #fff;
     border: none;
     border-radius: 8px;
     font-family: 'Press Start 2P', cursive;
-    font-size: 12px;
+    font-size: 10px;
     cursor: pointer;
     box-shadow: 0 0 15px #ff4444;
+    transition: all 0.2s;
+}
+
+.free-btn {
+    padding: 15px 25px;
+    background: #444;
+    color: #fff;
+    border: 1px solid #666;
+    border-radius: 8px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.free-btn:hover {
+    background: #666;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.free-hint {
+    font-size: 8px !important;
+    opacity: 0.6;
+    color: #aaa !important;
 }
 
 .pay-btn:disabled {

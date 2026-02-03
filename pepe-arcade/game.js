@@ -639,6 +639,7 @@ class Game {
         this.pepeContract = null;
         this.userAddress = null;
         this.isConnected = false;
+        this.isPaidSession = false;
 
         this.setupWeb3Listeners();
     }
@@ -1136,11 +1137,20 @@ class Game {
 
         const overlay = document.getElementById('payment-overlay');
         const payBtn = document.getElementById('btn-confirm-pay');
-        if (!overlay || !payBtn) return false;
+        const freeBtn = document.getElementById('btn-free-play');
+        if (!overlay || !payBtn || !freeBtn) return false;
 
         overlay.classList.remove('hidden');
 
         return new Promise((resolve) => {
+            // Free Play Path
+            freeBtn.onclick = () => {
+                this.isPaidSession = false;
+                overlay.classList.add('hidden');
+                resolve(true);
+            };
+
+            // Paid Path
             payBtn.onclick = async () => {
                 payBtn.disabled = true;
                 payBtn.innerText = "WAITING...";
@@ -1160,6 +1170,7 @@ class Game {
                     await txPlay.wait();
 
                     this.updateJackpotStatus();
+                    this.isPaidSession = true;
                     overlay.classList.add('hidden');
                     resolve(true);
                 } catch (err) {
@@ -1176,7 +1187,7 @@ class Game {
     }
 
     async submitScoreToChain(score) {
-        if (!this.isConnected || score <= 0) return;
+        if (!this.isConnected || !this.isPaidSession || score <= 0) return;
 
         try {
             const tx = await this.arcadeContract.submitScore(score, "PEPE_PLAYER");
