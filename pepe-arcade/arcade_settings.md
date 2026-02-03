@@ -5,7 +5,7 @@
 - [x] CRT Scanlines & Screen Glow Effects
 - [x] Toggle Logic in Game Class
 - [x] Local Leaderboard System
-- [ ] Social "Share Score" Integration
+- [x] Social "Share Score" Integration (with Auto-Copy)
 
 ## Progress Notes
 - Initializing project for Arcade Immersion features.

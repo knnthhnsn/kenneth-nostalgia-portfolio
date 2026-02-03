@@ -828,19 +828,32 @@ class Game {
                         logging: false
                     });
 
-                    // Download the screenshot
+                    // 1. Download the screenshot as backup
                     const link = document.createElement('a');
                     link.download = `pepecoin-arcade-score-${this.score}.png`;
                     link.href = canvas.toDataURL('image/png');
                     link.click();
 
-                    // Open Twitter intent
+                    // 2. Copy to Clipboard (The "Pro" feature)
+                    try {
+                        const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+                        if (navigator.clipboard && window.ClipboardItem) {
+                            const data = [new ClipboardItem({ 'image/png': blob })];
+                            await navigator.clipboard.write(data);
+                            console.log('Image copied to clipboard');
+                        }
+                    } catch (clipErr) {
+                        console.error('Clipboard copy failed:', clipErr);
+                        // Fallback: the download still happened
+                    }
+
+                    // 3. Open Twitter intent
                     const text = `I just scored ${this.score} in $PEPECOIN ARCADE! 🐸🕹️\n\nCan you beat my high score? Play now at https://pepecoin-arcade.vercel.app #PEPECOIN #ARCADE #BASED`;
                     window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`, '_blank');
 
                     // Small alert to guide the user
                     setTimeout(() => {
-                        alert("Screenshot saved! Don't forget to attach it to your post! 🐸📸");
+                        alert("Screenshot copied! Just press Ctrl+V (Paste) in your post to attach it! 🐸📸✂️");
                     }, 1000);
 
                 } catch (err) {
