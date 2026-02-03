@@ -107,11 +107,13 @@ body {
 .sticker-content {
     position: relative;
     overflow: hidden;
-    /* Clips the shine to the image bounds! */
-    display: inline-block;
-    /* Wraps tight around image */
+    /* Clips the shine to the image bounds */
+    display: flex;
+    /* Fixes collapse issues better than inline-block */
+    width: max-content;
+    /* Ensure it wraps the image */
+    height: max-content;
     border-radius: 2px;
-    /* Slight rounding if needed */
 }
 
 .sticker-content::after {
