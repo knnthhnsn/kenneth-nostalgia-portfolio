@@ -820,7 +820,7 @@ class Game {
                 document.body.classList.add('screenshot-mode');
 
                 try {
-                    await new Promise(r => setTimeout(r, 200));
+                    await new Promise(r => setTimeout(r, 300));
 
                     const canvas = await html2canvas(document.body, {
                         backgroundColor: '#1a1a1a',

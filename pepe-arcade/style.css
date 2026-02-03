@@ -1568,16 +1568,35 @@ input[type="checkbox"]:checked::after {
 }
 
 /* Screenshot Mode Fixes */
+.screenshot-mode .arcade-cabinet {
+    transform: none !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    width: 600px !important;
+    max-width: 95vw !important;
+}
+
 .screenshot-mode .control-panel {
     transform: none !important;
     perspective: none !important;
     margin-top: 0 !important;
-    transition: none !important;
+    height: auto !important;
+    padding: 20px !important;
+    background: #222 !important;
 }
 
 .screenshot-mode .arcade-btn {
     box-shadow: none !important;
-    border-bottom: 8px solid #222 !important;
+    transform: none !important;
+    border: 4px solid rgba(0, 0, 0, 0.3) !important;
+}
+
+.screenshot-mode .arcade-btn.red {
+    background: #ff4444 !important;
+}
+
+.screenshot-mode .arcade-btn.green {
+    background: #44ff44 !important;
 }
 
 .screenshot-mode .stick-base {
@@ -1585,25 +1604,52 @@ input[type="checkbox"]:checked::after {
     background: #111 !important;
 }
 
+.screenshot-mode .stick-handle {
+    transform: none !important;
+    left: 50% !important;
+    top: 50% !important;
+    margin: -55px 0 0 -55px !important;
+}
+
+@media screen and (max-width: 768px) {
+    .screenshot-mode .stick-handle {
+        margin: -30px 0 0 -30px !important;
+    }
+}
+
+.screenshot-mode .stick-handle::after {
+    background: #ff4444 !important;
+    box-shadow: none !important;
+}
+
+.screenshot-mode .stick-handle::before {
+    background: #444 !important;
+}
+
 .screenshot-mode .scanlines,
 .screenshot-mode .crt-glow,
 .screenshot-mode .screen-reflection {
-    opacity: 0.1 !important;
-    /* Dim effects for cleaner capture */
-}
-
-.screenshot-mode .share-btn {
     display: none !important;
 }
 
+.screenshot-mode .share-btn,
+.screenshot-mode .retry-hint,
+.screenshot-mode .desktop-hint,
+.screenshot-mode .retry-coin {
+    display: none !important;
+    visibility: hidden !important;
+}
+
 .screenshot-mode #game-over-screen {
-    background: rgba(0, 0, 0, 0.8) !important;
+    background: rgba(0, 0, 0, 0.7) !important;
+    padding: 10px !important;
 }
 
 .screenshot-mode .sticker-wrapper {
     transition: none !important;
+    transform: none !important;
 }
 
-.screenshot-mode .arcade-cabinet {
-    transform: none !important;
+.screenshot-mode .cabinet-fill-bottom {
+    display: none !important;
 }
