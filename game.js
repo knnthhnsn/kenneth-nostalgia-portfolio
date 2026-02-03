@@ -1107,6 +1107,16 @@ class Game {
             btnCloseIntro.onclick = () => {
                 window.removeEventListener('keydown', handleIntroEnter);
                 document.getElementById('intro-overlay').classList.add('hidden');
+
+                // Show Game UI
+                const startScreen = document.getElementById('start-screen');
+                if (startScreen) {
+                    startScreen.classList.remove('hidden');
+                    startScreen.classList.add('active');
+                }
+                const btnConnect = document.getElementById('btn-connect');
+                if (btnConnect) btnConnect.classList.remove('hidden');
+
                 // Try to auto-connect if they have accounts
                 if (window.ethereum) {
                     window.ethereum.request({ method: 'eth_accounts' }).then(accounts => {
