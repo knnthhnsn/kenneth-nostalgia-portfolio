@@ -1970,18 +1970,28 @@ input[type="checkbox"]:checked::after {
     letter-spacing: 1px;
 }
 
-.monitor-jackpot {
+.monitor-jackpot-section {
     margin-top: 15px;
     padding-top: 10px;
-    border-top: 1px solid #222;
-    text-align: center;
-    color: #ff4444;
-    /* Retro alert red */
-    font-size: 8px;
-    text-shadow: 0 0 5px #ff0000;
+    border-top: 2px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.monitor-jackpot span {
+.monitor-jackpot-section .label {
+    font-size: 8px;
+    color: #ffd700;
+}
+
+#jackpot-status {
+    font-size: 10px;
+    color: #4ade80;
+    text-shadow: 0 0 5px #4ade80;
+    font-weight: bold;
+}
+
+#jackpot-status span {
     color: #fff;
 }
 
