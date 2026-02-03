@@ -1159,11 +1159,11 @@ h1 {
 
 /* Retry Coin Mechanism */
 .retry-coin {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     cursor: pointer;
     transition: transform 0.2s;
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0 0 20px rgba(74, 222, 128, 0.8)) drop-shadow(0 0 40px rgba(74, 222, 128, 0.5));
     opacity: 0;
     pointer-events: none;
     position: absolute;
@@ -1172,7 +1172,29 @@ h1 {
 .retry-coin.active {
     opacity: 1;
     pointer-events: auto;
-    animation: coinPulse 2s infinite ease-in-out;
+    animation: coalBounce 1s ease-in-out infinite, coalGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes coalBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes coalGlow {
+    0% {
+        filter: drop-shadow(0 0 20px rgba(74, 222, 128, 0.8)) drop-shadow(0 0 40px rgba(74, 222, 128, 0.5));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 30px rgba(255, 200, 50, 1)) drop-shadow(0 0 60px rgba(255, 150, 0, 0.8));
+    }
 }
 
 .retry-coin:hover {
@@ -1233,11 +1255,27 @@ h1 {
 .touch-retry-coin {
     position: absolute;
     top: 50%;
-    left: -110px;
+    left: -160px;
     /* Position to the LEFT of the slot */
     transform: translateY(-50%);
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
+}
+
+.touch-retry-coin.active {
+    animation: coalBounceTouch 1s ease-in-out infinite, coalGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes coalBounceTouch {
+
+    0%,
+    100% {
+        transform: translateY(-50%) translateX(0);
+    }
+
+    50% {
+        transform: translateY(-50%) translateX(10px);
+    }
 }
 
 /* Special animation for touch coal - slides RIGHT into slot */
