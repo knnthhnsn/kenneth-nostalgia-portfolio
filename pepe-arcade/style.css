@@ -1229,14 +1229,37 @@ h1 {
     top: 0;
 }
 
-/* Touch Coin at Bottom Slot */
+/* Touch Coin at Bottom Slot - positioned to the RIGHT of the slot */
 .touch-retry-coin {
     position: absolute;
-    top: -60px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    right: -60px;
+    /* Position to the right of the slot */
+    transform: translateY(-50%);
     width: 45px;
     height: 45px;
+}
+
+/* Special animation for touch coin - slides LEFT into slot */
+.touch-retry-coin.inserting {
+    animation: coinInsertLeft 0.6s ease-in forwards !important;
+}
+
+@keyframes coinInsertLeft {
+    0% {
+        transform: translateY(-50%) translateX(0) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-50%) translateX(-30px) scale(0.8);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-50%) translateX(-60px) scale(0.3);
+        opacity: 0;
+    }
 }
 
 /* Visibility: Desktop shows control panel coin, Touch shows bottom coin */
