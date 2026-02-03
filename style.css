@@ -1955,8 +1955,39 @@ input[type="checkbox"]:checked::after {
 
 @media (max-width: 900px) {
     .global-monitor {
-        display: none;
-        /* Hide on mobile to avoid overlap */
+        position: fixed;
+        /* Fixed to viewport */
+        top: 50%;
+        right: 5px;
+        left: auto;
+        transform: translateY(-50%);
+        width: 100px;
+        border-width: 3px;
+        z-index: 6000;
+        box-shadow: 0 0 10px rgba(74, 222, 128, 0.4);
+    }
+
+    .monitor-screen {
+        padding: 6px;
+    }
+
+    .monitor-header {
+        font-size: 6px;
+        margin-bottom: 5px;
+    }
+
+    .rank-list {
+        gap: 4px;
+    }
+
+    .rank-item {
+        font-size: 5px;
+        padding-left: 4px;
+    }
+
+    .monitor-footer {
+        font-size: 4px;
+        margin-top: 5px;
     }
 
     .intro-overlay {
