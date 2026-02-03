@@ -1129,12 +1129,6 @@ class Game {
     }
 
     async requestPayment() {
-        if (!this.isConnected) {
-            alert("Connect wallet first!");
-            await this.connectWallet();
-            if (!this.isConnected) return false;
-        }
-
         const overlay = document.getElementById('payment-overlay');
         const payBtn = document.getElementById('btn-confirm-pay');
         const freeBtn = document.getElementById('btn-free-play');
@@ -1143,7 +1137,7 @@ class Game {
         overlay.classList.remove('hidden');
 
         return new Promise((resolve) => {
-            // Free Play Path
+            // Free Play Path - NO WALLET NEEDED
             freeBtn.onclick = () => {
                 this.isPaidSession = false;
                 overlay.classList.add('hidden');
@@ -1152,6 +1146,11 @@ class Game {
 
             // Paid Path
             payBtn.onclick = async () => {
+                if (!this.isConnected) {
+                    await this.connectWallet();
+                    if (!this.isConnected) return; // Cancelled
+                }
+
                 payBtn.disabled = true;
                 payBtn.innerText = "WAITING...";
 
