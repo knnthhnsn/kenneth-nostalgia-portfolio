@@ -582,20 +582,20 @@ class Game {
         this.assets = new AssetManager();
         this.audio = new SoundSynth();
 
-        this.assets.queueImage('ground', '../assets/flat_jungle_ground_tileset.png');
-        this.assets.queueImage('player_f1', '../assets/pepe_frame_1.png');
-        this.assets.queueImage('player_f2', '../assets/pepe_frame_2.png');
-        this.assets.queueImage('player_walk1', '../assets/pepe_frame_foot_walk_1.png');
-        this.assets.queueImage('player_walk2', '../assets/pepe_frame_foot_walk_2.png');
-        this.assets.queueImage('projectile', '../assets/projectile.png');
-        this.assets.queueImage('impact', '../assets/impact_effect.png');
-        this.assets.queueImage('helicopter', '../assets/helicopter_support.png');
+        this.assets.queueImage('ground', './assets/flat_jungle_ground_tileset.png');
+        this.assets.queueImage('player_f1', './assets/pepe_frame_1.png');
+        this.assets.queueImage('player_f2', './assets/pepe_frame_2.png');
+        this.assets.queueImage('player_walk1', './assets/pepe_frame_foot_walk_1.png');
+        this.assets.queueImage('player_walk2', './assets/pepe_frame_foot_walk_2.png');
+        this.assets.queueImage('projectile', './assets/projectile.png');
+        this.assets.queueImage('impact', './assets/impact_effect.png');
+        this.assets.queueImage('helicopter', './assets/helicopter_support.png');
 
         this.bgKeys = ['bg1', 'bg2', 'bg3', 'bg4'];
-        this.assets.queueImage('bg1', '../assets/Backgrounds/community-art2.avif');
-        this.assets.queueImage('bg2', '../assets/Backgrounds/king-pepekong.png');
-        this.assets.queueImage('bg3', '../assets/Backgrounds/pepe-park.png');
-        this.assets.queueImage('bg4', '../assets/Backgrounds/pepskimo.png');
+        this.assets.queueImage('bg1', './assets/Backgrounds/community-art2.avif');
+        this.assets.queueImage('bg2', './assets/Backgrounds/king-pepekong.png');
+        this.assets.queueImage('bg3', './assets/Backgrounds/pepe-park.png');
+        this.assets.queueImage('bg4', './assets/Backgrounds/pepskimo.png');
 
         this.currentBgKey = this.bgKeys[Math.floor(Math.random() * this.bgKeys.length)];
         this.player = new Player(this);
@@ -831,7 +831,7 @@ window.onload = () => {
         wrapper.style.top = top + '%';
         wrapper.style.transform = `rotate(${rot}deg) scale(${scale})`;
         const img = document.createElement('img');
-        img.src = `../assets/cabinet-sticker/${filename}`;
+        img.src = `./assets/cabinet-sticker/${filename}`;
         img.className = 'sticker';
         wrapper.appendChild(img);
         if (isTapeable) {
