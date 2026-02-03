@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$PEPECOIN Arcade</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.7.0/ethers.umd.min.js"></script>
+</head>
+
+<body>
+    <!-- Background Wall Stickers -->
+    <div id="wall-sticker-container" class="wall-sticker-layer"></div>
+
+    <!-- Global Leaderboard Monitor -->
+    <div class="global-monitor">
+        <div class="monitor-screen">
+            <div class="monitor-header">GLOBAL TOP 3</div>
+            <div id="global-rank-list" class="rank-list">
+                <div class="rank-item empty">FETCHING...</div>
+                <div class="rank-item empty">---</div>
+                <div class="rank-item empty">---</div>
+            </div>
+            <div class="monitor-footer">ON-CHAIN DATA</div>
+        </div>
+    </div>
+
+    <div class="arcade-cabinet">
+        <div id="sticker-container" class="sticker-layer"></div>
+
+        <!-- Marquee / Top -->
+        <div class="marquee">
+            <div class="marquee-text">$PEPECOIN ARCADE V1.1</div>
+        </div>
+
+        <div class="monitor-bezel">
+            <div class="screen-container">
+                <div id="lives-display"></div>
+                <div id="score-display">SCORE: <span id="score">0</span></div>
+                <div id="jackpot-status">
+                    JACKPOT: <span id="pool-count">0</span>/60 GAMES
+                </div>
+                <button id="btn-connect" class="connect-btn">CONNECT WALLET</button>
+
+                <!-- Intro Overlay -->
+                <div id="intro-overlay" class="intro-overlay">
+                    <div class="intro-content">
+                        <h1>$PEPECOIN ARCADE</h1>
+                        <div class="intro-rules">
+                            <div class="rule-item">
+                                <span class="rule-icon">💰</span>
+                                <p><strong>100 $PEPE</strong> PER GAME ENTRY</p>
+                            </div>
+                            <div class="rule-item">
+                                <span class="rule-icon">🏆</span>
+                                <p><strong>JACKPOT</strong> PAYOUT EVERY 60 GAMES</p>
+                            </div>
+                            <div class="rule-item">
+                                <span class="rule-icon">💎</span>
+                                <div class="prizes">
+                                    <p>1ST: <strong>2,500 $PEPE</strong></p>
+                                    <p>2ND: <strong>1,000 $PEPE</strong></p>
+                                    <p>3RD: <strong>500 $PEPE</strong></p>
+                                </div>
+                            </div>
+                            <div class="rule-item">
+                                <span class="rule-icon">🕹️</span>
+                                <p><strong>FREE PLAY</strong> AVAILABLE (NO REWARDS)</p>
+                            </div>
+                        </div>
+                        <button id="btn-close-intro" class="intro-btn">I UNDERSTAND</button>
+                    </div>
+                </div>
+
+                <!-- Payment Overlay -->
+                <div id="payment-overlay" class="payment-overlay hidden">
+                    <h2>INSERT COINS</h2>
+                    <p>Fee: 100 $PEPE PER GAME</p>
+                    <p>Winner Jackpot: 2,500 $PEPECOIN!</p>
+                    <div class="payment-buttons">
+                        <button id="btn-confirm-pay" class="pay-btn">PAY 100 $PEPE</button>
+                        <button id="btn-free-play" class="free-btn">FREE PLAY</button>
+                    </div>
+                    <p class="free-hint">(Free games ignore on-chain rewards)</p>
+                </div>
+
+                <!-- UI Overlay -->
+                <div id="ui-layer" class="ui-layer">
+                    <div id="start-screen" class="active">
+                        <h1>$PEPECOIN ARCADE</h1>
+                        <p>CLICK THE COIN TO START</p>
+                        <div id="coin-entry-zone" class="coin-entry-zone">
+                            <img src="./assets/coin/pepecoin.webp" id="pepe-coin" class="draggable-coin" alt="PepeCoin">
+                            <div class="coin-slot-wrapper">
+                                <div class="coin-slot"></div>
+                                <div class="coin-label">INSERT COIN</div>
+                            </div>
+                        </div>
+                        <div class="controls-hint">WASD / ARROWS TO MOVE <br> SPACE / CLICK TO SHOOT <br> W / UP TO
+                            JUMP
+                        </div>
+                    </div>
+                    <div id="game-over-screen" class="hidden">
+                        <h1>GAME OVER</h1>
+                        <p>FINAL SCORE: <span id="final-score">0</span></p>
+                        <p class="best-score-label">BEST: <span id="best-score">0</span></p>
+                        <p class="retry-hint">INSERT COAL TO RETRY</p>
+                        <p class="desktop-hint">OR PRESS ENTER</p>
+                        <button id="btn-share" class="share-btn">SHARE ON X</button>
+                    </div>
+                </div>
+
+                <canvas id="gameCanvas" width="800" height="600"></canvas>
+                <div class="scanlines"></div>
+                <div class="crt-glow"></div>
+                <div class="screen-reflection"></div>
+            </div>
+        </div>
+
+        <!-- Control Panel (Now Inside the Cabinet) -->
+        <div class="control-panel">
+            <div class="buttons-group">
+                <div class="button-area">
+                    <div class="arcade-btn red" id="btn-jump"></div>
+                    <div class="btn-label">JUMP</div>
+                </div>
+                <div class="button-area">
+                    <div class="arcade-btn green" id="btn-shoot"></div>
+                    <div class="btn-label">SHOOT</div>
+                </div>
+            </div>
+
+            <!-- Coin Slot for Desktop Retry -->
+            <div class="control-panel-coin-slot desktop-coin-slot" id="desktop-coin-slot">
+                <img src="./assets/coin/coal.png" class="retry-coin" id="desktop-retry-coin" alt="Insert Coal">
+                <div class="coin-slot-hole"></div>
+            </div>
+
+            <!-- Service/Settings Button -->
+            <div class="service-panel-btn" id="btn-settings" title="Service Menu">
+                <div class="btn-inner"></div>
+                <div class="btn-label">SERVICE</div>
+            </div>
+
+            <div class="joystick-area">
+                <div class="stick-base"></div>
+                <div class="stick-handle" id="joystick"></div>
+                <div class="btn-label">MOVE</div>
+            </div>
+        </div>
+
+        <div class="brand-logo">$PEPECOIN ARCADE</div>
+
+        <!-- Coin Return / Front Panel Details -->
+        <div class="cabinet-front-details">
+            <div class="coin-return">
+                <!-- Retry Coal for Touch Devices -->
+                <img src="./assets/coin/coal.png" class="retry-coin touch-retry-coin" id="touch-retry-coin"
+                    alt="Insert Coal">
+            </div>
+        </div>
+    </div>
+
+    <!-- Extend cabinet bottom -->
+    <div class="cabinet-fill-bottom"></div>
+
+    <!-- Settings Panel -->
+    <div id="settings-panel" class="settings-panel hidden">
+        <div class="settings-content">
+            <button class="close-settings" id="close-settings">&times;</button>
+            <h2>SERVICE PANEL</h2>
+
+            <div class="settings-section">
+                <h3>SCREEN SETTINGS</h3>
+                <div class="toggle-group">
+                    <label>CRT SCANLINES</label>
+                    <input type="checkbox" id="toggle-crt" checked>
+                </div>
+                <div class="toggle-group">
+                    <label>SCREEN GLOW</label>
+                    <input type="checkbox" id="toggle-glow" checked>
+                </div>
+            </div>
+
+            <div class="settings-section">
+                <h3>TOP COMMANDERS</h3>
+                <div id="leaderboard-list" class="leaderboard-list">
+                    <!-- Loaded via JS -->
+                    <div class="leaderboard-item loading">LOADING SCORES...</div>
+                </div>
+            </div>
+
+            <p class="panel-footer">PEPE ARCADE SYSTEM V1.0</p>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
