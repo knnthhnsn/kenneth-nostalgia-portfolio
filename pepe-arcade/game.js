@@ -838,27 +838,43 @@ window.onload = () => {
     const container = document.getElementById('sticker-container');
     container.innerHTML = '';
 
-    const createSticker = (filename, left, top, scale, rot, isTapeable) => {
+    const cabinetContainer = document.getElementById('sticker-container');
+    const wallContainer = document.getElementById('wall-sticker-container');
+
+    const createSticker = (targetContainer, filename, left, top, scale, rot, isWall) => {
         const wrapper = document.createElement('div');
-        wrapper.className = 'sticker-wrapper';
-        wrapper.style.left = left + '%';
-        wrapper.style.top = top + '%';
+        wrapper.className = isWall ? 'wall-sticker-wrapper' : 'sticker-wrapper';
+        wrapper.style.left = left + (isWall ? 'vw' : '%');
+        wrapper.style.top = top + (isWall ? 'vh' : '%');
         wrapper.style.transform = `rotate(${rot}deg) scale(${scale})`;
+
         const img = document.createElement('img');
         img.src = `./assets/cabinet-sticker/${filename}`;
-        img.className = 'sticker';
+        img.className = isWall ? 'wall-sticker' : 'sticker';
         wrapper.appendChild(img);
-        if (isTapeable) {
-            const tape = document.createElement('div');
-            tape.className = 'tape';
-            if (Math.random() > 0.5) tape.classList.add('corner');
-            wrapper.appendChild(tape);
+
+        if (isWall) {
+            // Add pieces of tape for that DIY look
+            const tape1 = document.createElement('div');
+            tape1.className = 'tape tape-tl';
+            const tape2 = document.createElement('div');
+            tape2.className = 'tape tape-tr';
+            wrapper.appendChild(tape1);
+            wrapper.appendChild(tape2);
         }
-        container.appendChild(wrapper);
+
+        targetContainer.appendChild(wrapper);
     };
 
-    const spacingX = 80 / nftStickers.length;
-    nftStickers.forEach((s, i) => createSticker(s, 10 + (i * spacingX) + (Math.random() * 4 - 2), 65 + (Math.random() * 4 - 2), 1.2, (Math.random() * 30 - 15), true));
+    // Scatter NFTs on the walls
+    nftStickers.forEach((s, i) => {
+        const isLeft = i % 2 === 0;
+        const x = isLeft ? (Math.random() * 20) : (80 + Math.random() * 10);
+        const y = 10 + Math.random() * 70;
+        createSticker(wallContainer, s, x, y, 1.0, (Math.random() * 20 - 10), true);
+    });
+
+    // Regular stickers stay on the cabinet
     const moveLeftList = ['basedman-white-eye.png', 'basedman.png', 'basedman1.png', 'basedman2.png', 'brain-logo.webp', 'heart.png', 'Jockstrap.png'];
     regularStickers.forEach((s, i) => {
         if (i > 7) return;
@@ -867,10 +883,10 @@ window.onload = () => {
         let scale = 0.6;
 
         if (moveLeftList.includes(s)) {
-            leftBase -= 4.5; // Pulled back slightly right from -6
-            scale = 0.7;    // Kept the larger size
+            leftBase -= 4.5;
+            scale = 0.7;
         }
 
-        createSticker(s, leftBase + Math.random() * 4, 10 + (i * 12) + (Math.random() * 4 - 2), scale, (Math.random() * 40 - 20), false);
+        createSticker(cabinetContainer, s, leftBase + Math.random() * 4, 10 + (i * 12) + (Math.random() * 4 - 2), scale, (Math.random() * 40 - 20), false);
     });
 };
