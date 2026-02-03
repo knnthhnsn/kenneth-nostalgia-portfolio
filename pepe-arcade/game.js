@@ -130,14 +130,14 @@ class InputHandler {
         if (jumpBtn) {
             jumpBtn.addEventListener('touchstart', e => {
                 e.preventDefault();
-                this.keys['Space'] = true;
-                this.updateVisualControls('Space', true);
+                this.keys['KeyW'] = true; // Use KeyW as the internal jump key
+                this.updateVisualControls('KeyW', true);
             }, { passive: false });
 
             jumpBtn.addEventListener('touchend', e => {
                 e.preventDefault();
-                this.keys['Space'] = false;
-                this.updateVisualControls('Space', false);
+                this.keys['KeyW'] = false;
+                this.updateVisualControls('KeyW', false);
             }, { passive: false });
         }
 
@@ -145,14 +145,14 @@ class InputHandler {
         if (shootBtn) {
             shootBtn.addEventListener('touchstart', e => {
                 e.preventDefault();
-                this.keys['KeyB'] = true;
-                this.updateVisualControls('KeyB', true);
+                this.keys['Space'] = true; // Space is now Shoot
+                this.updateVisualControls('Space', true);
             }, { passive: false });
 
             shootBtn.addEventListener('touchend', e => {
                 e.preventDefault();
-                this.keys['KeyB'] = false;
-                this.updateVisualControls('KeyB', false);
+                this.keys['Space'] = false;
+                this.updateVisualControls('Space', false);
             }, { passive: false });
         }
 
@@ -267,10 +267,10 @@ class InputHandler {
             isDown ? stick.classList.add('stick-down') : stick.classList.remove('stick-down');
         }
 
-        if (code === 'Space' || code === 'ArrowUp' || code === 'KeyW') {
+        if (code === 'ArrowUp' || code === 'KeyW') {
             isDown ? jumpBtn.classList.add('pressed') : jumpBtn.classList.remove('pressed');
         }
-        if (code === 'KeyB' || code === 'Click') {
+        if (code === 'Space' || code === 'KeyB' || code === 'Click') {
             isDown ? shootBtn.classList.add('pressed') : shootBtn.classList.remove('pressed');
         }
     }
@@ -477,14 +477,14 @@ class Player extends Entity {
             this.animState = 'idle';
         }
 
-        if ((this.game.input.isDown('Space') || this.game.input.isDown('ArrowUp') || this.game.input.isDown('KeyW')) && this.onGround) {
+        if ((this.game.input.isDown('ArrowUp') || this.game.input.isDown('KeyW')) && this.onGround) {
             this.vy = this.jumpForce;
             this.onGround = false;
             if (this.game.audio && this.game.audio.jump) this.game.audio.jump();
         }
 
         if (this.shootTimer > 0) this.shootTimer--;
-        if ((this.game.input.isDown('KeyB') || this.game.input.isDown('Click')) && this.shootTimer === 0) {
+        if ((this.game.input.isDown('Space') || this.game.input.isDown('KeyB') || this.game.input.isDown('Click')) && this.shootTimer === 0) {
             if (this.game.audio && this.game.audio.shoot) this.game.audio.shoot();
             const dir = this.facingRight ? 1 : -1;
             const px = this.x + (this.facingRight ? this.width : 0) - 8;
