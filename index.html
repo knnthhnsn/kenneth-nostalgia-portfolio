@@ -32,7 +32,7 @@
 
         <!-- Marquee / Top -->
         <div class="marquee">
-            <div class="marquee-text">$PEPECOIN ARCADE V1.7</div>
+            <div class="marquee-text">$PEPECOIN ARCADE V1.8</div>
         </div>
 
         <div class="monitor-bezel">
@@ -44,9 +44,47 @@
                 </div>
                 <button id="btn-connect" class="connect-btn hidden">CONNECT WALLET</button>
 
-                <!-- Intro Overlay Removed from here -->
+                <!-- Intro Overlay -->
+                <div id="intro-overlay" class="intro-overlay">
+                    <div class="intro-content">
+                        <h1>$PEPECOIN ARCADE</h1>
+                        <div class="intro-rules">
+                            <div class="rule-item">
+                                <span class="rule-icon">💰</span>
+                                <p><strong>100 $PEPECOIN</strong> PER GAME ENTRY</p>
+                            </div>
+                            <div class="rule-item">
+                                <span class="rule-icon">🏆</span>
+                                <p><strong>60 GAMES</strong> PER JACKPOT ROUND</p>
+                            </div>
+                            <div class="rule-item">
+                                <span class="rule-icon">💎</span>
+                                <div class="prizes">
+                                    <p>1ST: <strong>2,500 $PEPECOIN</strong></p>
+                                    <p>2ND: <strong>1,000 $PEPECOIN</strong></p>
+                                    <p>3RD: <strong>500 $PEPECOIN</strong></p>
+                                </div>
+                            </div>
+                            <div class="rule-item">
+                                <span class="rule-icon">🕹️</span>
+                                <p><strong>FREE PLAY</strong> AVAILABLE (NO REWARDS)</p>
+                            </div>
+                        </div>
+                        <button id="btn-close-intro" class="intro-btn">I UNDERSTAND</button>
+                    </div>
+                </div>
 
-                <!-- Payment Overlay Removed from here -->
+                <!-- Payment Overlay -->
+                <div id="payment-overlay" class="payment-overlay hidden">
+                    <h2>INSERT COINS</h2>
+                    <p>Fee: 100 $PEPECOIN PER GAME</p>
+                    <p>Winner Jackpot: 2,500 $PEPECOIN!</p>
+                    <div class="payment-buttons">
+                        <button id="btn-confirm-pay" class="pay-btn">PAY 100 $PEPECOIN</button>
+                        <button id="btn-free-play" class="free-btn">FREE PLAY</button>
+                    </div>
+                    <p class="free-hint">(Free games ignore on-chain rewards)</p>
+                </div>
 
                 <!-- UI Overlay -->
                 <div id="ui-layer" class="ui-layer">
@@ -131,47 +169,9 @@
     <!-- Settings Panel -->
     <!-- Settings Panel Removed from here -->
 
-    <!-- Intro Overlay -->
-    <div id="intro-overlay" class="intro-overlay">
-        <div class="intro-content">
-            <h1>$PEPECOIN ARCADE</h1>
-            <div class="intro-rules">
-                <div class="rule-item">
-                    <span class="rule-icon">💰</span>
-                    <p><strong>100 $PEPECOIN</strong> PER GAME ENTRY</p>
-                </div>
-                <div class="rule-item">
-                    <span class="rule-icon">🏆</span>
-                    <p><strong>60 GAMES</strong> PER JACKPOT ROUND</p>
-                </div>
-                <div class="rule-item">
-                    <span class="rule-icon">💎</span>
-                    <div class="prizes">
-                        <p>1ST: <strong>2,500 $PEPECOIN</strong></p>
-                        <p>2ND: <strong>1,000 $PEPECOIN</strong></p>
-                        <p>3RD: <strong>500 $PEPECOIN</strong></p>
-                    </div>
-                </div>
-                <div class="rule-item">
-                    <span class="rule-icon">🕹️</span>
-                    <p><strong>FREE PLAY</strong> AVAILABLE (NO REWARDS)</p>
-                </div>
-            </div>
-            <button id="btn-close-intro" class="intro-btn">I UNDERSTAND</button>
-        </div>
-    </div>
+    <!-- Intro Overlay moved inside screen-container -->
 
-    <!-- Payment Overlay -->
-    <div id="payment-overlay" class="payment-overlay hidden">
-        <h2>INSERT COINS</h2>
-        <p>Fee: 100 $PEPECOIN PER GAME</p>
-        <p>Winner Jackpot: 2,500 $PEPECOIN!</p>
-        <div class="payment-buttons">
-            <button id="btn-confirm-pay" class="pay-btn">PAY 100 $PEPECOIN</button>
-            <button id="btn-free-play" class="free-btn">FREE PLAY</button>
-        </div>
-        <p class="free-hint">(Free games ignore on-chain rewards)</p>
-    </div>
+    <!-- Payment Overlay moved inside screen-container -->
 
     <!-- Settings Panel -->
     <div id="settings-panel" class="settings-panel hidden">
