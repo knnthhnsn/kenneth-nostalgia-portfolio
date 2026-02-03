@@ -642,7 +642,7 @@ class Game {
         });
         setTimeout(() => {
             hearts.forEach(h => h.classList.remove('shake'));
-        }, 400);
+        }, 600);
     }
 
     start() {
