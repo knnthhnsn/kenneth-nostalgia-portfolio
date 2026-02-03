@@ -111,17 +111,18 @@ body {
     left: -150%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(to right,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0) 45%,
-            rgba(255, 255, 255, 0.4) 50%,
-            rgba(255, 255, 255, 0) 55%,
-            rgba(255, 255, 255, 0) 100%);
-    transform: rotate(30deg);
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0) 40%,
+            rgba(255, 255, 255, 0.8) 50%,
+            rgba(255, 255, 255, 0) 60%);
+    transform: rotate(0deg);
+    /* Gradient angle handles rotation */
     pointer-events: none;
     z-index: 10;
     opacity: 0;
-    transition: opacity 0.3s;
+    mix-blend-mode: overlay;
+    /* Key for "shine" vs "fog" */
+    transition: opacity 0.2s;
     /* The mask will be set via JS to match the sticker image */
     -webkit-mask-image: var(--sticker-mask);
     mask-image: var(--sticker-mask);
@@ -135,8 +136,8 @@ body {
 
 .sticker-wrapper:hover::after,
 .wall-sticker-wrapper:hover::after {
-    opacity: 0.7;
-    animation: stickerShine 1.5s ease-in-out infinite;
+    opacity: 1;
+    animation: stickerShine 2s ease-in-out infinite;
 }
 
 @keyframes stickerShine {
