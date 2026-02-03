@@ -103,8 +103,18 @@ body {
 }
 
 /* Shine Effect */
-.sticker-wrapper::after,
-.wall-sticker-wrapper::after {
+/* Shine Effect */
+.sticker-content {
+    position: relative;
+    overflow: hidden;
+    /* Clips the shine to the image bounds! */
+    display: inline-block;
+    /* Wraps tight around image */
+    border-radius: 2px;
+    /* Slight rounding if needed */
+}
+
+.sticker-content::after {
     content: '';
     position: absolute;
     top: -50%;
@@ -115,27 +125,15 @@ body {
             rgba(255, 255, 255, 0) 40%,
             rgba(255, 255, 255, 0.8) 50%,
             rgba(255, 255, 255, 0) 60%);
-    transform: rotate(0deg);
-    /* Gradient angle handles rotation */
     pointer-events: none;
     z-index: 10;
     opacity: 0;
     mix-blend-mode: overlay;
-    /* Key for "shine" vs "fog" */
     transition: opacity 0.2s;
-    /* The mask will be set via JS to match the sticker image */
-    -webkit-mask-image: var(--sticker-mask);
-    mask-image: var(--sticker-mask);
-    -webkit-mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    mask-size: contain;
-    mask-repeat: no-repeat;
-    mask-position: center;
 }
 
-.sticker-wrapper:hover::after,
-.wall-sticker-wrapper:hover::after {
+.sticker-wrapper:hover .sticker-content::after,
+.wall-sticker-wrapper:hover .sticker-content::after {
     opacity: 1;
     animation: stickerShine 2s ease-in-out infinite;
 }

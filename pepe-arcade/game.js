@@ -852,14 +852,20 @@ window.onload = () => {
         wrapper.style.cursor = 'pointer';
         wrapper.onclick = () => window.open('https://basedman.io', '_blank');
 
-        // precise shine mask
-        const imgSrc = `./assets/cabinet-sticker/${filename}`;
-        wrapper.style.setProperty('--sticker-mask', `url(${imgSrc})`);
+        // Create inner content wrapper for clipping the shine
+        const innerContent = document.createElement('div');
+        innerContent.className = 'sticker-content';
+        // Match the mask for the shine on this inner element if we stick with masking, 
+        // but primarily this is for overflow:hidden if we switch techniques.
+        // For now, we keep the mask var but move it here just in case style needs it.
+        innerContent.style.setProperty('--sticker-mask', `url(${imgSrc})`);
 
         const img = document.createElement('img');
         img.src = imgSrc;
         img.className = isWall ? 'wall-sticker' : 'sticker';
-        wrapper.appendChild(img);
+        innerContent.appendChild(img);
+
+        wrapper.appendChild(innerContent);
 
         if (isWall) {
             // Add pieces of tape for that DIY look
