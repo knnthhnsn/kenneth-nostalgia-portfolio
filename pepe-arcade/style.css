@@ -303,6 +303,50 @@ h1 {
     opacity: 0.5;
 }
 
+.heart-icon.shake {
+    animation: heartShake 0.4s ease-in-out;
+}
+
+@keyframes heartShake {
+
+    0%,
+    100% {
+        transform: translateX(0) scale(1);
+    }
+
+    10% {
+        transform: translateX(-4px) scale(1.1);
+    }
+
+    20% {
+        transform: translateX(4px) scale(1.1);
+    }
+
+    30% {
+        transform: translateX(-4px) scale(1.05);
+    }
+
+    40% {
+        transform: translateX(4px) scale(1.05);
+    }
+
+    50% {
+        transform: translateX(-2px) scale(1);
+    }
+
+    60% {
+        transform: translateX(2px) scale(1);
+    }
+
+    70% {
+        transform: translateX(-1px);
+    }
+
+    80% {
+        transform: translateX(1px);
+    }
+}
+
 .control-panel {
     width: 100%;
     background: #2a2a2a;

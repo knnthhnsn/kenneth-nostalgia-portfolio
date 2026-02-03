@@ -400,6 +400,7 @@ class Enemy extends Entity {
             if (this.game.state === 'PLAYING') {
                 this.game.lives -= 0.5;
                 this.game.updateLivesUI();
+                this.game.shakeHearts();
                 if (this.game.lives <= 0) this.game.gameOver();
             }
         }
@@ -631,6 +632,18 @@ class Game {
         }
     }
 
+    shakeHearts() {
+        const hearts = document.querySelectorAll('.heart-icon');
+        hearts.forEach(heart => {
+            heart.classList.remove('shake');
+            void heart.offsetWidth; // Trigger reflow
+            heart.classList.add('shake');
+        });
+        setTimeout(() => {
+            hearts.forEach(h => h.classList.remove('shake'));
+        }, 400);
+    }
+
     start() {
         // Setup Coin Logic
         const coin = document.getElementById('pepe-coin');
@@ -717,6 +730,7 @@ class Game {
             if (!e.markedForDeletion && this.player.invincibilityTimer === 0 && this.checkAABB(this.player, e)) {
                 this.lives -= 1.0; // Penalty for direct hit (2 half-hearts)
                 this.updateLivesUI();
+                this.shakeHearts();
                 this.audio.explosion();
                 this.player.invincibilityTimer = this.player.invincibilityDuration;
 
