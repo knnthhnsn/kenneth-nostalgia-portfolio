@@ -1314,6 +1314,15 @@ h1 {
     display: none;
 }
 
+.desktop-hint {
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+    color: #4ade80;
+    text-shadow: 0 0 5px rgba(74, 222, 128, 0.5);
+    font-family: inherit;
+}
+
 @media (hover: none) and (pointer: coarse) {
     .desktop-coin-slot {
         display: none;
@@ -1321,6 +1330,10 @@ h1 {
 
     .touch-retry-coin {
         display: block;
+    }
+
+    .desktop-hint {
+        display: none;
     }
 }
 
@@ -1331,5 +1344,9 @@ h1 {
 
     .touch-retry-coin {
         display: block;
+    }
+
+    .desktop-hint {
+        display: none;
     }
 }
