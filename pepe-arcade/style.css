@@ -73,8 +73,7 @@ body {
     height: 100%;
     pointer-events: none;
     z-index: 5;
-    display: none;
-    /* Hidden for now */
+    /* display: none; Removed to show cabinet stickers */
 }
 
 .sticker {
@@ -1127,7 +1126,7 @@ h1 {
     /* Hidden by default on small screens */
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
     #wall-sticker-container {
         display: block;
         /* Show only on wider screens */
