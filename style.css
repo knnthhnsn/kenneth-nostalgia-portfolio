@@ -1229,11 +1229,11 @@ h1 {
 
     0%,
     100% {
-        transform: translateY(0) rotate(-15deg);
+        transform: translateY(0);
     }
 
     50% {
-        transform: translateY(-10px) rotate(-15deg);
+        transform: translateY(-10px);
     }
 }
 
@@ -1262,18 +1262,17 @@ h1 {
 
 @keyframes ticketInsert {
     0% {
-        transform: translateY(0) scale(1) rotate(0deg);
+        transform: translateY(0) scale(1);
         opacity: 1;
     }
 
     50% {
-        transform: translateY(30px) scale(0.8) rotate(90deg);
-        /* Rotate to fit slot? */
+        transform: translateY(30px) scale(0.8);
         opacity: 1;
     }
 
     100% {
-        transform: translateY(50px) scale(0.3) rotate(90deg);
+        transform: translateY(50px) scale(0.3);
         opacity: 0;
     }
 }
@@ -1322,11 +1321,11 @@ h1 {
 
     0%,
     100% {
-        transform: translateY(-50%) translateX(0) rotate(-10deg);
+        transform: translateY(-50%) translateX(0);
     }
 
     50% {
-        transform: translateY(-50%) translateX(10px) rotate(-10deg);
+        transform: translateY(-50%) translateX(10px);
     }
 }
 
@@ -1337,17 +1336,17 @@ h1 {
 
 @keyframes ticketInsertRight {
     0% {
-        transform: translateY(-50%) translateX(0) scale(1) rotate(-10deg);
+        transform: translateY(-50%) translateX(0) scale(1);
         opacity: 1;
     }
 
     50% {
-        transform: translateY(-50%) translateX(80px) scale(0.8) rotate(0deg);
+        transform: translateY(-50%) translateX(80px) scale(0.8);
         opacity: 1;
     }
 
     100% {
-        transform: translateY(-50%) translateX(160px) scale(0.3) rotate(90deg);
+        transform: translateY(-50%) translateX(160px) scale(0.3);
         opacity: 0;
     }
 }
