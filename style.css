@@ -1207,8 +1207,8 @@ h1 {
 /* Retry Coin Mechanism */
 /* Retry Ticket Mechanism */
 .retry-ticket {
-    width: 140px;
-    /* Wider for ticket */
+    width: 100px;
+    /* Smaller ticket */
     height: auto;
     cursor: pointer;
     transition: transform 0.2s;
@@ -1307,10 +1307,10 @@ h1 {
 .touch-retry-ticket {
     position: absolute;
     top: 50%;
-    left: -160px;
-    /* Position to the LEFT of the slot */
+    left: -120px;
+    /* Adjusted for smaller size */
     transform: translateY(-50%);
-    width: 160px;
+    width: 110px;
     height: auto;
 }
 
