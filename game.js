@@ -712,9 +712,12 @@ class Game {
         // Add Enter key listener for start screen
         window.addEventListener('keydown', (e) => {
             if (e.code === 'Enter' && this.state === 'START') {
-                // Check if payment overlay is NOT visible to avoid double triggering if payment handled Enter
                 const overlay = document.getElementById('payment-overlay');
-                if (overlay && overlay.classList.contains('hidden')) {
+                const intro = document.getElementById('intro-overlay');
+
+                // Only trigger if both the payment AND intro overlays are hidden
+                if (overlay && overlay.classList.contains('hidden') &&
+                    (!intro || intro.classList.contains('hidden'))) {
                     this.insertCoin();
                 }
             }
