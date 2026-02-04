@@ -836,7 +836,7 @@ class Game {
         const touchTicket = document.getElementById('touch-golden-ticket');
         const tickets = [desktopTicket, touchTicket].filter(c => c); // Filter out nulls
 
-        const handleCoinInsert = (coin) => async (e) => {
+        const handleTicketInsert = (ticket) => async (e) => {
             if (e) {
                 e.preventDefault();
                 e.stopPropagation();
@@ -846,7 +846,7 @@ class Game {
             if (!success) return;
 
             // Play ticket insert animation
-            coin.classList.add('inserting');
+            ticket.classList.add('inserting');
             this.audio.playTone(400, 'sine', 0.1); // Coin sound
 
             // Remove Enter key listener
@@ -870,10 +870,17 @@ class Game {
             }, 600);
         };
 
+        // Activate tickets and bind events
+        tickets.forEach(ticket => {
+            ticket.classList.add('active');
+            ticket.onclick = (e) => handleTicketInsert(ticket)(e);
+            ticket.ontouchstart = (e) => handleTicketInsert(ticket)(e);
+        });
+
         // Enter key support for desktop
         const enterKeyHandler = (e) => {
-            if (e.code === 'Enter' && this.state === 'GAMEOVER' && desktopCoin) {
-                handleCoinInsert(desktopCoin)(null);
+            if (e.code === 'Enter' && this.state === 'GAMEOVER' && desktopTicket) {
+                handleTicketInsert(desktopTicket)(null);
             }
         };
         window.addEventListener('keydown', enterKeyHandler);
