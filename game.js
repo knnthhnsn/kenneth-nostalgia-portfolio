@@ -1352,11 +1352,21 @@ class Game {
         if (!this.isConnected || !this.isPaidSession || score <= 0) return;
 
         try {
-            const tx = await this.arcadeContract.submitScore(score, "PEPE_PLAYER");
+            // SECURITY NOTE: In a production environment, you would:
+            // 1. Send the 'score' and 'this.userAddress' to your secure backend.
+            // 2. The backend verifies the score is logically possible.
+            // 3. The backend signs a message: keccak256(userAddress, score).
+            // 4. The backend returns the 'signature' string to the frontend.
+
+            // FOR NOW: This is a placeholder showing how the contract call now requires a signature.
+            // You will need to implement a backend endpoint to provide real signatures.
+            const placeholderSignature = "0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
+
+            const tx = await this.arcadeContract.submitScore(score, "PEPE_PLAYER", placeholderSignature);
             await tx.wait();
             this.updateJackpotStatus();
         } catch (err) {
-            console.error("Score submission failed:", err);
+            console.error("Score submission failed (Likely due to missing/invalid signature):", err);
         }
     }
 }

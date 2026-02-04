@@ -10,6 +10,8 @@ interface IERC20 {
 contract PepecoinArcade {
     address public owner;
     address public pepecoinAddress = 0xA9E8aCf069C58aEc8825542845Fd754e41a9489A;
+    address public arcadeSigner;
+    mapping(bytes32 => bool) public usedSignatures;
     
     // Adjustable Parameters (Option B: 100 PEPE Entry)
     uint256 public entryFee = 100 * 10**18; 
@@ -36,8 +38,9 @@ contract PepecoinArcade {
     event NewHighScore(address indexed player, uint256 score, uint256 rank);
     event SettingsUpdated(string parameter, uint256 newValue);
 
-    constructor() {
+    constructor(address _signer) {
         owner = 0xAfBDfCDfa5454E45aa9AeE833DF87cC3Ec511d1b;
+        arcadeSigner = _signer;
     }
 
     modifier onlyOwner() {
@@ -65,6 +68,11 @@ contract PepecoinArcade {
         emit SettingsUpdated("payoutsUpdated", _p1 + _p2 + _p3 + _dev);
     }
 
+    function setArcadeSigner(address _signer) external onlyOwner {
+        arcadeSigner = _signer;
+        emit SettingsUpdated("arcadeSigner", uint160(_signer));
+    }
+
     function playGame() external {
         require(IERC20(pepecoinAddress).transferFrom(msg.sender, address(this), entryFee), "Transfer failed");
         
@@ -76,7 +84,16 @@ contract PepecoinArcade {
         }
     }
 
-    function submitScore(uint256 score, string memory name) external {
+    function submitScore(uint256 score, string memory name, bytes memory signature) external {
+        // Verify Signature to prevent botting
+        bytes32 messageHash = keccak256(abi.encodePacked(msg.sender, score));
+        bytes32 ethSignedMessageHash = getEthSignedMessageHash(messageHash);
+        
+        require(!usedSignatures[ethSignedMessageHash], "Signature already used");
+        require(recoverSigner(ethSignedMessageHash, signature) == arcadeSigner, "Invalid top-score signature");
+        
+        usedSignatures[ethSignedMessageHash] = true;
+
         // Find if score fits in Top 3
         int8 rank = -1;
         if (score > topPlayers[0].score) {
@@ -90,6 +107,25 @@ contract PepecoinArcade {
         if (rank >= 0) {
             _updateLeaderboard(uint8(rank), msg.sender, score, name);
             emit NewHighScore(msg.sender, score, uint256(uint8(rank) + 1));
+        }
+    }
+
+    // --- Helpers for Signature Verification ---
+    function getEthSignedMessageHash(bytes32 _messageHash) public pure returns (bytes32) {
+        return keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", _messageHash));
+    }
+
+    function recoverSigner(bytes32 _ethSignedMessageHash, bytes memory _signature) public pure returns (address) {
+        (bytes32 r, bytes32 s, uint8 v) = splitSignature(_signature);
+        return ecrecover(_ethSignedMessageHash, v, r, s);
+    }
+
+    function splitSignature(bytes memory sig) public pure returns (bytes32 r, bytes32 s, uint8 v) {
+        require(sig.length == 65, "invalid signature length");
+        assembly {
+            r := mload(add(sig, 32))
+            s := mload(add(sig, 64))
+            v := byte(0, mload(add(sig, 96)))
         }
     }
 
