@@ -1153,9 +1153,32 @@ h1 {
     display: block;
 }
 
+/* Golden Ticket Bundle (Bottom Left) - v2.06 */
+.golden-ticket-bundle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+    /* Behind cabinet (10) but above wall (1) */
+    pointer-events: none;
+    display: none;
+    /* Hidden on small screens */
+    opacity: 0.9;
+    transform: rotate(-10deg);
+    filter: drop-shadow(4px 8px 12px rgba(0, 0, 0, 0.4));
+}
+
+.golden-ticket-bundle img {
+    width: 350px;
+    height: auto;
+    display: block;
+}
+
 /* Show only on wider screens */
-@media (min-width: 1200px) {
-    .kekspace-graffiti {
+@media (min-width: 1400px) {
+
+    .kekspace-graffiti,
+    .golden-ticket-bundle {
         display: block;
     }
 }
