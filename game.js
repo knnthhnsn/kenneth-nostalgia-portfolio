@@ -831,10 +831,10 @@ class Game {
         document.getElementById('best-score').innerText = this.bestScore;
         document.getElementById('game-over-screen').classList.remove('hidden');
 
-        // Setup retry coin interaction for both desktop and touch coins
-        const desktopCoin = document.getElementById('desktop-retry-coin');
-        const touchCoin = document.getElementById('touch-retry-coin');
-        const coins = [desktopCoin, touchCoin].filter(c => c); // Filter out nulls
+        // Setup retry ticket interaction for both desktop and touch tickets
+        const desktopTicket = document.getElementById('desktop-golden-ticket');
+        const touchTicket = document.getElementById('touch-golden-ticket');
+        const tickets = [desktopTicket, touchTicket].filter(c => c); // Filter out nulls
 
         const handleCoinInsert = (coin) => async (e) => {
             if (e) {
@@ -845,7 +845,7 @@ class Game {
             const success = await this.requestPayment();
             if (!success) return;
 
-            // Play coin insert animation
+            // Play ticket insert animation
             coin.classList.add('inserting');
             this.audio.playTone(400, 'sine', 0.1); // Coin sound
 
@@ -855,7 +855,7 @@ class Game {
             // Wait for animation then restart
             setTimeout(() => {
                 document.getElementById('game-over-screen').classList.add('hidden');
-                coins.forEach(c => {
+                tickets.forEach(c => {
                     c.classList.remove('inserting');
                     c.classList.remove('active');
                 });
@@ -1287,13 +1287,13 @@ class Game {
                 freeBtn.onclick();
             };
 
-            // Coal shortcuts for Free Play
-            const desktopCoal = document.getElementById('desktop-retry-coin');
-            const touchCoal = document.getElementById('touch-retry-coin');
-            const startCoal = document.getElementById('pepe-coin');
+            // Ticket shortcuts for Free Play
+            const desktopTicket = document.getElementById('desktop-golden-ticket');
+            const touchTicket = document.getElementById('touch-golden-ticket');
+            const startCoin = document.getElementById('pepe-coin'); // Start coin remains pepe-coin
 
             const saveHandlers = new Map();
-            [desktopCoal, touchCoal, startCoal].forEach(el => {
+            [desktopTicket, touchTicket, startCoin].forEach(el => {
                 if (el) {
                     saveHandlers.set(el, { click: el.onclick, touch: el.ontouchstart });
 

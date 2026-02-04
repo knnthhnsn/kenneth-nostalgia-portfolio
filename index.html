@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$PEPECOIN Arcade v1.102</title>
+    <title>$PEPECOIN Arcade v2.03</title>
     <link rel="stylesheet" href="style.css">
     <!-- Build ID: 1770142367 -->
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
@@ -61,7 +61,7 @@
 
         <!-- Marquee / Top -->
         <div class="marquee">
-            <div class="marquee-text">$PEPECOIN ARCADE v1.102</div>
+            <div class="marquee-text">$PEPECOIN ARCADE v2.03</div>
         </div>
 
         <div class="monitor-bezel">
@@ -139,7 +139,7 @@
                         <h1>GAME OVER</h1>
                         <p>FINAL SCORE: <span id="final-score">0</span></p>
                         <p class="best-score-label">BEST: <span id="best-score">0</span></p>
-                        <p class="retry-hint">INSERT COAL TO RETRY</p>
+                        <p class="retry-hint">INSERT TICKET TO RETRY</p>
                         <p class="desktop-hint">OR PRESS ENTER</p>
                         <button id="btn-share" class="share-btn">SHARE ON X</button>
                     </div>
@@ -167,7 +167,8 @@
 
             <!-- Coin Slot for Desktop Retry -->
             <div class="control-panel-coin-slot desktop-coin-slot" id="desktop-coin-slot">
-                <img src="./assets/coin/coal.png" class="retry-coin" id="desktop-retry-coin" alt="Insert Coal">
+                <img src="./assets/golden-ticket.png" class="retry-ticket" id="desktop-golden-ticket"
+                    alt="Insert Golden Ticket">
                 <div class="coin-slot-hole"></div>
             </div>
 
@@ -189,9 +190,9 @@
         <!-- Coin Return / Front Panel Details -->
         <div class="cabinet-front-details">
             <div class="coin-return">
-                <!-- Retry Coal for Touch Devices -->
-                <img src="./assets/coin/coal.png" class="retry-coin touch-retry-coin" id="touch-retry-coin"
-                    alt="Insert Coal">
+                <!-- Retry Ticket for Touch Devices -->
+                <img src="./assets/golden-ticket.png" class="retry-ticket touch-retry-ticket" id="touch-golden-ticket"
+                    alt="Insert Golden Ticket">
             </div>
         </div>
     </div>

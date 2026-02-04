@@ -1205,71 +1205,74 @@ h1 {
 }
 
 /* Retry Coin Mechanism */
-.retry-coin {
-    width: 120px;
-    height: 120px;
+/* Retry Ticket Mechanism */
+.retry-ticket {
+    width: 140px;
+    /* Wider for ticket */
+    height: auto;
     cursor: pointer;
     transition: transform 0.2s;
-    filter: drop-shadow(0 0 20px rgba(74, 222, 128, 0.8)) drop-shadow(0 0 40px rgba(74, 222, 128, 0.5));
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.6)) drop-shadow(0 0 20px rgba(255, 200, 0, 0.4));
     opacity: 0;
     pointer-events: none;
     position: absolute;
 }
 
-.retry-coin.active {
+.retry-ticket.active {
     opacity: 1;
     pointer-events: auto;
-    animation: coalBounce 1s ease-in-out infinite, coalGlow 1.5s ease-in-out infinite alternate;
+    animation: ticketBounce 1s ease-in-out infinite, ticketGlow 1.5s ease-in-out infinite alternate;
 }
 
-@keyframes coalBounce {
+@keyframes ticketBounce {
 
     0%,
     100% {
-        transform: translateY(0);
+        transform: translateY(0) rotate(-15deg);
     }
 
     50% {
-        transform: translateY(-15px);
+        transform: translateY(-10px) rotate(-15deg);
     }
 }
 
-@keyframes coalGlow {
+@keyframes ticketGlow {
     0% {
-        filter: drop-shadow(0 0 20px rgba(74, 222, 128, 0.8)) drop-shadow(0 0 40px rgba(74, 222, 128, 0.5));
+        filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.6)) drop-shadow(0 0 20px rgba(255, 200, 0, 0.4));
     }
 
     100% {
-        filter: drop-shadow(0 0 30px rgba(255, 200, 50, 1)) drop-shadow(0 0 60px rgba(255, 150, 0, 0.8));
+        filter: drop-shadow(0 0 20px rgba(255, 255, 100, 1)) drop-shadow(0 0 40px rgba(255, 215, 0, 0.8));
     }
 }
 
-.retry-coin:hover {
-    transform: scale(1.1) rotate(5deg);
+.retry-ticket:hover {
+    transform: scale(1.1) rotate(0deg);
 }
 
-.retry-coin:active {
+.retry-ticket:active {
     transform: scale(0.9);
 }
 
-.retry-coin.inserting {
-    animation: coinInsert 0.6s ease-in forwards !important;
+.retry-ticket.inserting {
+    animation: ticketInsert 0.6s ease-in forwards !important;
     pointer-events: none;
 }
 
-@keyframes coinInsert {
+@keyframes ticketInsert {
     0% {
-        transform: translateY(0) scale(1);
+        transform: translateY(0) scale(1) rotate(0deg);
         opacity: 1;
     }
 
     50% {
-        transform: translateY(30px) scale(0.8);
+        transform: translateY(30px) scale(0.8) rotate(90deg);
+        /* Rotate to fit slot? */
         opacity: 1;
     }
 
     100% {
-        transform: translateY(50px) scale(0.3);
+        transform: translateY(50px) scale(0.3) rotate(90deg);
         opacity: 0;
     }
 }
@@ -1285,67 +1288,70 @@ h1 {
 }
 
 .coin-slot-hole {
-    width: 45px;
-    height: 10px;
+    width: 50px;
+    /* Slightly wider for ticket */
+    height: 12px;
     background: #000;
     border: 2px solid #555;
     border-radius: 3px;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-#desktop-retry-coin {
+#desktop-golden-ticket {
     position: relative;
     top: 0;
 }
 
-/* Touch Coal at Bottom Slot - positioned to the LEFT of the slot */
-.touch-retry-coin {
+/* Touch Ticket at Bottom Slot - positioned to the LEFT of the slot */
+.touch-retry-ticket {
     position: absolute;
     top: 50%;
     left: -160px;
     /* Position to the LEFT of the slot */
     transform: translateY(-50%);
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: auto;
 }
 
-.touch-retry-coin.active {
-    animation: coalBounceTouch 1s ease-in-out infinite, coalGlow 1.5s ease-in-out infinite alternate;
+.touch-retry-ticket.active {
+    animation: ticketBounceTouch 1s ease-in-out infinite, ticketGlow 1.5s ease-in-out infinite alternate;
 }
 
-@keyframes coalBounceTouch {
+@keyframes ticketBounceTouch {
 
     0%,
     100% {
-        transform: translateY(-50%) translateX(0);
+        transform: translateY(-50%) translateX(0) rotate(-10deg);
     }
 
     50% {
-        transform: translateY(-50%) translateX(10px);
+        transform: translateY(-50%) translateX(10px) rotate(-10deg);
     }
 }
 
-/* Special animation for touch coal - slides RIGHT into slot */
-.touch-retry-coin.inserting {
-    animation: coinInsertRight 0.6s ease-in forwards !important;
+/* Special animation for touch ticket - slides RIGHT into slot */
+/* Special animation for touch ticket - slides RIGHT into slot */
+.touch-retry-ticket.inserting {
+    animation: ticketInsertRight 0.6s ease-in forwards !important;
 }
 
-@keyframes coinInsertRight {
+@keyframes ticketInsertRight {
     0% {
-        transform: translateY(-50%) translateX(0) scale(1);
+        transform: translateY(-50%) translateX(0) scale(1) rotate(-10deg);
         opacity: 1;
     }
 
     50% {
-        transform: translateY(-50%) translateX(40px) scale(0.8);
+        transform: translateY(-50%) translateX(80px) scale(0.8) rotate(0deg);
         opacity: 1;
     }
 
     100% {
-        transform: translateY(-50%) translateX(80px) scale(0.3);
+        transform: translateY(-50%) translateX(160px) scale(0.3) rotate(90deg);
         opacity: 0;
     }
 }
+
 
 /* Visibility: Desktop shows control panel coin, Touch shows bottom coin */
 .desktop-coin-slot {
