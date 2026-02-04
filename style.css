@@ -2436,8 +2436,8 @@ input[type="checkbox"]:checked::after {
     .global-monitor {
         position: fixed;
         /* Fixed to viewport */
-        bottom: 80px;
-        /* Keep it above the bottom controls if any, but "down" */
+        bottom: 30px;
+        /* Moved further down as requested */
         top: auto;
         right: 5px;
         left: auto;
