@@ -1933,66 +1933,49 @@ input[type="checkbox"]:checked::after {
     }
 }
 
-/* Cabinet Side Wires (Right) */
+/* Cabinet Side Wires (Right) - Reverted to v1.83 style */
 .cabinet-wires-right {
     position: absolute;
     left: calc(100% + 40px);
     bottom: 25%;
     width: 1000px;
-    height: 200px;
-    /* Taller container to allow visual sag */
-    pointer-events: none;
-    z-index: 10;
+    height: 24px;
+    background: linear-gradient(180deg, #600 0%, #b00 50%, #600 100%);
+    border-top: 2px solid #400;
+    border-bottom: 2px solid #400;
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.4);
+    z-index: 0;
+    /* Behind front but in front of wall (-3) */
+    transform: rotate(0.1deg);
     display: none;
 }
 
-/* Main Red Wire with Realistic Sag */
+/* Thinner Secondary Wire Re-integrated as ::after */
+.cabinet-wires-right::after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: #400;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
 .cabinet-wires-right::before {
     content: "";
     position: absolute;
-    top: 5px;
-    left: -60px;
-    /* Fully overlap socket */
-    width: calc(100% + 60px);
-    height: 100px;
-    /* Sag using an elliptical border-radius and large border */
-    border-bottom: 26px solid #b00;
-    border-radius: 0 0 500px 30px;
-    z-index: 25;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(90deg, transparent, transparent 6px, rgba(0, 0, 0, 0.4) 8px);
     pointer-events: none;
-
-    /* Connection Shadow Gradient Overlay - Stretched further right */
-    background: linear-gradient(90deg,
-            rgba(0, 0, 0, 1) 0%,
-            rgba(0, 0, 0, 0.8) 15%,
-            rgba(0, 0, 0, 0.4) 30%,
-            transparent 60%);
-    background-size: 100% 26px;
-    background-position: bottom;
-    background-repeat: no-repeat;
-
-    border-left: 2px solid #500;
 }
 
-/* Thinner Secondary Wire with Sag */
+/* Hidden container helper */
 .cabinet-wires-right-thinner {
-    position: absolute;
-    top: 55px;
-    left: -50px;
-    width: calc(100% + 50px);
-    height: 80px;
-    border-bottom: 10px solid #400;
-    border-radius: 0 0 400px 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
-    z-index: 24;
-
-    background: linear-gradient(90deg,
-            rgba(0, 0, 0, 0.95) 0%,
-            rgba(0, 0, 0, 0.6) 20%,
-            transparent 50%);
-    background-size: 100% 10px;
-    background-position: bottom;
-    background-repeat: no-repeat;
+    display: none;
 }
 
 /* 3D Power Socket Hub - Heavy Junction Box Style */
@@ -2011,8 +1994,8 @@ input[type="checkbox"]:checked::after {
     box-shadow:
         inset 0 0 15px #000,
         15px 15px 30px rgba(0, 0, 0, 0.9);
-    z-index: 1;
-    /* Behind the wires */
+    z-index: 20;
+    /* In front of wires again */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2097,12 +2080,7 @@ input[type="checkbox"]:checked::after {
     border-radius: 2px;
 }
 
-/* Removed old ::after wire because we use a div for better Z-control */
-.cabinet-wires-right::after {
-    display: none;
-}
-
-/* Duplicate rule removed for v1.85 */
+/* Cleaned up v1.87 */
 
 @media (min-width: 1400px) {
     .cabinet-wires-right {
