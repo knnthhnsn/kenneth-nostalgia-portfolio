@@ -3547,7 +3547,7 @@ const fileSystem = {
     pictures: [
         { name: 'Me-pixel.jpeg', type: 'image', path: 'assets/Me-pixel.jpeg' },
         { name: 'Me-pixel-smile.jpeg', type: 'image', path: 'assets/Me-pixel-smile.jpeg' },
-        { name: 'sitting-me.jpeg', type: 'image', path: 'assets/sitting-me.jpeg' }
+        { name: 'sitting-me.png', type: 'image', path: 'assets/sitting-me.png' }
     ],
     music: [
         { name: 'Kenneth - Bass.mp3', type: 'audio' },
@@ -3563,7 +3563,12 @@ window.navigateFS = function (folder) {
     path.textContent = folder === 'root' ? 'C:\\' : 'C:\\' + folder.charAt(0).toUpperCase() + folder.slice(1);
 
     content.innerHTML = fileSystem[folder].map(item => {
-        const action = item.type === 'folder' ? `navigateFS('${item.id}')` : item.type === 'window' ? `openWindowById('${item.id}')` : `alert('Opening ${item.name}...')`;
+        const pathPrefix = item.path ? '' : 'assets/';
+        const itemPath = item.path || (item.type === 'image' ? 'assets/' + item.name : '');
+        const action = item.type === 'folder' ? `navigateFS('${item.id}')` :
+            item.type === 'window' ? `openWindowById('${item.id}')` :
+                item.type === 'image' ? `window.open('${itemPath}', '_blank')` :
+                    `alert('Opening ${item.name}...')`;
         return `
             <div class="explorer-item" onclick="${action}" ondblclick="${action}">
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E${item.type === 'folder' ? "%3Cpath d='M4 8v16h24V10H16l-2-2H4z' fill='%23ffcc00'/%3E" :

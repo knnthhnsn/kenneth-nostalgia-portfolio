@@ -274,7 +274,7 @@ body.material-cotton #desktop::before {
 /* Icons */
 #icon-grid {
     display: grid;
-    grid-template-columns: repeat(4, 75px);
+    grid-template-columns: repeat(5, 75px);
     grid-auto-flow: row;
     gap: 15px;
     height: calc(100% - var(--taskbar-height));
@@ -3183,5 +3183,3 @@ body.wallpaper-matrix #desktop {
     z-index: 0;
     pointer-events: none;
 }
-
-/* DUPLICATE DESKTOP ICON STYLES REMOVED - Using grid layout from line 275 */
