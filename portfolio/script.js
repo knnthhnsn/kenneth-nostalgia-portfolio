@@ -1,4 +1,4 @@
-/* Minimal XP Sound System */
+﻿/* Minimal XP Sound System */
 const XP_CLICK = "https://cdnjs.cloudflare.com/ajax/libs/ion-sound/3.0.7/sounds/button_tiny.mp3";
 
 /* ========================================
@@ -17,8 +17,8 @@ const translations = {
         'win_my-documents': 'My Documents',
 
         // Window Titles
-        'win_about': 'About Kenneth - My Computer',
-        'win_projects': 'Projects - My Documents',
+        'win_about': 'About Kenneth',
+        'win_projects': 'Projects',
         'win_skills': 'System Properties',
         'win_contact': 'New Message - Outlook Express',
         'win_resume': 'Resume.txt - Notepad',
@@ -88,8 +88,8 @@ const translations = {
         'win_my-documents': 'Dokumenter',
 
         // Window Titles
-        'win_about': 'Om Kenneth - Denne Computer',
-        'win_projects': 'Projekter - Dokumenter',
+        'win_about': 'Om Kenneth',
+        'win_projects': 'Projekter',
         'win_skills': 'Systemegenskaber',
         'win_contact': 'Ny Besked - Outlook Express',
         'win_resume': 'CV.txt - Notesblok',
@@ -159,8 +159,8 @@ const translations = {
         'win_my-documents': 'Eigene Dateien',
 
         // Window Titles
-        'win_about': 'Über Kenneth - Mein Computer',
-        'win_projects': 'Projekte - Eigene Dateien',
+        'win_about': 'Über Kenneth',
+        'win_projects': 'Projekte',
         'win_skills': 'Systemeigenschaften',
         'win_contact': 'Neue Nachricht - Outlook Express',
         'win_resume': 'Lebenslauf.txt - Editor',
@@ -396,7 +396,7 @@ function getAboutContent(lang) {
     return `
             <div class="xp-content-wrapper about-win">
                 <div class="sidebar">
-                    <img src="/portfolio/assets/Me-pixel-smile.jpeg" class="profile-pic" style="object-fit: cover;">
+                    <img src="assets/Me-pixel-smile.jpeg" class="profile-pic" style="object-fit: cover;">
                     <h3>Kenneth</h3>
                     <p>24 Years Old</p>
                     <p>Aarhus, Denmark</p>
@@ -963,7 +963,7 @@ function makeIconDraggable(icon) {
 const windowContents = {
     'about': {
         title: 'About Kenneth - My Computer',
-        icon: "/portfolio/assets/Me-pixel-smile.jpeg",
+        icon: "assets/Me-pixel-smile.jpeg",
         get content() { return getAboutContent(window.currentLang); }
     },
     'projects': {
@@ -1173,13 +1173,13 @@ const windowContents = {
         content: `
             <div class="photo-viewer">
                 <div class="photo-main">
-                    <img id="photo-current" src="/portfolio/assets/Me-pixel-smile.jpeg" alt="Portfolio Photo">
+                    <img id="photo-current" src="assets/Me-pixel-smile.jpeg" alt="Portfolio Photo">
                 </div>
                 <div class="photo-thumbnails" id="photo-thumbs">
-                    <img class="photo-thumb active" src="/portfolio/assets/Me-pixel-smile.jpeg" onclick="changePhoto(this, '/portfolio/assets/Me-pixel-smile.jpeg')">
-                    <img class="photo-thumb" src="/portfolio/assets/Me-pixel.jpeg" onclick="changePhoto(this, '/portfolio/assets/Me-pixel.jpeg')">
-                    <img class="photo-thumb" src="/portfolio/assets/sitting-me.png" onclick="changePhoto(this, '/portfolio/assets/sitting-me.png')">
-                    <img class="photo-thumb" src="/portfolio/assets/xp-wallpaper.jpg" onclick="changePhoto(this, '/portfolio/assets/xp-wallpaper.jpg')">
+                    <img class="photo-thumb active" src="assets/Me-pixel-smile.jpeg" onclick="changePhoto(this, 'assets/Me-pixel-smile.jpeg')">
+                    <img class="photo-thumb" src="assets/Me-pixel.jpeg" onclick="changePhoto(this, 'assets/Me-pixel.jpeg')">
+                    <img class="photo-thumb" src="assets/sitting-me.png" onclick="changePhoto(this, 'assets/sitting-me.png')">
+                    <img class="photo-thumb" src="assets/xp-wallpaper.jpg" onclick="changePhoto(this, 'assets/xp-wallpaper.jpg')">
                 </div>
             </div>
         `
@@ -2213,7 +2213,7 @@ windowContents['msn'] = {
     content: `
         <div class="msn-win">
             <div class="msn-header">
-                <img src="/portfolio/assets/Me-pixel-smile.jpeg" class="msn-pfp" style="object-fit: cover;">
+                <img src="assets/Me-pixel-smile.jpeg" class="msn-pfp" style="object-fit: cover;">
                 <div>
                     <div style="font-weight:bold;">Kenneth (Online)</div>
                     <div style="font-size:9px; color:#666;">I'm a multimedia creator!</div>
@@ -2427,7 +2427,7 @@ windowContents['moviemaker'] = {
     clippy.id = 'clippy-companion';
     clippy.innerHTML = `
         <div id="clippy-bubble" class="hidden">It looks like you're browsing a portfolio. Would you like help finding Kenneth's skills?</div>
-        <img id="clippy-agent" src="/portfolio/assets/clippy.png" alt="Clippy" style="width:65px; height:auto; cursor:grab;">
+        <img id="clippy-agent" src="assets/clippy.png" alt="Clippy" style="width:65px; height:auto; cursor:grab;">
     `;
     document.body.appendChild(clippy);
 
@@ -2732,7 +2732,7 @@ window.startErrorAccordion = function () {
         <div id="login-top"></div>
         <div id="login-center">
             <div class="login-user-card" onclick="document.getElementById('login-screen').remove()">
-                <img src="/portfolio/assets/Me-pixel.jpeg" class="login-pfp" style="object-fit: cover; border-radius: 5px;">
+                <img src="assets/Me-pixel.jpeg" class="login-pfp" style="object-fit: cover; border-radius: 5px;">
                 <div class="login-text">
                     <h2>Kenneth</h2>
                     <p>Multimedia Creator</p>
@@ -2836,7 +2836,7 @@ window.addEventListener('keyup', (e) => {
 (function initDesktopPet() {
     const pet = document.createElement('img');
     pet.id = 'desktop-pet';
-    pet.src = '/portfolio/assets/cat.gif';
+    pet.src = 'assets/cat.gif';
     pet.title = "Kenneth's Desktop Cat - Controlled by Joystick";
     pet.style.display = 'block';
     pet.style.position = 'fixed'; // Ensure it's above everything
@@ -3241,7 +3241,7 @@ document.addEventListener('keydown', (e) => {
    ======================================== */
 // Play the authentic old PC booting sound immediately
 (function initBootSound() {
-    const bootSound = new Audio('/portfolio/old-desktop-pc-booting.mp3');
+    const bootSound = new Audio('old-desktop-pc-booting.mp3');
     bootSound.volume = 0.6;
 
     // Try to play immediately (may be blocked by browser)
@@ -3545,9 +3545,9 @@ const fileSystem = {
         { name: 'Projects', type: 'folder', id: 'projects' }
     ],
     pictures: [
-        { name: 'Me-pixel.jpeg', type: 'image', path: '/portfolio/assets/Me-pixel.jpeg' },
-        { name: 'Me-pixel-smile.jpeg', type: 'image', path: '/portfolio/assets/Me-pixel-smile.jpeg' },
-        { name: 'sitting-me.png', type: 'image', path: '/portfolio/assets/sitting-me.png' }
+        { name: 'Me-pixel.jpeg', type: 'image', path: 'assets/Me-pixel.jpeg' },
+        { name: 'Me-pixel-smile.jpeg', type: 'image', path: 'assets/Me-pixel-smile.jpeg' },
+        { name: 'sitting-me.png', type: 'image', path: 'assets/sitting-me.png' }
     ],
     music: [
         { name: 'Kenneth - Bass.mp3', type: 'audio' },
@@ -3563,8 +3563,8 @@ window.navigateFS = function (folder) {
     path.textContent = folder === 'root' ? 'C:\\' : 'C:\\' + folder.charAt(0).toUpperCase() + folder.slice(1);
 
     content.innerHTML = fileSystem[folder].map(item => {
-        const pathPrefix = item.path ? '' : '/portfolio/assets/';
-        const itemPath = item.path || (item.type === 'image' ? '/portfolio/assets/' + item.name : '');
+        const pathPrefix = item.path ? '' : 'assets/';
+        const itemPath = item.path || (item.type === 'image' ? 'assets/' + item.name : '');
         const action = item.type === 'folder' ? `navigateFS('${item.id}')` :
             item.type === 'window' ? `openWindowById('${item.id}')` :
                 item.type === 'image' ? `window.open('${itemPath}', '_blank')` :
@@ -3619,7 +3619,7 @@ window.initCmdLogic = function () {
 windowContents['msn'].content = `
     <div class="msn-win">
         <div class="msn-header">
-            <img src="/portfolio/assets/Me-pixel-smile.jpeg" class="msn-pfp" style="object-fit: cover;">
+            <img src="assets/Me-pixel-smile.jpeg" class="msn-pfp" style="object-fit: cover;">
             <div>
                 <div style="font-weight:bold;">Kenneth (Online)</div>
                 <div style="font-size:9px; color:#666;">I'm a multimedia creator!</div>
