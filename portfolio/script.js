@@ -1,14 +1,14 @@
-﻿/* Minimal XP Sound System */
+﻿/* Minimalistisk XP Lydsystem */
 const XP_CLICK = "https:// cdnjs.cloudflare.com/ajax/libs/ion-sound/3.0.7/sounds/button_tiny.mp3";
 
 /* ========================================
-   LANGUAGE SYSTEM (OPTION A)
+   SPROGSYSTEM (MULIGHED A)
    ======================================== */
 window.currentLang = 'en';
 
 const translations = {
     en: {
-        // UI Elements
+        // Brugergrænseflade Elementer
         'start_menu': 'Start',
         'recycle_bin': 'Recycle Bin',
         'my_computer': 'My Computer',
@@ -16,7 +16,7 @@ const translations = {
         'my_documents': 'My Documents',
         'win_my-documents': 'My Documents',
 
-        // Window Titles
+        // Vindues Titler
         'win_about': 'About Kenneth',
         'win_projects': 'Projects',
         'win_skills': 'System Properties',
@@ -30,7 +30,7 @@ const translations = {
         'win_games': 'Games',
         'win_tools': 'Tools',
 
-        // Clippy Phrases (Keys match Python script)
+        // Clippy Fraser
         'clippy_startup': "Welcome back, Kenneth! Your desktop is ready.",
         'clippy_shutdown': "Are you sure you want to shut down? I'll miss you!",
         'clippy_error': "Oops! Something went wrong. But don't worry, I'm here to help!",
@@ -79,7 +79,7 @@ const translations = {
         'clippy_minesweeper_lost': "Kaboom! Better luck next time."
     },
     da: {
-        // UI Elements
+        // Brugergrænseflade Elementer
         'start_menu': 'Start',
         'recycle_bin': 'Papirkurv',
         'my_computer': 'Denne Computer',
@@ -87,7 +87,7 @@ const translations = {
         'my_documents': 'Dokumenter',
         'win_my-documents': 'Dokumenter',
 
-        // Window Titles
+        // Vindues Titler
         'win_about': 'Om Kenneth',
         'win_projects': 'Projekter',
         'win_skills': 'Systemegenskaber',
@@ -101,7 +101,7 @@ const translations = {
         'win_games': 'Spil',
         'win_tools': 'Værktøjer',
 
-        // Clippy Phrases (Keys match Python script)
+        // Clippy Fraser (Nøgler matcher Python script)
         'clippy_startup': "Velkommen tilbage, Kenneth! Dit skrivebord er klar.",
         'clippy_shutdown': "Er du sikker på, at du vil lukke ned? Jeg kommer til at savne dig!",
         'clippy_error': "Ups! Noget gik galt. Men bare rolig, jeg er her for at hjælpe!",
@@ -150,7 +150,7 @@ const translations = {
         'clippy_minesweeper_lost': "Kaboom! Bedre held næste gang."
     },
     de: {
-        // UI Elements
+        // Brugergrænseflade Elementer
         'start_menu': 'Start',
         'recycle_bin': 'Papierkorb',
         'my_computer': 'Mein Computer',
@@ -158,7 +158,7 @@ const translations = {
         'my_documents': 'Eigene Dateien',
         'win_my-documents': 'Eigene Dateien',
 
-        // Window Titles
+        // Vindues Titler
         'win_about': 'Über Kenneth',
         'win_projects': 'Projekte',
         'win_skills': 'Systemeigenschaften',
@@ -172,7 +172,7 @@ const translations = {
         'win_games': 'Spiele',
         'win_tools': 'Werkzeuge',
 
-        // Clippy Phrases
+        // Clippy Fraser
         'clippy_startup': "Willkommen zurück, Kenneth! Dein Desktop ist bereit.",
         'clippy_shutdown': "Bist du sicher, dass du herunterfahren möchtest? Ich werde dich vermissen!",
         'clippy_error': "Hoppla! Etwas ist schiefgegangen. Aber keine Sorge, ich bin hier um zu helfen!",
@@ -227,7 +227,7 @@ window.setLanguage = function (lang) {
     window.currentLang = lang;
     document.documentElement.lang = lang;
 
-    // Update Desktop Icons
+    // Opdater Skrivebordsikoner
     document.querySelectorAll('.desktop-icon').forEach(icon => {
         const winId = icon.getAttribute('data-window');
         if (winId) {
@@ -239,21 +239,21 @@ window.setLanguage = function (lang) {
         }
     });
 
-    // Update Start Button
+    // Opdater Start-knap
     const startBtn = document.querySelector('.start-btn-text');
     if (startBtn) startBtn.textContent = translations[lang]['start_menu'];
 
-    // Refresh About Me window content if it's open
+    // Opdater Om Mig-vinduets indhold, hvis det er åbent
     if (typeof refreshAboutContent === 'function') refreshAboutContent(lang);
 
-    // Play sound
+    // Afspil lyd
     if (window.clippySpeak) window.clippySpeak('clippy_lang_changed');
 
-    // Update Tray Icon
+    // Opdater Proceslinje-ikon
     const switchEl = document.querySelector('#language-switch span');
     if (switchEl) switchEl.textContent = lang.toUpperCase();
 
-    // Update Desktop Flag Icons
+    // Opdater Skrivebords-flagikoner
     document.querySelectorAll('.lang-icon').forEach(icon => {
         icon.classList.remove('active-lang');
     });
@@ -269,7 +269,7 @@ window.toggleLanguage = function () {
 };
 
 /* ========================================
-   ABOUT ME - MULTILINGUAL CONTENT
+   OM MIG - FLERSPROGET INDHOLD
    ======================================== */
 const aboutTranslations = {
     en: {
@@ -453,11 +453,11 @@ window.refreshAboutContent = function (lang) {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Tray icon toggle
+    // Bakke-ikon skift
     const ls = document.getElementById('language-switch');
     if (ls) ls.onclick = window.toggleLanguage;
 
-    // Desktop flag icons
+    // Skrivebords flagikoner
     document.querySelectorAll('.lang-icon').forEach(icon => {
         icon.addEventListener('dblclick', (e) => {
             e.stopPropagation();
@@ -467,7 +467,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Reuse a single Audio object for click sound to prevent memory leaks
+// Genbrug et enkelt Audio-objekt til kliklyd for at forhindre hukommelseslækager
 let _clickAudio = null;
 window.playSound = function () {
     const vol = document.getElementById('volume-icon');
@@ -491,7 +491,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initWindowSystem();
     window.xpInitialized = true;
 
-    // Unlock audio context on interaction
+    // Lås lydkontekst op ved interaktion
     const unlockAudio = () => {
         window.audioUnlocked = true;
         document.body.removeEventListener('click', unlockAudio);
@@ -499,10 +499,10 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     document.body.addEventListener('click', unlockAudio);
 
-    // Global click sound
+    // Global kliklyd
     document.addEventListener('mousedown', () => window.playSound());
 
-    // Connectivity for Start Menu and Quick Launch
+    // Forbindelse til Start-menu og Hurtig start
     document.querySelectorAll('.menu-item[data-window]').forEach(item => {
         item.addEventListener('click', () => {
             const winId = item.getAttribute('data-window');
@@ -541,7 +541,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-/* Clock Functionality */
+/* Ur-funktion */
 function initClock() {
     const clockElement = document.getElementById('taskbar-clock');
     function updateTime() {
@@ -553,7 +553,7 @@ function initClock() {
     setInterval(updateTime, 1000);
 }
 
-/* Start Menu Toggle */
+/* Start-menu Skift */
 function initStartMenu() {
     const startBtn = document.getElementById('start-button');
     const startMenu = document.getElementById('start-menu');
@@ -577,13 +577,13 @@ function initStartMenu() {
 }
 
 /* ========================================
-   DESKTOP ICONS & DRAG LOGIC
+   SKRIVEBORDSIKONER & TRÆK-LOGIK
    ======================================== */
 const GRID_SIZE_X = 80;
 const GRID_SIZE_Y = 85;
 
-// Global Auto-Arrange Function (Row-Major: Left-to-Right, Top-Down)
-// Respects .row-break elements to force new rows
+// Global Auto-arrangeringsfunktion (Række-baseret: Venstre-mod-Højre, Top-Ned)
+// Respekterer .row-break elementer for at gennemtvinge nye rækker
 window.arrangeIcons = function () {
     const iconGrid = document.getElementById('icon-grid');
     if (!iconGrid) return;
@@ -652,16 +652,16 @@ window.snapToGrid = function (element) {
 };
 
 // ==========================================
-// FINAL LAYOUT FIX: MUTATION OBSERVER
+// ENDELIGT LAYOUT FIX: MUTATION OBSERVER
 // ==========================================
-// Automatically re-arrange icons if new ones are added
+// Arrangerer automatisk ikoner igen, hvis nye tilføjes
 const iconGrid = document.getElementById('icon-grid');
 if (iconGrid) {
     const observer = new MutationObserver((mutations) => {
         let shouldArrange = false;
         mutations.forEach((mutation) => {
             if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
-                // Check if added node is an icon or contains one
+                // Tjek om den tilføjede node er et ikon eller indeholder et
                 mutation.addedNodes.forEach(node => {
                     if (node.classList && node.classList.contains('desktop-icon')) {
                         shouldArrange = true;
@@ -671,7 +671,7 @@ if (iconGrid) {
         });
 
         if (shouldArrange && window.arrangeIcons) {
-            if (window.arrangeTimeout) return; // Already scheduled
+            if (window.arrangeTimeout) return; // Allerede planlagt
             window.arrangeTimeout = setTimeout(() => {
                 window.arrangeIcons();
                 window.arrangeTimeout = null;
@@ -682,7 +682,7 @@ if (iconGrid) {
     observer.observe(iconGrid, { childList: true });
 }
 
-// Ensure initial run
+// Sørg for indledende kørsel
 window.addEventListener('load', () => {
     if (window.arrangeIcons) setTimeout(window.arrangeIcons, 500);
 });
@@ -694,7 +694,7 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-/* Window System */
+/* Vinduessystem */
 let zIndexCounter = 100;
 const windows = {};
 
@@ -708,7 +708,7 @@ function initWindowSystem() {
             return;
         }
 
-        // Translation override for title
+        // Oversættelse af titel
         if (translations && window.currentLang && translations[window.currentLang]) {
             const trKey = 'win_' + id;
             if (translations[window.currentLang][trKey]) {
@@ -757,7 +757,7 @@ function initWindowSystem() {
         focusWindow(id);
         playSound('window-open-sound');
 
-        // Clippy Reactivity
+        // Clippy Reaktivitet
         if (window.clippySpeak) {
             const comments = {
                 'pinball': 'clippy_pinball',
@@ -883,9 +883,9 @@ window.maximizeWindow = function (id) {
     }
 };
 
-/* Desktop Icons & Dragging */
+/* Skrivebordsikoner & Trækning */
 function initDesktopIcons() {
-    // Initial arrangement using the grid logic
+    // Indledende arrangering ved hjælp af gitterlogik
     if (window.arrangeIcons) window.arrangeIcons();
 
     const iconGrid = document.getElementById('icon-grid');
@@ -893,27 +893,27 @@ function initDesktopIcons() {
     const icons = iconGrid.querySelectorAll('.desktop-icon');
 
     icons.forEach((icon) => {
-        // Double click to open (Standard Mouse Behavior)
+        // Dobbeltklik for at åbne (Standard Museadfærd)
         icon.addEventListener('dblclick', (e) => {
             e.stopPropagation();
             const winId = icon.getAttribute('data-window');
             if (winId) openWindowById(winId);
         });
 
-        // Click logic (Select + Arcade Single Click Support)
+        // Kliklogik (Vælg + Arcade Enkeltklik Support)
         icon.addEventListener('click', (e) => {
             e.stopPropagation();
             document.querySelectorAll('.desktop-icon').forEach(i => i.classList.remove('selected'));
             icon.classList.add('selected');
 
-            // Arcade enhancement: Single click to open!
-            // We only trigger if it's NOT a double-click (though openWindowById handles duplicates)
+            // Arcade forbedring: Enkeltklik for at åbne!
+            // Vi udløser kun hvis det IKKE er et dobbeltklik (selvom openWindowById håndterer dubletter)
             const winId = icon.getAttribute('data-window');
             if (winId) openWindowById(winId);
         });
     });
 
-    // Deselect icons when clicking the desktop
+    // Fravælg ikoner ved klik på skrivebordet
     const desktop = document.getElementById('desktop');
     if (desktop) {
         desktop.addEventListener('click', () => {
@@ -921,7 +921,7 @@ function initDesktopIcons() {
         });
     }
 
-    // Re-arrange on resize
+    // Arranger igen ved ændring af størrelse
     window.addEventListener('resize', () => {
         if (window.arrangeIcons) window.arrangeIcons();
     });
@@ -935,10 +935,10 @@ function makeIconDraggable(icon) {
         p3 = e.clientX; p4 = e.clientY;
         document.onmouseup = () => {
             document.onmouseup = null; document.onmousemove = null;
-            // Snap to grid
+            // Fastgør til gitter
             let snappedLeft = Math.round(icon.offsetLeft / GRID_SIZE_X) * GRID_SIZE_X + 10;
             let snappedTop = Math.round(icon.offsetTop / GRID_SIZE_Y) * GRID_SIZE_Y + 10;
-            // Constrain to not overlap taskbar (30px height)
+            // Begræns for ikke at overlappe proceslinjen (30px højde)
             const maxTop = window.innerHeight - 30 - 60; // taskbar height - approximate icon height
             if (snappedTop > maxTop) snappedTop = maxTop;
             if (snappedTop < 10) snappedTop = 10;
@@ -955,7 +955,7 @@ function makeIconDraggable(icon) {
     };
 }
 
-/* Window Content Definitions */
+/* Vinduesindholdsdefinitioner */
 const windowContents = {
     'about': {
         title: 'About Kenneth - My Computer',
@@ -1146,7 +1146,7 @@ const windowContents = {
             </div>
         `
     },
-    // ENHANCEMENT PACK: Working Notepad with localStorage
+    // FORBEDRINGSPAKKE: Fungerende Notesblok med localStorage
     'notepad-enhanced': {
         title: 'Notepad - Kenneth\'s Notes',
         icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M2 2h12v12H2V2z' fill='white' stroke='black'/%3E%3Cline x1='4' y1='5' x2='10' y2='5' stroke='black'/%3E%3Cline x1='4' y1='8' x2='12' y2='8' stroke='black'/%3E%3C/svg%3E",
@@ -1162,7 +1162,7 @@ const windowContents = {
             </div>
         `
     },
-    // ENHANCEMENT PACK: Photo Viewer
+    // FORBEDRINGSPAKKE: Foto Fremviser
     'photos': {
         title: 'Windows Picture and Fax Viewer',
         icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' fill='%23333' rx='2'/%3E%3Crect x='6' y='6' width='20' height='16' fill='%23666'/%3E%3Ccircle cx='12' cy='12' r='3' fill='%23ffcc00'/%3E%3Cpath d='M6 18l6-4 4 3 6-5v10H6z' fill='%2300aa00'/%3E%3C/svg%3E",
@@ -1180,7 +1180,7 @@ const windowContents = {
             </div>
         `
     },
-    // ENHANCEMENT PACK V2: Working Calculator
+    // FORBEDRINGSPAKKE V2: Fungerende Lommeregner
     'calculator': {
         title: 'Calculator',
         icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='2' width='24' height='28' fill='%23ECE9D8' stroke='%23716F64'/%3E%3Crect x='6' y='4' width='20' height='8' fill='%2398FF98'/%3E%3Crect x='6' y='14' width='4' height='4' fill='%23ddd' stroke='%23888'/%3E%3Crect x='12' y='14' width='4' height='4' fill='%23ddd' stroke='%23888'/%3E%3Crect x='18' y='14' width='4' height='4' fill='%23ddd' stroke='%23888'/%3E%3Crect x='6' y='20' width='4' height='4' fill='%23ddd' stroke='%23888'/%3E%3Crect x='12' y='20' width='4' height='4' fill='%23ddd' stroke='%23888'/%3E%3Crect x='18' y='20' width='4' height='4' fill='%23ddd' stroke='%23888'/%3E%3C/svg%3E",
@@ -1210,7 +1210,7 @@ const windowContents = {
             </div>
         `
     },
-    // ENHANCEMENT PACK V2: Snake Game (Easter Egg)
+    // FORBEDRINGSPAKKE V2: Snake Spil (Påskeæg)
     'snake': {
         title: 'Snake - Easter Egg!',
         icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Crect x='4' y='14' width='4' height='4' fill='%2300ff00'/%3E%3Crect x='8' y='14' width='4' height='4' fill='%2300ff00'/%3E%3Crect x='12' y='14' width='4' height='4' fill='%2300ff00'/%3E%3Crect x='16' y='14' width='4' height='4' fill='%2300ff00'/%3E%3Crect x='24' y='8' width='4' height='4' fill='%23ff0000'/%3E%3C/svg%3E",
@@ -1223,7 +1223,7 @@ const windowContents = {
                 </div>
         `
     },
-    // ENHANCEMENT PACK V2: File System Explorer
+    // FORBEDRINGSPAKKE V2: Fil System Udforsker
     'msn': {
         title: 'Windows Messenger',
         icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2a7 7 0 0 0-7 7c0 3 2 5 4 6-5 1-9 5-9 11h24c0-6-4-10-9-11 2-1 4-3 4-6a7 7 0 0 0-7-7z' fill='%2366cc00'/%3E%3C/svg%3E",
@@ -1367,7 +1367,7 @@ const windowContents = {
             </div>
         `
     },
-    // ENHANCEMENT PACK V2: Skills with Progress Bars
+    // FORBEDRINGSPAKKE V2: Kompetencer med Statusbjælker
     'skills-enhanced': {
         title: 'Kenneth\'s Skills - System Properties',
         icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' fill='%23808080'/%3E%3Crect x='8' y='8' width='16' height='3' fill='%2300ff00'/%3E%3Crect x='8' y='14' width='12' height='3' fill='%2300ff00'/%3E%3Crect x='8' y='20' width='14' height='3' fill='%2300ff00'/%3E%3C/svg%3E",
@@ -1407,7 +1407,7 @@ const windowContents = {
             </div>
         `
     },
-    // ENHANCEMENT PACK V2: Weather Widget
+    // FORBEDRINGSPAKKE V2: Vejr Widget
     'weather': {
         title: 'Aarhus Weather',
         icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='14' r='6' fill='%23FFD700'/%3E%3Cpath d='M16 2v4M16 22v4M4 14h4M24 14h4M7 7l3 3M22 22l3 3M7 21l3-3M22 4l3 3' stroke='%23FFD700' stroke-width='2'/%3E%3C/svg%3E",
@@ -1588,7 +1588,7 @@ function switchTab(btn, tabId) {
     tabs.querySelector(`#tab-${tabId}`).classList.add('active');
 }
 
-/* Context Menu */
+/* Kontekstmenu */
 const contextMenu = document.createElement('div');
 contextMenu.id = 'context-menu'; contextMenu.className = 'hidden';
 contextMenu.innerHTML = `
@@ -1608,16 +1608,16 @@ window.createStickyNote = function () {
     note.innerHTML = `<textarea placeholder="Type a note..."></textarea>`;
     document.getElementById('desktop').appendChild(note);
 
-    // Simple drag fix for sticky note (since it doesn't have a title bar)
+    // Simpel træk-fix til sticky note (da den ikke har en titellinje)
     note.onmousedown = (e) => {
-        // Bring to front
+        // Bring til forrest
         note.style.zIndex = ++zIndexCounter;
 
-        // If clicking the textarea, only allow dragging if clicking the very edges
+        // Hvis der klikkes på tekstfeltet, tillad kun trækning hvis der klikkes på selve kanterne
         if (e.target.tagName === 'TEXTAREA') {
-            // Check if we are clicking near the top/edges to drag
+            // Tjek om vi klikker nær toppen/kanterne for at trække
             const rect = note.getBoundingClientRect();
-            if (e.clientY - rect.top > 20) return; // Only top 20px is draggable for textarea
+            if (e.clientY - rect.top > 20) return; // Kun top 20px kan trækkes for tekstfelt
         }
 
         e.preventDefault();
@@ -1643,11 +1643,11 @@ window.createStickyNote = function () {
     };
 };
 
-// MSN Toast Trigger logic
+// MSN Toast Trigger logik
 window.showMsnToast = function (name) {
-    // Reuse existing toast element or create one
+    // Genbrug eksisterende toast-element eller opret et nyt
     let toast = document.getElementById('msn-toast');
-    if (toast) toast.remove(); // Remove previous to avoid stacking
+    if (toast) toast.remove(); // Fjern forrige for at undgå stabling
     toast = document.createElement('div');
     toast.id = 'msn-toast';
     toast.innerHTML = `
@@ -1665,21 +1665,21 @@ window.showMsnToast = function (name) {
     }, 4000);
 };
 
-// Periodically show toast (reduced frequency)
+// Vis toast periodisk (reduceret frekvens)
 setInterval(() => {
-    if (Math.random() > 0.8) { // 20% chance (was 30%)
+    if (Math.random() > 0.8) { // 20% chance (var 30%)
         const names = ["John", "Sarah", "Recruiter", "Aarhus Mayor"];
         showMsnToast(names[Math.floor(Math.random() * names.length)]);
     }
-}, 45000); // Check every 45s instead of 30s
+}, 45000); // Tjek hver 45s i stedet for 30s
 document.body.appendChild(contextMenu);
 document.getElementById('desktop').oncontextmenu = (e) => { e.preventDefault(); contextMenu.style.top = e.clientY + 'px'; contextMenu.style.left = e.clientX + 'px'; contextMenu.classList.remove('hidden'); };
 document.addEventListener('click', () => contextMenu.classList.add('hidden'));
 
 
-/* --- NEW WINDOW XP FEATURES --- */
+/* --- NYE WINDOWS XP FUNKTIONER --- */
 
-// 1. Search Companion (Rover)
+// 1. Søgekammerat (Rover)
 windowContents['search'] = {
     title: 'Search Results',
     icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='14' cy='14' r='8' stroke='black' stroke-width='2' fill='none'/%3E%3Cline x1='20' y1='20' x2='28' y2='28' stroke='black' stroke-width='3'/%3E%3C/svg%3E",
@@ -1707,7 +1707,7 @@ windowContents['search'] = {
     `
 };
 
-// 2. Space Cadet Pinball (Self-contained)
+// 2. Space Cadet Pinball (Selvstændig)
 windowContents['pinball'] = {
     title: '3D Pinball for Windows - Space Cadet',
     icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23003399'/%3E%3Ccircle cx='16' cy='16' r='8' fill='silver'/%3E%3C/svg%3E",
@@ -1747,7 +1747,7 @@ window.initPinball = function () {
     const keys = {};
     const GRAVITY = 0.15, FRICTION = 0.998, BOUNCE = 0.65;
 
-    // Bumpers
+    // Kofangere
     const bumpers = [];
     function createBumpers() {
         bumpers.length = 0;
@@ -1800,33 +1800,33 @@ window.initPinball = function () {
     function update() {
         if (gameOver) return;
 
-        // Flippers
+        // Flippere
         leftFlip += (keys['ArrowLeft'] || keys['KeyZ'] ? 1 : -1) * 0.15;
         rightFlip += (keys['ArrowRight'] || keys['Slash'] ? 1 : -1) * 0.15;
         leftFlip = Math.max(0, Math.min(1, leftFlip));
         rightFlip = Math.max(0, Math.min(1, rightFlip));
 
-        // Plunger
+        // Stempel
         if (plungerHeld && !launched) {
             plungerPower = Math.min(plungerPower + 1.5, 50);
         }
 
         if (!launched) return;
 
-        // Physics
+        // Fysik
         ball.vy += GRAVITY;
         ball.vx *= FRICTION;
         ball.vy *= FRICTION;
         ball.x += ball.vx;
         ball.y += ball.vy;
 
-        // Wall bouncing
+        // Væg-prelning
         const wallL = 15, wallR = W - 30;
         if (ball.x - ball.r < wallL) { ball.x = wallL + ball.r; ball.vx = Math.abs(ball.vx) * BOUNCE; }
         if (ball.x + ball.r > wallR) { ball.x = wallR - ball.r; ball.vx = -Math.abs(ball.vx) * BOUNCE; }
         if (ball.y - ball.r < 10) { ball.y = 10 + ball.r; ball.vy = Math.abs(ball.vy) * BOUNCE; }
 
-        // Bumper collision
+        // Kofanger kollision
         bumpers.forEach(b => {
             const dx = ball.x - b.x, dy = ball.y - b.y;
             const dist = Math.sqrt(dx * dx + dy * dy);
@@ -1843,12 +1843,12 @@ window.initPinball = function () {
             if (b.lit > 0) b.lit--;
         });
 
-        // Flipper collision zones
+        // Flipper kollisionszoner
         const flipY = H - 55, flipLen = 55;
         const lx1 = W * 0.15, ly1 = flipY, lx2 = lx1 + flipLen, ly2 = flipY - leftFlip * 25;
         const rx1 = W * 0.85 - 15, ry1 = flipY, rx2 = rx1 - flipLen, ry2 = flipY - rightFlip * 25;
 
-        // Simple flipper hit detection
+        // Simpel flipper-hit detektion
         if (ball.y > flipY - 15 && ball.y < flipY + 5) {
             if (ball.x > lx1 && ball.x < lx2 && ball.vy > 0) {
                 ball.vy = -Math.abs(ball.vy) * 1.2 - leftFlip * 6;
@@ -1862,26 +1862,26 @@ window.initPinball = function () {
             }
         }
 
-        // Ball lost
+        // Bold tabt
         if (ball.y > H + 20) loseLife();
     }
 
     function draw() {
-        // Background
+        // Baggrund
         const grad = ctx.createLinearGradient(0, 0, 0, H);
         grad.addColorStop(0, '#0a0a2e');
         grad.addColorStop(1, '#1a0a3e');
         ctx.fillStyle = grad;
         ctx.fillRect(0, 0, W, H);
 
-        // Table walls
+        // Bordvægge
         ctx.strokeStyle = '#334';
         ctx.lineWidth = 3;
         ctx.beginPath();
         ctx.moveTo(15, 10); ctx.lineTo(15, H); ctx.moveTo(W - 30, 10); ctx.lineTo(W - 30, H);
         ctx.stroke();
 
-        // Side rails (glow)
+        // Sideskinner (glød)
         ctx.strokeStyle = '#0ff3';
         ctx.lineWidth = 1;
         ctx.beginPath();
@@ -1889,7 +1889,7 @@ window.initPinball = function () {
         ctx.moveTo(W - 32, 10); ctx.lineTo(W - 32, H);
         ctx.stroke();
 
-        // Bumpers
+        // Kofangere
         bumpers.forEach(b => {
             ctx.beginPath();
             ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
@@ -1909,22 +1909,22 @@ window.initPinball = function () {
             ctx.stroke();
         });
 
-        // Flippers
+        // Flippere
         const flipY = H - 55;
         ctx.lineWidth = 8; ctx.lineCap = 'round';
-        // Left flipper
+        // Venstre flipper
         ctx.strokeStyle = '#c0c0c0';
         ctx.beginPath();
         ctx.moveTo(W * 0.15, flipY);
         ctx.lineTo(W * 0.15 + 55, flipY - leftFlip * 25);
         ctx.stroke();
-        // Right flipper
+        // Højre flipper
         ctx.beginPath();
         ctx.moveTo(W * 0.85 - 15, flipY);
         ctx.lineTo(W * 0.85 - 15 - 55, flipY - rightFlip * 25);
         ctx.stroke();
 
-        // Plunger lane
+        // Stempelbane
         ctx.fillStyle = '#222';
         ctx.fillRect(W - 28, H * 0.3, 15, H * 0.7);
         if (!launched) {
@@ -1935,7 +1935,7 @@ window.initPinball = function () {
             ctx.fillRect(W - 26, plY + 15, 11, H - plY - 15);
         }
 
-        // Ball
+        // Bold
         if (!gameOver) {
             const ballGrad = ctx.createRadialGradient(ball.x - 2, ball.y - 2, 1, ball.x, ball.y, ball.r);
             ballGrad.addColorStop(0, '#fff');
@@ -1947,7 +1947,7 @@ window.initPinball = function () {
             ctx.fill();
         }
 
-        // Game over
+        // Spil slut
         if (gameOver) {
             ctx.fillStyle = 'rgba(0,0,0,0.7)';
             ctx.fillRect(0, H / 2 - 50, W, 100);
@@ -1964,7 +1964,7 @@ window.initPinball = function () {
         }
     }
 
-    // Restart handler
+    // Genstart håndtering
     document.addEventListener('keydown', function pbRestart(e) {
         if (gameOver && e.code === 'Space') {
             e.preventDefault();
@@ -2134,7 +2134,7 @@ window.initMinesweeper = function () {
     }
 };
 
-// 6. Display Properties (Theme Switcher)
+// 6. Skærmegenskaber (Temaskifter)
 windowContents['display-props'] = {
     title: 'Display Properties',
     icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='18' fill='%23333'/%3E%3Crect x='6' y='6' width='20' height='14' fill='%233a6ea5'/%3E%3Crect x='12' y='22' width='8' height='4' fill='%23666'/%3E%3C/svg%3E",
@@ -2230,7 +2230,7 @@ windowContents['msn'] = {
     `
 };
 
-// 9. Sound Recorder
+// 9. Lydoptager
 windowContents['sound-recorder'] = {
     title: 'Sound - Sound Recorder',
     icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='10' y='4' width='12' height='18' rx='6' fill='%23666'/%3E%3Crect x='8' y='22' width='16' height='4' fill='%23333'/%3E%3C/svg%3E",
@@ -2251,7 +2251,7 @@ windowContents['sound-recorder'] = {
     `
 };
 
-// 10. Control Panel
+// 10. Kontrolpanel
 windowContents['control-panel'] = {
     title: 'Control Panel',
     icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' fill='%23808080'/%3E%3Crect x='8' y='8' width='6' height='6' fill='white'/%3E%3Crect x='18' y='8' width='6' height='6' fill='white'/%3E%3Crect x='8' y='18' width='6' height='6' fill='white'/%3E%3Crect x='18' y='18' width='6' height='6' fill='white'/%3E%3C/svg%3E",
@@ -2322,7 +2322,7 @@ window.toggleHighContrast = function () {
 };
 
 window.changeTheme = function (theme) {
-    // Dynamically remove all theme-* classes (V18)
+    // Fjern alle theme-* klasser dynamisk (V18)
     const classList = document.body.classList;
     [...classList].forEach(cls => {
         if (cls.startsWith('theme-')) {
@@ -2354,20 +2354,20 @@ window.changeMaterial = function (material) {
     const desktop = document.getElementById('desktop');
     const char = document.getElementById('desktop-char');
 
-    // Reset Taskbar Styles (Prevent Glass Fix persistence)
+    // Nulstil Proceslinje-stile (Forhindr Glass Fix vedholdenhed)
     const tbRef = document.getElementById('taskbar');
     if (tbRef) {
         tbRef.style.cssText = '';
         Array.from(tbRef.children).forEach(c => c.style.cssText = '');
     }
 
-    // Remove all material classes
+    // Fjern alle materiale-klasser
     document.body.classList.remove('material-plastic', 'material-chrome', 'material-cotton');
 
-    // Material-specific backgrounds (Atmospheric mood setting for textures)
+    // Materiale-specifikke baggrunde (Atmosfærisk stemningssætning for teksturer)
     const backgrounds = {
         none: 'xp-wallpaper.jpg',
-        plastic: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)', // Midnight for highlights
+        plastic: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)', // Midnat for highlights
         chrome: 'linear-gradient(45deg, #000 0%, #444 45%, #888 50%, #444 55%, #000 100%)',
         cotton: 'linear-gradient(135deg, #fff5f5 0%, #f0f4ff 100%)'
     };
@@ -2391,11 +2391,11 @@ window.changeMaterial = function (material) {
         if (char) char.style.display = 'block';
     }
 
-    // Play physical sound
+    // Afspil fysisk lyd
     window.playSound();
 };
 
-// Redundant Desktop Icons removed for cleaner desktop management
+// Redundante Skrivebordsikoner fjernet for renere skrivebordsstyring
 // 7. Windows Movie Maker
 windowContents['moviemaker'] = {
     title: 'Windows Movie Maker',
@@ -2417,7 +2417,7 @@ windowContents['moviemaker'] = {
     `
 };
 
-// Clippy Logic
+// Clippy Logik
 (function initClippy() {
     const clippy = document.createElement('div');
     clippy.id = 'clippy-companion';
@@ -2464,7 +2464,7 @@ windowContents['moviemaker'] = {
     window.speechSynthesis.onvoiceschanged = loadVoices;
     loadVoices();
 
-    // Track current audio to prevent overlap
+    // Spor nuværende lyd for at forhindre overlap
     let currentClippyAudio = null;
 
     window.stopClippyAudio = () => {
@@ -2482,21 +2482,21 @@ windowContents['moviemaker'] = {
         let textToSpeak = keyOrText;
         let finalAudioPath = audioPath;
 
-        // CHECK: Is this a translation key?
-        // We check if the key exists in our 'en' dictionary
+        // TJEK: Er dette en oversættelsesnøgle?
+        // Vi tjekker om nøglen findes i vores 'en' ordbog
         if (translations && translations.en && translations.en[keyOrText]) {
             const lang = window.currentLang || 'en';
             // 1. Get Text
             textToSpeak = translations[lang][keyOrText] || translations['en'][keyOrText];
 
-            // 2. Resolve Audio Path
-            // The translation keys are like 'clippy_welcome', but files are 'welcome.mp3'
+            // 2. Find Lydsti
+            // Oversættelsesnøglerne er som 'clippy_welcome', men filer er 'welcome.mp3'
             const fileKey = keyOrText.replace('clippy_', '');
             finalAudioPath = `sounds/clippy/${lang}/${fileKey}.mp3`;
         } else {
-            // Legacy/Direct Text Mode
-            // If specific audioPath wasn't provided, we might have issues,
-            // but the original logic handled some of this via the 'phrases' array below.
+            // Legacy/Direkte Tekst Tilstand
+            // Hvis specifik lydsti ikke blev angivet, kan vi have problemer,
+            // men den originale logik håndterede noget af dette via 'phrases' arrayet nedenfor.
         }
 
         if (!textToSpeak) return;
@@ -2506,12 +2506,12 @@ windowContents['moviemaker'] = {
         bubble.classList.remove('hidden'); // Show bubble after stop hides it
         bubble.textContent = textToSpeak;
 
-        // Function to handle the "talking" animation and cleanup
+        // Funktion til at håndtere "taler" animation og oprydning
         const handleAudio = (audioObj) => {
             currentClippyAudio = audioObj;
             audioObj.onplay = () => clippy.classList.add('talking');
             audioObj.onended = () => {
-                // Ensure this is still the active audio
+                // Sørg for at dette stadig er den aktive lyd
                 if (currentClippyAudio === audioObj) {
                     clippy.classList.remove('talking');
                     currentClippyAudio = null;
@@ -2524,16 +2524,16 @@ windowContents['moviemaker'] = {
             };
             audioObj.play().catch(e => {
                 console.warn("Local audio playback blocked, falling back to legacy TTS...", e);
-                // Clean up failed audio to prevent leak
+                // Ryd op efter fejlslagen lyd for at forhindre lækage
                 audioObj.src = '';
                 currentClippyAudio = null;
                 legacySpeak(textToSpeak);
             });
         };
 
-        // Priority 1: High-Quality Local AI File
+        // Prioritet 1: Høj-Kvalitets Lokal AI Fil
         if (finalAudioPath) {
-            // Clean up previous audio element
+            // Ryd op efter forrige lyd-element
             if (currentClippyAudio) {
                 currentClippyAudio.src = '';
             }
@@ -2543,12 +2543,12 @@ windowContents['moviemaker'] = {
             legacySpeak(textToSpeak);
         }
 
-        // Legacy Fallback (Old Neural AI logic) if file is missing
+        // Legacy Fallback (Gammel Neural AI logik) hvis fil mangler
         function legacySpeak(text) {
             const encodedText = encodeURIComponent(text);
             const voice = (window.currentLang === 'da') ? "da-DK-JeppeNeural" : "en-US-BrianMultilingualNeural";
             const proxyUrl = `https:// api.vve.me/api/tts?voice=${voice}&text=${encodedText}`;
-            // Clean up previous audio element
+            // Ryd op efter forrige lyd-element
             if (currentClippyAudio) {
                 currentClippyAudio.src = '';
             }
@@ -2573,7 +2573,7 @@ windowContents['moviemaker'] = {
         window.clippySpeak(key);
     });
 
-    // Drag Logic
+    // Træk-Logik
     let isDragging = false;
     let startX, startY;
 
@@ -2602,20 +2602,20 @@ windowContents['moviemaker'] = {
         document.addEventListener('mouseup', onMouseUp);
     };
 
-    // Proactive Idle Logic
+    // Proaktiv Idle Logik
     let idleCounter = 0;
     setInterval(() => {
         idleCounter += 10000;
-        if (idleCounter >= 60000) { // 60 seconds of relative idle (was 45s/5s)
+        if (idleCounter >= 60000) { // 60 sekunders relativ inaktivitet (var 45s/5s)
             const key = phrases[Math.floor(Math.random() * phrases.length)];
             window.clippySpeak(key);
             idleCounter = 0;
         }
-    }, 10000); // Check every 10s instead of 5s
+    }, 10000); // Tjek hver 10. sekund i stedet for 5.
     document.addEventListener('mousedown', () => idleCounter = 0);
 })();
 
-// Starfield Screensaver Logic
+// Stjernefelt Pauseskærm Logik
 (function initScreensaver() {
     const ss = document.createElement('div');
     ss.id = 'screensaver';
@@ -2644,10 +2644,10 @@ windowContents['moviemaker'] = {
 
     let ssAnimId = null;
     function draw() {
-        // Only render when screensaver is actually visible
+        // Render kun når pauseskærm faktisk er synlig
         if (ss.style.display === 'none' || ss.style.display === '') {
             ssAnimId = null;
-            return; // Stop the loop when hidden
+            return; // Stop løkken når skjult
         }
         ctx.fillStyle = 'black';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -2667,7 +2667,7 @@ windowContents['moviemaker'] = {
         });
         ssAnimId = requestAnimationFrame(draw);
     }
-    // Don't start draw() immediately  only start when screensaver activates
+    // Start ikke draw() med det samme — start kun når pauseskærm aktiveres
 
     let idleTime = 0;
     function resetIdle() {
@@ -2681,16 +2681,16 @@ windowContents['moviemaker'] = {
 
     setInterval(() => {
         idleTime++;
-        if (idleTime > 60) { // 60 seconds idle ? activate screensaver
+        if (idleTime > 60) { // 60 sekunder idle ? aktiver pauseskærm
             if (ss.style.display !== 'block') {
                 ss.style.display = 'block';
-                if (!ssAnimId) draw(); // Start rendering only now
+                if (!ssAnimId) draw(); // Start rendering først nu
             }
         }
     }, 1000);
 })();
 
-// Error Accordion Logic
+// Fejl Harmonika Logik
 window.startErrorAccordion = function () {
     playSound('error-sound');
     let count = 0;
@@ -2720,7 +2720,7 @@ window.startErrorAccordion = function () {
     }, 100);
 };
 
-// Welcome Screen Logic
+// Velkomstskærm Logik
 (function initWelcomeScreen() {
     const login = document.createElement('div');
     login.id = 'login-screen';
@@ -2746,7 +2746,7 @@ window.startErrorAccordion = function () {
     document.body.appendChild(login);
 })();
 
-// 12. Recycle Bin
+// 12. Papirkurv
 windowContents['recycle-bin'] = {
     title: 'Recycle Bin',
     icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M10 12h28v28H10V12z' fill='%233A6EA5' stroke='%23003399' stroke-width='2'/%3E%3Cpath d='M8 12h32M24 12V6M16 6h16' stroke='%23003399' stroke-width='2'/%3E%3C/svg%3E",
@@ -2763,9 +2763,9 @@ windowContents['recycle-bin'] = {
     `
 };
 
-// Redundant Desktop Icons removed for cleaner desktop management
+// Overflødige Skrivebordsikoner fjernet for renere skrivebordsstyring
 
-// 13. Desktop Cleanup Wizard
+// 13. Oprydning af Skrivebord Wizard
 windowContents['cleanup-wizard'] = {
     title: 'Desktop Cleanup Wizard',
     icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Ccircle cx='20' cy='20' r='10' stroke='black' stroke-width='2'/%3E%3Cline x1='28' y1='28' x2='40' y2='40' stroke='black' stroke-width='4'/%3E%3C/svg%3E", // Or a wizard icon
@@ -2793,25 +2793,25 @@ windowContents['cleanup-wizard'] = {
     `
 };
 
-// 14. Unused Icons Folder
+// 14. Mappe til Ubrugte Ikoner
 windowContents['unused-icons'] = {
     title: 'Unused Desktop Icons',
     icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E",
     content: '<p style="padding:20px; color:black;">Your unused icons have been successfully moved here!</p>'
 };
 
-// Desktop Cleanup Wizard Simulation
+// Simulering af Skrivebordsoprydning Wizard
 setTimeout(() => {
     openWindowById('cleanup-wizard');
     if (window.clippySpeak) window.clippySpeak("clippy_cluttered");
 }, 120000); // 2 minutes
 
-// Windows Update Notification Simulation
+// Simulering af Windows Update Notifikation
 setTimeout(() => {
     if (window.clippySpeak) window.clippySpeak("clippy_updates");
 }, 45000); // 45 seconds
 
-// Desktop Pet (Wandering Cat)
+// Skrivebordskæledyr (Vandrende Kat)
 // --- ARCADE INTEGRATION ---
 window.arcadeKeys = {};
 window.addEventListener('message', (e) => {
@@ -2820,7 +2820,7 @@ window.addEventListener('message', (e) => {
     }
 });
 
-// Relay keyboard events to parent (for cabinet visual feedback when iframe has focus)
+// Videresend tastaturbegivenheder til forælder (for kabinet visuel feedback når iframe har fokus)
 window.addEventListener('keydown', (e) => {
     window.parent.postMessage({ type: 'ARCADE_KEY_INTERNAL', code: e.code, state: true }, '*');
 });
@@ -2828,16 +2828,16 @@ window.addEventListener('keyup', (e) => {
     window.parent.postMessage({ type: 'ARCADE_KEY_INTERNAL', code: e.code, state: false }, '*');
 });
 
-// Desktop Pet (Arcade-Controlled Cat)
+// Skrivebordskæledyr (Arcade-Kontrolleret Kat)
 (function initDesktopPet() {
     const pet = document.createElement('img');
     pet.id = 'desktop-pet';
     pet.src = 'assets/cat.gif';
     pet.title = "Kenneth's Desktop Cat - Controlled by Joystick";
     pet.style.display = 'block';
-    pet.style.position = 'fixed'; // Ensure it's above everything
+    pet.style.position = 'fixed'; // Sørg for at den er over alt andet
     pet.style.zIndex = '999999';
-    pet.style.pointerEvents = 'none'; // So it doesn't block clicks
+    pet.style.pointerEvents = 'none'; // Så den ikke blokerer klik
     document.body.appendChild(pet);
 
     let x = 100, y = 100;
@@ -2847,7 +2847,7 @@ window.addEventListener('keyup', (e) => {
     let lastEnter = false;
 
     let lastUpdateTime = 0;
-    const CAT_IDLE_INTERVAL = 50; // ~20fps when idle
+    const CAT_IDLE_INTERVAL = 50; // ~20fps når inaktiv
 
     function update(timestamp) {
         const keys = window.arcadeKeys || {};
@@ -2855,14 +2855,14 @@ window.addEventListener('keyup', (e) => {
             keys['ArrowUp'] || keys['KeyW'] || keys['ArrowDown'] || keys['KeyS'] ||
             keys['Space'] || keys['Enter'];
 
-        // Full 60fps when actively controlled, throttle to ~20fps when idle
+        // Fuld 60fps når aktivt kontrolleret, droslet til ~20fps når inaktiv
         if (!isActive && timestamp - lastUpdateTime < CAT_IDLE_INTERVAL) {
             requestAnimationFrame(update);
             return;
         }
         lastUpdateTime = timestamp;
 
-        const speed = 4; // Reduced from 7 for better control with joystick
+        const speed = 4; // Reduceret fra 7 for bedre kontrol med joystick
         let dx = 0, dy = 0;
 
         // Arrows or WASD
@@ -2877,14 +2877,14 @@ window.addEventListener('keyup', (e) => {
             x += dx;
             y += dy;
             pet.style.transform = dx > 0 ? 'scaleX(-1)' : 'scaleX(1)';
-            pet.style.transition = 'none'; // Instant movement during manual
+            pet.style.transition = 'none'; // Øjeblikkelig bevægelse under manuel kontrol
         } else if (wanderTimer > 0) {
             wanderTimer--;
         } else {
             isManual = false;
         }
 
-        // Simplified Bounds Logic: Let the cat's center reach the absolute edges
+        // Forenklet Grænselogik: Lad kattens center nå de absolutte kanter
         const half = 30; // Center offset
 
         x = Math.max(-half, Math.min(x, window.innerWidth - half));
@@ -2892,12 +2892,10 @@ window.addEventListener('keyup', (e) => {
 
         pet.style.left = x + 'px';
         pet.style.top = y + 'px';
-
-        // Interaction Logic: Space or Enter
         const isInteracting = keys['Space'] || keys['Enter'];
 
         if (isInteracting && !lastClick) {
-            // Find element at cat's center (the click point)
+            // Find element ved kattens center (klikpunktet)
             pet.style.display = 'none';
             const target = document.elementFromPoint(x + half, y + half);
             pet.style.display = 'block';
@@ -2906,15 +2904,15 @@ window.addEventListener('keyup', (e) => {
                 pet.classList.add('knocking');
                 setTimeout(() => pet.classList.remove('knocking'), 200);
 
-                // Standard click
+                // Standard klik
                 target.click();
 
-                // Focus element if it's an input
+                // Fokuser element hvis det er et input
                 if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') {
                     target.focus();
                 }
 
-                // XP Icon double-click support
+                // XP Ikon dobbeltklik understøttelse
                 if (target.closest('.desktop-icon')) {
                     const winId = target.closest('.desktop-icon').getAttribute('data-window');
                     if (winId && typeof openWindowById === 'function') openWindowById(winId);
@@ -2926,7 +2924,7 @@ window.addEventListener('keyup', (e) => {
         requestAnimationFrame(update);
     }
 
-    // Default autonomous wander (simplified)
+    // Standard autonom vandring (forenklet)
     function wander() {
         if (!isManual && wanderTimer <= 0) {
             const tx = Math.random() * (window.innerWidth - 60);
@@ -2943,13 +2941,13 @@ window.addEventListener('keyup', (e) => {
         setTimeout(wander, 10000 + Math.random() * 5000);
     }
 
-    // Start with a small jump
+    // Start med et lille hop
     pet.style.left = x + 'px';
     pet.style.top = y + 'px';
     requestAnimationFrame(update);
     wander();
 
-    // Still allow standard dragging but don't break arcade control
+    // Tillad stadig standard træk, men ødelæg ikke arcade kontrol
     pet.style.pointerEvents = 'auto';
     pet.onmousedown = (e) => {
         if (e.button !== 0) return;
@@ -2969,7 +2967,7 @@ window.addEventListener('keyup', (e) => {
 })();
 
 
-/* --- COMMAND PROMPT --- */
+/* --- KOMMANDOPROMPT --- */
 windowContents['cmd'] = {
     title: 'C:\\WINDOWS\\system32\\cmd.exe',
     icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='black'/%3E%3Cpath d='M4 8l6 6-6 6h4l6-6-6-6H4zM16 26h12v-4H16v4z' fill='white'/%3E%3C/svg%3E",
@@ -3033,7 +3031,7 @@ window.initCmdLogic = function () {
                 case 'start':
                     if (args[1] && windowContents[args[1]]) {
                         openWindowById(args[1]);
-                        response = `<p>Starting ${args[1]}...</p>`;
+                        response = `<p>Starter ${args[1]}...</p>`;
                     } else response = '<p>Usage: start [app name]</p>';
                     break;
                 case 'snake':
@@ -3080,7 +3078,7 @@ function triggerBSOD() {
     document.getElementById('desktop').style.display = 'none';
     document.getElementById('taskbar').style.display = 'none';
 
-    // Restart on interaction
+    // Genstart ved interaktion
     setTimeout(() => {
         document.body.onclick = () => location.reload();
         document.body.onkeydown = () => location.reload();
@@ -3089,7 +3087,7 @@ function triggerBSOD() {
 
 
 /* ========================================
-   ENHANCEMENT PACK - NOTEPAD FUNCTIONS
+   FORBEDRINGSPAKKE - NOTEPAD FUNKTIONER
    ======================================== */
 window.saveNote = function () {
     const textarea = document.getElementById('notepad-textarea');
@@ -3125,7 +3123,7 @@ window.clearNote = function () {
     }
 };
 
-// Auto-load notes when notepad opens
+// Auto-indlæs noter når notepad åbnes
 const originalOpenWindowById = window.openWindowById || openWindowById;
 window.openWindowById = function (id) {
     originalOpenWindowById(id);
@@ -3136,7 +3134,7 @@ window.openWindowById = function (id) {
             if (saved && textarea) {
                 textarea.value = saved;
             }
-            // Auto-save on typing
+            // Auto-gem ved tastning
             if (textarea) {
                 textarea.addEventListener('input', () => {
                     localStorage.setItem('xp-notepad-content', textarea.value);
@@ -3145,14 +3143,14 @@ window.openWindowById = function (id) {
             }
         }, 100);
     }
-    // Clippy comments on specific windows
+    // Clippy kommentarer til specifikke vinduer
     if (window.clippySpeak) {
         const windowComments = {
             'notepad-enhanced': 'clippy_notepad',
             'photos': 'clippy_photos',
             'winamp': 'clippy_winamp',
             'cmd': 'clippy_cmd',
-            // Legacy/Missing Keys (Use direct object if needed, but here we just map known ones)
+            // Legacy/Manglende Nøgler (Brug direkte objekt hvis nødvendigt, men her mapper vi bare kendte)
             'solitaire': { text: "Classic Solitaire! I bet you can win.", audio: "sounds/clippy/solitaire.mp3" },
             'snake': { text: "Ssssnake! Don't hit the walls.", audio: "sounds/clippy/snake.mp3" },
             'calculator': { text: "Let's crunch some numbers.", audio: "sounds/clippy/calc.mp3" },
@@ -3178,7 +3176,7 @@ window.openWindowById = function (id) {
 };
 
 /* ========================================
-   ENHANCEMENT PACK - PHOTO VIEWER
+   FORBEDRINGSPAKKE - FOTO FREMVISER
    ======================================== */
 window.changePhoto = function (thumb, src) {
     const main = document.getElementById('photo-current');
@@ -3198,10 +3196,10 @@ window.changePhoto = function (thumb, src) {
 };
 
 /* ========================================
-   ENHANCEMENT PACK - KEYBOARD SHORTCUTS
+   FORBEDRINGSPAKKE - TASTATUR GENVEJE
    ======================================== */
 document.addEventListener('keydown', (e) => {
-    // Alt+F4 - Close active window
+    // Alt+F4 - Luk aktivt vindue
     if (e.altKey && e.key === 'F4') {
         e.preventDefault();
         const activeWin = document.querySelector('.window.active');
@@ -3211,7 +3209,7 @@ document.addEventListener('keydown', (e) => {
         }
     }
 
-    // Ctrl+W - Close active window (alternative)
+    // Ctrl+W - Luk aktivt vindue (alternativ)
     if (e.ctrlKey && e.key === 'w') {
         e.preventDefault();
         const activeWin = document.querySelector('.window.active');
@@ -3222,7 +3220,7 @@ document.addEventListener('keydown', (e) => {
     }
 
 
-    // Ctrl+S - Save in notepad
+    // Ctrl+S - Gem i notepad
     if (e.ctrlKey && e.key === 's') {
         const notepad = document.getElementById('notepad-textarea');
         if (notepad && document.activeElement === notepad) {
@@ -3233,16 +3231,16 @@ document.addEventListener('keydown', (e) => {
 });
 
 /* ========================================
-   ENHANCEMENT PACK - BOOT SCREEN LOGIC
+   FORBEDRINGSPAKKE - BOOT SKÆRM LOGIK
    ======================================== */
-// Play the authentic old PC booting sound immediately
+// Afspil den autentiske gamle PC opstartslyd med det samme
 (function initBootSound() {
     const bootSound = new Audio('old-desktop-pc-booting.mp3');
     bootSound.volume = 0.6;
 
-    // Try to play immediately (may be blocked by browser)
+    // Prøv at afspille med det samme (kan blokeres af browser)
     bootSound.play().catch(() => {
-        // If blocked, play on first interaction
+        // Hvis blokeret, afspil ved første interaktion
         const playOnce = () => {
             bootSound.play().catch(() => { });
             document.removeEventListener('click', playOnce);
@@ -3251,7 +3249,7 @@ document.addEventListener('keydown', (e) => {
     });
 })();
 
-// Hide boot screen after loading completes
+// Skjul boot skærm efter indlæsning er færdig
 setTimeout(() => {
     const bootScreen = document.getElementById('boot-screen');
     if (bootScreen) {
@@ -3260,7 +3258,7 @@ setTimeout(() => {
 }, 3000);
 
 /* ========================================
-   ENHANCEMENT PACK - CAT WINDOW INTERACTION
+   FORBEDRINGSPAKKE - KAT VINDUE INTERAKTION
    ======================================== */
 (function enhanceCatBehavior() {
     const checkCatOnWindow = () => {
@@ -3282,21 +3280,21 @@ setTimeout(() => {
             if (petCenter.x >= winRect.left && petCenter.x <= winRect.right &&
                 petCenter.y >= winRect.top && petCenter.y <= winRect.bottom) {
                 onWindow = true;
-                break; // Early exit  no need to check all windows
+                break; // Tidlig udgang — ingen grund til at tjekke alle vinduer
             }
         }
 
         pet.classList.toggle('on-window', onWindow);
     };
 
-    // Check every 3 seconds instead of 1
+    // Tjek hver 3. sekund i stedet for 1
     setInterval(checkCatOnWindow, 3000);
 
-    // Occasionally make cat knock over a window (every 30s instead of 15s)
+    // Indimellem få katten til at vælte et vindue (hver 30s i stedet for 15s)
     setInterval(() => {
         if (Math.random() > 0.95) {
             const pet = document.getElementById('desktop-pet');
-            if (!pet) return; // Early bail
+            if (!pet) return; // Tidlig afbrydelse
             const openWindows = Object.values(windows).filter(w => !w.classList.contains('hidden'));
 
             if (openWindows.length > 0 && pet.classList.contains('on-window')) {
@@ -3315,17 +3313,17 @@ setTimeout(() => {
     }, 30000);
 })();
 
-// Redundant Desktop Icons removed for cleaner desktop management
+// Overflødige Skrivebordsikoner fjernet for renere skrivebordsstyring
 
 /* ========================================
-   ENHANCEMENT PACK - WINDOW CLOSE ANIMATION
+   FORBEDRINGSPAKKE - VINDUE LUK ANIMATION
    ======================================== */
 const originalCloseWindow = window.closeWindow;
 window.closeWindow = function (id) {
-    // Stop any ongoing Clippy narration when a window closes
+    // Stop enhver igangværende Clippy fortælling når et vindue lukkes
     if (window.stopClippyAudio) window.stopClippyAudio();
 
-    // Extra cleanup for Snake if closed via window controls
+    // Ekstra oprydning for Snake hvis lukket via vindueskontroller
     if (id === 'snake' && window.snakeKeyHandler) {
         window.removeEventListener('keydown', window.snakeKeyHandler);
     }
@@ -3333,7 +3331,7 @@ window.closeWindow = function (id) {
     const win = windows[id];
     if (win) {
         win.classList.add('closing');
-        // Clippy sometimes says goodbye
+        // Clippy siger nogle gange farvel
         if (window.clippySpeak && Math.random() > 0.8) {
             window.clippySpeak("clippy_window_close");
         }
@@ -3346,7 +3344,7 @@ window.closeWindow = function (id) {
 };
 
 /* ========================================
-   ENHANCEMENT PACK V2 - CALCULATOR LOGIC
+   FORBEDRINGSPAKKE V2 - LOMMEREGNER LOGIK
    ======================================== */
 let calcDisplay = '0';
 let calcOperator = null;
@@ -3411,7 +3409,7 @@ function updateCalcDisplay() {
 }
 
 /* ========================================
-   ENHANCEMENT PACK V2 - SNAKE GAME LOGIC
+   FORBEDRINGSPAKKE V2 - SNAKE SPIL LOGIK
    ======================================== */
 let snakeGame = null;
 
@@ -3419,7 +3417,7 @@ window.startSnake = function () {
     const canvas = document.getElementById('snake-canvas');
     if (!canvas) return;
 
-    // Ensure focus for key events
+    // Sikre fokus for tastebegivenheder
     canvas.setAttribute('tabindex', '0');
     canvas.focus();
 
@@ -3435,14 +3433,14 @@ window.startSnake = function () {
 
     if (snakeGame) clearInterval(snakeGame);
 
-    // Remove old listener if exists to prevent duplicates
+    // Fjern gammel lytter hvis den findes for at undgå dubletter
     if (window.snakeKeyHandler) {
         window.removeEventListener('keydown', window.snakeKeyHandler);
     }
 
-    // New named handler
+    // Ny navngivet håndterer
     window.snakeKeyHandler = (e) => {
-        // Prevent default scrolling for arrow keys
+        // Forhindr standard scrolling for piletaster
         if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1) {
             e.preventDefault();
         }
@@ -3457,21 +3455,21 @@ window.startSnake = function () {
 
     window.addEventListener('keydown', window.snakeKeyHandler);
 
-    // Clean up on window close (mutation observer or robust checking)
-    // For now, checks inside loop
+    // Ryd op ved vindueslukning (mutation observer eller robust tjek)
+    // For nu, tjek inde i løkken
 
     snakeGame = setInterval(() => {
-        // Check if canvas still exists (window closed?)
+        // Tjek om canvas stadig eksisterer (vindue lukket?)
         if (!document.getElementById('snake-canvas')) {
             clearInterval(snakeGame);
             window.removeEventListener('keydown', window.snakeKeyHandler);
             return;
         }
 
-        // Move snake
+        // Flyt slange
         const head = { x: snake[0].x + dx, y: snake[0].y + dy };
 
-        // Wall collision
+        // Væg kollision
         if (head.x < 0 || head.x >= tileCount || head.y < 0 || head.y >= tileCount) {
             clearInterval(snakeGame);
             window.removeEventListener('keydown', window.snakeKeyHandler);
@@ -3479,7 +3477,7 @@ window.startSnake = function () {
             return;
         }
 
-        // Self collision
+        // Selv kollision
         for (let segment of snake) {
             if (head.x === segment.x && head.y === segment.y) {
                 clearInterval(snakeGame);
@@ -3491,7 +3489,7 @@ window.startSnake = function () {
 
         snake.unshift(head);
 
-        // Food collision
+        // Mad kollision
         if (head.x === food.x && head.y === food.y) {
             score++;
             const scoreEl = document.getElementById('snake-score');
@@ -3504,17 +3502,17 @@ window.startSnake = function () {
             snake.pop();
         }
 
-        // Draw
+        // Tegn
         ctx.fillStyle = '#111';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        // Draw snake
+        // Tegn slange
         ctx.fillStyle = '#00ff00';
         for (let segment of snake) {
             ctx.fillRect(segment.x * gridSize, segment.y * gridSize, gridSize - 1, gridSize - 1);
         }
 
-        // Draw food
+        // Tegn mad
         ctx.fillStyle = '#ff0000';
         ctx.fillRect(food.x * gridSize, food.y * gridSize, gridSize - 1, gridSize - 1);
 
@@ -3526,7 +3524,7 @@ window.startSnake = function () {
 };
 
 /* ========================================
-   ENHANCEMENT PACK V2 - FILE SYSTEM NAV
+   FORBEDRINGSPAKKE V2 - FILSYSTEM NAV
    ======================================== */
 const fileSystem = {
     root: [
@@ -3580,14 +3578,14 @@ window.navigateFS = function (folder) {
 
 
 /* ========================================
-   ENHANCEMENT PACK V2 - DIAL-UP SOUND FOR IE
+   FORBEDRINGSPAKKE V2 - OPKALD LYD FOR IE
    ======================================== */
-// Dial-up logic moved to main openWindowById
+// Opkaldslogik flyttet til hoved openWindowById
 
-// Redundant Desktop Icons removed for cleaner desktop management
+// Overflødige Skrivebordsikoner fjernet for renere skrivebordsstyring
 
 /* ========================================
-   ENHANCEMENT PACK V2 - SNAKE EASTER EGG IN CMD
+   FORBEDRINGSPAKKE V2 - SNAKE PÅSKEÆG I CMD
    ======================================== */
 const originalCmdLogic = window.initCmdLogic;
 window.initCmdLogic = function () {
@@ -3609,9 +3607,9 @@ window.initCmdLogic = function () {
 };
 
 /* ========================================
-   ENHANCEMENT PACK V2 - UPDATE MSN WITH SOCIALS
+   FORBEDRINGSPAKKE V2 - OPDATER MSN MED SOCIALS
    ======================================== */
-// Enhance MSN window with social links
+// Forbedr MSN vindue med sociale links
 windowContents['msn'].content = `
     <div class="msn-win">
         <div class="msn-header">
@@ -3648,12 +3646,12 @@ windowContents['msn'].content = `
 
 console.log("?? Enhancement Pack V3 Loaded!");
 
-// Safety init for icons in case DOMContentLoaded fired early
+// Sikkerheds-init for ikoner i tilfælde af at DOMContentLoaded fyrede tidligt
 if (document.readyState === 'complete' || document.readyState === 'interactive') {
     setTimeout(() => {
         if (window.initDesktopIcons) window.initDesktopIcons();
 
-        // Force Start Menu CSS check
+        // Tving Startmenu CSS tjek
         const cssCheck = document.createElement('style');
         cssCheck.innerHTML = '.menu-item { min-height: 48px !important; }';
         document.head.appendChild(cssCheck);
@@ -3663,6 +3661,6 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
 
 
 // ==========================================
-// FINAL LAYOUT FIX: DONE
+// ENDELIGT LAYOUT FIX: FÆRDIG
 // ==========================================
-// Layout order is now controlled by HTML + .row-break elements in #icon-grid
+// Layout rækkefølge er nu kontrolleret af HTML + .row-break elementer i #icon-grid
