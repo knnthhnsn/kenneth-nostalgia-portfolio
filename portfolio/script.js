@@ -1,5 +1,5 @@
 ﻿/* Minimal XP Sound System */
-const XP_CLICK = "https://cdnjs.cloudflare.com/ajax/libs/ion-sound/3.0.7/sounds/button_tiny.mp3";
+const XP_CLICK = "https:// cdnjs.cloudflare.com/ajax/libs/ion-sound/3.0.7/sounds/button_tiny.mp3";
 
 /* ========================================
    LANGUAGE SYSTEM (OPTION A)
@@ -274,7 +274,6 @@ window.toggleLanguage = function () {
 const aboutTranslations = {
     en: {
         sidebar_education: 'Multimedia Design',
-        sidebar_semester: '3rd Semester',
         section1_title: 'Who am I?',
         section1_text: "My name is Kenneth, I'm 24 years old and I live in Aarhus. I'm a creative entrepreneur-type who loves building things from scratch - whether it's websites, apps, games or entirely new concepts. I'm defined by courage, curiosity and a strong resilience - I rarely give up, even when things get tough. My personal ethics and presence make people trust me and enjoy working with me.",
         section2_title: 'What am I passionate about?',
@@ -312,7 +311,6 @@ const aboutTranslations = {
     },
     da: {
         sidebar_education: 'Multimediedesign',
-        sidebar_semester: '3. Semester',
         section1_title: 'Hvem er jeg?',
         section1_text: 'Jeg hedder Kenneth, er 24 år og bor i Aarhus. Jeg er en kreativ iværksætter-type der elsker at bygge ting fra bunden - hvad enten det er websites, apps, spil eller helt nye koncepter. Jeg kendetegnes ved mod, nysgerrighed og en stærk modstandskraft - jeg giver sjældent op, selv når tingene bliver svære. Min personlige etik og nærvær gør, at folk stoler på mig og gerne samarbejder med mig.',
         section2_title: 'Hvad brænder jeg for?',
@@ -350,7 +348,6 @@ const aboutTranslations = {
     },
     de: {
         sidebar_education: 'Multimedia Design',
-        sidebar_semester: '3. Semester',
         section1_title: 'Wer bin ich?',
         section1_text: 'Ich heiße Kenneth, bin 24 Jahre alt und lebe in Aarhus. Ich bin ein kreativer Unternehmertyp, der es liebt, Dinge von Grund auf zu bauen - ob Websites, Apps, Spiele oder völlig neue Konzepte. Ich zeichne mich durch Mut, Neugier und eine starke Widerstandsfähigkeit aus - ich gebe selten auf, auch wenn es schwierig wird. Meine persönliche Ethik und Präsenz sorgen dafür, dass Menschen mir vertrauen und gerne mit mir zusammenarbeiten.',
         section2_title: 'Wofür brenne ich?',
@@ -390,8 +387,8 @@ const aboutTranslations = {
 
 function getAboutContent(lang) {
     const t = aboutTranslations[lang] || aboutTranslations.en;
-    const skillTags = ['HTML5', 'CSS3', 'JavaScript', 'Figma', 'UI/UX', 'AI Tools', 'Web3', 'Video'];
-    const tagsHtml = skillTags.map(s => `<span class="skill-tag" style="color:#fff; border-color:rgba(255,255,255,0.4);">${s}</span>`).join('\n                        ');
+    const skillTags = ['HTML', 'CSS', 'JavaScript', 'Figma', 'UI/UX', 'AI Tools', 'Web3', 'Illustrator', 'Video'];
+    const tagsHtml = skillTags.map(s => `<span class="skill-tag" style="color:#000; border-color:rgba(255,255,255,0.4);">${s}</span>`).join('\n                        ');
 
     return `
             <div class="xp-content-wrapper about-win">
@@ -401,14 +398,13 @@ function getAboutContent(lang) {
                     <p>24 Years Old</p>
                     <p>Aarhus, Denmark</p>
                     <p style="margin-top:10px; font-size:10px;">${t.sidebar_education}</p>
-                    <p style="font-size:10px;">${t.sidebar_semester}</p>
                     <div style="margin-top:15px;">
                         ${tagsHtml}
                     </div>
                 </div>
                 <div class="main-content">
                     <div class="about-section">
-                        <h3><span class="section-icon">ℹ</span> ${t.section1_title}</h3>
+                        <h3><span class="section-icon">👋😄</span> ${t.section1_title}</h3>
                         <p>${t.section1_text}</p>
                     </div>
                     <div class="about-section">
@@ -417,7 +413,7 @@ function getAboutContent(lang) {
                         <p>${t.section2_prof}</p>
                     </div>
                     <div class="about-section">
-                        <h3><span class="section-icon">❓</span> ${t.section3_title}</h3>
+                        <h3><span class="section-icon">🎨</span> ${t.section3_title}</h3>
                         <p>${t.section3_text}</p>
                     </div>
                     <div class="about-section">
@@ -425,7 +421,7 @@ function getAboutContent(lang) {
                         <p>${t.section4_text}</p>
                     </div>
                     <div class="about-section">
-                        <h3><span class="section-icon">✨</span> ${t.section5_title}</h3>
+                        <h3><span class="section-icon">🎯</span> ${t.section5_title}</h3>
                         <ul>${t.section5_items.map(i => '<li>' + i + '</li>').join('')}</ul>
                         <p style="margin-top:8px;">${t.section5_example}</p>
                     </div>
@@ -532,8 +528,8 @@ document.addEventListener('DOMContentLoaded', () => {
             volIcon.classList.toggle('active');
             const isActive = volIcon.classList.contains('active');
             volIcon.querySelector('img').src = isActive ?
-                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M2 6v4h3l4 4V2L5 6H2zM12 8c0-2-1-3-2-4v8c1-1 2-2 2-4z' fill='white'/%3E%3C/svg%3E" :
-                "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M2 6v4h3l4 4V2L5 6H2z' fill='gray'/%3E%3C/svg%3E";
+                "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M2 6v4h3l4 4V2L5 6H2zM12 8c0-2-1-3-2-4v8c1-1 2-2 2-4z' fill='white'/%3E%3C/svg%3E" :
+                "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M2 6v4h3l4 4V2L5 6H2z' fill='gray'/%3E%3C/svg%3E";
         };
     }
 
@@ -968,30 +964,30 @@ const windowContents = {
     },
     'projects': {
         title: 'Projects - My Documents',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E",
         content: `
             <div class="xp-explorer">
                 <div class="explorer-toolbar">
-                    <button><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M10 2L4 8l6 6' stroke='%233a9d23' stroke-width='2' fill='none'/%3E%3C/svg%3E"> Back</button>
+                    <button><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M10 2L4 8l6 6' stroke='%233a9d23' stroke-width='2' fill='none'/%3E%3C/svg%3E"> Back</button>
                     <div class="divider"></div>
-                    <button><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M2 4v10h12V6H8l-2-2H2z' fill='%23ffcc00'/%3E%3C/svg%3E"> Folders</button>
+                    <button><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M2 4v10h12V6H8l-2-2H2z' fill='%23ffcc00'/%3E%3C/svg%3E"> Folders</button>
                 </div>
                 <div class="explorer-grid">
-                    <div class="explorer-item" onclick="openProject('volume-village')" ondblclick="openProject('volume-village')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E"><span>Volume Village</span></div>
-                    <div class="explorer-item" onclick="openProject('black-bible')" ondblclick="openProject('black-bible')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E"><span>Premium Black Bible</span></div>
-                    <div class="explorer-item" onclick="openProject('bitcoin-basics')" ondblclick="openProject('bitcoin-basics')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E"><span>Bitcoin Basics</span></div>
-                    <div class="explorer-item" onclick="openProject('pepecoin-arcade')" ondblclick="openProject('pepecoin-arcade')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E"><span>Pepecoin Arcade</span></div>
-                    <div class="explorer-item" onclick="openProject('museum-guide')" ondblclick="openProject('museum-guide')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E"><span>Museum Spille Guide</span></div>
-                    <div class="explorer-item" onclick="openProject('havblink')" ondblclick="openProject('havblink')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E"><span>Havblink</span></div>
-                    <div class="explorer-item" onclick="openProject('kekspace')" ondblclick="openProject('kekspace')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E"><span>Kekspace</span></div>
-                    <div class="explorer-item" onclick="openProject('basedman')" ondblclick="openProject('basedman')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E"><span>Basedman</span></div>
+                    <div class="explorer-item" onclick="openProject('volume-village')" ondblclick="openProject('volume-village')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E"><span>Volume Village</span></div>
+                    <div class="explorer-item" onclick="openProject('black-bible')" ondblclick="openProject('black-bible')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E"><span>Premium Black Bible</span></div>
+                    <div class="explorer-item" onclick="openProject('bitcoin-basics')" ondblclick="openProject('bitcoin-basics')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E"><span>Bitcoin Basics</span></div>
+                    <div class="explorer-item" onclick="openProject('pepecoin-arcade')" ondblclick="openProject('pepecoin-arcade')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E"><span>Pepecoin Arcade</span></div>
+                    <div class="explorer-item" onclick="openProject('museum-guide')" ondblclick="openProject('museum-guide')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E"><span>Museum Spille Guide</span></div>
+                    <div class="explorer-item" onclick="openProject('havblink')" ondblclick="openProject('havblink')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E"><span>Havblink</span></div>
+                    <div class="explorer-item" onclick="openProject('kekspace')" ondblclick="openProject('kekspace')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E"><span>Kekspace</span></div>
+                    <div class="explorer-item" onclick="openProject('basedman')" ondblclick="openProject('basedman')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E"><span>Basedman</span></div>
                 </div>
             </div>
         `
     },
     'skills': {
         title: 'System Properties',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect x='10' y='10' width='28' height='28' fill='%23808080'/%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect x='10' y='10' width='28' height='28' fill='%23808080'/%3E%3C/svg%3E",
         content: `
             <div class="xp-tabs">
                 <div class="tab-list">
@@ -1010,7 +1006,7 @@ const windowContents = {
     },
     'contact': {
         title: 'New Message - Outlook Express',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M1 3h14v10H1V3zm2 2v6l5-3.5L3 5zm10 0L8 8.5 3 5h10z' fill='%23666'/%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M1 3h14v10H1V3zm2 2v6l5-3.5L3 5zm10 0L8 8.5 3 5h10z' fill='%23666'/%3E%3C/svg%3E",
         content: `
             <div class="outlook-win">
                 <div class="outlook-toolbar"><button>Send</button></div>
@@ -1024,21 +1020,21 @@ const windowContents = {
     },
     'resume': {
         title: 'Resume.txt - Notepad',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M2 2h12v12H2V2z' fill='white' stroke='black'/%3E%3Cline x1='4' y1='5' x2='10' y2='5' stroke='black'/%3E%3Cline x1='4' y1='8' x2='12' y2='8' stroke='black'/%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M2 2h12v12H2V2z' fill='white' stroke='black'/%3E%3Cline x1='4' y1='5' x2='10' y2='5' stroke='black'/%3E%3Cline x1='4' y1='8' x2='12' y2='8' stroke='black'/%3E%3C/svg%3E",
         content: `
             <div class="notepad-win"><textarea readonly>KENNETH - MULTIMEDIA CREATOR\nLocation: Aarhus, Denmark\nAge: 24</textarea></div>
         `
     },
     'ie': {
         title: 'Internet Explorer',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='18' fill='%23003399'/%3E%3Ctext x='24' y='32' font-family='Arial' font-size='24' font-weight='bold' fill='white' text-anchor='middle'%3Ee%3C/text%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='18' fill='%23003399'/%3E%3Ctext x='24' y='32' font-family='Arial' font-size='24' font-weight='bold' fill='white' text-anchor='middle'%3Ee%3C/text%3E%3C/svg%3E",
         content: `
             <div class="ie-layout">
                 <div class="ie-sidebar">
                     <h3>Favorites</h3>
-                    <a href="#" class="fav-link"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='16' fill='%23003399' stroke='%23001F5C' stroke-width='2'/%3E%3Cpath d='M8 24c0-8.8 7.2-16 16-16s16 7.2 16 16' fill='none' stroke='%23FFC000' stroke-width='4'/%3E%3C/svg%3E"> Kenneth's Twitter</a>
-                    <a href="#" class="fav-link"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='16' fill='%23003399' stroke='%23001F5C' stroke-width='2'/%3E%3Cpath d='M8 24c0-8.8 7.2-16 16-16s16 7.2 16 16' fill='none' stroke='%23FFC000' stroke-width='4'/%3E%3C/svg%3E"> Aarhus Guide</a>
-                    <a href="#" class="fav-link"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='16' fill='%23003399' stroke='%23001F5C' stroke-width='2'/%3E%3Cpath d='M8 24c0-8.8 7.2-16 16-16s16 7.2 16 16' fill='none' stroke='%23FFC000' stroke-width='4'/%3E%3C/svg%3E"> Web Dev 2001</a>
+                    <a href="#" class="fav-link"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='16' fill='%23003399' stroke='%23001F5C' stroke-width='2'/%3E%3Cpath d='M8 24c0-8.8 7.2-16 16-16s16 7.2 16 16' fill='none' stroke='%23FFC000' stroke-width='4'/%3E%3C/svg%3E"> Kenneth's Twitter</a>
+                    <a href="#" class="fav-link"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='16' fill='%23003399' stroke='%23001F5C' stroke-width='2'/%3E%3Cpath d='M8 24c0-8.8 7.2-16 16-16s16 7.2 16 16' fill='none' stroke='%23FFC000' stroke-width='4'/%3E%3C/svg%3E"> Aarhus Guide</a>
+                    <a href="#" class="fav-link"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='16' fill='%23003399' stroke='%23001F5C' stroke-width='2'/%3E%3Cpath d='M8 24c0-8.8 7.2-16 16-16s16 7.2 16 16' fill='none' stroke='%23FFC000' stroke-width='4'/%3E%3C/svg%3E"> Web Dev 2001</a>
                     <div class="divider"></div>
                     <h3>History</h3>
                     <div style="font-size:10px; color:#666; padding:5px;">Today - Aarhus Portfolio</div>
@@ -1046,15 +1042,15 @@ const windowContents = {
                 <div style="flex-grow:1; display:flex; flex-direction:column;">
                     <div class="ie-address-bar">
                         <span>Address</span>
-                        <input type="text" value="http://www.aarhus-portal.dk" readonly>
+                        <input type="text" value="http:// www.aarhus-portal.dk" readonly>
                     </div>
                     <div id="dial-up-overlay" style="position:absolute; top:50px; left:0; width:100%; height:calc(100% - 50px); background:#ECE9D8; z-index:10; display:flex; flex-direction:column; align-items:center; justify-content:center;">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Crect x='2' y='2' width='12' height='12' fill='%23ccc'/%3E%3C/svg%3E" width="48">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Crect x='2' y='2' width='12' height='12' fill='%23ccc'/%3E%3C/svg%3E" width="48">
                         <p style="margin-top:10px;">Connecting to Aarhus ISP...</p>
                         <button class="xp-btn" onclick="this.parentElement.remove()" style="margin-top:20px;">Cancel</button>
                     </div>
                     <div class="ie-homepage" style="padding:40px; background:white; height:100%; overflow-y:auto; text-align:center;">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 30'%3E%3Crect width='100' height='30' rx='15' fill='%233a9d23'/%3E%3Ctext x='50' y='20' font-family='Arial' font-size='14' fill='white' text-anchor='middle'%3Estart%3C/text%3E%3C/svg%3E" width="150" style="margin-bottom:20px;">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 100 30'%3E%3Crect width='100' height='30' rx='15' fill='%233a9d23'/%3E%3Ctext x='50' y='20' font-family='Arial' font-size='14' fill='white' text-anchor='middle'%3Estart%3C/text%3E%3C/svg%3E" width="150" style="margin-bottom:20px;">
                         <h1 style="color:#003399; font-size:24px;">Aarhus Portal</h1>
                         <p style="margin-bottom:20px;">Welcome to your local gateway to the web.</p>
                         <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; text-align:left; max-width:400px; margin:0 auto;">
@@ -1080,7 +1076,7 @@ const windowContents = {
     },
     'winamp': {
         title: 'Winamp',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23333'/%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23333'/%3E%3C/svg%3E",
         content: `
             <div class="winamp-win">
                 <div class="winamp-top">
@@ -1104,7 +1100,7 @@ const windowContents = {
     },
     'error-trigger': {
         title: 'Error',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 1l7 14H1L8 1z' fill='yellow' stroke='black'/%3E%3Ctext x='8' y='13' font-size='10' text-anchor='middle'%3E!%3C/text%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 1l7 14H1L8 1z' fill='yellow' stroke='black'/%3E%3Ctext x='8' y='13' font-size='10' text-anchor='middle'%3E!%3C/text%3E%3C/svg%3E",
         content: `
             <div style="padding:20px; text-align:center;">
                 <p>A fatal exception 0E has occurred at 0028:C0011E36. The current application will be terminated.</p>
@@ -1117,17 +1113,17 @@ const windowContents = {
     },
     'solitaire': {
         title: 'Solitaire',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='green'/%3E%3C/svg%3E",
-        content: `<div style="text-align:center; padding:20px;"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='green'/%3E%3C/svg%3E" width="64"><br><br><a href="https://solitaireforfree.com/" target="_blank" class="xp-btn" style="text-decoration:none;">Play Solitaire</a></div>`
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='green'/%3E%3C/svg%3E",
+        content: `<div style="text-align:center; padding:20px;"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='green'/%3E%3C/svg%3E" width="64"><br><br><a href="https://solitaireforfree.com/" target="_blank" class="xp-btn" style="text-decoration:none;">Play Solitaire</a></div>`
     },
     'recycle-bin': {
         title: 'Recycle Bin',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect x='14' y='14' width='20' height='24' fill='%233a6ea5'/%3E%3Crect x='12' y='10' width='24' height='4' fill='%23666'/%3E%3C/svg%3E",
-        content: `<div class="explorer-grid"><div class="explorer-item grayed-out"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M6 4v24h20V10l-6-6H6z' fill='white' stroke='black'/%3E%3C/svg%3E"><span>Failed NFTs.txt</span></div></div>`
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect x='14' y='14' width='20' height='24' fill='%233a6ea5'/%3E%3Crect x='12' y='10' width='24' height='4' fill='%23666'/%3E%3C/svg%3E",
+        content: `<div class="explorer-grid"><div class="explorer-item grayed-out"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M6 4v24h20V10l-6-6H6z' fill='white' stroke='black'/%3E%3C/svg%3E"><span>Failed NFTs.txt</span></div></div>`
     },
     'sound-test': {
         title: 'Sound and Audio Devices',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M2 6v4h3l4 4V2L5 6H2zM12 8c0-2-1-3-2-4v8c1-1 2-2 2-4z' fill='%23666'/%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M2 6v4h3l4 4V2L5 6H2zM12 8c0-2-1-3-2-4v8c1-1 2-2 2-4z' fill='%23666'/%3E%3C/svg%3E",
         content: `
             <div class="xp-tabs" style="height:100%">
                 <div class="tab-list">
@@ -1153,7 +1149,7 @@ const windowContents = {
     // ENHANCEMENT PACK: Working Notepad with localStorage
     'notepad-enhanced': {
         title: 'Notepad - Kenneth\'s Notes',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M2 2h12v12H2V2z' fill='white' stroke='black'/%3E%3Cline x1='4' y1='5' x2='10' y2='5' stroke='black'/%3E%3Cline x1='4' y1='8' x2='12' y2='8' stroke='black'/%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M2 2h12v12H2V2z' fill='white' stroke='black'/%3E%3Cline x1='4' y1='5' x2='10' y2='5' stroke='black'/%3E%3Cline x1='4' y1='8' x2='12' y2='8' stroke='black'/%3E%3C/svg%3E",
         content: `
             <div class="notepad-enhanced">
                 <div class="notepad-toolbar">
@@ -1169,7 +1165,7 @@ const windowContents = {
     // ENHANCEMENT PACK: Photo Viewer
     'photos': {
         title: 'Windows Picture and Fax Viewer',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' fill='%23333' rx='2'/%3E%3Crect x='6' y='6' width='20' height='16' fill='%23666'/%3E%3Ccircle cx='12' cy='12' r='3' fill='%23ffcc00'/%3E%3Cpath d='M6 18l6-4 4 3 6-5v10H6z' fill='%2300aa00'/%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' fill='%23333' rx='2'/%3E%3Crect x='6' y='6' width='20' height='16' fill='%23666'/%3E%3Ccircle cx='12' cy='12' r='3' fill='%23ffcc00'/%3E%3Cpath d='M6 18l6-4 4 3 6-5v10H6z' fill='%2300aa00'/%3E%3C/svg%3E",
         content: `
             <div class="photo-viewer">
                 <div class="photo-main">
@@ -1187,7 +1183,7 @@ const windowContents = {
     // ENHANCEMENT PACK V2: Working Calculator
     'calculator': {
         title: 'Calculator',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='2' width='24' height='28' fill='%23ECE9D8' stroke='%23716F64'/%3E%3Crect x='6' y='4' width='20' height='8' fill='%2398FF98'/%3E%3Crect x='6' y='14' width='4' height='4' fill='%23ddd' stroke='%23888'/%3E%3Crect x='12' y='14' width='4' height='4' fill='%23ddd' stroke='%23888'/%3E%3Crect x='18' y='14' width='4' height='4' fill='%23ddd' stroke='%23888'/%3E%3Crect x='6' y='20' width='4' height='4' fill='%23ddd' stroke='%23888'/%3E%3Crect x='12' y='20' width='4' height='4' fill='%23ddd' stroke='%23888'/%3E%3Crect x='18' y='20' width='4' height='4' fill='%23ddd' stroke='%23888'/%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='2' width='24' height='28' fill='%23ECE9D8' stroke='%23716F64'/%3E%3Crect x='6' y='4' width='20' height='8' fill='%2398FF98'/%3E%3Crect x='6' y='14' width='4' height='4' fill='%23ddd' stroke='%23888'/%3E%3Crect x='12' y='14' width='4' height='4' fill='%23ddd' stroke='%23888'/%3E%3Crect x='18' y='14' width='4' height='4' fill='%23ddd' stroke='%23888'/%3E%3Crect x='6' y='20' width='4' height='4' fill='%23ddd' stroke='%23888'/%3E%3Crect x='12' y='20' width='4' height='4' fill='%23ddd' stroke='%23888'/%3E%3Crect x='18' y='20' width='4' height='4' fill='%23ddd' stroke='%23888'/%3E%3C/svg%3E",
         content: `
             <div class="calculator-app">
                 <div class="calc-display" id="calc-display">0</div>
@@ -1217,7 +1213,7 @@ const windowContents = {
     // ENHANCEMENT PACK V2: Snake Game (Easter Egg)
     'snake': {
         title: 'Snake - Easter Egg!',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Crect x='4' y='14' width='4' height='4' fill='%2300ff00'/%3E%3Crect x='8' y='14' width='4' height='4' fill='%2300ff00'/%3E%3Crect x='12' y='14' width='4' height='4' fill='%2300ff00'/%3E%3Crect x='16' y='14' width='4' height='4' fill='%2300ff00'/%3E%3Crect x='24' y='8' width='4' height='4' fill='%23ff0000'/%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Crect x='4' y='14' width='4' height='4' fill='%2300ff00'/%3E%3Crect x='8' y='14' width='4' height='4' fill='%2300ff00'/%3E%3Crect x='12' y='14' width='4' height='4' fill='%2300ff00'/%3E%3Crect x='16' y='14' width='4' height='4' fill='%2300ff00'/%3E%3Crect x='24' y='8' width='4' height='4' fill='%23ff0000'/%3E%3C/svg%3E",
         content: `
             <div class="snake-game">
                 <canvas id="snake-canvas" width="300" height="300"></canvas>
@@ -1230,10 +1226,10 @@ const windowContents = {
     // ENHANCEMENT PACK V2: File System Explorer
     'msn': {
         title: 'Windows Messenger',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2a7 7 0 0 0-7 7c0 3 2 5 4 6-5 1-9 5-9 11h24c0-6-4-10-9-11 2-1 4-3 4-6a7 7 0 0 0-7-7z' fill='%2366cc00'/%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2a7 7 0 0 0-7 7c0 3 2 5 4 6-5 1-9 5-9 11h24c0-6-4-10-9-11 2-1 4-3 4-6a7 7 0 0 0-7-7z' fill='%2366cc00'/%3E%3C/svg%3E",
         content: `
             <div style="padding:40px; text-align:center; background:white; height:100%;">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2a7 7 0 0 0-7 7c0 3 2 5 4 6-5 1-9 5-9 11h24c0-6-4-10-9-11 2-1 4-3 4-6a7 7 0 0 0-7-7z' fill='%2366cc00'/%3E%3C/svg%3E" width="80">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2a7 7 0 0 0-7 7c0 3 2 5 4 6-5 1-9 5-9 11h24c0-6-4-10-9-11 2-1 4-3 4-6a7 7 0 0 0-7-7z' fill='%2366cc00'/%3E%3C/svg%3E" width="80">
                 <h3 style="color:#003399; margin-top:20px;">Messenger is currently offline</h3>
                 <p style="font-size:11px; color:#666;">Trying to connect to .NET Passport Service...</p>
                 <button class="xp-btn" style="margin-top:20px;" onclick="alert('Network error: Is your 56k modem plugged in?')">Try Again</button>
@@ -1242,7 +1238,7 @@ const windowContents = {
     },
     'wmp': {
         title: 'Windows Media Player',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23336699'/%3E%3Cpath d='M12 10v12l10-6z' fill='white'/%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23336699'/%3E%3Cpath d='M12 10v12l10-6z' fill='white'/%3E%3C/svg%3E",
         content: `
             <div style="background:#000; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#00ff00; font-family:monospace;">
                 <div style="border:2px solid #336699; padding:20px; text-align:center;">
@@ -1260,7 +1256,7 @@ const windowContents = {
     },
     'paint': {
         title: 'untitled - Paint',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 4h24v24H4z' fill='white' stroke='black'/%3E%3Ccircle cx='10' cy='10' r='3' fill='red'/%3E%3Ccircle cx='22' cy='10' r='3' fill='blue'/%3E%3Ccircle cx='16' cy='22' r='4' fill='yellow'/%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 4h24v24H4z' fill='white' stroke='black'/%3E%3Ccircle cx='10' cy='10' r='3' fill='red'/%3E%3Ccircle cx='22' cy='10' r='3' fill='blue'/%3E%3Ccircle cx='16' cy='22' r='4' fill='yellow'/%3E%3C/svg%3E",
         content: `
             <div style="display:flex; flex-direction:column; height:100%; background:#716F64;">
                 <div style="display:flex; background:#ECE9D8; padding:2px; border-bottom:1px solid #716F64;">
@@ -1276,7 +1272,7 @@ const windowContents = {
     },
     'cmd': {
         title: 'Command Prompt',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='black'/%3E%3Ctext x='2' y='12' font-family='monospace' font-size='10' fill='white'%3EC:_%%3E%3C/text%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='black'/%3E%3Ctext x='2' y='12' font-family='monospace' font-size='10' fill='white'%3EC:_%%3E%3C/text%3E%3C/svg%3E",
         content: `
             <div style="background:black; color:#00ff00; font-family:monospace; height:100%; padding:10px;">
                 <p>Microsoft(R) Windows XP [Version 5.1.2600]</p>
@@ -1298,7 +1294,7 @@ const windowContents = {
     },
     'control-panel': {
         title: 'Control Panel',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='10' y='10' width='28' height='28' fill='%23ECE9D8' stroke='%23716F64'/%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='10' y='10' width='28' height='28' fill='%23ECE9D8' stroke='%23716F64'/%3E%3C/svg%3E",
         content: `
             <div style="padding:20px; background:#fff; height:100%;">
                 <h2 style="color:#003399; font-size:16px;">Pick a category</h2>
@@ -1317,7 +1313,7 @@ const windowContents = {
     },
     'search': {
         title: 'Search Results',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='6' cy='6' r='5' fill='none' stroke='black'/%3E%3Cline x1='10' y1='10' x2='14' y2='14' stroke='black'/%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='6' cy='6' r='5' fill='none' stroke='black'/%3E%3Cline x1='10' y1='10' x2='14' y2='14' stroke='black'/%3E%3C/svg%3E",
         content: `
             <div style="display:flex; height:100%;">
                 <div style="width:150px; background:#708FD2; color:white; padding:15px; font-size:11px;">
@@ -1333,17 +1329,17 @@ const windowContents = {
     },
     'root': {
         title: 'My Computer',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='12' y='12' width='24' height='16' fill='%233a6ea5'/%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='12' y='12' width='24' height='16' fill='%233a6ea5'/%3E%3C/svg%3E",
         content: `
             <div class="explorer-grid">
-                <div class="explorer-item" onclick="navigateFS('documents')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 8v16h24V10H16l-2-2H4z' fill='%23ffcc00'/%3E%3C/svg%3E"><span>My Documents</span></div>
-                <div class="explorer-item" onclick="navigateFS('pictures')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 8v16h24V10H16l-2-2H4z' fill='%2366ccff'/%3E%3C/svg%3E"><span>My Pictures</span></div>
+                <div class="explorer-item" onclick="navigateFS('documents')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 8v16h24V10H16l-2-2H4z' fill='%23ffcc00'/%3E%3C/svg%3E"><span>My Documents</span></div>
+                <div class="explorer-item" onclick="navigateFS('pictures')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 8v16h24V10H16l-2-2H4z' fill='%2366ccff'/%3E%3C/svg%3E"><span>My Pictures</span></div>
             </div>
         `
     },
     'my-computer-explorer': {
         title: 'My Computer',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='10' y='10' width='28' height='20' fill='%23666'/%3E%3Crect x='12' y='12' width='24' height='16' fill='%233a6ea5'/%3E%3Crect x='18' y='30' width='12' height='4' fill='%23666'/%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='10' y='10' width='28' height='20' fill='%23666'/%3E%3Crect x='12' y='12' width='24' height='16' fill='%233a6ea5'/%3E%3Crect x='18' y='30' width='12' height='4' fill='%23666'/%3E%3C/svg%3E",
         content: `
             <div class="xp-explorer">
                 <div class="explorer-toolbar">
@@ -1352,19 +1348,19 @@ const windowContents = {
                 </div>
                 <div class="explorer-grid" id="fs-content">
                     <div class="explorer-item" onclick="navigateFS('documents')">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 8v16h24V10H16l-2-2H4z' fill='%23ffcc00'/%3E%3C/svg%3E">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 8v16h24V10H16l-2-2H4z' fill='%23ffcc00'/%3E%3C/svg%3E">
                         <span>My Documents</span>
                     </div>
                     <div class="explorer-item" onclick="navigateFS('pictures')">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 8v16h24V10H16l-2-2H4z' fill='%2366ccff'/%3E%3C/svg%3E">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 8v16h24V10H16l-2-2H4z' fill='%2366ccff'/%3E%3C/svg%3E">
                         <span>My Pictures</span>
                     </div>
                     <div class="explorer-item" onclick="navigateFS('music')">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 8v16h24V10H16l-2-2H4z' fill='%23ff9966'/%3E%3C/svg%3E">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 8v16h24V10H16l-2-2H4z' fill='%23ff9966'/%3E%3C/svg%3E">
                         <span>My Music</span>
                     </div>
                     <div class="explorer-item" onclick="openWindowById('control-panel')">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' fill='%23808080'/%3E%3Crect x='8' y='8' width='6' height='6' fill='white'/%3E%3Crect x='18' y='8' width='6' height='6' fill='white'/%3E%3C/svg%3E">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' fill='%23808080'/%3E%3Crect x='8' y='8' width='6' height='6' fill='white'/%3E%3Crect x='18' y='8' width='6' height='6' fill='white'/%3E%3C/svg%3E">
                         <span>Control Panel</span>
                     </div>
                 </div>
@@ -1374,7 +1370,7 @@ const windowContents = {
     // ENHANCEMENT PACK V2: Skills with Progress Bars
     'skills-enhanced': {
         title: 'Kenneth\'s Skills - System Properties',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' fill='%23808080'/%3E%3Crect x='8' y='8' width='16' height='3' fill='%2300ff00'/%3E%3Crect x='8' y='14' width='12' height='3' fill='%2300ff00'/%3E%3Crect x='8' y='20' width='14' height='3' fill='%2300ff00'/%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' fill='%23808080'/%3E%3Crect x='8' y='8' width='16' height='3' fill='%2300ff00'/%3E%3Crect x='8' y='14' width='12' height='3' fill='%2300ff00'/%3E%3Crect x='8' y='20' width='14' height='3' fill='%2300ff00'/%3E%3C/svg%3E",
         content: `
             <div class="skills-enhanced">
                 <h3>Technical Skills</h3>
@@ -1414,7 +1410,7 @@ const windowContents = {
     // ENHANCEMENT PACK V2: Weather Widget
     'weather': {
         title: 'Aarhus Weather',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='14' r='6' fill='%23FFD700'/%3E%3Cpath d='M16 2v4M16 22v4M4 14h4M24 14h4M7 7l3 3M22 22l3 3M7 21l3-3M22 4l3 3' stroke='%23FFD700' stroke-width='2'/%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='14' r='6' fill='%23FFD700'/%3E%3Cpath d='M16 2v4M16 22v4M4 14h4M24 14h4M7 7l3 3M22 22l3 3M7 21l3-3M22 4l3 3' stroke='%23FFD700' stroke-width='2'/%3E%3C/svg%3E",
         content: `
             <div class="weather-widget">
                 <div class="weather-main">
@@ -1442,74 +1438,74 @@ const windowContents = {
     },
     'facebook': {
         title: 'Kenneth on Facebook',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='8' fill='%231877F2'/%3E%3Cpath d='M32 24h-4v16h-6v-16h-4v-5h4v-3c0-4 2.5-6 6-6 1.5 0 3 .1 3 .1v4h-2c-2 0-2.5 1-2.5 2.5v2.4h4.5l-1 5z' fill='white'/%3E%3C/svg%3E",
-        external: 'https://www.facebook.com/share/18tAi3FbrU/?mibextid=wwXIfr'
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='8' fill='%231877F2'/%3E%3Cpath d='M32 24h-4v16h-6v-16h-4v-5h4v-3c0-4 2.5-6 6-6 1.5 0 3 .1 3 .1v4h-2c-2 0-2.5 1-2.5 2.5v2.4h4.5l-1 5z' fill='white'/%3E%3C/svg%3E",
+        external: 'https:// www.facebook.com/share/18tAi3FbrU/?mibextid=wwXIfr'
     },
     'instagram': {
         title: 'Kenneth on Instagram',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='url(%23ig-grad)'/%3E%3Cdefs%3E%3ClinearGradient id='ig-grad' x1='0' y1='100%25' x2='100%25' y2='0'%3E%3Cstop offset='0%25' stop-color='%23f09433'/%3E%3Cstop offset='25%25' stop-color='%23e6683c'/%3E%3Cstop offset='50%25' stop-color='%23dc2743'/%3E%3Cstop offset='75%25' stop-color='%23cc2366'/%3E%3Cstop offset='100%25' stop-color='%23bc1888'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='10' y='10' width='28' height='28' rx='7' fill='none' stroke='white' stroke-width='2'/%3E%3Ccircle cx='24' cy='24' r='6' fill='none' stroke='white' stroke-width='2'/%3E%3Ccircle cx='32' cy='16' r='1.5' fill='white'/%3E%3C/svg%3E",
-        external: 'https://www.instagram.com/knnthhnsn?igsh=ZnAxY2Z0Yms1ZTQ0'
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='url(%23ig-grad)'/%3E%3Cdefs%3E%3ClinearGradient id='ig-grad' x1='0' y1='100%25' x2='100%25' y2='0'%3E%3Cstop offset='0%25' stop-color='%23f09433'/%3E%3Cstop offset='25%25' stop-color='%23e6683c'/%3E%3Cstop offset='50%25' stop-color='%23dc2743'/%3E%3Cstop offset='75%25' stop-color='%23cc2366'/%3E%3Cstop offset='100%25' stop-color='%23bc1888'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='10' y='10' width='28' height='28' rx='7' fill='none' stroke='white' stroke-width='2'/%3E%3Ccircle cx='24' cy='24' r='6' fill='none' stroke='white' stroke-width='2'/%3E%3Ccircle cx='32' cy='16' r='1.5' fill='white'/%3E%3C/svg%3E",
+        external: 'https:// www.instagram.com/knnthhnsn?igsh=ZnAxY2Z0Yms1ZTQ0'
     },
     'x-social': {
         title: 'Kenneth on X',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='8' fill='black'/%3E%3Cpath d='M30.5 14h3.5L26 23.5 35 34h-7l-5.5-7.5L16.5 34H13l8.5-10.5L13 14h7l5 6.5L30.5 14zm-1.2 18h2L18.5 16h-2l12.8 16z' fill='white'/%3E%3C/svg%3E",
-        external: 'https://x.com/knnthhnsn?s=21&t=MX1PGiBHxAKPq3a0DGlwgA'
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='8' fill='black'/%3E%3Cpath d='M30.5 14h3.5L26 23.5 35 34h-7l-5.5-7.5L16.5 34H13l8.5-10.5L13 14h7l5 6.5L30.5 14zm-1.2 18h2L18.5 16h-2l12.8 16z' fill='white'/%3E%3C/svg%3E",
+        external: 'https:// x.com/knnthhnsn?s=21&t=MX1PGiBHxAKPq3a0DGlwgA'
     },
     'linkedin': {
         title: 'Kenneth on LinkedIn',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='4' fill='%230A66C2'/%3E%3Cpath d='M14 18h4v16h-4V18zm2-6a2.2 2.2 0 1 1-2.2 2.2A2.2 2.2 0 0 1 16 12zm8 6h3.8v2.2h.1a4.2 4.2 0 0 1 3.8-2.1c4 0 4.8 2.7 4.8 6.2V34h-4v-6.3c0-1.5 0-3.4-2.1-3.4s-2.4 1.7-2.4 3.3V34h-4V18z' fill='white'/%3E%3C/svg%3E",
-        external: 'https://de.linkedin.com/in/kenneth-hansen-1163b21b5'
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='4' fill='%230A66C2'/%3E%3Cpath d='M14 18h4v16h-4V18zm2-6a2.2 2.2 0 1 1-2.2 2.2A2.2 2.2 0 0 1 16 12zm8 6h3.8v2.2h.1a4.2 4.2 0 0 1 3.8-2.1c4 0 4.8 2.7 4.8 6.2V34h-4v-6.3c0-1.5 0-3.4-2.1-3.4s-2.4 1.7-2.4 3.3V34h-4V18z' fill='white'/%3E%3C/svg%3E",
+        external: 'https:// de.linkedin.com/in/kenneth-hansen-1163b21b5'
     },
     'github': {
         title: 'Kenneth on GitHub',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 4C12.95 4 4 12.95 4 24c0 8.84 5.73 16.33 13.67 18.97.5.09.68-.22.68-.48v-1.7c-5.56 1.21-6.73-2.68-6.73-2.68-.91-2.31-2.21-2.93-2.21-2.93-1.82-1.24.14-1.2.14-1.2 2.01.14 3.07 2.06 3.07 2.06 1.79 3.06 4.69 2.18 5.83 1.67.18-1.3.7-2.18 1.28-2.68-4.44-.5-9.1-2.22-9.1-9.87 0-2.18.78-3.96 2.06-5.35-.2-.5-.89-2.53.2-5.28 0 0 1.68-.54 5.5 2.05a19.1 19.1 0 0 1 10 0c3.82-2.59 5.5-2.05 5.5-2.05 1.09 2.75.4 4.78.2 5.28 1.28 1.39 2.06 3.17 2.06 5.35 0 7.67-4.67 9.36-9.13 9.86.72.62 1.37 1.83 1.37 3.69v5.48c0 .26.18.57.69.47C38.27 40.33 44 32.84 44 24c0-11.05-8.95-20-20-20z' fill='black'/%3E%3C/svg%3E",
-        external: 'https://github.com/knnthhnsn'
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 4C12.95 4 4 12.95 4 24c0 8.84 5.73 16.33 13.67 18.97.5.09.68-.22.68-.48v-1.7c-5.56 1.21-6.73-2.68-6.73-2.68-.91-2.31-2.21-2.93-2.21-2.93-1.82-1.24.14-1.2.14-1.2 2.01.14 3.07 2.06 3.07 2.06 1.79 3.06 4.69 2.18 5.83 1.67.18-1.3.7-2.18 1.28-2.68-4.44-.5-9.1-2.22-9.1-9.87 0-2.18.78-3.96 2.06-5.35-.2-.5-.89-2.53.2-5.28 0 0 1.68-.54 5.5 2.05a19.1 19.1 0 0 1 10 0c3.82-2.59 5.5-2.05 5.5-2.05 1.09 2.75.4 4.78.2 5.28 1.28 1.39 2.06 3.17 2.06 5.35 0 7.67-4.67 9.36-9.13 9.86.72.62 1.37 1.83 1.37 3.69v5.48c0 .26.18.57.69.47C38.27 40.33 44 32.84 44 24c0-11.05-8.95-20-20-20z' fill='black'/%3E%3C/svg%3E",
+        external: 'https:// github.com/knnthhnsn'
     },
     'games': {
         title: 'Games',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E",
         content: `
             <div class="xp-explorer">
                 <div class="explorer-toolbar">
-                    <button><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M10 2L4 8l6 6' stroke='%233a9d23' stroke-width='2' fill='none'/%3E%3C/svg%3E"> Back</button>
+                    <button><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M10 2L4 8l6 6' stroke='%233a9d23' stroke-width='2' fill='none'/%3E%3C/svg%3E"> Back</button>
                     <div class="divider"></div>
-                    <button><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M2 4v10h12V6H8l-2-2H2z' fill='%23ffcc00'/%3E%3C/svg%3E"> Folders</button>
+                    <button><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M2 4v10h12V6H8l-2-2H2z' fill='%23ffcc00'/%3E%3C/svg%3E"> Folders</button>
                 </div>
                 <div class="explorer-grid">
-                    <div class="explorer-item" onclick="openWindowById('solitaire')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='green'/%3E%3Crect x='10' y='10' width='28' height='28' rx='2' fill='white'/%3E%3Ctext x='24' y='30' font-family='Arial' font-size='20' fill='red' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E"><span>Solitaire</span></div>
-                    <div class="explorer-item" onclick="openWindowById('snake')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Crect x='4' y='14' width='4' height='4' fill='%2300ff00'/%3E%3Crect x='8' y='14' width='4' height='4' fill='%2300ff00'/%3E%3Crect x='12' y='14' width='4' height='4' fill='%2300ff00'/%3E%3Crect x='16' y='14' width='4' height='4' fill='%2300ff00'/%3E%3Crect x='24' y='8' width='4' height='4' fill='%23ff0000'/%3E%3C/svg%3E"><span>Snake</span></div>
-                    <div class="explorer-item" onclick="openWindowById('minesweeper')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ccc'/%3E%3Ccircle cx='16' cy='16' r='6' fill='black'/%3E%3C/svg%3E"><span>Minesweeper</span></div>
-                    <div class="explorer-item" onclick="openWindowById('pinball')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23003399'/%3E%3Ccircle cx='16' cy='16' r='8' fill='silver'/%3E%3C/svg%3E"><span>Pinball</span></div>
+                    <div class="explorer-item" onclick="openWindowById('solitaire')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='green'/%3E%3Crect x='10' y='10' width='28' height='28' rx='2' fill='white'/%3E%3Ctext x='24' y='30' font-family='Arial' font-size='20' fill='red' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E"><span>Solitaire</span></div>
+                    <div class="explorer-item" onclick="openWindowById('snake')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Crect x='4' y='14' width='4' height='4' fill='%2300ff00'/%3E%3Crect x='8' y='14' width='4' height='4' fill='%2300ff00'/%3E%3Crect x='12' y='14' width='4' height='4' fill='%2300ff00'/%3E%3Crect x='16' y='14' width='4' height='4' fill='%2300ff00'/%3E%3Crect x='24' y='8' width='4' height='4' fill='%23ff0000'/%3E%3C/svg%3E"><span>Snake</span></div>
+                    <div class="explorer-item" onclick="openWindowById('minesweeper')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ccc'/%3E%3Ccircle cx='16' cy='16' r='6' fill='black'/%3E%3C/svg%3E"><span>Minesweeper</span></div>
+                    <div class="explorer-item" onclick="openWindowById('pinball')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23003399'/%3E%3Ccircle cx='16' cy='16' r='8' fill='silver'/%3E%3C/svg%3E"><span>Pinball</span></div>
                 </div>
             </div>
         `
     },
     'tools': {
         title: 'Tools',
-        icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E",
+        icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E",
         content: `
             <div class="xp-explorer">
                 <div class="explorer-toolbar">
-                    <button><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M10 2L4 8l6 6' stroke='%233a9d23' stroke-width='2' fill='none'/%3E%3C/svg%3E"> Back</button>
+                    <button><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M10 2L4 8l6 6' stroke='%233a9d23' stroke-width='2' fill='none'/%3E%3C/svg%3E"> Back</button>
                     <div class="divider"></div>
-                    <button><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M2 4v10h12V6H8l-2-2H2z' fill='%23ffcc00'/%3E%3C/svg%3E"> Folders</button>
+                    <button><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M2 4v10h12V6H8l-2-2H2z' fill='%23ffcc00'/%3E%3C/svg%3E"> Folders</button>
                 </div>
                 <div class="explorer-grid">
-                    <div class="explorer-item" onclick="openWindowById('ie')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='18' fill='%23003399'/%3E%3Ctext x='24' y='32' font-family='Arial' font-size='24' font-weight='bold' fill='white' text-anchor='middle'%3Ee%3C/text%3E%3C/svg%3E"><span>Internet Explorer</span></div>
-                    <div class="explorer-item" onclick="openWindowById('calculator')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='2' width='24' height='28' fill='%23ECE9D8' stroke='%23716F64'/%3E%3C/svg%3E"><span>Calculator</span></div>
-                    <div class="explorer-item" onclick="openWindowById('paint')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 4h24v24H4z' fill='white' stroke='black'/%3E%3C/svg%3E"><span>Paint</span></div>
-                    <div class="explorer-item" onclick="openWindowById('cmd')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='black'/%3E%3C/svg%3E"><span>Command Prompt</span></div>
-                    <div class="explorer-item" onclick="openWindowById('notepad-enhanced')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M2 2h12v12H2V2z' fill='white' stroke='black'/%3E%3C/svg%3E"><span>Notepad</span></div>
-                    <div class="explorer-item" onclick="openWindowById('sound-test')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M2 6v4h3l4 4V2L5 6H2zM12 8c0-2-1-3-2-4v8c1-1 2-2 2-4z' fill='%23666'/%3E%3C/svg%3E"><span>Sound Check</span></div>
-                    <div class="explorer-item" onclick="openWindowById('photos')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' fill='%23333' rx='2'/%3E%3Crect x='6' y='6' width='20' height='16' fill='%23666'/%3E%3Ccircle cx='12' cy='12' r='3' fill='%23ffcc00'/%3E%3Cpath d='M6 18l6-4 4 3 6-5v10H6z' fill='%2300aa00'/%3E%3C/svg%3E"><span>My Pictures</span></div>
-                    <div class="explorer-item" onclick="openWindowById('winamp')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23333'/%3E%3C/svg%3E"><span>Winamp</span></div>
-                    <div class="explorer-item" onclick="openWindowById('wmp')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%23ff6600'/%3E%3Cpath d='M12 10v12l10-6z' fill='white'/%3E%3C/svg%3E"><span>Media Player</span></div>
-                    <div class="explorer-item" onclick="openWindowById('weather')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='14' r='6' fill='%23FFD700'/%3E%3C/svg%3E"><span>Weather</span></div>
-                    <div class="explorer-item" onclick="openWindowById('skills-enhanced')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' fill='%23808080'/%3E%3Crect x='8' y='8' width='16' height='3' fill='%2300ff00'/%3E%3C/svg%3E"><span>My Skills</span></div>
-                    <div class="explorer-item" onclick="openWindowById('msn')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%2300cc00'/%3E%3C/svg%3E"><span>Messenger</span></div>
-                    <div class="explorer-item" onclick="openWindowById('control-panel')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='10' y='10' width='28' height='28' fill='%23ECE9D8' stroke='%23716F64'/%3E%3C/svg%3E"><span>Control Panel</span></div>
-                    <div class="explorer-item" onclick="openWindowById('search')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='6' cy='6' r='5' fill='none' stroke='black'/%3E%3C/svg%3E"><span>Search</span></div>
-                    <div class="explorer-item" onclick="openWindowById('error-trigger')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M8 1l7 14H1L8 1z' fill='yellow' stroke='black'/%3E%3C/svg%3E"><span>System Fix</span></div>
+                    <div class="explorer-item" onclick="openWindowById('ie')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='18' fill='%23003399'/%3E%3Ctext x='24' y='32' font-family='Arial' font-size='24' font-weight='bold' fill='white' text-anchor='middle'%3Ee%3C/text%3E%3C/svg%3E"><span>Internet Explorer</span></div>
+                    <div class="explorer-item" onclick="openWindowById('calculator')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='2' width='24' height='28' fill='%23ECE9D8' stroke='%23716F64'/%3E%3C/svg%3E"><span>Calculator</span></div>
+                    <div class="explorer-item" onclick="openWindowById('paint')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 4h24v24H4z' fill='white' stroke='black'/%3E%3C/svg%3E"><span>Paint</span></div>
+                    <div class="explorer-item" onclick="openWindowById('cmd')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='black'/%3E%3C/svg%3E"><span>Command Prompt</span></div>
+                    <div class="explorer-item" onclick="openWindowById('notepad-enhanced')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M2 2h12v12H2V2z' fill='white' stroke='black'/%3E%3C/svg%3E"><span>Notepad</span></div>
+                    <div class="explorer-item" onclick="openWindowById('sound-test')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M2 6v4h3l4 4V2L5 6H2zM12 8c0-2-1-3-2-4v8c1-1 2-2 2-4z' fill='%23666'/%3E%3C/svg%3E"><span>Sound Check</span></div>
+                    <div class="explorer-item" onclick="openWindowById('photos')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' fill='%23333' rx='2'/%3E%3Crect x='6' y='6' width='20' height='16' fill='%23666'/%3E%3Ccircle cx='12' cy='12' r='3' fill='%23ffcc00'/%3E%3Cpath d='M6 18l6-4 4 3 6-5v10H6z' fill='%2300aa00'/%3E%3C/svg%3E"><span>My Pictures</span></div>
+                    <div class="explorer-item" onclick="openWindowById('winamp')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23333'/%3E%3C/svg%3E"><span>Winamp</span></div>
+                    <div class="explorer-item" onclick="openWindowById('wmp')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%23ff6600'/%3E%3Cpath d='M12 10v12l10-6z' fill='white'/%3E%3C/svg%3E"><span>Media Player</span></div>
+                    <div class="explorer-item" onclick="openWindowById('weather')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='14' r='6' fill='%23FFD700'/%3E%3C/svg%3E"><span>Weather</span></div>
+                    <div class="explorer-item" onclick="openWindowById('skills-enhanced')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' fill='%23808080'/%3E%3Crect x='8' y='8' width='16' height='3' fill='%2300ff00'/%3E%3C/svg%3E"><span>My Skills</span></div>
+                    <div class="explorer-item" onclick="openWindowById('msn')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%2300cc00'/%3E%3C/svg%3E"><span>Messenger</span></div>
+                    <div class="explorer-item" onclick="openWindowById('control-panel')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='10' y='10' width='28' height='28' fill='%23ECE9D8' stroke='%23716F64'/%3E%3C/svg%3E"><span>Control Panel</span></div>
+                    <div class="explorer-item" onclick="openWindowById('search')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='6' cy='6' r='5' fill='none' stroke='black'/%3E%3C/svg%3E"><span>Search</span></div>
+                    <div class="explorer-item" onclick="openWindowById('error-trigger')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M8 1l7 14H1L8 1z' fill='yellow' stroke='black'/%3E%3C/svg%3E"><span>System Fix</span></div>
                 </div>
             </div>
         `
@@ -1517,14 +1513,14 @@ const windowContents = {
 };
 
 const projectDetails = {
-    'volume-village': { title: 'Volume Village', link: 'https://updated-volume-village.vercel.app/', desc: 'Underground culture hub in Aarhusevents, concerts, and raves. A multimedia project showcasing the vibrant local scene.' },
-    'black-bible': { title: 'Premium Black Bible', link: 'https://premiumblackbible.com/', desc: 'Minimal scripture-inspired book/ebook promo site with waitlist.' },
-    'bitcoin-basics': { title: 'Bitcoin Basics', link: 'https://bitcoin-basics.vercel.app/', desc: 'Beginner-friendly Bitcoin education guidelevels, wallets, freedom vibes.' },
-    'pepecoin-arcade': { title: 'Pepecoin Arcade', link: 'https://pepecoin-arcade.vercel.app/', desc: 'Retro arcade hub for the Pepecoin universegames, vibes, and community.' },
-    'museum-guide': { title: 'Museum Spille Guide', link: 'https://interstellar-smoky-psi.vercel.app/', desc: 'Interactive gaming guide for museum exhibitsblending history with play.' },
-    'havblink': { title: 'Havblink', link: 'https://havblink.vercel.app/', desc: 'A modern web experience for Havblinksleek design and smooth performance.' },
-    'kekspace': { title: 'Kekspace', link: 'https://kek.space', desc: 'The frontier of internet culturea community space for explorers of the digital realm.' },
-    'basedman': { title: 'Basedman', link: 'https://basedman.io/', desc: 'Meme hero NFT/token site in the Pepecoin universebased culture protector.' }
+    'volume-village': { title: 'Volume Village', link: 'https:// updated-volume-village.vercel.app/', desc: 'Underground culture hub in Aarhusevents, concerts, and raves. A multimedia project showcasing the vibrant local scene.' },
+    'black-bible': { title: 'Premium Black Bible', link: 'https:// premiumblackbible.com/', desc: 'Minimal scripture-inspired book/ebook promo site with waitlist.' },
+    'bitcoin-basics': { title: 'Bitcoin Basics', link: 'https:// bitcoin-basics.vercel.app/', desc: 'Beginner-friendly Bitcoin education guidelevels, wallets, freedom vibes.' },
+    'pepecoin-arcade': { title: 'Pepecoin Arcade', link: 'https:// pepecoin-arcade.vercel.app/', desc: 'Retro arcade hub for the Pepecoin universegames, vibes, and community.' },
+    'museum-guide': { title: 'Museum Spille Guide', link: 'https:// interstellar-smoky-psi.vercel.app/', desc: 'Interactive gaming guide for museum exhibitsblending history with play.' },
+    'havblink': { title: 'Havblink', link: 'https:// havblink.vercel.app/', desc: 'A modern web experience for Havblinksleek design and smooth performance.' },
+    'kekspace': { title: 'Kekspace', link: 'https:// kek.space', desc: 'The frontier of internet culturea community space for explorers of the digital realm.' },
+    'basedman': { title: 'Basedman', link: 'https:// basedman.io/', desc: 'Meme hero NFT/token site in the Pepecoin universebased culture protector.' }
 };
 
 function openWindowById(id) {
@@ -1541,7 +1537,7 @@ function openWindowById(id) {
 
         // Play dial-up sound when opening IE
         if (id === 'ie') {
-            const dialUp = new Audio('https://www.soundboard.com/handler/DownLoadTrack.ashx?cliptitle=Dial+Up+Modem&filename=mz/Mzg1ODMxNTIzMzg1ODM3_JzthsfvUY24.mp3');
+            const dialUp = new Audio('https:// www.soundboard.com/handler/DownLoadTrack.ashx?cliptitle=Dial+Up+Modem&filename=mz/Mzg1ODMxNTIzMzg1ODM3_JzthsfvUY24.mp3');
             dialUp.volume = 0.3;
             dialUp.play().catch(() => { });
         }
@@ -1557,7 +1553,7 @@ function openProject(projectId) {
                 <p style="font-size: 12px; margin-bottom: 20px;">${project.desc}</p>
                 <div style="display: flex; gap: 10px; justify-content: center;">
                     <button class="xp-btn" onclick="openInIE('${project.link}')">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23003399'/%3E%3Ctext x='8' y='11' font-size='10' fill='white' text-anchor='middle'%3Ee%3C/text%3E%3C/svg%3E" width="16" style="vertical-align: middle; margin-right: 5px;">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%23003399'/%3E%3Ctext x='8' y='11' font-size='10' fill='white' text-anchor='middle'%3Ee%3C/text%3E%3C/svg%3E" width="16" style="vertical-align: middle; margin-right: 5px;">
                         Immersive IE View
                     </button>
                     <a href="${project.link}" target="_blank" class="xp-btn" style="text-decoration: none; color: black; line-height: 1.4;">
@@ -1566,7 +1562,7 @@ function openProject(projectId) {
                 </div>
             </div>
         `;
-        createWindow(`proj-${projectId}`, project.title, "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E", content);
+        createWindow(`proj-${projectId}`, project.title, "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E", content);
     }
 }
 
@@ -1581,7 +1577,7 @@ function openInIE(url) {
             <iframe src="${url}" style="flex-grow: 1; border: none; background: white;"></iframe>
         </div>
     `;
-    createWindow('ie-immersive', 'Internet Explorer', "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='18' fill='%23003399'/%3E%3Ctext x='24' y='32' font-family='Arial' font-size='24' font-weight='bold' fill='white' text-anchor='middle'%3Ee%3C/text%3E%3C/svg%3E", content);
+    createWindow('ie-immersive', 'Internet Explorer', "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='18' fill='%23003399'/%3E%3Ctext x='24' y='32' font-family='Arial' font-size='24' font-weight='bold' fill='white' text-anchor='middle'%3Ee%3C/text%3E%3C/svg%3E", content);
 }
 
 function switchTab(btn, tabId) {
@@ -1655,7 +1651,7 @@ window.showMsnToast = function (name) {
     toast = document.createElement('div');
     toast.id = 'msn-toast';
     toast.innerHTML = `
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Ccircle cx='25' cy='25' r='25' fill='%23ccc'/%3E%3Crect x='15' y='15' width='20' height='20' fill='white' rx='5'/%3E%3C/svg%3E" class="toast-pfp">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Ccircle cx='25' cy='25' r='25' fill='%23ccc'/%3E%3Crect x='15' y='15' width='20' height='20' fill='white' rx='5'/%3E%3C/svg%3E" class="toast-pfp">
         <div class="toast-text">
             <strong>${name}</strong>
             <span>just signed in.</span>
@@ -1686,11 +1682,11 @@ document.addEventListener('click', () => contextMenu.classList.add('hidden'));
 // 1. Search Companion (Rover)
 windowContents['search'] = {
     title: 'Search Results',
-    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='14' cy='14' r='8' stroke='black' stroke-width='2' fill='none'/%3E%3Cline x1='20' y1='20' x2='28' y2='28' stroke='black' stroke-width='3'/%3E%3C/svg%3E",
+    icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='14' cy='14' r='8' stroke='black' stroke-width='2' fill='none'/%3E%3Cline x1='20' y1='20' x2='28' y2='28' stroke='black' stroke-width='3'/%3E%3C/svg%3E",
     content: `
         <div class="search-companion">
             <div class="rover-area">
-                <img src="https://winxp.vercel.app/rover.gif" class="rover-gif" alt="Rover" id="rover-companion" style="cursor:pointer;" onclick="if(window.clippySpeak) {
+                <img src="https:// winxp.vercel.app/rover.gif" class="rover-gif" alt="Rover" id="rover-companion" style="cursor:pointer;" onclick="if(window.clippySpeak) {
                     const roverPhrases = [
                         { text: 'Did you know Rover used to be a movie star? He\'s very famous in the Windows XP world.', audio: 'sounds/clippy/rover_star.mp3' },
                         { text: 'Who\'s a good search companion? Rover is! Yes he is!', audio: 'sounds/clippy/rover_goodboy.mp3' }
@@ -1714,7 +1710,7 @@ windowContents['search'] = {
 // 2. Space Cadet Pinball (Self-contained)
 windowContents['pinball'] = {
     title: '3D Pinball for Windows - Space Cadet',
-    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23003399'/%3E%3Ccircle cx='16' cy='16' r='8' fill='silver'/%3E%3C/svg%3E",
+    icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23003399'/%3E%3Ccircle cx='16' cy='16' r='8' fill='silver'/%3E%3C/svg%3E",
     content: `
         <div id="pb-game" style="display:flex;flex-direction:column;align-items:center;background:#1a1a2e;height:100%;overflow:hidden;position:relative;">
             <div style="display:flex;justify-content:space-between;width:100%;padding:6px 12px;background:#0f0f23;color:#0ff;font-family:'Courier New',monospace;font-size:14px;box-sizing:border-box;">
@@ -1993,7 +1989,7 @@ window.initPinball = function () {
 // 3. Windows Media Player
 windowContents['wmp'] = {
     title: 'Windows Media Player',
-    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%23ff6600'/%3E%3Cpath d='M12 10v12l10-6z' fill='white'/%3E%3C/svg%3E",
+    icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%23ff6600'/%3E%3Cpath d='M12 10v12l10-6z' fill='white'/%3E%3C/svg%3E",
     content: `
         <div class="wmp-win">
             <div class="wmp-viz">
@@ -2014,16 +2010,16 @@ windowContents['wmp'] = {
 // 4. JS Paint (MS Paint Clone)
 windowContents['paint'] = {
     title: 'untitled - Paint',
-    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' fill='white' stroke='black'/%3E%3Ccircle cx='10' cy='10' r='3' fill='red'/%3E%3Ccircle cx='22' cy='10' r='3' fill='blue'/%3E%3Ccircle cx='16' cy='22' r='4' fill='yellow'/%3E%3C/svg%3E",
+    icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' fill='white' stroke='black'/%3E%3Ccircle cx='10' cy='10' r='3' fill='red'/%3E%3Ccircle cx='22' cy='10' r='3' fill='blue'/%3E%3Ccircle cx='16' cy='22' r='4' fill='yellow'/%3E%3C/svg%3E",
     content: `
-        <iframe src="https://jspaint.app/" style="width:100%; height:100%; border:none;"></iframe>
+        <iframe src="https:// jspaint.app/" style="width:100%; height:100%; border:none;"></iframe>
     `
 };
 
 // 5. Minesweeper (Self-contained)
 windowContents['minesweeper'] = {
     title: 'Minesweeper',
-    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ccc'/%3E%3Ccircle cx='16' cy='16' r='6' fill='black'/%3E%3C/svg%3E",
+    icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ccc'/%3E%3Ccircle cx='16' cy='16' r='6' fill='black'/%3E%3C/svg%3E",
     content: `
         <div id="ms-game" style="display:flex; flex-direction:column; align-items:center; background:#bdbdbd; padding:10px; border:3px outset #eee; height:100%; box-sizing:border-box; user-select:none;">
             <div style="background:#bdbdbd; border:3px inset #777; padding:5px 10px; margin-bottom:10px; display:flex; justify-content:space-between; width:220px; align-items:center; font-family:'MS Sans Serif', Arial; font-weight:bold;">
@@ -2141,7 +2137,7 @@ window.initMinesweeper = function () {
 // 6. Display Properties (Theme Switcher)
 windowContents['display-props'] = {
     title: 'Display Properties',
-    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='18' fill='%23333'/%3E%3Crect x='6' y='6' width='20' height='14' fill='%233a6ea5'/%3E%3Crect x='12' y='22' width='8' height='4' fill='%23666'/%3E%3C/svg%3E",
+    icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='18' fill='%23333'/%3E%3Crect x='6' y='6' width='20' height='14' fill='%233a6ea5'/%3E%3Crect x='12' y='22' width='8' height='4' fill='%23666'/%3E%3C/svg%3E",
     content: `
         <div class="xp-tabs">
             <div class="tab-list">
@@ -2153,10 +2149,10 @@ windowContents['display-props'] = {
                 <p style="margin-bottom:10px;">Select a background for your desktop:</p>
                 <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
                     <button class="xp-btn" onclick="changeWallpaper('xp-wallpaper.jpg')">Default XP</button>
-                    <button class="xp-btn" onclick="changeWallpaper('https://images.unsplash.com/photo-1541411191165-f18b6f5d27a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')">Original Bliss</button>
-                    <button class="xp-btn" onclick="changeWallpaper('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000')">Aarhus Mountains</button>
-                    <button class="xp-btn" onclick="changeWallpaper('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000')">Autumn Lake</button>
-                    <button class="xp-btn" onclick="changeWallpaper('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=1000')">Nature Green</button>
+                    <button class="xp-btn" onclick="changeWallpaper('https:// images.unsplash.com/photo-1541411191165-f18b6f5d27a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')">Original Bliss</button>
+                    <button class="xp-btn" onclick="changeWallpaper('https:// images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000')">Aarhus Mountains</button>
+                    <button class="xp-btn" onclick="changeWallpaper('https:// images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000')">Autumn Lake</button>
+                    <button class="xp-btn" onclick="changeWallpaper('https:// images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=1000')">Nature Green</button>
                 </div>
             </div>
             <div class="tab-content" id="tab-appearance">
@@ -2175,7 +2171,7 @@ windowContents['display-props'] = {
                     <button class="xp-btn" onclick="changeTheme('aarhus')" style="background: #0B0E14; color: #FF6B00; font-weight: bold;">Aarhus Midnight (PRO)</button>
                 </div>
                 <br>
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 30'%3E%3Crect width='100' height='30' rx='15' fill='%233a9d23'/%3E%3Ctext x='50' y='20' font-family='Arial' font-size='14' fill='white' text-anchor='middle'%3Estart%3C/text%3E%3C/svg%3E" style="width:100px; opacity:0.5;">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 100 30'%3E%3Crect width='100' height='30' rx='15' fill='%233a9d23'/%3E%3Ctext x='50' y='20' font-family='Arial' font-size='14' fill='white' text-anchor='middle'%3Estart%3C/text%3E%3C/svg%3E" style="width:100px; opacity:0.5;">
             </div>
             <div class="tab-content" id="tab-materials">
                 <p style="margin-bottom:10px;">Apply a material effect to windows:</p>
@@ -2209,7 +2205,7 @@ windowContents['display-props'] = {
 // 8. Windows Messenger (MSN)
 windowContents['msn'] = {
     title: 'Windows Messenger',
-    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%2300cc00'/%3E%3C/svg%3E",
+    icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%2300cc00'/%3E%3C/svg%3E",
     content: `
         <div class="msn-win">
             <div class="msn-header">
@@ -2221,11 +2217,11 @@ windowContents['msn'] = {
             </div>
             <div class="msn-contact-list">
                 <div class="msn-group">Online (3)</div>
-                <div class="msn-contact"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%2300cc00'/%3E%3C/svg%3E" class="msn-status"> <span>John (Aarhus)</span></div>
-                <div class="msn-contact"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%2300cc00'/%3E%3C/svg%3E" class="msn-status"> <span>Sarah (Client)</span></div>
-                <div class="msn-contact" onclick="alert('Starting chat with Recruiter...')"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%2300cc00'/%3E%3C/svg%3E" class="msn-status"> <span>Recruiter</span></div>
+                <div class="msn-contact"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%2300cc00'/%3E%3C/svg%3E" class="msn-status"> <span>John (Aarhus)</span></div>
+                <div class="msn-contact"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%2300cc00'/%3E%3C/svg%3E" class="msn-status"> <span>Sarah (Client)</span></div>
+                <div class="msn-contact" onclick="alert('Starting chat with Recruiter...')"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%2300cc00'/%3E%3C/svg%3E" class="msn-status"> <span>Recruiter</span></div>
                 <div class="msn-group">Offline (12)</div>
-                <div class="msn-contact"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='gray'/%3E%3C/svg%3E" class="msn-status"> <span>Clippy</span></div>
+                <div class="msn-contact"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='gray'/%3E%3C/svg%3E" class="msn-status"> <span>Clippy</span></div>
             </div>
             <div class="msn-footer">
                 <button class="xp-btn" style="width:100%;">Add a Contact</button>
@@ -2237,7 +2233,7 @@ windowContents['msn'] = {
 // 9. Sound Recorder
 windowContents['sound-recorder'] = {
     title: 'Sound - Sound Recorder',
-    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='10' y='4' width='12' height='18' rx='6' fill='%23666'/%3E%3Crect x='8' y='22' width='16' height='4' fill='%23333'/%3E%3C/svg%3E",
+    icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='10' y='4' width='12' height='18' rx='6' fill='%23666'/%3E%3Crect x='8' y='22' width='16' height='4' fill='%23333'/%3E%3C/svg%3E",
     content: `
         <div class="sound-recorder-win">
             <div style="font-size:10px; margin-bottom:5px;">Length: 0.0 sec.</div>
@@ -2258,7 +2254,7 @@ windowContents['sound-recorder'] = {
 // 10. Control Panel
 windowContents['control-panel'] = {
     title: 'Control Panel',
-    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' fill='%23808080'/%3E%3Crect x='8' y='8' width='6' height='6' fill='white'/%3E%3Crect x='18' y='8' width='6' height='6' fill='white'/%3E%3Crect x='8' y='18' width='6' height='6' fill='white'/%3E%3Crect x='18' y='18' width='6' height='6' fill='white'/%3E%3C/svg%3E",
+    icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' fill='%23808080'/%3E%3Crect x='8' y='8' width='6' height='6' fill='white'/%3E%3Crect x='18' y='8' width='6' height='6' fill='white'/%3E%3Crect x='8' y='18' width='6' height='6' fill='white'/%3E%3Crect x='18' y='18' width='6' height='6' fill='white'/%3E%3C/svg%3E",
     content: `
         <div class="xp-explorer">
             <div class="explorer-toolbar">
@@ -2268,19 +2264,19 @@ windowContents['control-panel'] = {
             </div>
             <div class="explorer-grid">
                 <div class="explorer-item" onclick="toggleHighContrast()">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='black'/%3E%3Cpath d='M16 4a12 12 0 010 24z' fill='white'/%3E%3C/svg%3E">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='black'/%3E%3Cpath d='M16 4a12 12 0 010 24z' fill='white'/%3E%3C/svg%3E">
                     <span>High Contrast Mode</span>
                 </div>
                 <div class="explorer-item" onclick="openWindowById('display-props')">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='18' fill='%23333'/%3E%3Crect x='6' y='6' width='20' height='14' fill='%233a6ea5'/%3E%3Crect x='12' y='22' width='8' height='4' fill='%23666'/%3E%3C/svg%3E">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='18' fill='%23333'/%3E%3Crect x='6' y='6' width='20' height='14' fill='%233a6ea5'/%3E%3Crect x='12' y='22' width='8' height='4' fill='%23666'/%3E%3C/svg%3E">
                     <span>Display Settings</span>
                 </div>
                 <div class="explorer-item" onclick="openWindowById('sound-recorder')">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='10' y='4' width='12' height='18' rx='6' fill='%23666'/%3E%3Crect x='8' y='22' width='16' height='4' fill='%23333'/%3E%3C/svg%3E">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='10' y='4' width='12' height='18' rx='6' fill='%23666'/%3E%3Crect x='8' y='22' width='16' height='4' fill='%23333'/%3E%3C/svg%3E">
                     <span>Sounds and Audio</span>
                 </div>
                 <div class="explorer-item" onclick="openWindowById('windows-update')">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23003399'/%3E%3Cpath d='M4 4l10 2v10H4V4zm14-2l10 2v10H18V2zM4 18h10v10l-10-2V18zm14 10V18h10v8l-10 2z' fill='white'/%3E%3C/svg%3E">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23003399'/%3E%3Cpath d='M4 4l10 2v10H4V4zm14-2l10 2v10H18V2zM4 18h10v10l-10-2V18zm14 10V18h10v8l-10 2z' fill='white'/%3E%3C/svg%3E">
                     <span>Windows Update</span>
                 </div>
             </div>
@@ -2291,7 +2287,7 @@ windowContents['control-panel'] = {
 // 11. Windows Update
 windowContents['windows-update'] = {
     title: 'Windows Update',
-    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23003399'/%3E%3Cpath d='M4 4l10 2v10H4V4zm14-2l10 2v10H18V2zM4 18h10v10l-10-2V18zm14 10V18h10v8l-10 2z' fill='white'/%3E%3C/svg%3E",
+    icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23003399'/%3E%3Cpath d='M4 4l10 2v10H4V4zm14-2l10 2v10H18V2zM4 18h10v10l-10-2V18zm14 10V18h10v8l-10 2z' fill='white'/%3E%3C/svg%3E",
     content: `
         <div class="xp-explorer" style="background:white;">
             <div style="background:#003399; color:white; padding:20px;">
@@ -2403,14 +2399,14 @@ window.changeMaterial = function (material) {
 // 7. Windows Movie Maker
 windowContents['moviemaker'] = {
     title: 'Windows Movie Maker',
-    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23666'/%3E%3Crect x='4' y='8' width='24' height='16' fill='%23333'/%3E%3Ccircle cx='16' cy='16' r='4' fill='white'/%3E%3C/svg%3E",
+    icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23666'/%3E%3Crect x='4' y='8' width='24' height='16' fill='%23333'/%3E%3Ccircle cx='16' cy='16' r='4' fill='white'/%3E%3C/svg%3E",
     content: `
         <div class="xp-explorer" style="background:#ECE9D8;">
             <div class="explorer-toolbar">
                 <button>Tasks</button><button>Collections</button>
             </div>
             <div style="padding:20px; text-align:center;">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23666'/%3E%3Crect x='4' y='8' width='24' height='16' fill='%23333'/%3E%3Ccircle cx='16' cy='16' r='4' fill='white'/%3E%3C/svg%3E" width="64" style="margin-bottom:20px;">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23666'/%3E%3Crect x='4' y='8' width='24' height='16' fill='%23333'/%3E%3Ccircle cx='16' cy='16' r='4' fill='white'/%3E%3C/svg%3E" width="64" style="margin-bottom:20px;">
                 <h2>Movie Maker</h2>
                 <p>Import your multimedia projects into the timeline.</p>
                 <div style="margin-top:20px; border:2px inset #716f64; background:black; height:150px; display:flex; align-items:center; justify-content:center; color:white;">
@@ -2499,7 +2495,7 @@ windowContents['moviemaker'] = {
             finalAudioPath = `sounds/clippy/${lang}/${fileKey}.mp3`;
         } else {
             // Legacy/Direct Text Mode
-            // If specific audioPath wasn't provided, we might have issues, 
+            // If specific audioPath wasn't provided, we might have issues,
             // but the original logic handled some of this via the 'phrases' array below.
         }
 
@@ -2551,7 +2547,7 @@ windowContents['moviemaker'] = {
         function legacySpeak(text) {
             const encodedText = encodeURIComponent(text);
             const voice = (window.currentLang === 'da') ? "da-DK-JeppeNeural" : "en-US-BrianMultilingualNeural";
-            const proxyUrl = `https://api.vve.me/api/tts?voice=${voice}&text=${encodedText}`;
+            const proxyUrl = `https:// api.vve.me/api/tts?voice=${voice}&text=${encodedText}`;
             // Clean up previous audio element
             if (currentClippyAudio) {
                 currentClippyAudio.src = '';
@@ -2741,7 +2737,7 @@ window.startErrorAccordion = function () {
         </div>
         <div id="login-bottom">
             <div class="login-footer-btn">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Crect x='2' y='2' width='12' height='12' fill='%23cc0000'/%3E%3C/svg%3E">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Crect x='2' y='2' width='12' height='12' fill='%23cc0000'/%3E%3C/svg%3E">
                 <span>Turn off computer</span>
             </div>
             <div style="opacity:0.6;">After you log on, you can start working.</div>
@@ -2753,13 +2749,13 @@ window.startErrorAccordion = function () {
 // 12. Recycle Bin
 windowContents['recycle-bin'] = {
     title: 'Recycle Bin',
-    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M10 12h28v28H10V12z' fill='%233A6EA5' stroke='%23003399' stroke-width='2'/%3E%3Cpath d='M8 12h32M24 12V6M16 6h16' stroke='%23003399' stroke-width='2'/%3E%3C/svg%3E",
+    icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M10 12h28v28H10V12z' fill='%233A6EA5' stroke='%23003399' stroke-width='2'/%3E%3Cpath d='M8 12h32M24 12V6M16 6h16' stroke='%23003399' stroke-width='2'/%3E%3C/svg%3E",
     content: `
         <div class="xp-explorer" style="background:white;">
             <div style="padding:10px; border-bottom:1px solid #ACA899; background:#eee; font-size:10px;">1 objects in Recycle Bin</div>
             <div class="explorer-grid">
                 <div class="explorer-item" onclick="alert('Recovering system32... just kidding!')">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M6 4v24h20V10l-6-6H6z' fill='white' stroke='black'/%3E%3C/svg%3E">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M6 4v24h20V10l-6-6H6z' fill='white' stroke='black'/%3E%3C/svg%3E">
                     <span>secret_memes.txt</span>
                 </div>
             </div>
@@ -2772,11 +2768,11 @@ windowContents['recycle-bin'] = {
 // 13. Desktop Cleanup Wizard
 windowContents['cleanup-wizard'] = {
     title: 'Desktop Cleanup Wizard',
-    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Ccircle cx='20' cy='20' r='10' stroke='black' stroke-width='2'/%3E%3Cline x1='28' y1='28' x2='40' y2='40' stroke='black' stroke-width='4'/%3E%3C/svg%3E", // Or a wizard icon
+    icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Ccircle cx='20' cy='20' r='10' stroke='black' stroke-width='2'/%3E%3Cline x1='28' y1='28' x2='40' y2='40' stroke='black' stroke-width='4'/%3E%3C/svg%3E", // Or a wizard icon
     content: `
         <div class="xp-wizard">
             <div class="wizard-side">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Ccircle cx='20' cy='20' r='10' stroke='black' stroke-width='2'/%3E%3Cline x1='28' y1='28' x2='40' y2='40' stroke='black' stroke-width='4'/%3E%3C/svg%3E" width="48">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Ccircle cx='20' cy='20' r='10' stroke='black' stroke-width='2'/%3E%3Cline x1='28' y1='28' x2='40' y2='40' stroke='black' stroke-width='4'/%3E%3C/svg%3E" width="48">
             </div>
             <div class="wizard-main">
                 <h2 style="font-size:16px; margin-bottom:10px;">Welcome to the Desktop Cleanup Wizard</h2>
@@ -2785,7 +2781,7 @@ windowContents['cleanup-wizard'] = {
                 <p>The following icons have not been used in the last 60 days:</p>
                 <div style="border:1px solid #ACA899; background:white; height:100px; padding:5px; margin-top:10px;">
                     <div style="display:flex; align-items:center; gap:5px; font-size:11px;">
-                        <input type="checkbox" checked disabled> <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M6 4v24h20V10l-6-6H6z' fill='white' stroke='black'/%3E%3C/svg%3E" width="16"> secret_memes.txt
+                        <input type="checkbox" checked disabled> <img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M6 4v24h20V10l-6-6H6z' fill='white' stroke='black'/%3E%3C/svg%3E" width="16"> secret_memes.txt
                     </div>
                 </div>
                 <div class="wizard-footer">
@@ -2800,7 +2796,7 @@ windowContents['cleanup-wizard'] = {
 // 14. Unused Icons Folder
 windowContents['unused-icons'] = {
     title: 'Unused Desktop Icons',
-    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E",
+    icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M4 12v24h40V16H24l-4-4H4z' fill='%23FFC000' stroke='%23D49B00' stroke-width='2'/%3E%3C/svg%3E",
     content: '<p style="padding:20px; color:black;">Your unused icons have been successfully moved here!</p>'
 };
 
@@ -2976,7 +2972,7 @@ window.addEventListener('keyup', (e) => {
 /* --- COMMAND PROMPT --- */
 windowContents['cmd'] = {
     title: 'C:\\WINDOWS\\system32\\cmd.exe',
-    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='black'/%3E%3Cpath d='M4 8l6 6-6 6h4l6-6-6-6H4zM16 26h12v-4H16v4z' fill='white'/%3E%3C/svg%3E",
+    icon: "data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='black'/%3E%3Cpath d='M4 8l6 6-6 6h4l6-6-6-6H4zM16 26h12v-4H16v4z' fill='white'/%3E%3C/svg%3E",
     content: `
         <div id="cmd-container" onclick="document.getElementById('cmd-input').focus()">
             <div id="cmd-output">
@@ -3571,7 +3567,7 @@ window.navigateFS = function (folder) {
                     `alert('Opening ${item.name}...')`;
         return `
             <div class="explorer-item" onclick="${action}" ondblclick="${action}">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E${item.type === 'folder' ? "%3Cpath d='M4 8v16h24V10H16l-2-2H4z' fill='%23ffcc00'/%3E" :
+                <img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 32 32'%3E${item.type === 'folder' ? "%3Cpath d='M4 8v16h24V10H16l-2-2H4z' fill='%23ffcc00'/%3E" :
                 item.type === 'image' ? "%3Crect x='4' y='4' width='24' height='24' fill='%23fff' stroke='%23666'/%3E%3Ccircle cx='12' cy='12' r='4' fill='%23ffcc00'/%3E%3Cpath d='M4 20l8-6 6 4 10-6v12H4z' fill='%2300aa00'/%3E" :
                     "%3Cpath d='M6 4v24h20V10l-6-6H6z' fill='white' stroke='black'/%3E"
             }%3C/svg%3E">
@@ -3627,22 +3623,22 @@ windowContents['msn'].content = `
         </div>
         <div class="msn-contact-list">
             <div class="msn-group">Social Links</div>
-            <div class="msn-contact" onclick="window.open('https://linkedin.com/in/kenneth', '_blank')">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='2' fill='%230077B5'/%3E%3Cpath d='M4 6v6h2V6H4zm1-3a1 1 0 100 2 1 1 0 000-2zM7 6v6h2V9c0-1 .5-1.5 1.2-1.5.8 0 .8.7.8 1.5v3h2V8.5c0-2-1-2.5-2-2.5-1 0-1.5.5-2 1V6H7z' fill='white'/%3E%3C/svg%3E" class="msn-status"> 
+            <div class="msn-contact" onclick="window.open('https:// linkedin.com/in/kenneth', '_blank')">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='2' fill='%230077B5'/%3E%3Cpath d='M4 6v6h2V6H4zm1-3a1 1 0 100 2 1 1 0 000-2zM7 6v6h2V9c0-1 .5-1.5 1.2-1.5.8 0 .8.7.8 1.5v3h2V8.5c0-2-1-2.5-2-2.5-1 0-1.5.5-2 1V6H7z' fill='white'/%3E%3C/svg%3E" class="msn-status">
                 <span>LinkedIn</span>
             </div>
-            <div class="msn-contact" onclick="window.open('https://github.com/kenneth', '_blank')">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='%23333'/%3E%3Cpath d='M8 1C4.1 1 1 4.1 1 8c0 3.1 2 5.7 4.8 6.6.4.1.5-.2.5-.4v-1.4c-2 .4-2.4-1-2.4-1-.3-.9-.8-1.1-.8-1.1-.7-.5.1-.5.1-.5.7.1 1.1.8 1.1.8.6 1.1 1.7.8 2.1.6.1-.5.3-.8.5-.9-1.6-.2-3.3-.8-3.3-3.6 0-.8.3-1.5.8-2-.1-.2-.4-1 .1-2 0 0 .6-.2 2 .8.6-.2 1.2-.3 1.8-.3s1.2.1 1.8.3c1.4-1 2-.8 2-.8.4 1 .2 1.8.1 2 .5.5.8 1.2.8 2 0 2.8-1.7 3.4-3.3 3.6.3.2.5.7.5 1.4v2.1c0 .2.1.5.5.4C13 13.7 15 11.1 15 8c0-3.9-3.1-7-7-7z' fill='white'/%3E%3C/svg%3E" class="msn-status">
+            <div class="msn-contact" onclick="window.open('https:// github.com/kenneth', '_blank')">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='%23333'/%3E%3Cpath d='M8 1C4.1 1 1 4.1 1 8c0 3.1 2 5.7 4.8 6.6.4.1.5-.2.5-.4v-1.4c-2 .4-2.4-1-2.4-1-.3-.9-.8-1.1-.8-1.1-.7-.5.1-.5.1-.5.7.1 1.1.8 1.1.8.6 1.1 1.7.8 2.1.6.1-.5.3-.8.5-.9-1.6-.2-3.3-.8-3.3-3.6 0-.8.3-1.5.8-2-.1-.2-.4-1 .1-2 0 0 .6-.2 2 .8.6-.2 1.2-.3 1.8-.3s1.2.1 1.8.3c1.4-1 2-.8 2-.8.4 1 .2 1.8.1 2 .5.5.8 1.2.8 2 0 2.8-1.7 3.4-3.3 3.6.3.2.5.7.5 1.4v2.1c0 .2.1.5.5.4C13 13.7 15 11.1 15 8c0-3.9-3.1-7-7-7z' fill='white'/%3E%3C/svg%3E" class="msn-status">
                 <span>GitHub</span>
             </div>
-            <div class="msn-contact" onclick="window.open('https://twitter.com/kenneth', '_blank')">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='%231DA1F2'/%3E%3Cpath d='M12 5.5c-.4.2-.8.3-1.2.4.4-.3.8-.7.9-1.2-.4.2-.9.4-1.4.5-.4-.4-1-.7-1.6-.7-1.2 0-2.2 1-2.2 2.2 0 .2 0 .3.1.5-1.8-.1-3.4-1-4.5-2.3-.2.3-.3.7-.3 1.1 0 .8.4 1.4 1 1.8-.4 0-.7-.1-1-.3 0 1 .7 1.8 1.6 2-.2 0-.3.1-.5.1-.1 0-.3 0-.4-.1.3.9 1.1 1.5 2.1 1.5-.8.6-1.7 1-2.8 1h-.5c1 .6 2.2 1 3.4 1 4.1 0 6.3-3.4 6.3-6.3v-.3c.4-.3.8-.7 1-1.2z' fill='white'/%3E%3C/svg%3E" class="msn-status">
+            <div class="msn-contact" onclick="window.open('https:// twitter.com/kenneth', '_blank')">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='%231DA1F2'/%3E%3Cpath d='M12 5.5c-.4.2-.8.3-1.2.4.4-.3.8-.7.9-1.2-.4.2-.9.4-1.4.5-.4-.4-1-.7-1.6-.7-1.2 0-2.2 1-2.2 2.2 0 .2 0 .3.1.5-1.8-.1-3.4-1-4.5-2.3-.2.3-.3.7-.3 1.1 0 .8.4 1.4 1 1.8-.4 0-.7-.1-1-.3 0 1 .7 1.8 1.6 2-.2 0-.3.1-.5.1-.1 0-.3 0-.4-.1.3.9 1.1 1.5 2.1 1.5-.8.6-1.7 1-2.8 1h-.5c1 .6 2.2 1 3.4 1 4.1 0 6.3-3.4 6.3-6.3v-.3c.4-.3.8-.7 1-1.2z' fill='white'/%3E%3C/svg%3E" class="msn-status">
                 <span>Twitter</span>
             </div>
             <div class="msn-group">Online (3)</div>
-            <div class="msn-contact"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%2300cc00'/%3E%3C/svg%3E" class="msn-status"> <span>John (Aarhus)</span></div>
-            <div class="msn-contact"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%2300cc00'/%3E%3C/svg%3E" class="msn-status"> <span>Sarah (Client)</span></div>
-            <div class="msn-contact"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%2300cc00'/%3E%3C/svg%3E" class="msn-status"> <span>Recruiter</span></div>
+            <div class="msn-contact"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%2300cc00'/%3E%3C/svg%3E" class="msn-status"> <span>John (Aarhus)</span></div>
+            <div class="msn-contact"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%2300cc00'/%3E%3C/svg%3E" class="msn-status"> <span>Sarah (Client)</span></div>
+            <div class="msn-contact"><img src="data:image/svg+xml,%3Csvg xmlns='http:// www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='6' fill='%2300cc00'/%3E%3C/svg%3E" class="msn-status"> <span>Recruiter</span></div>
         </div>
         <div class="msn-footer">
             <button class="xp-btn" style="width:100%;">Add a Contact</button>
