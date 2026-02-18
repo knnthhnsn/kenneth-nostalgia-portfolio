@@ -246,7 +246,7 @@ html {
     width: 100vw;
     height: 100vh;
     background-color: #3a6ea5;
-    background-image: url('xp-wallpaper.jpg');
+    background-image: url('assets/xp-wallpaper.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -1950,9 +1950,9 @@ body.high-contrast #start-button {
 #desktop-char {
     position: absolute;
     bottom: 50px;
-    right: 200px;
+    right: 20px;
     width: 150px;
-    z-index: 0;
+    z-index: -1;
     pointer-events: none !important;
     user-select: none;
     transform: scaleX(-1);

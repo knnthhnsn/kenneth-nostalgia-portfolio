@@ -396,7 +396,7 @@ function getAboutContent(lang) {
     return `
             <div class="xp-content-wrapper about-win">
                 <div class="sidebar">
-                    <img src="Me-pixel-smile.jpeg" class="profile-pic" style="object-fit: cover;">
+                    <img src="assets/Me-pixel-smile.jpeg" class="profile-pic" style="object-fit: cover;">
                     <h3>Kenneth</h3>
                     <p>24 Years Old</p>
                     <p>Aarhus, Denmark</p>
@@ -2427,7 +2427,7 @@ windowContents['moviemaker'] = {
     clippy.id = 'clippy-companion';
     clippy.innerHTML = `
         <div id="clippy-bubble" class="hidden">It looks like you're browsing a portfolio. Would you like help finding Kenneth's skills?</div>
-        <img id="clippy-agent" src="clippy.png" alt="Clippy" style="width:100px; height:auto; cursor:grab;">
+        <img id="clippy-agent" src="assets/clippy.png" alt="Clippy" style="width:65px; height:auto; cursor:grab;">
     `;
     document.body.appendChild(clippy);
 
@@ -2836,7 +2836,7 @@ window.addEventListener('keyup', (e) => {
 (function initDesktopPet() {
     const pet = document.createElement('img');
     pet.id = 'desktop-pet';
-    pet.src = 'cat.gif';
+    pet.src = 'assets/cat.gif';
     pet.title = "Kenneth's Desktop Cat - Controlled by Joystick";
     pet.style.display = 'block';
     pet.style.position = 'fixed'; // Ensure it's above everything
@@ -3545,9 +3545,9 @@ const fileSystem = {
         { name: 'Projects', type: 'folder', id: 'projects' }
     ],
     pictures: [
-        { name: 'Me-pixel.jpeg', type: 'image' },
-        { name: 'Me-pixel-smile.jpeg', type: 'image' },
-        { name: 'sitting-me.jpeg', type: 'image' }
+        { name: 'Me-pixel.jpeg', type: 'image', path: 'assets/Me-pixel.jpeg' },
+        { name: 'Me-pixel-smile.jpeg', type: 'image', path: 'assets/Me-pixel-smile.jpeg' },
+        { name: 'sitting-me.jpeg', type: 'image', path: 'assets/sitting-me.jpeg' }
     ],
     music: [
         { name: 'Kenneth - Bass.mp3', type: 'audio' },
@@ -3614,7 +3614,7 @@ window.initCmdLogic = function () {
 windowContents['msn'].content = `
     <div class="msn-win">
         <div class="msn-header">
-            <img src="Me-pixel-smile.jpeg" class="msn-pfp" style="object-fit: cover;">
+            <img src="assets/Me-pixel-smile.jpeg" class="msn-pfp" style="object-fit: cover;">
             <div>
                 <div style="font-weight:bold;">Kenneth (Online)</div>
                 <div style="font-size:9px; color:#666;">I'm a multimedia creator!</div>
