@@ -276,27 +276,27 @@ const aboutTranslations = {
         sidebar_education: 'Multimedia Design',
         sidebar_semester: '3rd Semester',
         section1_title: 'Who am I?',
-        section1_text: "My name is Kenneth, I'm 24 years old and I live in Aarhus. I'm a creative entrepreneur-type who loves building things from scratch  
+        section1_text: "My name is Kenneth, I'm 24 years old and I live in Aarhus. I'm a creative entrepreneur-type who loves building things from scratch - whether it's websites, apps, games or entirely new concepts. I'm defined by courage, curiosity and a strong resilience - I rarely give up, even when things get tough. My personal ethics and presence make people trust me and enjoy working with me.",
         section2_title: 'What am I passionate about?',
         section2_private: 'Private: Technology, crypto, gaming, music and experimenting with new ideas. I can spend hours diving into a new concept just because it fascinates me.',
-        section2_prof: "Professional: Creating interactive digital experiences that surprise people. I'm passionate about combining design and code into something that feels alive  like this portfolio, built as a fully functional Windows XP simulation in the browser.",
+        section2_prof: "Professional: Creating interactive digital experiences that surprise people. I'm passionate about combining design and code into something that feels alive - like this portfolio, built as a fully functional Windows XP simulation in the browser.",
         section3_title: 'Why Multimedia Design?',
-        section3_text: "I've always built things on the web  from websites as a kid to crypto projects as an adult. The Multimedia Design program gives me the academic foundation I was missing: UX methods, design principles, and a community of like-minded creatives. It's the perfect bridge between my self-taught experience and the professional world.",
+        section3_text: "I've always built things on the web - from websites as a kid to crypto projects as an adult. The Multimedia Design program gives me the academic foundation I was missing: UX methods, design principles, and a community of like-minded creatives. It's the perfect bridge between my self-taught experience and the professional world.",
         section4_title: 'Favorite study projects',
-        section4_text: "The projects where I've had creative freedom have been the best. I love when technology and storytelling meet  like building interactive web experiences or concepts that challenge the norm. This portfolio is a great example: a Windows XP arcade as a portfolio isn't standard, but that's exactly the point.",
+        section4_text: "The projects where I've had creative freedom have been the best. I love when technology and storytelling meet - like building interactive web experiences or concepts that challenge the norm. This portfolio is a great example: a Windows XP arcade as a portfolio isn't standard, but that's exactly the point.",
         section5_title: 'Strengths & tools',
         section5_items: [
-            'Frontend development: HTML, CSS, JavaScript  I can build complex interactive interfaces from scratch',
+            'Frontend development: HTML, CSS, JavaScript - I can build complex interactive interfaces from scratch',
             'Design: Figma, UI/UX principles, prototyping',
-            'AI tools: I use AI as a force-multiplier in my workflow  from ideation to coding',
+            'AI tools: I use AI as a force-multiplier in my workflow - from ideation to coding',
             'Blockchain/Web3: Smart contracts, token design, decentralized apps',
             'Video & content: Content creation, social media automation'
         ],
-        section5_example: "Example: This portfolio illustrates my strengths  it's a complete operating system in the browser with drag-and-drop windows, themes, materials, a cat you can control, Clippy with AI speech, and a full snake game in the command prompt.",
+        section5_example: "Example: This portfolio illustrates my strengths - it's a complete operating system in the browser with drag-and-drop windows, themes, materials, a cat you can control, Clippy with AI speech, and a full snake game in the command prompt.",
         section6_title: 'What others say about me',
         section6_quotes: [
             '"Kenneth is the type who just sits down and builds it, while everyone else is still talking about it."',
-            '"He always thinks in possibilities rather than limitations  and his projects are never boring."'
+            '"He always thinks in possibilities rather than limitations - and his projects are never boring."'
         ],
         section7_title: 'Relevant experience',
         section7_items: [
@@ -305,36 +305,36 @@ const aboutTranslations = {
             'Content creator: Automated social media pipelines with AI-generated content'
         ],
         section7_skills: 'Skills gained: Self-management, rapid prototyping, user empathy, technical problem-solving under pressure, and the ability to go from idea to finished product alone.',
-        section8_title: 'The future  in 5 years',
-        section8_internship: 'Dream internship: A creative tech agency or startup where I can build innovative digital experiences  preferably with focus on interactive design, gamification or Web3.',
+        section8_title: 'The future - in 5 years',
+        section8_internship: 'Dream internship: A creative tech agency or startup where I can build innovative digital experiences - preferably with focus on interactive design, gamification or Web3.',
         section8_job: 'Dream job: Creative Technologist or Product Designer at a company that dares to think differently. Alternatively: my own creative tech studio where we build the wildest digital experiences.',
-        section8_vision: 'In 5 years I see myself as an experienced digital creator with a portfolio of projects that made a difference  and with a network of collaborators who share my passion for pushing the boundaries of what tech and design can do.'
+        section8_vision: 'In 5 years I see myself as an experienced digital creator with a portfolio of projects that made a difference - and with a network of collaborators who share my passion for pushing the boundaries of what tech and design can do.'
     },
     da: {
         sidebar_education: 'Multimediedesign',
         sidebar_semester: '3. Semester',
         section1_title: 'Hvem er jeg?',
-        section1_text: 'Jeg hedder Kenneth, er 24 år og bor i Aarhus. Jeg er en kreativ iværksætter-type der elsker at bygge ting fra bunden  hvad enten det er websites, apps, spil eller helt nye koncepter. Jeg kendetegnes ved mod, nysgerrighed og en stærk modstandskraft  jeg giver sjældent op, selv når tingene bliver svære. Min personlige etik og nærvær gør, at folk stoler på mig og gerne samarbejder med mig.',
+        section1_text: 'Jeg hedder Kenneth, er 24 år og bor i Aarhus. Jeg er en kreativ iværksætter-type der elsker at bygge ting fra bunden - hvad enten det er websites, apps, spil eller helt nye koncepter. Jeg kendetegnes ved mod, nysgerrighed og en stærk modstandskraft - jeg giver sjældent op, selv når tingene bliver svære. Min personlige etik og nærvær gør, at folk stoler på mig og gerne samarbejder med mig.',
         section2_title: 'Hvad brænder jeg for?',
         section2_private: 'Privat: Teknologi, krypto, gaming, musik og at eksperimentere med nye idéer. Jeg kan bruge timer på at dykke ned i et nyt koncept bare fordi det fascinerer mig.',
-        section2_prof: 'Professionelt: At skabe interaktive digitale oplevelser der overrasker folk. Jeg brænder for at kombinere design og kode til noget der føles levende  som denne portfolio, der er bygget som en fuldt funktionel Windows XP-simulation i browseren.',
+        section2_prof: 'Professionelt: At skabe interaktive digitale oplevelser der overrasker folk. Jeg brænder for at kombinere design og kode til noget der føles levende - som denne portfolio, der er bygget som en fuldt funktionel Windows XP-simulation i browseren.',
         section3_title: 'Hvorfor Multimediedesign?',
-        section3_text: 'Jeg har altid bygget ting på nettet  lige fra hjemmesider som barn til krypto-projekter som voksen. Multimediedesign-uddannelsen giver mig det faglige fundament jeg manglede: UX-metoder, designprincipper, og et fællesskab af ligesindede. Det er den perfekte bro mellem min selvlærte erfaring og den professionelle verden.',
+        section3_text: 'Jeg har altid bygget ting på nettet - lige fra hjemmesider som barn til krypto-projekter som voksen. Multimediedesign-uddannelsen giver mig det faglige fundament jeg manglede: UX-metoder, designprincipper, og et fællesskab af ligesindede. Det er den perfekte bro mellem min selvlærte erfaring og den professionelle verden.',
         section4_title: 'Sjoveste projekter på studiet',
-        section4_text: 'De projekter hvor jeg har fået frie hænder til at tænke kreativt har været de bedste. Jeg elsker når teknologi og storytelling mødes  f.eks. at bygge interaktive web-oplevelser eller koncepter der udfordrer det normale. Denne portfolio er et godt eksempel: en Windows XP-arkade som portfolio er ikke standard, men det er netop pointen.',
+        section4_text: 'De projekter hvor jeg har fået frie hænder til at tænke kreativt har været de bedste. Jeg elsker når teknologi og storytelling mødes - f.eks. at bygge interaktive web-oplevelser eller koncepter der udfordrer det normale. Denne portfolio er et godt eksempel: en Windows XP-arkade som portfolio er ikke standard, men det er netop pointen.',
         section5_title: 'Faglige styrker & værktøjer',
         section5_items: [
-            'Frontend-udvikling: HTML, CSS, JavaScript  jeg kan bygge komplekse interaktive interfaces fra scratch',
+            'Frontend-udvikling: HTML, CSS, JavaScript - jeg kan bygge komplekse interaktive interfaces fra scratch',
             'Design: Figma, UI/UX-principper, prototyping',
-            'AI-værktøjer: Jeg bruger AI som en force-multiplier i mit workflow  fra idéudvikling til kodning',
+            'AI-værktøjer: Jeg bruger AI som en force-multiplier i mit workflow - fra idéudvikling til kodning',
             'Blockchain/Web3: Smart contracts, token-design, decentraliserede apps',
             'Video & indhold: Content creation, social media automation'
         ],
-        section5_example: 'Eksempel: Denne portfolio illustrerer mine styrker  den er et komplet operativsystem i browseren med drag-and-drop vinduer, temaer, materialer, en kat du kan styre, Clippy med AI-tale, og et fuldt snake-spil i kommandoprompten.',
+        section5_example: 'Eksempel: Denne portfolio illustrerer mine styrker - den er et komplet operativsystem i browseren med drag-and-drop vinduer, temaer, materialer, en kat du kan styre, Clippy med AI-tale, og et fuldt snake-spil i kommandoprompten.',
         section6_title: 'Hvad siger andre om mig?',
         section6_quotes: [
             '"Kenneth er den type der bare sætter sig ned og bygger det, mens resten stadig snakker om det."',
-            '"Han tænker altid i muligheder frem for begrænsninger  og hans projekter er aldrig kedelige."'
+            '"Han tænker altid i muligheder frem for begrænsninger - og hans projekter er aldrig kedelige."'
         ],
         section7_title: 'Relevante erfaringer',
         section7_items: [
@@ -343,36 +343,36 @@ const aboutTranslations = {
             'Content creator: Automatiseret social media pipelines med AI-genereret indhold'
         ],
         section7_skills: 'Kompetencer det gav mig: Selvledelse, hurtig prototyping, brugerforståelse, teknisk problemløsning under pres, og evnen til at gå fra idé til færdigt produkt alene.',
-        section8_title: 'Fremtiden  om 5 år',
-        section8_internship: 'Drømmepraktik: Et kreativt tech-bureau eller startup hvor jeg kan bygge innovative digitale oplevelser  gerne med fokus på interaktivt design, gamification eller Web3.',
+        section8_title: 'Fremtiden - om 5 år',
+        section8_internship: 'Drømmepraktik: Et kreativt tech-bureau eller startup hvor jeg kan bygge innovative digitale oplevelser - gerne med fokus på interaktivt design, gamification eller Web3.',
         section8_job: 'Drømmejob: Creative Technologist eller Product Designer i en virksomhed der tør tænke anderledes. Alternativt: mit eget kreative tech-studio hvor vi bygger de wildeste digitale oplevelser.',
-        section8_vision: 'Om 5 år ser jeg mig selv som en erfaren digital skaber med en portefølje af projekter der har gjort en forskel  og med et netværk af samarbejdspartnere der deler min passion for at skubbe grænserne for hvad tech og design kan.'
+        section8_vision: 'Om 5 år ser jeg mig selv som en erfaren digital skaber med en portefølje af projekter der har gjort en forskel - og med et netværk af samarbejdspartnere der deler min passion for at skubbe grænserne for hvad tech og design kan.'
     },
     de: {
         sidebar_education: 'Multimedia Design',
         sidebar_semester: '3. Semester',
         section1_title: 'Wer bin ich?',
-        section1_text: 'Ich heiße Kenneth, bin 24 Jahre alt und lebe in Aarhus. Ich bin ein kreativer Unternehmertyp, der es liebt, Dinge von Grund auf zu bauen  ob Websites, Apps, Spiele oder völlig neue Konzepte. Ich zeichne mich durch Mut, Neugier und eine starke Widerstandsfähigkeit aus  ich gebe selten auf, auch wenn es schwierig wird. Meine persönliche Ethik und Präsenz sorgen dafür, dass Menschen mir vertrauen und gerne mit mir zusammenarbeiten.',
+        section1_text: 'Ich heiße Kenneth, bin 24 Jahre alt und lebe in Aarhus. Ich bin ein kreativer Unternehmertyp, der es liebt, Dinge von Grund auf zu bauen - ob Websites, Apps, Spiele oder völlig neue Konzepte. Ich zeichne mich durch Mut, Neugier und eine starke Widerstandsfähigkeit aus - ich gebe selten auf, auch wenn es schwierig wird. Meine persönliche Ethik und Präsenz sorgen dafür, dass Menschen mir vertrauen und gerne mit mir zusammenarbeiten.',
         section2_title: 'Wofür brenne ich?',
         section2_private: 'Privat: Technologie, Krypto, Gaming, Musik und das Experimentieren mit neuen Ideen. Ich kann stundenlang in ein neues Konzept eintauchen, einfach weil es mich fasziniert.',
-        section2_prof: 'Beruflich: Interaktive digitale Erlebnisse zu schaffen, die Menschen überraschen. Ich brenne dafür, Design und Code zu etwas zu verbinden, das sich lebendig anfühlt  wie dieses Portfolio, das als voll funktionsfähige Windows XP-Simulation im Browser gebaut ist.',
+        section2_prof: 'Beruflich: Interaktive digitale Erlebnisse zu schaffen, die Menschen überraschen. Ich brenne dafür, Design und Code zu etwas zu verbinden, das sich lebendig anfühlt - wie dieses Portfolio, das als voll funktionsfähige Windows XP-Simulation im Browser gebaut ist.',
         section3_title: 'Warum Multimedia Design?',
-        section3_text: 'Ich habe schon immer Dinge im Web gebaut  von Websites als Kind bis zu Krypto-Projekten als Erwachsener. Das Multimedia-Design-Studium gibt mir das akademische Fundament, das mir fehlte: UX-Methoden, Designprinzipien und eine Gemeinschaft Gleichgesinnter. Es ist die perfekte Brücke zwischen meiner selbst erlernten Erfahrung und der professionellen Welt.',
+        section3_text: 'Ich habe schon immer Dinge im Web gebaut - von Websites als Kind bis zu Krypto-Projekten als Erwachsener. Das Multimedia-Design-Studium gibt mir das akademische Fundament, das mir fehlte: UX-Methoden, Designprinzipien und eine Gemeinschaft Gleichgesinnter. Es ist die perfekte Brücke zwischen meiner selbst erlernten Erfahrung und der professionellen Welt.',
         section4_title: 'Lieblingsprojekte im Studium',
-        section4_text: 'Die Projekte, bei denen ich kreative Freiheit hatte, waren die besten. Ich liebe es, wenn Technologie und Storytelling sich treffen  wie interaktive Web-Erlebnisse oder Konzepte, die das Normale herausfordern. Dieses Portfolio ist ein gutes Beispiel: Eine Windows XP-Arcade als Portfolio ist nicht Standard, aber genau das ist der Punkt.',
+        section4_text: 'Die Projekte, bei denen ich kreative Freiheit hatte, waren die besten. Ich liebe es, wenn Technologie und Storytelling sich treffen - wie interaktive Web-Erlebnisse oder Konzepte, die das Normale herausfordern. Dieses Portfolio ist ein gutes Beispiel: Eine Windows XP-Arcade als Portfolio ist nicht Standard, aber genau das ist der Punkt.',
         section5_title: 'Stärken & Werkzeuge',
         section5_items: [
-            'Frontend-Entwicklung: HTML, CSS, JavaScript  ich kann komplexe interaktive Interfaces von Grund auf bauen',
+            'Frontend-Entwicklung: HTML, CSS, JavaScript - ich kann komplexe interaktive Interfaces von Grund auf bauen',
             'Design: Figma, UI/UX-Prinzipien, Prototyping',
-            'KI-Werkzeuge: Ich nutze KI als Kraftmultiplikator in meinem Workflow  von der Ideenfindung bis zum Programmieren',
+            'KI-Werkzeuge: Ich nutze KI als Kraftmultiplikator in meinem Workflow - von der Ideenfindung bis zum Programmieren',
             'Blockchain/Web3: Smart Contracts, Token-Design, dezentralisierte Apps',
             'Video & Inhalt: Content Creation, Social Media Automatisierung'
         ],
-        section5_example: 'Beispiel: Dieses Portfolio zeigt meine Stärken  es ist ein komplettes Betriebssystem im Browser mit Drag-and-Drop-Fenstern, Themes, Materialien, einer Katze, die man steuern kann, Clippy mit KI-Sprache und einem vollständigen Snake-Spiel in der Eingabeaufforderung.',
+        section5_example: 'Beispiel: Dieses Portfolio zeigt meine Stärken - es ist ein komplettes Betriebssystem im Browser mit Drag-and-Drop-Fenstern, Themes, Materialien, einer Katze, die man steuern kann, Clippy mit KI-Sprache und einem vollständigen Snake-Spiel in der Eingabeaufforderung.',
         section6_title: 'Was andere über mich sagen',
         section6_quotes: [
             '"Kenneth ist der Typ, der sich einfach hinsetzt und es baut, während alle anderen noch darüber reden."',
-            '"Er denkt immer in Möglichkeiten statt in Grenzen  und seine Projekte sind nie langweilig."'
+            '"Er denkt immer in Möglichkeiten statt in Grenzen - und seine Projekte sind nie langweilig."'
         ],
         section7_title: 'Relevante Erfahrungen',
         section7_items: [
@@ -381,10 +381,10 @@ const aboutTranslations = {
             'Content Creator: Automatisierte Social-Media-Pipelines mit KI-generierten Inhalten'
         ],
         section7_skills: 'Erworbene Kompetenzen: Selbstmanagement, schnelles Prototyping, Nutzerverständnis, technische Problemlösung unter Druck und die Fähigkeit, allein von der Idee zum fertigen Produkt zu gelangen.',
-        section8_title: 'Die Zukunft  in 5 Jahren',
-        section8_internship: 'Traumpraktikum: Eine kreative Tech-Agentur oder ein Startup, wo ich innovative digitale Erlebnisse bauen kann  vorzugsweise mit Fokus auf interaktives Design, Gamification oder Web3.',
+        section8_title: 'Die Zukunft - in 5 Jahren',
+        section8_internship: 'Traumpraktikum: Eine kreative Tech-Agentur oder ein Startup, wo ich innovative digitale Erlebnisse bauen kann - vorzugsweise mit Fokus auf interaktives Design, gamification oder Web3.',
         section8_job: 'Traumjob: Creative Technologist oder Product Designer in einem Unternehmen, das es wagt, anders zu denken. Alternativ: mein eigenes kreatives Tech-Studio, in dem wir die verrücktesten digitalen Erlebnisse bauen.',
-        section8_vision: 'In 5 Jahren sehe ich mich als erfahrenen digitalen Schöpfer mit einem Portfolio von Projekten, die einen Unterschied gemacht haben  und mit einem Netzwerk von Kollaborateuren, die meine Leidenschaft teilen, die Grenzen dessen zu verschieben, was Technik und Design können.'
+        section8_vision: 'In 5 Jahren sehe ich mich als erfahrenen digitalen Schöpfer mit einem Portfolio von Projekten, die einen Unterschied gemacht haben - und mit einem Netzwerk von Kollaborateuren, die meine Leidenschaft teilen, die Grenzen dessen zu verschieben, was Technik und Design können.'
     }
 };
 
@@ -999,8 +999,8 @@ const windowContents = {
                     <button class="tab-btn" onclick="switchTab(this, 'hardware')">Hardware</button>
                 </div>
                 <div class="tab-content active" id="tab-general">
-                    <p>System: Microsoft Windows XP Professional</p>
-                    <p>Registered to: Kenneth, Aarhus, Denmark</p>
+                    <p><strong>System:</strong> Microsoft Windows XP Professional</p>
+                    <p><strong>Registered to:</strong> Kenneth, Aarhus, Denmark</p>
                 </div>
                 <div class="tab-content" id="tab-hardware">
                     <ul><li>VS Code</li><li>Figma</li><li>Vercel</li></ul>
@@ -1305,11 +1305,11 @@ const windowContents = {
                 <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px; margin-top:20px;">
                     <div style="display:flex; align-items:center; gap:10px; cursor:pointer;" onclick="openWindowById('sound-test')">
                         <div style="width:32px; height:32px; background:#ddd;"></div>
-                        <div>Sounds and Audio<br><span style="font-size:10px;">Adjust the volume...</span></div>
+                        <div><strong>Sounds and Audio</strong><br><span style="font-size:10px;">Adjust the volume...</span></div>
                     </div>
                     <div style="display:flex; align-items:center; gap:10px; cursor:pointer;" onclick="alert('Display settings locked by Administrator.')">
                         <div style="width:32px; height:32px; background:#ddd;"></div>
-                        <div>Appearance and Themes<br><span style="font-size:10px;">Change the desktop background...</span></div>
+                        <div><strong>Appearance and Themes</strong><br><span style="font-size:10px;">Change the desktop background...</span></div>
                     </div>
                 </div>
             </div>
@@ -1321,7 +1321,7 @@ const windowContents = {
         content: `
             <div style="display:flex; height:100%;">
                 <div style="width:150px; background:#708FD2; color:white; padding:15px; font-size:11px;">
-                    <p>What do you want to search for?</p>
+                    <p><strong>What do you want to search for?</strong></p>
                     <input type="text" style="width:100%; margin-top:10px;">
                     <button class="xp-btn" style="margin-top:10px; width:100%;">Search</button>
                 </div>
@@ -1422,7 +1422,7 @@ const windowContents = {
                     <div class="weather-temp">12°C</div>
                 </div>
                 <div class="weather-details">
-                    <p>Aarhus, Denmark</p>
+                    <p><strong>Aarhus, Denmark</strong></p>
                     <p>Partly Cloudy</p>
                     <div class="weather-stats">
                         <span>?? 12 km/h</span>
@@ -1657,7 +1657,7 @@ window.showMsnToast = function (name) {
     toast.innerHTML = `
         <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Ccircle cx='25' cy='25' r='25' fill='%23ccc'/%3E%3Crect x='15' y='15' width='20' height='20' fill='white' rx='5'/%3E%3C/svg%3E" class="toast-pfp">
         <div class="toast-text">
-            ${name}
+            <strong>${name}</strong>
             <span>just signed in.</span>
         </div>
     `;
