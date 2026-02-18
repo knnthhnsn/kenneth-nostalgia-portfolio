@@ -2865,7 +2865,7 @@ window.addEventListener('keyup', (e) => {
         const speed = 4; // Reduceret fra 7 for bedre kontrol med joystick
         let dx = 0, dy = 0;
 
-        // Arrows or WASD
+        // Pile eller WASD
         if (keys['ArrowLeft'] || keys['KeyA']) dx -= speed;
         if (keys['ArrowRight'] || keys['KeyD']) dx += speed;
         if (keys['ArrowUp'] || keys['KeyW']) dy -= speed;
