@@ -1,4 +1,4 @@
-/* Minimal XP Sound System */
+ï»¿/* Minimal XP Sound System */
 const XP_CLICK = "https://cdnjs.cloudflare.com/ajax/libs/ion-sound/3.0.7/sounds/button_tiny.mp3";
 
 /* ========================================
@@ -17,8 +17,8 @@ const translations = {
         'win_my-documents': 'My Documents',
 
         // Window Titles
-        'win_about': 'About Kenneth - My Computer',
-        'win_projects': 'Projects - My Documents',
+        'win_about': 'About Kenneth',
+        'win_projects': 'Projects',
         'win_skills': 'System Properties',
         'win_contact': 'New Message - Outlook Express',
         'win_resume': 'Resume.txt - Notepad',
@@ -88,8 +88,8 @@ const translations = {
         'win_my-documents': 'Dokumenter',
 
         // Window Titles
-        'win_about': 'Om Kenneth - Denne Computer',
-        'win_projects': 'Projekter - Dokumenter',
+        'win_about': 'Om Kenneth',
+        'win_projects': 'Projekter',
         'win_skills': 'Systemegenskaber',
         'win_contact': 'Ny Besked - Outlook Express',
         'win_resume': 'CV.txt - Notesblok',
@@ -99,55 +99,55 @@ const translations = {
         'win_pinball': '3D Pinball',
         'win_recycle-bin': 'Papirkurv',
         'win_games': 'Spil',
-        'win_tools': 'V�rkt�jer',
+        'win_tools': 'VÃ¦rktÃ¸jer',
 
         // Clippy Phrases (Keys match Python script)
         'clippy_startup': "Velkommen tilbage, Kenneth! Dit skrivebord er klar.",
-        'clippy_shutdown': "Er du sikker p�, at du vil lukke ned? Jeg kommer til at savne dig!",
-        'clippy_error': "Ups! Noget gik galt. Men bare rolig, jeg er her for at hj�lpe!",
-        'clippy_window_close': "Farvel vindue! Vi ses n�ste gang.",
+        'clippy_shutdown': "Er du sikker pÃ¥, at du vil lukke ned? Jeg kommer til at savne dig!",
+        'clippy_error': "Ups! Noget gik galt. Men bare rolig, jeg er her for at hjÃ¦lpe!",
+        'clippy_window_close': "Farvel vindue! Vi ses nÃ¦ste gang.",
         'clippy_logon': "Hej Kenneth! Klar til at vise din portfolio frem?",
-        'clippy_welcome': "Det ser ud til, at du kigger p� en portfolio. Har du brug for hj�lp?",
+        'clippy_welcome': "Det ser ud til, at du kigger pÃ¥ en portfolio. Har du brug for hjï¿½lp?",
         'clippy_meme': "Glem ikke at tjekke Papirkurven for memes!",
-        'clippy_double_click': "Dobbeltklik p� et ikon for at �bne det.",
+        'clippy_double_click': "Dobbeltklik pÃ¥ et ikon for at Ã¥bne det.",
         'clippy_aarhus': "Aarhus er en fantastisk by. Vidste du det?",
-        'clippy_else': "Er der andet, jeg kan g�re for dig?",
+        'clippy_else': "Er der andet, jeg kan gÃ¸re for dig?",
         'clippy_talent': "Kenneth er en prisvindende multimedie-skaber. Meget talentfuld!",
-        'clippy_navigation': "Har du brug for hj�lp til navigation? Bare klik omkring!",
-        'clippy_productivity': "Du har v�ret meget produktiv i dag! Forts�t det gode arbejde!",
-        'clippy_coffee': "Tid til en kaffepause? Jeg holder �je med tingene.",
+        'clippy_navigation': "Har du brug for hjï¿½lp til navigation? Bare klik omkring!",
+        'clippy_productivity': "Du har vï¿½ret meget produktiv i dag! FortsÃ¦t det gode arbejde!",
+        'clippy_coffee': "Tid til en kaffepause? Jeg holder ï¿½je med tingene.",
         'clippy_weekend': "Arbejder du i weekenden? Det kalder jeg dedikation!",
-        'clippy_pinball': "�h, Pinball! Vidste du, at min highscore er en million...",
-        'clippy_paint': "Tegner du noget til portfolioen? Jeg kan hj�lpe dig med formerne!",
-        'clippy_minesweeper': "Pas p� minerne! (Jeg har v�ret der...)",
+        'clippy_pinball': "Ãh, Pinball! Vidste du, at min highscore er en million...",
+        'clippy_paint': "Tegner du noget til portfolioen? Jeg kan hjÃ¦lpe dig med formerne!",
+        'clippy_minesweeper': "Pas pÃ¥ minerne! (Jeg har vï¿½ret der...)",
         'clippy_search': "Rover er en god dreng, er han ikke?",
         'clippy_ie': "Leder du efter flere projekter? Tjek favoritterne i sidepanelet!",
         'clippy_notepad': "Skriver du noget vigtigt? Glem ikke at gemme!",
-        'clippy_photos': "Flotte billeder! Du har et godt �je for komposition.",
-        'clippy_cmd': "Uuh, kommandoprompten! Du m� v�re en power user.",
+        'clippy_photos': "Flotte billeder! Du har et godt Ã¸je for komposition.",
+        'clippy_cmd': "Uuh, kommandoprompten! Du mÃ¥ vï¿½re en power user.",
         'clippy_winamp': "It really whips the llama's behind! Klassisk Winamp.",
         'clippy_cat_like': "Mjav! Katten ser ud til at kunne lide din portfolio.",
         'clippy_cat_recycle': "Jeg tror, katten leder efter Papirkurven.",
-        'clippy_cat_step': "Pas p�! Lad den ikke tr�de p� dine vinduer.",
+        'clippy_cat_step': "Pas pï¿½! Lad den ikke trÃ¦de pÃ¥ dine vinduer.",
         'clippy_cat_treat': "Er der nogen, der har en digital godbid? Katten ser sulten ud.",
-        'clippy_cat_sleep': "Shhh! Katten tager en lur p� dit skrivebord.",
-        'clippy_cat_knock': "�h nej! Katten v�ltede et vindue! Typisk katteadf�rd.",
-        'clippy_cat_keyboard': "Katten pr�ver at skrive! Jeg gad vide, hvad den skriver.",
-        'clippy_cluttered': "Dit skrivebord ser lidt rodet ud. Lad mig hj�lpe dig med det!",
+        'clippy_cat_sleep': "Shhh! Katten tager en lur pÃ¥ dit skrivebord.",
+        'clippy_cat_knock': "ï¿½h nej! Katten vÃ¦ltede et vindue! Typisk katteadfÃ¦rd.",
+        'clippy_cat_keyboard': "Katten prÃ¸ver at skrive! Jeg gad vide, hvad den skriver.",
+        'clippy_cluttered': "Dit skrivebord ser lidt rodet ud. Lad mig hjÃ¦lpe dig med det!",
         'clippy_updates': "Der er nye opdateringer til din computer. Tjek Kontrolpanelet!",
         'clippy_meme_secret': "Jeg fandt nogle hemmelige memes i papirkurven. Sig ikke til Kenneth...",
         'clippy_keyboard_shortcut': "Pro tip: Tryk Alt plus F4 for at lukke vinduer hurtigt!",
-        'clippy_easter_egg': "Du fandt en hemmelighed! Kenneth har gemt p�ske�g over hele denne portfolio.",
-        'clippy_hc_on': "Wow! Det er h�j kontrast! Meget retro.",
+        'clippy_easter_egg': "Du fandt en hemmelighed! Kenneth har gemt pï¿½skeï¿½g over hele denne portfolio.",
+        'clippy_hc_on': "Wow! Det er hÃ¸j kontrast! Meget retro.",
         'clippy_hc_off': "Tilbage til det klassiske look!",
         'clippy_theme_success': "Nyt farvetema anvendt! Det ser godt ud.",
-        'clippy_lang_changed': "Sproget er �ndret! Nu snakker vi dansk.",
+        'clippy_lang_changed': "Sproget er Ã¦ndret! Nu snakker vi dansk.",
         'clippy_photo_nice': "Sikke et smukt billede! Kenneth har god smag.",
-        'clippy_photo_next': "Lad mig vise dig det n�ste mesterv�rk!",
+        'clippy_photo_next': "Lad mig vise dig det nÃ¦ste mestervï¿½rk!",
         'clippy_notepad_save': "Din note er gemt! Jeg skal nok huske den for dig.",
-        'clippy_notepad_tip': "Vidste du det? Du kan gemme noter, og de vil stadig v�re her i morgen!",
+        'clippy_notepad_tip': "Vidste du det? Du kan gemme noter, og de vil stadig vÃ¦re her i morgen!",
         'clippy_minesweeper_win': "Du vandt! Du er en minestryger-proff.",
-        'clippy_minesweeper_lost': "Kaboom! Bedre held n�ste gang."
+        'clippy_minesweeper_lost': "Kaboom! Bedre held nÃ¦ste gang."
     },
     de: {
         // UI Elements
@@ -159,8 +159,8 @@ const translations = {
         'win_my-documents': 'Eigene Dateien',
 
         // Window Titles
-        'win_about': '�ber Kenneth - Mein Computer',
-        'win_projects': 'Projekte - Eigene Dateien',
+        'win_about': 'Ãber Kenneth',
+        'win_projects': 'Projekte',
         'win_skills': 'Systemeigenschaften',
         'win_contact': 'Neue Nachricht - Outlook Express',
         'win_resume': 'Lebenslauf.txt - Editor',
@@ -173,31 +173,31 @@ const translations = {
         'win_tools': 'Werkzeuge',
 
         // Clippy Phrases
-        'clippy_startup': "Willkommen zur�ck, Kenneth! Dein Desktop ist bereit.",
-        'clippy_shutdown': "Bist du sicher, dass du herunterfahren m�chtest? Ich werde dich vermissen!",
+        'clippy_startup': "Willkommen zurï¿½ck, Kenneth! Dein Desktop ist bereit.",
+        'clippy_shutdown': "Bist du sicher, dass du herunterfahren mÃ¶chtest? Ich werde dich vermissen!",
         'clippy_error': "Hoppla! Etwas ist schiefgegangen. Aber keine Sorge, ich bin hier um zu helfen!",
-        'clippy_window_close': "Auf Wiedersehen, Fenster! Bis zum n�chsten Mal.",
-        'clippy_logon': "Hallo Kenneth! Bereit, dein Portfolio zu pr�sentieren?",
-        'clippy_welcome': "Es sieht so aus, als ob du ein Portfolio durchst�berst. Brauchst du Hilfe?",
+        'clippy_window_close': "Auf Wiedersehen, Fenster! Bis zum nÃ¤chsten Mal.",
+        'clippy_logon': "Hallo Kenneth! Bereit, dein Portfolio zu prÃ¤sentieren?",
+        'clippy_welcome': "Es sieht so aus, als ob du ein Portfolio durchstÃ¶berst. Brauchst du Hilfe?",
         'clippy_meme': "Vergiss nicht, im Papierkorb nach Memes zu schauen!",
-        'clippy_double_click': "Doppelklicke auf ein Symbol, um es zu �ffnen.",
+        'clippy_double_click': "Doppelklicke auf ein Symbol, um es zu Ã¶ffnen.",
         'clippy_aarhus': "Aarhus ist eine tolle Stadt. Wusstest du das?",
-        'clippy_else': "Gibt es noch etwas, das ich f�r dich tun kann?",
-        'clippy_talent': "Kenneth ist ein preisgekr�nter Multimedia-Sch�pfer. Sehr talentiert!",
+        'clippy_else': "Gibt es noch etwas, das ich fï¿½r dich tun kann?",
+        'clippy_talent': "Kenneth ist ein preisgekrÃ¶nter Multimedia-SchÃ¶pfer. Sehr talentiert!",
         'clippy_navigation': "Brauchst du Hilfe bei der Navigation? Klick einfach herum!",
         'clippy_productivity': "Du warst heute sehr produktiv! Weiter so!",
-        'clippy_coffee': "Zeit f�r eine Kaffeepause? Ich behalte alles im Auge.",
+        'clippy_coffee': "Zeit fï¿½r eine Kaffeepause? Ich behalte alles im Auge.",
         'clippy_weekend': "Am Wochenende arbeiten? Das nenne ich Hingabe!",
         'clippy_pinball': "Oh, Pinball! Wusstest du, mein Highscore ist 1.234.000?",
-        'clippy_paint': "Malst du etwas f�rs Portfolio? Ich kann dir mit Formen helfen!",
+        'clippy_paint': "Malst du etwas fï¿½rs Portfolio? Ich kann dir mit Formen helfen!",
         'clippy_minesweeper': "Klick nicht auf die Minen! (War ich schon...)",
         'clippy_search': "Rover ist ein guter Junge, oder?",
         'clippy_ie': "Suchst du nach mehr Projekten? Schau in die Favoritenleiste!",
         'clippy_notepad': "Schreibst du etwas Wichtiges? Vergiss nicht zu speichern!",
-        'clippy_photos': "Sch�ne Fotos! Du hast ein gutes Auge f�r Komposition.",
+        'clippy_photos': "Schï¿½ne Fotos! Du hast ein gutes Auge fï¿½r Komposition.",
         'clippy_cmd': "Ooh, die Eingabeaufforderung! Du musst ein Power-User sein.",
         'clippy_winamp': "It really whips the llama's behind! Klassisches Winamp.",
-        'clippy_cat_like': "Miau! Die Katze scheint dein Portfolio zu m�gen.",
+        'clippy_cat_like': "Miau! Die Katze scheint dein Portfolio zu mï¿½gen.",
         'clippy_cat_recycle': "Ich glaube, die Katze sucht den Papierkorb.",
         'clippy_cat_step': "Vorsicht! Lass sie nicht auf deine Fenster treten.",
         'clippy_cat_treat': "Hat jemand ein digitales Leckerli? Die Katze sieht hungrig aus.",
@@ -205,20 +205,20 @@ const translations = {
         'clippy_cat_knock': "Oh nein! Die Katze hat ein Fenster umgeworfen! Typisches Katzenverhalten.",
         'clippy_cat_keyboard': "Die Katze versucht zu tippen! Was sie wohl schreibt?",
         'clippy_cluttered': "Dein Desktop sieht etwas unordentlich aus. Lass mich dir helfen!",
-        'clippy_updates': "Neue Updates sind verf�gbar. Pr�fe die Systemsteuerung!",
+        'clippy_updates': "Neue Updates sind verfÃ¼gbar. PrÃ¼fe die Systemsteuerung!",
         'clippy_meme_secret': "Ich habe geheime Memes im Papierkorb gefunden. Sag nicht Kenneth, dass ich es dir verraten habe!",
-        'clippy_keyboard_shortcut': "Profi-Tipp: Dr�cke Alt plus F4, um Fenster schnell zu schlie�en!",
-        'clippy_easter_egg': "Du hast ein Geheimnis gefunden! Kenneth hat Ostereier �berall in diesem Portfolio versteckt.",
+        'clippy_keyboard_shortcut': "Profi-Tipp: Drï¿½cke Alt plus F4, um Fenster schnell zu schlieï¿½en!",
+        'clippy_easter_egg': "Du hast ein Geheimnis gefunden! Kenneth hat Ostereier ï¿½berall in diesem Portfolio versteckt.",
         'clippy_hc_on': "Wow! Das ist hoher Kontrast! Sehr retro.",
-        'clippy_hc_off': "Zur�ck zum klassischen Look!",
+        'clippy_hc_off': "Zurï¿½ck zum klassischen Look!",
         'clippy_theme_success': "Neues Farbschema angewendet! Sieht gut aus.",
-        'clippy_lang_changed': "Sprache ge�ndert! Jetzt sprechen wir Deutsch.",
-        'clippy_photo_nice': "Was f�r ein sch�nes Foto! Kenneth hat guten Geschmack.",
-        'clippy_photo_next': "Lass mich dir das n�chste Meisterwerk zeigen!",
-        'clippy_notepad_save': "Deine Notiz wurde gespeichert! Ich merke sie mir f�r dich.",
+        'clippy_lang_changed': "Sprache geÃ¤ndert! Jetzt sprechen wir Deutsch.",
+        'clippy_photo_nice': "Was fï¿½r ein schÃ¶nes Foto! Kenneth hat guten Geschmack.",
+        'clippy_photo_next': "Lass mich dir das nï¿½chste Meisterwerk zeigen!",
+        'clippy_notepad_save': "Deine Notiz wurde gespeichert! Ich merke sie mir fï¿½r dich.",
         'clippy_notepad_tip': "Wusstest du? Du kannst Notizen speichern und sie sind morgen noch da!",
         'clippy_minesweeper_win': "Du hast gewonnen! Du bist ein Minesweeper-Profi.",
-        'clippy_minesweeper_lost': "Kaboom! Viel Gl�ck beim n�chsten Mal."
+        'clippy_minesweeper_lost': "Kaboom! Viel Glï¿½ck beim nÃ¤chsten Mal."
     }
 };
 
@@ -276,27 +276,27 @@ const aboutTranslations = {
         sidebar_education: 'Multimedia Design',
         sidebar_semester: '3rd Semester',
         section1_title: 'Who am I?',
-        section1_text: "My name is Kenneth, I'm 24 years old and I live in Aarhus. I'm a creative entrepreneur-type who loves building things from scratch � whether it's websites, apps, games or entirely new concepts. I'm defined by <strong>courage</strong>, <strong>curiosity</strong> and a strong <strong>resilience</strong> � I rarely give up, even when things get tough. My personal ethics and presence make people trust me and enjoy working with me.",
+        section1_text: "My name is Kenneth, I'm 24 years old and I live in Aarhus. I'm a creative entrepreneur-type who loves building things from scratch ï¿½ whether it's websites, apps, games or entirely new concepts. I'm defined by <strong>courage</strong>, <strong>curiosity</strong> and a strong <strong>resilience</strong> ï¿½ I rarely give up, even when things get tough. My personal ethics and presence make people trust me and enjoy working with me.",
         section2_title: 'What am I passionate about?',
         section2_private: '<strong>Private:</strong> Technology, crypto, gaming, music and experimenting with new ideas. I can spend hours diving into a new concept just because it fascinates me.',
-        section2_prof: "<strong>Professional:</strong> Creating interactive digital experiences that surprise people. I'm passionate about combining design and code into something that feels alive � like this portfolio, built as a fully functional Windows XP simulation in the browser.",
+        section2_prof: "<strong>Professional:</strong> Creating interactive digital experiences that surprise people. I'm passionate about combining design and code into something that feels alive ï¿½ like this portfolio, built as a fully functional Windows XP simulation in the browser.",
         section3_title: 'Why Multimedia Design?',
-        section3_text: "I've always built things on the web � from websites as a kid to crypto projects as an adult. The Multimedia Design program gives me the academic foundation I was missing: UX methods, design principles, and a community of like-minded creatives. It's the perfect bridge between my self-taught experience and the professional world.",
+        section3_text: "I've always built things on the web ï¿½ from websites as a kid to crypto projects as an adult. The Multimedia Design program gives me the academic foundation I was missing: UX methods, design principles, and a community of like-minded creatives. It's the perfect bridge between my self-taught experience and the professional world.",
         section4_title: 'Favorite study projects',
-        section4_text: "The projects where I've had creative freedom have been the best. I love when technology and storytelling meet � like building interactive web experiences or concepts that challenge the norm. This portfolio is a great example: a Windows XP arcade as a portfolio isn't standard, but that's exactly the point.",
+        section4_text: "The projects where I've had creative freedom have been the best. I love when technology and storytelling meet ï¿½ like building interactive web experiences or concepts that challenge the norm. This portfolio is a great example: a Windows XP arcade as a portfolio isn't standard, but that's exactly the point.",
         section5_title: 'Strengths & tools',
         section5_items: [
-            '<strong>Frontend development:</strong> HTML, CSS, JavaScript � I can build complex interactive interfaces from scratch',
+            '<strong>Frontend development:</strong> HTML, CSS, JavaScript ï¿½ I can build complex interactive interfaces from scratch',
             '<strong>Design:</strong> Figma, UI/UX principles, prototyping',
-            '<strong>AI tools:</strong> I use AI as a force-multiplier in my workflow � from ideation to coding',
+            '<strong>AI tools:</strong> I use AI as a force-multiplier in my workflow ï¿½ from ideation to coding',
             '<strong>Blockchain/Web3:</strong> Smart contracts, token design, decentralized apps',
             '<strong>Video & content:</strong> Content creation, social media automation'
         ],
-        section5_example: "<strong>Example:</strong> This portfolio illustrates my strengths � it's a complete operating system in the browser with drag-and-drop windows, themes, materials, a cat you can control, Clippy with AI speech, and a full snake game in the command prompt.",
+        section5_example: "<strong>Example:</strong> This portfolio illustrates my strengths ï¿½ it's a complete operating system in the browser with drag-and-drop windows, themes, materials, a cat you can control, Clippy with AI speech, and a full snake game in the command prompt.",
         section6_title: 'What others say about me',
         section6_quotes: [
             '"Kenneth is the type who just sits down and builds it, while everyone else is still talking about it."',
-            '"He always thinks in possibilities rather than limitations � and his projects are never boring."'
+            '"He always thinks in possibilities rather than limitations ï¿½ and his projects are never boring."'
         ],
         section7_title: 'Relevant experience',
         section7_items: [
@@ -305,86 +305,86 @@ const aboutTranslations = {
             '<strong>Content creator:</strong> Automated social media pipelines with AI-generated content'
         ],
         section7_skills: '<strong>Skills gained:</strong> Self-management, rapid prototyping, user empathy, technical problem-solving under pressure, and the ability to go from idea to finished product alone.',
-        section8_title: 'The future � in 5 years',
-        section8_internship: '<strong>Dream internship:</strong> A creative tech agency or startup where I can build innovative digital experiences � preferably with focus on interactive design, gamification or Web3.',
+        section8_title: 'The future ï¿½ in 5 years',
+        section8_internship: '<strong>Dream internship:</strong> A creative tech agency or startup where I can build innovative digital experiences ï¿½ preferably with focus on interactive design, gamification or Web3.',
         section8_job: '<strong>Dream job:</strong> Creative Technologist or Product Designer at a company that dares to think differently. Alternatively: my own creative tech studio where we build the wildest digital experiences.',
-        section8_vision: '<strong>In 5 years</strong> I see myself as an experienced digital creator with a portfolio of projects that made a difference � and with a network of collaborators who share my passion for pushing the boundaries of what tech and design can do.'
+        section8_vision: '<strong>In 5 years</strong> I see myself as an experienced digital creator with a portfolio of projects that made a difference ï¿½ and with a network of collaborators who share my passion for pushing the boundaries of what tech and design can do.'
     },
     da: {
         sidebar_education: 'Multimediedesign',
         sidebar_semester: '3. Semester',
         section1_title: 'Hvem er jeg?',
-        section1_text: 'Jeg hedder Kenneth, er 24 �r og bor i Aarhus. Jeg er en kreativ iv�rks�tter-type der elsker at bygge ting fra bunden � hvad enten det er websites, apps, spil eller helt nye koncepter. Jeg kendetegnes ved <strong>mod</strong>, <strong>nysgerrighed</strong> og en st�rk <strong>modstandskraft</strong> � jeg giver sj�ldent op, selv n�r tingene bliver sv�re. Min personlige etik og n�rv�r g�r, at folk stoler p� mig og gerne samarbejder med mig.',
-        section2_title: 'Hvad br�nder jeg for?',
-        section2_private: '<strong>Privat:</strong> Teknologi, krypto, gaming, musik og at eksperimentere med nye id�er. Jeg kan bruge timer p� at dykke ned i et nyt koncept bare fordi det fascinerer mig.',
-        section2_prof: '<strong>Professionelt:</strong> At skabe interaktive digitale oplevelser der overrasker folk. Jeg br�nder for at kombinere design og kode til noget der f�les levende � som denne portfolio, der er bygget som en fuldt funktionel Windows XP-simulation i browseren.',
+        section1_text: 'Jeg hedder Kenneth, er 24 ï¿½r og bor i Aarhus. Jeg er en kreativ ivï¿½rksï¿½tter-type der elsker at bygge ting fra bunden ï¿½ hvad enten det er websites, apps, spil eller helt nye koncepter. Jeg kendetegnes ved <strong>mod</strong>, <strong>nysgerrighed</strong> og en stï¿½rk <strong>modstandskraft</strong> ï¿½ jeg giver sjï¿½ldent op, selv nï¿½r tingene bliver svï¿½re. Min personlige etik og nï¿½rvï¿½r gï¿½r, at folk stoler pÃ¥ mig og gerne samarbejder med mig.',
+        section2_title: 'Hvad brï¿½nder jeg for?',
+        section2_private: '<strong>Privat:</strong> Teknologi, krypto, gaming, musik og at eksperimentere med nye idï¿½er. Jeg kan bruge timer pÃ¥ at dykke ned i et nyt koncept bare fordi det fascinerer mig.',
+        section2_prof: '<strong>Professionelt:</strong> At skabe interaktive digitale oplevelser der overrasker folk. Jeg brï¿½nder for at kombinere design og kode til noget der fï¿½les levende ï¿½ som denne portfolio, der er bygget som en fuldt funktionel Windows XP-simulation i browseren.',
         section3_title: 'Hvorfor Multimediedesign?',
-        section3_text: 'Jeg har altid bygget ting p� nettet � lige fra hjemmesider som barn til krypto-projekter som voksen. Multimediedesign-uddannelsen giver mig det faglige fundament jeg manglede: UX-metoder, designprincipper, og et f�llesskab af ligesindede. Det er den perfekte bro mellem min selvl�rte erfaring og den professionelle verden.',
-        section4_title: 'Sjoveste projekter p� studiet',
-        section4_text: 'De projekter hvor jeg har f�et frie h�nder til at t�nke kreativt har v�ret de bedste. Jeg elsker n�r teknologi og storytelling m�des � f.eks. at bygge interaktive web-oplevelser eller koncepter der udfordrer det normale. Denne portfolio er et godt eksempel: en Windows XP-arkade som portfolio er ikke standard, men det er netop pointen.',
-        section5_title: 'Faglige styrker & v�rkt�jer',
+        section3_text: 'Jeg har altid bygget ting pÃ¥ nettet ï¿½ lige fra hjemmesider som barn til krypto-projekter som voksen. Multimediedesign-uddannelsen giver mig det faglige fundament jeg manglede: UX-metoder, designprincipper, og et fï¿½llesskab af ligesindede. Det er den perfekte bro mellem min selvlï¿½rte erfaring og den professionelle verden.',
+        section4_title: 'Sjoveste projekter pÃ¥ studiet',
+        section4_text: 'De projekter hvor jeg har fï¿½et frie hï¿½nder til at tï¿½nke kreativt har vï¿½ret de bedste. Jeg elsker nï¿½r teknologi og storytelling mï¿½des ï¿½ f.eks. at bygge interaktive web-oplevelser eller koncepter der udfordrer det normale. Denne portfolio er et godt eksempel: en Windows XP-arkade som portfolio er ikke standard, men det er netop pointen.',
+        section5_title: 'Faglige styrker & vï¿½rktï¿½jer',
         section5_items: [
-            '<strong>Frontend-udvikling:</strong> HTML, CSS, JavaScript � jeg kan bygge komplekse interaktive interfaces fra scratch',
+            '<strong>Frontend-udvikling:</strong> HTML, CSS, JavaScript ï¿½ jeg kan bygge komplekse interaktive interfaces fra scratch',
             '<strong>Design:</strong> Figma, UI/UX-principper, prototyping',
-            '<strong>AI-v�rkt�jer:</strong> Jeg bruger AI som en force-multiplier i mit workflow � fra id�udvikling til kodning',
+            '<strong>AI-vï¿½rktï¿½jer:</strong> Jeg bruger AI som en force-multiplier i mit workflow ï¿½ fra idï¿½udvikling til kodning',
             '<strong>Blockchain/Web3:</strong> Smart contracts, token-design, decentraliserede apps',
             '<strong>Video & indhold:</strong> Content creation, social media automation'
         ],
-        section5_example: '<strong>Eksempel:</strong> Denne portfolio illustrerer mine styrker � den er et komplet operativsystem i browseren med drag-and-drop vinduer, temaer, materialer, en kat du kan styre, Clippy med AI-tale, og et fuldt snake-spil i kommandoprompten.',
+        section5_example: '<strong>Eksempel:</strong> Denne portfolio illustrerer mine styrker ï¿½ den er et komplet operativsystem i browseren med drag-and-drop vinduer, temaer, materialer, en kat du kan styre, Clippy med AI-tale, og et fuldt snake-spil i kommandoprompten.',
         section6_title: 'Hvad siger andre om mig?',
         section6_quotes: [
-            '"Kenneth er den type der bare s�tter sig ned og bygger det, mens resten stadig snakker om det."',
-            '"Han t�nker altid i muligheder frem for begr�nsninger � og hans projekter er aldrig kedelige."'
+            '"Kenneth er den type der bare sï¿½tter sig ned og bygger det, mens resten stadig snakker om det."',
+            '"Han tï¿½nker altid i muligheder frem for begrï¿½nsninger ï¿½ og hans projekter er aldrig kedelige."'
         ],
         section7_title: 'Relevante erfaringer',
         section7_items: [
-            '<strong>Selvst�ndig webudvikler:</strong> Bygget og lanceret adskillige webprojekter, fra interaktive sites til crypto-platforme',
-            '<strong>Krypto-iv�rks�tter:</strong> Skabt token-projekter med tusindvis af brugere, inkl. Pepecoin Arcade med on-chain gameplay',
+            '<strong>Selvstï¿½ndig webudvikler:</strong> Bygget og lanceret adskillige webprojekter, fra interaktive sites til crypto-platforme',
+            '<strong>Krypto-ivï¿½rksï¿½tter:</strong> Skabt token-projekter med tusindvis af brugere, inkl. Pepecoin Arcade med on-chain gameplay',
             '<strong>Content creator:</strong> Automatiseret social media pipelines med AI-genereret indhold'
         ],
-        section7_skills: '<strong>Kompetencer det gav mig:</strong> Selvledelse, hurtig prototyping, brugerforst�else, teknisk probleml�sning under pres, og evnen til at g� fra id� til f�rdigt produkt alene.',
-        section8_title: 'Fremtiden � om 5 �r',
-        section8_internship: '<strong>Dr�mmepraktik:</strong> Et kreativt tech-bureau eller startup hvor jeg kan bygge innovative digitale oplevelser � gerne med fokus p� interaktivt design, gamification eller Web3.',
-        section8_job: '<strong>Dr�mmejob:</strong> Creative Technologist eller Product Designer i en virksomhed der t�r t�nke anderledes. Alternativt: mit eget kreative tech-studio hvor vi bygger de wildeste digitale oplevelser.',
-        section8_vision: '<strong>Om 5 �r</strong> ser jeg mig selv som en erfaren digital skaber med en portef�lje af projekter der har gjort en forskel � og med et netv�rk af samarbejdspartnere der deler min passion for at skubbe gr�nserne for hvad tech og design kan.'
+        section7_skills: '<strong>Kompetencer det gav mig:</strong> Selvledelse, hurtig prototyping, brugerforstï¿½else, teknisk problemlï¿½sning under pres, og evnen til at gï¿½ fra idï¿½ til fï¿½rdigt produkt alene.',
+        section8_title: 'Fremtiden ï¿½ om 5 ï¿½r',
+        section8_internship: '<strong>Drï¿½mmepraktik:</strong> Et kreativt tech-bureau eller startup hvor jeg kan bygge innovative digitale oplevelser ï¿½ gerne med fokus pÃ¥ interaktivt design, gamification eller Web3.',
+        section8_job: '<strong>Drï¿½mmejob:</strong> Creative Technologist eller Product Designer i en virksomhed der tï¿½r tï¿½nke anderledes. Alternativt: mit eget kreative tech-studio hvor vi bygger de wildeste digitale oplevelser.',
+        section8_vision: '<strong>Om 5 ï¿½r</strong> ser jeg mig selv som en erfaren digital skaber med en portefï¿½lje af projekter der har gjort en forskel ï¿½ og med et netvï¿½rk af samarbejdspartnere der deler min passion for at skubbe grï¿½nserne for hvad tech og design kan.'
     },
     de: {
         sidebar_education: 'Multimedia Design',
         sidebar_semester: '3. Semester',
         section1_title: 'Wer bin ich?',
-        section1_text: 'Ich hei�e Kenneth, bin 24 Jahre alt und lebe in Aarhus. Ich bin ein kreativer Unternehmertyp, der es liebt, Dinge von Grund auf zu bauen � ob Websites, Apps, Spiele oder v�llig neue Konzepte. Ich zeichne mich durch <strong>Mut</strong>, <strong>Neugier</strong> und eine starke <strong>Widerstandsf�higkeit</strong> aus � ich gebe selten auf, auch wenn es schwierig wird. Meine pers�nliche Ethik und Pr�senz sorgen daf�r, dass Menschen mir vertrauen und gerne mit mir zusammenarbeiten.',
-        section2_title: 'Wof�r brenne ich?',
+        section1_text: 'Ich heiï¿½e Kenneth, bin 24 Jahre alt und lebe in Aarhus. Ich bin ein kreativer Unternehmertyp, der es liebt, Dinge von Grund auf zu bauen ï¿½ ob Websites, Apps, Spiele oder vï¿½llig neue Konzepte. Ich zeichne mich durch <strong>Mut</strong>, <strong>Neugier</strong> und eine starke <strong>Widerstandsfï¿½higkeit</strong> aus ï¿½ ich gebe selten auf, auch wenn es schwierig wird. Meine persï¿½nliche Ethik und Prï¿½senz sorgen dafï¿½r, dass Menschen mir vertrauen und gerne mit mir zusammenarbeiten.',
+        section2_title: 'Wofï¿½r brenne ich?',
         section2_private: '<strong>Privat:</strong> Technologie, Krypto, Gaming, Musik und das Experimentieren mit neuen Ideen. Ich kann stundenlang in ein neues Konzept eintauchen, einfach weil es mich fasziniert.',
-        section2_prof: '<strong>Beruflich:</strong> Interaktive digitale Erlebnisse zu schaffen, die Menschen �berraschen. Ich brenne daf�r, Design und Code zu etwas zu verbinden, das sich lebendig anf�hlt � wie dieses Portfolio, das als voll funktionsf�hige Windows XP-Simulation im Browser gebaut ist.',
+        section2_prof: '<strong>Beruflich:</strong> Interaktive digitale Erlebnisse zu schaffen, die Menschen ï¿½berraschen. Ich brenne dafï¿½r, Design und Code zu etwas zu verbinden, das sich lebendig anfï¿½hlt ï¿½ wie dieses Portfolio, das als voll funktionsfï¿½hige Windows XP-Simulation im Browser gebaut ist.',
         section3_title: 'Warum Multimedia Design?',
-        section3_text: 'Ich habe schon immer Dinge im Web gebaut � von Websites als Kind bis zu Krypto-Projekten als Erwachsener. Das Multimedia-Design-Studium gibt mir das akademische Fundament, das mir fehlte: UX-Methoden, Designprinzipien und eine Gemeinschaft Gleichgesinnter. Es ist die perfekte Br�cke zwischen meiner selbst erlernten Erfahrung und der professionellen Welt.',
+        section3_text: 'Ich habe schon immer Dinge im Web gebaut ï¿½ von Websites als Kind bis zu Krypto-Projekten als Erwachsener. Das Multimedia-Design-Studium gibt mir das akademische Fundament, das mir fehlte: UX-Methoden, Designprinzipien und eine Gemeinschaft Gleichgesinnter. Es ist die perfekte Brï¿½cke zwischen meiner selbst erlernten Erfahrung und der professionellen Welt.',
         section4_title: 'Lieblingsprojekte im Studium',
-        section4_text: 'Die Projekte, bei denen ich kreative Freiheit hatte, waren die besten. Ich liebe es, wenn Technologie und Storytelling sich treffen � wie interaktive Web-Erlebnisse oder Konzepte, die das Normale herausfordern. Dieses Portfolio ist ein gutes Beispiel: Eine Windows XP-Arcade als Portfolio ist nicht Standard, aber genau das ist der Punkt.',
-        section5_title: 'St�rken & Werkzeuge',
+        section4_text: 'Die Projekte, bei denen ich kreative Freiheit hatte, waren die besten. Ich liebe es, wenn Technologie und Storytelling sich treffen ï¿½ wie interaktive Web-Erlebnisse oder Konzepte, die das Normale herausfordern. Dieses Portfolio ist ein gutes Beispiel: Eine Windows XP-Arcade als Portfolio ist nicht Standard, aber genau das ist der Punkt.',
+        section5_title: 'Stï¿½rken & Werkzeuge',
         section5_items: [
-            '<strong>Frontend-Entwicklung:</strong> HTML, CSS, JavaScript � ich kann komplexe interaktive Interfaces von Grund auf bauen',
+            '<strong>Frontend-Entwicklung:</strong> HTML, CSS, JavaScript ï¿½ ich kann komplexe interaktive Interfaces von Grund auf bauen',
             '<strong>Design:</strong> Figma, UI/UX-Prinzipien, Prototyping',
-            '<strong>KI-Werkzeuge:</strong> Ich nutze KI als Kraftmultiplikator in meinem Workflow � von der Ideenfindung bis zum Programmieren',
+            '<strong>KI-Werkzeuge:</strong> Ich nutze KI als Kraftmultiplikator in meinem Workflow ï¿½ von der Ideenfindung bis zum Programmieren',
             '<strong>Blockchain/Web3:</strong> Smart Contracts, Token-Design, dezentralisierte Apps',
             '<strong>Video & Inhalt:</strong> Content Creation, Social Media Automatisierung'
         ],
-        section5_example: '<strong>Beispiel:</strong> Dieses Portfolio zeigt meine St�rken � es ist ein komplettes Betriebssystem im Browser mit Drag-and-Drop-Fenstern, Themes, Materialien, einer Katze, die man steuern kann, Clippy mit KI-Sprache und einem vollst�ndigen Snake-Spiel in der Eingabeaufforderung.',
-        section6_title: 'Was andere �ber mich sagen',
+        section5_example: '<strong>Beispiel:</strong> Dieses Portfolio zeigt meine Stï¿½rken ï¿½ es ist ein komplettes Betriebssystem im Browser mit Drag-and-Drop-Fenstern, Themes, Materialien, einer Katze, die man steuern kann, Clippy mit KI-Sprache und einem vollstï¿½ndigen Snake-Spiel in der Eingabeaufforderung.',
+        section6_title: 'Was andere Ãber mich sagen',
         section6_quotes: [
-            '"Kenneth ist der Typ, der sich einfach hinsetzt und es baut, w�hrend alle anderen noch dar�ber reden."',
-            '"Er denkt immer in M�glichkeiten statt in Grenzen � und seine Projekte sind nie langweilig."'
+            '"Kenneth ist der Typ, der sich einfach hinsetzt und es baut, wï¿½hrend alle anderen noch darÃber reden."',
+            '"Er denkt immer in Mï¿½glichkeiten statt in Grenzen ï¿½ und seine Projekte sind nie langweilig."'
         ],
         section7_title: 'Relevante Erfahrungen',
         section7_items: [
-            '<strong>Selbstst�ndiger Webentwickler:</strong> Mehrere Webprojekte gebaut und gelauncht, von interaktiven Seiten bis zu Krypto-Plattformen',
+            '<strong>Selbststï¿½ndiger Webentwickler:</strong> Mehrere Webprojekte gebaut und gelauncht, von interaktiven Seiten bis zu Krypto-Plattformen',
             '<strong>Krypto-Unternehmer:</strong> Token-Projekte mit Tausenden von Nutzern erstellt, inkl. Pepecoin Arcade mit On-Chain-Gameplay',
             '<strong>Content Creator:</strong> Automatisierte Social-Media-Pipelines mit KI-generierten Inhalten'
         ],
-        section7_skills: '<strong>Erworbene Kompetenzen:</strong> Selbstmanagement, schnelles Prototyping, Nutzerverst�ndnis, technische Probleml�sung unter Druck und die F�higkeit, allein von der Idee zum fertigen Produkt zu gelangen.',
-        section8_title: 'Die Zukunft � in 5 Jahren',
-        section8_internship: '<strong>Traumpraktikum:</strong> Eine kreative Tech-Agentur oder ein Startup, wo ich innovative digitale Erlebnisse bauen kann � vorzugsweise mit Fokus auf interaktives Design, Gamification oder Web3.',
-        section8_job: '<strong>Traumjob:</strong> Creative Technologist oder Product Designer in einem Unternehmen, das es wagt, anders zu denken. Alternativ: mein eigenes kreatives Tech-Studio, in dem wir die verr�cktesten digitalen Erlebnisse bauen.',
-        section8_vision: '<strong>In 5 Jahren</strong> sehe ich mich als erfahrenen digitalen Sch�pfer mit einem Portfolio von Projekten, die einen Unterschied gemacht haben � und mit einem Netzwerk von Kollaborateuren, die meine Leidenschaft teilen, die Grenzen dessen zu verschieben, was Technik und Design k�nnen.'
+        section7_skills: '<strong>Erworbene Kompetenzen:</strong> Selbstmanagement, schnelles Prototyping, Nutzerverstï¿½ndnis, technische Problemlï¿½sung unter Druck und die Fï¿½higkeit, allein von der Idee zum fertigen Produkt zu gelangen.',
+        section8_title: 'Die Zukunft ï¿½ in 5 Jahren',
+        section8_internship: '<strong>Traumpraktikum:</strong> Eine kreative Tech-Agentur oder ein Startup, wo ich innovative digitale Erlebnisse bauen kann ï¿½ vorzugsweise mit Fokus auf interaktives Design, Gamification oder Web3.',
+        section8_job: '<strong>Traumjob:</strong> Creative Technologist oder Product Designer in einem Unternehmen, das es wagt, anders zu denken. Alternativ: mein eigenes kreatives Tech-Studio, in dem wir die verrï¿½cktesten digitalen Erlebnisse bauen.',
+        section8_vision: '<strong>In 5 Jahren</strong> sehe ich mich als erfahrenen digitalen SchÃ¶pfer mit einem Portfolio von Projekten, die einen Unterschied gemacht haben ï¿½ und mit einem Netzwerk von Kollaborateuren, die meine Leidenschaft teilen, die Grenzen dessen zu verschieben, was Technik und Design kï¿½nnen.'
     }
 };
 
@@ -1061,15 +1061,15 @@ const windowContents = {
                             <div>
                                 <h4 style="color:#cc6600;">Latest News</h4>
                                 <ul style="list-style:none; padding:0; font-size:10px;">
-                                    <li>� Aarhus modern art museum opens!</li>
-                                    <li>� New Viking exhibit at Moesgaard.</li>
+                                    <li>ï¿½ Aarhus modern art museum opens!</li>
+                                    <li>ï¿½ New Viking exhibit at Moesgaard.</li>
                                 </ul>
                             </div>
                             <div>
                                 <h4 style="color:#4b64b5;">Multimedia</h4>
                                 <ul style="list-style:none; padding:0; font-size:10px;">
-                                    <li>� Winamp 2.8 released.</li>
-                                    <li>� Flash player update available.</li>
+                                    <li>ï¿½ Winamp 2.8 released.</li>
+                                    <li>ï¿½ Flash player update available.</li>
                                 </ul>
                             </div>
                         </div>
@@ -1193,8 +1193,8 @@ const windowContents = {
                 <div class="calc-display" id="calc-display">0</div>
                 <div class="calc-buttons">
                     <button class="calc-btn calc-clear" onclick="calcClear()">C</button>
-                    <button class="calc-btn calc-op" onclick="calcOp('/')">�</button>
-                    <button class="calc-btn calc-op" onclick="calcOp('*')">�</button>
+                    <button class="calc-btn calc-op" onclick="calcOp('/')">ï¿½</button>
+                    <button class="calc-btn calc-op" onclick="calcOp('*')">ï¿½</button>
                     <button class="calc-btn calc-op" onclick="calcBackspace()">?</button>
                     <button class="calc-btn" onclick="calcNum('7')">7</button>
                     <button class="calc-btn" onclick="calcNum('8')">8</button>
@@ -1251,7 +1251,7 @@ const windowContents = {
                     <div style="display:flex; gap:10px; margin-top:20px;">
                         <button class="xp-btn">??</button>
                         <button class="xp-btn" onclick="playSound()">?</button>
-                        <button class="xp-btn">�</button>
+                        <button class="xp-btn">ï¿½</button>
                         <button class="xp-btn">??</button>
                     </div>
                 </div>
@@ -1419,7 +1419,7 @@ const windowContents = {
             <div class="weather-widget">
                 <div class="weather-main">
                     <div class="weather-icon">??</div>
-                    <div class="weather-temp">12�C</div>
+                    <div class="weather-temp">12ï¿½C</div>
                 </div>
                 <div class="weather-details">
                     <p><strong>Aarhus, Denmark</strong></p>
@@ -1427,15 +1427,15 @@ const windowContents = {
                     <div class="weather-stats">
                         <span>?? 12 km/h</span>
                         <span>?? 65%</span>
-                        <span>??? Feels like 10�C</span>
+                        <span>??? Feels like 10ï¿½C</span>
                     </div>
                 </div>
                 <div class="weather-forecast">
-                    <div class="forecast-day"><span>Mon</span><span>??</span><span>14�</span></div>
-                    <div class="forecast-day"><span>Tue</span><span>?</span><span>11�</span></div>
-                    <div class="forecast-day"><span>Wed</span><span>???</span><span>9�</span></div>
-                    <div class="forecast-day"><span>Thu</span><span>??</span><span>13�</span></div>
-                    <div class="forecast-day"><span>Fri</span><span>?</span><span>12�</span></div>
+                    <div class="forecast-day"><span>Mon</span><span>??</span><span>14ï¿½</span></div>
+                    <div class="forecast-day"><span>Tue</span><span>?</span><span>11ï¿½</span></div>
+                    <div class="forecast-day"><span>Wed</span><span>???</span><span>9ï¿½</span></div>
+                    <div class="forecast-day"><span>Thu</span><span>??</span><span>13ï¿½</span></div>
+                    <div class="forecast-day"><span>Fri</span><span>?</span><span>12ï¿½</span></div>
                 </div>
             </div>
         `
@@ -1517,14 +1517,14 @@ const windowContents = {
 };
 
 const projectDetails = {
-    'volume-village': { title: 'Volume Village', link: 'https://updated-volume-village.vercel.app/', desc: 'Underground culture hub in Aarhus�events, concerts, and raves. A multimedia project showcasing the vibrant local scene.' },
+    'volume-village': { title: 'Volume Village', link: 'https://updated-volume-village.vercel.app/', desc: 'Underground culture hub in Aarhusï¿½events, concerts, and raves. A multimedia project showcasing the vibrant local scene.' },
     'black-bible': { title: 'Premium Black Bible', link: 'https://premiumblackbible.com/', desc: 'Minimal scripture-inspired book/ebook promo site with waitlist.' },
-    'bitcoin-basics': { title: 'Bitcoin Basics', link: 'https://bitcoin-basics.vercel.app/', desc: 'Beginner-friendly Bitcoin education guide�levels, wallets, freedom vibes.' },
-    'pepecoin-arcade': { title: 'Pepecoin Arcade', link: 'https://pepecoin-arcade.vercel.app/', desc: 'Retro arcade hub for the Pepecoin universe�games, vibes, and community.' },
-    'museum-guide': { title: 'Museum Spille Guide', link: 'https://interstellar-smoky-psi.vercel.app/', desc: 'Interactive gaming guide for museum exhibits�blending history with play.' },
-    'havblink': { title: 'Havblink', link: 'https://havblink.vercel.app/', desc: 'A modern web experience for Havblink�sleek design and smooth performance.' },
-    'kekspace': { title: 'Kekspace', link: 'https://kek.space', desc: 'The frontier of internet culture�a community space for explorers of the digital realm.' },
-    'basedman': { title: 'Basedman', link: 'https://basedman.io/', desc: 'Meme hero NFT/token site in the Pepecoin universe�based culture protector.' }
+    'bitcoin-basics': { title: 'Bitcoin Basics', link: 'https://bitcoin-basics.vercel.app/', desc: 'Beginner-friendly Bitcoin education guideï¿½levels, wallets, freedom vibes.' },
+    'pepecoin-arcade': { title: 'Pepecoin Arcade', link: 'https://pepecoin-arcade.vercel.app/', desc: 'Retro arcade hub for the Pepecoin universeï¿½games, vibes, and community.' },
+    'museum-guide': { title: 'Museum Spille Guide', link: 'https://interstellar-smoky-psi.vercel.app/', desc: 'Interactive gaming guide for museum exhibitsï¿½blending history with play.' },
+    'havblink': { title: 'Havblink', link: 'https://havblink.vercel.app/', desc: 'A modern web experience for Havblinkï¿½sleek design and smooth performance.' },
+    'kekspace': { title: 'Kekspace', link: 'https://kek.space', desc: 'The frontier of internet cultureï¿½a community space for explorers of the digital realm.' },
+    'basedman': { title: 'Basedman', link: 'https://basedman.io/', desc: 'Meme hero NFT/token site in the Pepecoin universeï¿½based culture protector.' }
 };
 
 function openWindowById(id) {
@@ -2248,7 +2248,7 @@ windowContents['sound-recorder'] = {
                 <div class="sr-btn-circle" onclick="alert('Seeking...')">?</div>
                 <div class="sr-btn-circle" onclick="alert('Seeking...')">?</div>
                 <div class="sr-btn-circle play" onclick="playSound('startup-sound')">?</div>
-                <div class="sr-btn-circle stop" onclick="alert('Stopped')">�</div>
+                <div class="sr-btn-circle stop" onclick="alert('Stopped')">ï¿½</div>
                 <div class="sr-btn-circle rec" onclick="alert('Recording...')">?</div>
             </div>
         </div>
@@ -2303,8 +2303,8 @@ windowContents['windows-update'] = {
                     <div style="position:absolute; top:0; left:0; height:100%; width:70%; background:linear-gradient(to right, #0055ff, #09adff); animation: progress 3s infinite;"></div>
                 </div>
                 <ul style="font-size:10px; color:#666;">
-                    <li>� Critical Security Update - Aarhus 2001 (KB999999)</li>
-                    <li>� Multimedia Pack 2.0 (DirectX 9.0c)</li>
+                    <li>ï¿½ Critical Security Update - Aarhus 2001 (KB999999)</li>
+                    <li>ï¿½ Multimedia Pack 2.0 (DirectX 9.0c)</li>
                 </ul>
                 <br>
                 <button class="xp-btn" onclick="alert('System is up to date!')">Install Updates</button>
@@ -2671,7 +2671,7 @@ windowContents['moviemaker'] = {
         });
         ssAnimId = requestAnimationFrame(draw);
     }
-    // Don't start draw() immediately � only start when screensaver activates
+    // Don't start draw() immediately ï¿½ only start when screensaver activates
 
     let idleTime = 0;
     function resetIdle() {
@@ -3286,7 +3286,7 @@ setTimeout(() => {
             if (petCenter.x >= winRect.left && petCenter.x <= winRect.right &&
                 petCenter.y >= winRect.top && petCenter.y <= winRect.bottom) {
                 onWindow = true;
-                break; // Early exit � no need to check all windows
+                break; // Early exit ï¿½ no need to check all windows
             }
         }
 
