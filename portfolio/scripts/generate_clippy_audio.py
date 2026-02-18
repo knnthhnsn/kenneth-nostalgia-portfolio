@@ -51,6 +51,10 @@ phrases_en = {
     "hc_on": "Whoa! That's high contrast! Very retro.",
     "hc_off": "Back to the classic look!",
     "theme_success": "Applied the new color scheme! Looking good.",
+<<<<<<< HEAD
+=======
+    "lang_changed": "Language changed! Now we're speaking English.",
+>>>>>>> master
     
     # === PHOTO VIEWER PHRASES ===
     "photo_nice": "What a beautiful photo! Kenneth has great taste.",
@@ -110,6 +114,10 @@ phrases_da = {
     "hc_on": "Wow! Det er høj kontrast! Meget retro.",
     "hc_off": "Tilbage til det klassiske look!",
     "theme_success": "Nyt farvetema anvendt! Det ser godt ud.",
+<<<<<<< HEAD
+=======
+    "lang_changed": "Sproget er ændret! Nu snakker vi dansk.",
+>>>>>>> master
     
     # === PHOTO VIEWER PHRASES ===
     "photo_nice": "Sikke et smukt billede! Kenneth har god smag.",
@@ -122,6 +130,70 @@ phrases_da = {
 
 VOICE_EN = "en-US-BrianMultilingualNeural"
 VOICE_DA = "da-DK-JeppeNeural"
+<<<<<<< HEAD
+=======
+VOICE_DE = "de-DE-ConradNeural"
+
+phrases_de = {
+    # === SYSTEM SOUNDS ===
+    "startup": "Willkommen zurück, Kenneth! Dein Desktop ist bereit.",
+    "shutdown": "Bist du sicher, dass du herunterfahren möchtest? Ich werde dich vermissen!",
+    "error": "Hoppla! Etwas ist schiefgelaufen. Aber keine Sorge, ich bin hier um zu helfen!",
+    "window_close": "Tschüss, Fenster! Bis zum nächsten Mal.",
+    "logon": "Hallo Kenneth! Bereit, dein Portfolio zu zeigen?",
+    
+    # === RANDOM IDLE PHRASES ===
+    "welcome": "Es sieht so aus, als würdest du ein Portfolio durchstöbern. Brauchst du Hilfe?",
+    "meme": "Vergiss nicht, den Papierkorb nach Memes zu durchsuchen!",
+    "double_click": "Doppelklicke auf ein Symbol, um es zu öffnen.",
+    "aarhus": "Aarhus ist eine tolle Stadt. Wusstest du das?",
+    "else": "Kann ich sonst noch etwas für dich tun?",
+    "talent": "Kenneth ist ein preisgekrönter Multimedia-Kreativer. Sehr talentiert!",
+    "navigation": "Brauchst du Hilfe bei der Navigation? Klick einfach drauflos!",
+    "productivity": "Du warst heute sehr produktiv! Weiter so!",
+    "coffee": "Zeit für eine Kaffeepause? Ich behalte alles im Auge.",
+    "weekend": "Arbeitest du am Wochenende? Das nenne ich Hingabe!",
+    
+    # === WINDOW-SPECIFIC PHRASES ===
+    "pinball": "Oh, Pinball! Wusstest du, dass mein Highscore eine Million zweihundertvierunddreißigtausend ist?",
+    "paint": "Malst du etwas für das Portfolio? Ich kann dir mit den Formen helfen!",
+    "minesweeper": "Klick nicht auf die Minen! Ich war schon mal da...",
+    "search": "Rover ist ein braver Junge, oder?",
+    "ie": "Suchst du nach mehr Projekten? Schau in die Favoriten-Seitenleiste!",
+    "notepad": "Schreibst du etwas Wichtiges? Vergiss nicht zu speichern!",
+    "photos": "Schöne Fotos! Du hast ein gutes Auge für Komposition.",
+    "cmd": "Ooh, die Eingabeaufforderung! Du musst ein Power-User sein.",
+    "winamp": "It really whips the llama's behind! Klassischer Winamp.",
+    
+    # === CAT PHRASES ===
+    "cat_like": "Miau! Die Katze scheint dein Portfolio zu mögen.",
+    "cat_recycle": "Ich glaube, die Katze sucht den Papierkorb.",
+    "cat_step": "Aufpassen! Lass sie nicht auf deine Fenster treten.",
+    "cat_treat": "Hat jemand ein digitales Leckerli? Diese Katze sieht hungrig aus.",
+    "cat_sleep": "Psst! Die Katze macht ein Nickerchen auf deinem Desktop.",
+    "cat_knock": "Oh nein! Die Katze hat ein Fenster umgeworfen! Typisches Katzenverhalten.",
+    "cat_keyboard": "Die Katze versucht zu tippen! Ich frage mich, was sie schreibt.",
+    "cluttered": "Dein Desktop sieht etwas unordentlich aus. Lass mich dir dabei helfen!",
+    "updates": "Neue Updates sind verfügbar für deinen Computer. Schau in die Systemsteuerung!",
+    "meme_secret": "Ich habe geheime Memes im Papierkorb gefunden. Sag Kenneth nicht, dass ich es dir verraten habe!",
+    "keyboard_shortcut": "Profi-Tipp: Drücke Alt plus F4, um Fenster schnell zu schließen!",
+    "easter_egg": "Du hast ein Geheimnis gefunden! Kenneth hat Ostereier im ganzen Portfolio versteckt.",
+    
+    # === THEME/CONTRAST PHRASES ===
+    "hc_on": "Wow! Das ist hoher Kontrast! Sehr retro.",
+    "hc_off": "Zurück zum klassischen Look!",
+    "theme_success": "Neues Farbschema angewendet! Sieht gut aus.",
+    "lang_changed": "Sprache geändert! Jetzt sprechen wir Deutsch.",
+    
+    # === PHOTO VIEWER PHRASES ===
+    "photo_nice": "Was für ein schönes Foto! Kenneth hat einen guten Geschmack.",
+    "photo_next": "Lass mich dir das nächste Meisterwerk zeigen!",
+    
+    # === NOTEPAD PHRASES ===
+    "notepad_save": "Deine Notiz wurde gespeichert! Ich merke sie mir für dich.",
+    "notepad_tip": "Wusstest du? Du kannst Notizen speichern und sie sind morgen noch da!"
+}
+>>>>>>> master
 
 async def generate_clippy_audio():
     base_dir = "sounds/clippy"
@@ -129,6 +201,10 @@ async def generate_clippy_audio():
     # Ensure directories exist
     os.makedirs(os.path.join(base_dir, "en"), exist_ok=True)
     os.makedirs(os.path.join(base_dir, "da"), exist_ok=True)
+<<<<<<< HEAD
+=======
+    os.makedirs(os.path.join(base_dir, "de"), exist_ok=True)
+>>>>>>> master
 
     # Generate English
     print("Generating English audio...")
@@ -148,7 +224,22 @@ async def generate_clippy_audio():
         communicate = edge_tts.Communicate(text, VOICE_DA) 
         await communicate.save(output_path)
     
+<<<<<<< HEAD
+=======
+    # Generate German
+    print("Generating German audio...")
+    for key, text in phrases_de.items():
+        output_path = os.path.join(base_dir, "de", f"{key}.mp3")
+        print(f"  DE -> {key}")
+        communicate = edge_tts.Communicate(text, VOICE_DE)
+        await communicate.save(output_path)
+    
+>>>>>>> master
     print("All audio files generated successfully!")
 
 if __name__ == "__main__":
     asyncio.run(generate_clippy_audio())
+<<<<<<< HEAD
+=======
+
+>>>>>>> master

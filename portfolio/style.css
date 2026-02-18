@@ -484,6 +484,10 @@ body.material-cotton #desktop::before {
     left: 0;
     width: 380px;
     height: 480px;
+<<<<<<< HEAD
+=======
+    max-height: calc(100vh - var(--taskbar-height) - 4px);
+>>>>>>> master
     background: var(--win-bg-color);
     /* Use theme variable */
     border-top-left-radius: 5px;
@@ -527,6 +531,11 @@ body.material-cotton #desktop::before {
 #start-menu-body {
     flex-grow: 1;
     display: flex;
+<<<<<<< HEAD
+=======
+    overflow-y: auto;
+    min-height: 0;
+>>>>>>> master
 }
 
 #start-menu-left {
@@ -1171,6 +1180,47 @@ body.xp-luna,
     }
 }
 
+<<<<<<< HEAD
+=======
+/* Height-based responsive: Arcade screen / small viewports */
+@media (max-height: 500px) {
+    #start-menu {
+        height: auto;
+        max-height: calc(100vh - var(--taskbar-height) - 4px);
+    }
+
+    #start-menu-header {
+        height: 40px;
+        padding: 5px 10px;
+    }
+
+    #user-pfp {
+        width: 30px;
+        height: 30px;
+    }
+
+    #start-menu-body {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    #start-menu-left,
+    #start-menu-right {
+        width: 100%;
+    }
+
+    #start-menu-footer {
+        height: 32px;
+        padding: 0 6px;
+    }
+
+    .menu-item {
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+}
+
+>>>>>>> master
 .tray-icon {
     cursor: pointer;
     padding: 2px;

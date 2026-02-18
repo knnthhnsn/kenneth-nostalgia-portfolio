@@ -1,0 +1,113 @@
+PERSONAL BRANDING, FORÅR 2026
+Multimediedesignuddannelsen, Erhvervsakademi Aarhus
+
+Website: [INDSÆT LINK]
+Video: [INDSÆT LINK]
+Figma: [INDSÆT LINK]
+
+Kenneth Hansen
+
+
+1. MÅLGRUPPE
+
+Primær målgruppe er digitale bureauer og tech-virksomheder i Aarhus og København. Gennem desk research har jeg identificeret følgende 3 relevante praktikopslag:
+
+• Adapt – Digital Designer (Aarhus): Søger profiles der behersker "HTML/CSS grundlæggende" og har "øje for detaljer". De vægter kreativt mod og evnen til at tænke i koncepter.
+
+• Dwarf – Digital Designer (København): Efterspørger "stærke visuelle skills", "frontendforståelse" og evnen til at "arbejde selvstændigt med komplekse projekter".
+
+• Knowit – UX/UI Designer (Aarhus): Fokuserer på "brugervenlige løsninger", "prototypekompetencer" og "evnen til at kommunikere designvalg".
+
+Fællesnævneren er behovet for hybrid-profiler der mestrer både design og kode. De ser 50+ portfolios årligt og differentiering er kritisk. Jeg matcher dette med kompetencer i vanilla JS, CSS-arkitektur og konceptuel tænkning.
+
+Sekundær målgruppe er fagfælle-netværk på Discord og LinkedIn hvor "proof of concept" vægtes højere end "promise of concept".
+
+
+2. CONTENT OG STRUKTUR
+
+Valgt content:
+Arcade Portfolio demonstrerer kompetencer gennem selve formatet – det er ikke en beskrivelse af hvad jeg kan, men beviset. Inkluderet content:
+
+• Windows XP-simulation med fuldt window management system
+• 11-tema designsystem med runtime theme-switching
+• Bilingual support (EN/DA) med 80+ lokaliserede lydfiler
+• Clippy-agent med context-aware kommentarer
+• Easter eggs (BSOD, Minesweeper) der demonstrerer opmærksomhed på UX-mikrointeraktioner
+
+Argument: Hvert element valgt for at demonstrere specifikke kompetencer. Window-systemet viser DOM-manipulation uden frameworks. Theme-systemet viser CSS-arkitektur. Clippy viser forståelse for tone-of-voice og karakterdesign.
+
+Kompetencer:
+Faglige: Vanilla JavaScript mastery (custom window manager), CSS architecture (11 temaer, material design), UX micro-interactions (drag, resize, snap-to-grid), internationalization (runtime language switch), accessibility (high contrast, keyboard nav).
+
+Personlige: "Seriøs leg" – evnen til at balancere kreativt mod med teknisk præcision. Selvdisciplin (projektet krævede 3000+ linjer vanilla JS uden shortcuts). Situationsfornemmelse (dual-tone kommunikation).
+
+Differentiering: 100% vanilla stack i en verden af React-portfolios. Fysisk arcade-cabinet metafor. Interaktiv desktop fremfor statisk scroll.
+
+Struktur (Informationsarkitektur):
+To-lags struktur: Arcade Cabinet (container) → XP Desktop (content). Brugeren navigerer ikke via menuer men gennem desktop icons der åbner windows. Dette valg er bevidst: det demonstrerer informationsarkitektonisk tænkning (Windows XP's affordances genkendes instinktivt) og differentierer fra standard portfolio-layouts.
+
+
+3. DESIGN OG UI
+
+Proces:
+Udgangspunkt var spørgsmålet: "Hvordan viser jeg at jeg kan kode uden at skrive 'Jeg kan kode'?" XP-metaforen valgt fordi den er nostalgi-ladet (følelsesmæssig forbindelse) og teknisk krævende (window management, z-index stacking, drag-handlers).
+
+Wireframes udviklet i Figma viser progression fra simpel desktop-simulation til fuldt arcade-cabinet med 3D-perspektivisk kontrolpanel. Key insight: Joystick-kontrollerne tilføjer taktisk feedback og differentierer oplevelsen.
+
+Visuel identitet:
+Positionering som "The Nostalgic Engineer" – retro-kultur møder moderne udvikling. XP Luna-tema (#0055FF primær, #3a9d23 sekundær) signalerer tillid og teknologi. Arcade-laget tilføjer neon-grøn (#4ade80) og guld (#ffd700) som accent-farver der skaber "wow"-moment.
+
+Signaler: Kompetence (flawless execution), kreativitet (unexpected format), professionalism uden stivhed (playful easter eggs).
+
+Styletile:
+Farver:
+• XP Blue #0055FF – title bars, active states
+• XP Green #3a9d23 – Start button, success states  
+• Neon Green #4ade80 – arcade marquee, accents
+• Gold #ffd700 – CTAs, highlights
+• Window BG #ECE9D8 – content areas
+
+Typografi:
+• Press Start 2P (arcade headers) – retro-gaming association
+• Outfit (desktop content) – moderne læsbarhed
+• 16pt bold (main title), 14pt bold (section headers), 11pt (body)
+
+UI-komponenter:
+• Windows: 3px border, gradient title bar, shadow, resize handles
+• Desktop icons: 75x85px container, snap-to-grid adfærd
+• Taskbar: 30px height, gradient background, dynamic window list
+• Buttons: 3D-effect med highlight/shadow, hover states
+
+Usability test:
+• Cross-browser: Testet i Chrome, Firefox, Edge – alle features fungerer
+• Mobile: Breakpoints ved 1024px/768px/480px. 3D-perspektiv degraderes elegant, touch-optimerede controls
+• Accessibility: High contrast mode implementeret, keyboard navigation testet (tab, enter, escape)
+• Brugertest: 3 medstuderende testede navigation – alle fandt content uden vejledning. Feedback: "Føles som en rigtig computer"
+
+
+4. TONE OF VOICE
+
+Ønsket opfattelse: Kompetent men approacheable. Teknisk dygtig uden at være arrogant. Kreativ uden at være ustruktureret.
+
+TOV-defintion: "Professionelt uformel med retro-charme. Koncis men personlig. Teknisk uden jargontunghed. Selvironisk uden at miste troværdighed."
+
+Implementering:
+• Clippy-kommentarer: "It looks like you're browsing a portfolio" – selvbevidst reference til Office 97, demonstrerer UX-mikrocopy forståelse
+• BSOD easter egg: "KENNETH_AWESOME.SYS failed" – humor der signalerer sikkerhed i eget brand
+• Recycle Bin: "Where projects go to... be recycled" – selvironi omkring iterative processer
+• Dual-tone strategi: Professionel for virksomheder (seriøs beskrivelse af kompetencer), casual for peers (easter eggs, gaming referencer)
+
+Eksempel på kontrast:
+Virksomheds-tone: "Arcade Portfolio demonstrerer domæneekspertise i vanilla JavaScript og CSS-arkitektur gennem implementering af et fuldt window management system."
+Peer-tone: "Yeah I basically rebuilt Windows XP in a browser because why not. Check the BSOD, it's funny."
+
+Samme indhold, forskellig packaging – begge autentiske, men kontekst-afhængige.
+
+
+5. REFLEKSION
+
+Arcade Portfolio opnår målet om at være memorable i en ocean af standard-portfolios. Det tekniske valg om vanilla stack var bevidst – det demonstrerer fundamentforståelse fremfor framework-afhængighed. Designvalgene understøtter strategien: XP-metaforen signalerer nostalgi og teknisk kompetence samtidig.
+
+Begrænsninger: 3000+ linjer vanilla JS krævede streng modularisering. Cross-browser lyd var udfordrende. Mobile adaptation krævede elegant degradering.
+
+Konklusion: Portfolioet er lykkedes når modtageren husker det dagen efter – ikke fordi det er flot, men fordi det var en oplevelse.
