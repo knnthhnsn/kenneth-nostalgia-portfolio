@@ -282,10 +282,7 @@ body.material-cotton #desktop::before {
     align-content: start;
 }
 
-.row-break {
-    grid-column: 1 / -1;
-    height: 0;
-}
+
 
 .desktop-icon {
     width: 75px;
