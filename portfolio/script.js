@@ -274,172 +274,168 @@ window.toggleLanguage = function () {
 const aboutTranslations = {
     en: {
         sidebar_education: 'Multimedia Design',
-        sidebar_semester: '3rd Semester',
         section1_title: 'Who am I?',
-        section1_text: "My name is Kenneth, I'm 24 years old and I live in Aarhus. I'm a creative entrepreneur-type who loves building things from scratch  whether it's websites, apps, games or entirely new concepts. I'm defined by <strong>courage</strong>, <strong>curiosity</strong> and a strong <strong>resilience</strong>  I rarely give up, even when things get tough. My personal ethics and presence make people trust me and enjoy working with me.",
+        section1_text: "My name is Kenneth, I'm 24 years old and I live in Aarhus. I'm a creative entrepreneur-type who loves building things from scratch - whether it's websites, apps, games or entirely new concepts. I'm defined by courage, curiosity and a strong resilience - I rarely give up, even when things get tough. My personal ethics and presence make people trust me and enjoy working with me.",
         section2_title: 'What am I passionate about?',
-        section2_private: '<strong>Private:</strong> Technology, crypto, gaming, music and experimenting with new ideas. I can spend hours diving into a new concept just because it fascinates me.',
-        section2_prof: "<strong>Professional:</strong> Creating interactive digital experiences that surprise people. I'm passionate about combining design and code into something that feels alive  like this portfolio, built as a fully functional Windows XP simulation in the browser.",
+        section2_private: 'Private: Technology, crypto, gaming, music and experimenting with new ideas. I can spend hours diving into a new concept just because it fascinates me.',
+        section2_prof: "Professional: Creating interactive digital experiences that surprise people. I'm passionate about combining design and code into something that feels alive - like this portfolio, built as a fully functional Windows XP simulation in the browser.",
         section3_title: 'Why Multimedia Design?',
-        section3_text: "I've always built things on the web  from websites as a kid to crypto projects as an adult. The Multimedia Design program gives me the academic foundation I was missing: UX methods, design principles, and a community of like-minded creatives. It's the perfect bridge between my self-taught experience and the professional world.",
+        section3_text: "I've always built things on the web - from websites as a kid to crypto projects as an adult. The Multimedia Design program gives me the academic foundation I was missing: UX methods, design principles, and a community of like-minded creatives. It's the perfect bridge between my self-taught experience and the professional world.",
         section4_title: 'Favorite study projects',
-        section4_text: "The projects where I've had creative freedom have been the best. I love when technology and storytelling meet  like building interactive web experiences or concepts that challenge the norm. This portfolio is a great example: a Windows XP arcade as a portfolio isn't standard, but that's exactly the point.",
+        section4_text: "The projects where I've had creative freedom have been the best. I love when technology and storytelling meet - like building interactive web experiences or concepts that challenge the norm. This portfolio is a great example: a Windows XP arcade as a portfolio isn't standard, but that's exactly the point.",
         section5_title: 'Strengths & tools',
         section5_items: [
-            '<strong>Frontend development:</strong> HTML, CSS, JavaScript  I can build complex interactive interfaces from scratch',
-            '<strong>Design:</strong> Figma, UI/UX principles, prototyping',
-            '<strong>AI tools:</strong> I use AI as a force-multiplier in my workflow  from ideation to coding',
-            '<strong>Blockchain/Web3:</strong> Smart contracts, token design, decentralized apps',
-            '<strong>Video & content:</strong> Content creation, social media automation'
+            'Frontend development: HTML, CSS, JavaScript - I can build complex interactive interfaces from scratch',
+            'Design: Figma, UI/UX principles, prototyping',
+            'AI tools: I use AI as a force-multiplier in my workflow - from ideation to coding',
+            'Blockchain/Web3: Smart contracts, token design, decentralized apps',
+            'Video & content: Content creation, social media automation'
         ],
-        section5_example: "<strong>Example:</strong> This portfolio illustrates my strengths  it's a complete operating system in the browser with drag-and-drop windows, themes, materials, a cat you can control, Clippy with AI speech, and a full snake game in the command prompt.",
+        section5_example: "Example: This portfolio illustrates my strengths - it's a complete operating system in the browser with drag-and-drop windows, themes, materials, a cat you can control, Clippy with AI speech, and a full snake game in the command prompt.",
         section6_title: 'What others say about me',
         section6_quotes: [
             '"Kenneth is the type who just sits down and builds it, while everyone else is still talking about it."',
-            '"He always thinks in possibilities rather than limitations  and his projects are never boring."'
+            '"He always thinks in possibilities rather than limitations - and his projects are never boring."'
         ],
         section7_title: 'Relevant experience',
         section7_items: [
-            '<strong>Independent web developer:</strong> Built and launched multiple web projects, from interactive sites to crypto platforms',
-            '<strong>Crypto entrepreneur:</strong> Created token projects with thousands of users, incl. Pepecoin Arcade with on-chain gameplay',
-            '<strong>Content creator:</strong> Automated social media pipelines with AI-generated content'
+            'Independent web developer: Built and launched multiple web projects, from interactive sites to crypto platforms',
+            'Crypto entrepreneur: Created token projects with thousands of users, incl. Pepecoin Arcade with on-chain gameplay',
+            'Content creator: Automated social media pipelines with AI-generated content'
         ],
-        section7_skills: '<strong>Skills gained:</strong> Self-management, rapid prototyping, user empathy, technical problem-solving under pressure, and the ability to go from idea to finished product alone.',
-        section8_title: 'The future  in 5 years',
-        section8_internship: '<strong>Dream internship:</strong> A creative tech agency or startup where I can build innovative digital experiences  preferably with focus on interactive design, gamification or Web3.',
-        section8_job: '<strong>Dream job:</strong> Creative Technologist or Product Designer at a company that dares to think differently. Alternatively: my own creative tech studio where we build the wildest digital experiences.',
-        section8_vision: '<strong>In 5 years</strong> I see myself as an experienced digital creator with a portfolio of projects that made a difference  and with a network of collaborators who share my passion for pushing the boundaries of what tech and design can do.'
+        section7_skills: 'Skills gained: Self-management, rapid prototyping, user empathy, technical problem-solving under pressure, and the ability to go from idea to finished product alone.',
+        section8_title: 'The future - in 5 years',
+        section8_internship: 'Dream internship: A creative tech agency or startup where I can build innovative digital experiences - preferably with focus on interactive design, gamification or Web3.',
+        section8_job: 'Dream job: Creative Technologist or Product Designer at a company that dares to think differently. Alternatively: my own creative tech studio where we build the wildest digital experiences.',
+        section8_vision: 'In 5 years I see myself as an experienced digital creator with a portfolio of projects that made a difference - and with a network of collaborators who share my passion for pushing the boundaries of what tech and design can do.'
     },
     da: {
         sidebar_education: 'Multimediedesign',
-        sidebar_semester: '3. Semester',
         section1_title: 'Hvem er jeg?',
-        section1_text: 'Jeg hedder Kenneth, er 24 år og bor i Aarhus. Jeg er en kreativ iværksætter-type der elsker at bygge ting fra bunden  hvad enten det er websites, apps, spil eller helt nye koncepter. Jeg kendetegnes ved <strong>mod</strong>, <strong>nysgerrighed</strong> og en stærk <strong>modstandskraft</strong>  jeg giver sjældent op, selv når tingene bliver svære. Min personlige etik og nærvær gør, at folk stoler på mig og gerne samarbejder med mig.',
+        section1_text: 'Jeg hedder Kenneth, er 24 år og bor i Aarhus. Jeg er en kreativ iværksætter-type der elsker at bygge ting fra bunden - hvad enten det er websites, apps, spil eller helt nye koncepter. Jeg kendetegnes ved mod, nysgerrighed og en stærk modstandskraft - jeg giver sjældent op, selv når tingene bliver svære. Min personlige etik og nærvær gør, at folk stoler på mig og gerne samarbejder med mig.',
         section2_title: 'Hvad brænder jeg for?',
-        section2_private: '<strong>Privat:</strong> Teknologi, krypto, gaming, musik og at eksperimentere med nye idéer. Jeg kan bruge timer på at dykke ned i et nyt koncept bare fordi det fascinerer mig.',
-        section2_prof: '<strong>Professionelt:</strong> At skabe interaktive digitale oplevelser der overrasker folk. Jeg brænder for at kombinere design og kode til noget der føles levende  som denne portfolio, der er bygget som en fuldt funktionel Windows XP-simulation i browseren.',
+        section2_private: 'Privat: Teknologi, krypto, gaming, musik og at eksperimentere med nye idéer. Jeg kan bruge timer på at dykke ned i et nyt koncept bare fordi det fascinerer mig.',
+        section2_prof: 'Professionelt: At skabe interaktive digitale oplevelser der overrasker folk. Jeg brænder for at kombinere design og kode til noget der føles levende - som denne portfolio, der er bygget som en fuldt funktionel Windows XP-simulation i browseren.',
         section3_title: 'Hvorfor Multimediedesign?',
-        section3_text: 'Jeg har altid bygget ting på nettet  lige fra hjemmesider som barn til krypto-projekter som voksen. Multimediedesign-uddannelsen giver mig det faglige fundament jeg manglede: UX-metoder, designprincipper, og et fællesskab af ligesindede. Det er den perfekte bro mellem min selvlærte erfaring og den professionelle verden.',
+        section3_text: 'Jeg har altid bygget ting på nettet - lige fra hjemmesider som barn til krypto-projekter som voksen. Multimediedesign-uddannelsen giver mig det faglige fundament jeg manglede: UX-metoder, designprincipper, og et fællesskab af ligesindede. Det er den perfekte bro mellem min selvlærte erfaring og den professionelle verden.',
         section4_title: 'Sjoveste projekter på studiet',
-        section4_text: 'De projekter hvor jeg har fået frie hænder til at tænke kreativt har været de bedste. Jeg elsker når teknologi og storytelling mødes  f.eks. at bygge interaktive web-oplevelser eller koncepter der udfordrer det normale. Denne portfolio er et godt eksempel: en Windows XP-arkade som portfolio er ikke standard, men det er netop pointen.',
+        section4_text: 'De projekter hvor jeg har fået frie hænder til at tænke kreativt har været de bedste. Jeg elsker når teknologi og storytelling mødes - f.eks. at bygge interaktive web-oplevelser eller koncepter der udfordrer det normale. Denne portfolio er et godt eksempel: en Windows XP-arkade som portfolio er ikke standard, men det er netop pointen.',
         section5_title: 'Faglige styrker & værktøjer',
         section5_items: [
-            '<strong>Frontend-udvikling:</strong> HTML, CSS, JavaScript  jeg kan bygge komplekse interaktive interfaces fra scratch',
-            '<strong>Design:</strong> Figma, UI/UX-principper, prototyping',
-            '<strong>AI-værktøjer:</strong> Jeg bruger AI som en force-multiplier i mit workflow  fra idéudvikling til kodning',
-            '<strong>Blockchain/Web3:</strong> Smart contracts, token-design, decentraliserede apps',
-            '<strong>Video & indhold:</strong> Content creation, social media automation'
+            'Frontend-udvikling: HTML, CSS, JavaScript - jeg kan bygge komplekse interaktive interfaces fra scratch',
+            'Design: Figma, UI/UX-principper, prototyping',
+            'AI-værktøjer: Jeg bruger AI som en force-multiplier i mit workflow - fra idéudvikling til kodning',
+            'Blockchain/Web3: Smart contracts, token-design, decentraliserede apps',
+            'Video & indhold: Content creation, social media automation'
         ],
-        section5_example: '<strong>Eksempel:</strong> Denne portfolio illustrerer mine styrker  den er et komplet operativsystem i browseren med drag-and-drop vinduer, temaer, materialer, en kat du kan styre, Clippy med AI-tale, og et fuldt snake-spil i kommandoprompten.',
+        section5_example: 'Eksempel: Denne portfolio illustrerer mine styrker - den er et komplet operativsystem i browseren med drag-and-drop vinduer, temaer, materialer, en kat du kan styre, Clippy med AI-tale, og et fuldt snake-spil i kommandoprompten.',
         section6_title: 'Hvad siger andre om mig?',
         section6_quotes: [
             '"Kenneth er den type der bare sætter sig ned og bygger det, mens resten stadig snakker om det."',
-            '"Han tænker altid i muligheder frem for begrænsninger  og hans projekter er aldrig kedelige."'
+            '"Han tænker altid i muligheder frem for begrænsninger - og hans projekter er aldrig kedelige."'
         ],
         section7_title: 'Relevante erfaringer',
         section7_items: [
-            '<strong>Selvstændig webudvikler:</strong> Bygget og lanceret adskillige webprojekter, fra interaktive sites til crypto-platforme',
-            '<strong>Krypto-iværksætter:</strong> Skabt token-projekter med tusindvis af brugere, inkl. Pepecoin Arcade med on-chain gameplay',
-            '<strong>Content creator:</strong> Automatiseret social media pipelines med AI-genereret indhold'
+            'Selvstændig webudvikler: Bygget og lanceret adskillige webprojekter, fra interaktive sites til crypto-platforme',
+            'Krypto-iværksætter: Skabt token-projekter med tusindvis af brugere, inkl. Pepecoin Arcade med on-chain gameplay',
+            'Content creator: Automatiseret social media pipelines med AI-genereret indhold'
         ],
-        section7_skills: '<strong>Kompetencer det gav mig:</strong> Selvledelse, hurtig prototyping, brugerforståelse, teknisk problemløsning under pres, og evnen til at gå fra idé til færdigt produkt alene.',
-        section8_title: 'Fremtiden  om 5 år',
-        section8_internship: '<strong>Drømmepraktik:</strong> Et kreativt tech-bureau eller startup hvor jeg kan bygge innovative digitale oplevelser  gerne med fokus på interaktivt design, gamification eller Web3.',
-        section8_job: '<strong>Drømmejob:</strong> Creative Technologist eller Product Designer i en virksomhed der tør tænke anderledes. Alternativt: mit eget kreative tech-studio hvor vi bygger de wildeste digitale oplevelser.',
-        section8_vision: '<strong>Om 5 år</strong> ser jeg mig selv som en erfaren digital skaber med en portefølje af projekter der har gjort en forskel  og med et netværk af samarbejdspartnere der deler min passion for at skubbe grænserne for hvad tech og design kan.'
+        section7_skills: 'Kompetencer det gav mig: Selvledelse, hurtig prototyping, brugerforståelse, teknisk problemløsning under pres, og evnen til at gå fra idé til færdigt produkt alene.',
+        section8_title: 'Fremtiden - om 5 år',
+        section8_internship: 'Drømmepraktik: Et kreativt tech-bureau eller startup hvor jeg kan bygge innovative digitale oplevelser - gerne med fokus på interaktivt design, gamification eller Web3.',
+        section8_job: 'Drømmejob: Creative Technologist eller Product Designer i en virksomhed der tør tænke anderledes. Alternativt: mit eget kreative tech-studio hvor vi bygger de wildeste digitale oplevelser.',
+        section8_vision: 'Om 5 år ser jeg mig selv som en erfaren digital skaber med en portefølje af projekter der har gjort en forskel - og med et netværk af samarbejdspartnere der deler min passion for at skubbe grænserne for hvad tech og design kan.'
     },
     de: {
         sidebar_education: 'Multimedia Design',
-        sidebar_semester: '3. Semester',
         section1_title: 'Wer bin ich?',
-        section1_text: 'Ich heiße Kenneth, bin 24 Jahre alt und lebe in Aarhus. Ich bin ein kreativer Unternehmertyp, der es liebt, Dinge von Grund auf zu bauen  ob Websites, Apps, Spiele oder völlig neue Konzepte. Ich zeichne mich durch <strong>Mut</strong>, <strong>Neugier</strong> und eine starke <strong>Widerstandsfähigkeit</strong> aus  ich gebe selten auf, auch wenn es schwierig wird. Meine persönliche Ethik und Präsenz sorgen dafür, dass Menschen mir vertrauen und gerne mit mir zusammenarbeiten.',
+        section1_text: 'Ich heiße Kenneth, bin 24 Jahre alt und lebe in Aarhus. Ich bin ein kreativer Unternehmertyp, der es liebt, Dinge von Grund auf zu bauen - ob Websites, Apps, Spiele oder völlig neue Konzepte. Ich zeichne mich durch Mut, Neugier und eine starke Widerstandsfähigkeit aus - ich gebe selten auf, auch wenn es schwierig wird. Meine persönliche Ethik und Präsenz sorgen dafür, dass Menschen mir vertrauen und gerne mit mir zusammenarbeiten.',
         section2_title: 'Wofür brenne ich?',
-        section2_private: '<strong>Privat:</strong> Technologie, Krypto, Gaming, Musik und das Experimentieren mit neuen Ideen. Ich kann stundenlang in ein neues Konzept eintauchen, einfach weil es mich fasziniert.',
-        section2_prof: '<strong>Beruflich:</strong> Interaktive digitale Erlebnisse zu schaffen, die Menschen überraschen. Ich brenne dafür, Design und Code zu etwas zu verbinden, das sich lebendig anfühlt  wie dieses Portfolio, das als voll funktionsfähige Windows XP-Simulation im Browser gebaut ist.',
+        section2_private: 'Privat: Technologie, Krypto, Gaming, Musik und das Experimentieren mit neuen Ideen. Ich kann stundenlang in ein neues Konzept eintauchen, einfach weil es mich fasziniert.',
+        section2_prof: 'Beruflich: Interaktive digitale Erlebnisse zu schaffen, die Menschen überraschen. Ich brenne dafür, Design und Code zu etwas zu verbinden, das sich lebendig anfühlt - wie dieses Portfolio, das als voll funktionsfähige Windows XP-Simulation im Browser gebaut ist.',
         section3_title: 'Warum Multimedia Design?',
-        section3_text: 'Ich habe schon immer Dinge im Web gebaut  von Websites als Kind bis zu Krypto-Projekten als Erwachsener. Das Multimedia-Design-Studium gibt mir das akademische Fundament, das mir fehlte: UX-Methoden, Designprinzipien und eine Gemeinschaft Gleichgesinnter. Es ist die perfekte Brücke zwischen meiner selbst erlernten Erfahrung und der professionellen Welt.',
+        section3_text: 'Ich habe schon immer Dinge im Web gebaut - von Websites als Kind bis zu Krypto-Projekten als Erwachsener. Das Multimedia-Design-Studium gibt mir das akademische Fundament, das mir fehlte: UX-Methoden, Designprinzipien und eine Gemeinschaft Gleichgesinnter. Es ist die perfekte Brücke zwischen meiner selbst erlernten Erfahrung und der professionellen Welt.',
         section4_title: 'Lieblingsprojekte im Studium',
-        section4_text: 'Die Projekte, bei denen ich kreative Freiheit hatte, waren die besten. Ich liebe es, wenn Technologie und Storytelling sich treffen  wie interaktive Web-Erlebnisse oder Konzepte, die das Normale herausfordern. Dieses Portfolio ist ein gutes Beispiel: Eine Windows XP-Arcade als Portfolio ist nicht Standard, aber genau das ist der Punkt.',
+        section4_text: 'Die Projekte, bei denen ich kreative Freiheit hatte, waren die besten. Ich liebe es, wenn Technologie und Storytelling sich treffen - wie interaktive Web-Erlebnisse oder Konzepte, die das Normale herausfordern. Dieses Portfolio ist ein gutes Beispiel: Eine Windows XP-Arcade als Portfolio ist nicht Standard, aber genau das ist der Punkt.',
         section5_title: 'Stärken & Werkzeuge',
         section5_items: [
-            '<strong>Frontend-Entwicklung:</strong> HTML, CSS, JavaScript  ich kann komplexe interaktive Interfaces von Grund auf bauen',
-            '<strong>Design:</strong> Figma, UI/UX-Prinzipien, Prototyping',
-            '<strong>KI-Werkzeuge:</strong> Ich nutze KI als Kraftmultiplikator in meinem Workflow  von der Ideenfindung bis zum Programmieren',
-            '<strong>Blockchain/Web3:</strong> Smart Contracts, Token-Design, dezentralisierte Apps',
-            '<strong>Video & Inhalt:</strong> Content Creation, Social Media Automatisierung'
+            'Frontend-Entwicklung: HTML, CSS, JavaScript - ich kann komplexe interaktive Interfaces von Grund auf bauen',
+            'Design: Figma, UI/UX-Prinzipien, Prototyping',
+            'KI-Werkzeuge: Ich nutze KI als Kraftmultiplikator in meinem Workflow - von der Ideenfindung bis zum Programmieren',
+            'Blockchain/Web3: Smart Contracts, Token-Design, dezentralisierte Apps',
+            'Video & Inhalt: Content Creation, Social Media Automatisierung'
         ],
-        section5_example: '<strong>Beispiel:</strong> Dieses Portfolio zeigt meine Stärken  es ist ein komplettes Betriebssystem im Browser mit Drag-and-Drop-Fenstern, Themes, Materialien, einer Katze, die man steuern kann, Clippy mit KI-Sprache und einem vollständigen Snake-Spiel in der Eingabeaufforderung.',
+        section5_example: 'Beispiel: Dieses Portfolio zeigt meine Stärken - es ist ein komplettes Betriebssystem im Browser mit Drag-and-Drop-Fenstern, Themes, Materialien, einer Katze, die man steuern kann, Clippy mit KI-Sprache und einem vollständigen Snake-Spiel in der Eingabeaufforderung.',
         section6_title: 'Was andere über mich sagen',
         section6_quotes: [
             '"Kenneth ist der Typ, der sich einfach hinsetzt und es baut, während alle anderen noch darüber reden."',
-            '"Er denkt immer in Möglichkeiten statt in Grenzen  und seine Projekte sind nie langweilig."'
+            '"Er denkt immer in Möglichkeiten statt in Grenzen - und seine Projekte sind nie langweilig."'
         ],
         section7_title: 'Relevante Erfahrungen',
         section7_items: [
-            '<strong>Selbstständiger Webentwickler:</strong> Mehrere Webprojekte gebaut und gelauncht, von interaktiven Seiten bis zu Krypto-Plattformen',
-            '<strong>Krypto-Unternehmer:</strong> Token-Projekte mit Tausenden von Nutzern erstellt, inkl. Pepecoin Arcade mit On-Chain-Gameplay',
-            '<strong>Content Creator:</strong> Automatisierte Social-Media-Pipelines mit KI-generierten Inhalten'
+            'Selbstständiger Webentwickler: Mehrere Webprojekte gebaut und gelauncht, von interaktiven Seiten bis zu Krypto-Plattformen',
+            'Krypto-Unternehmer: Token-Projekte mit Tausenden von Nutzern erstellt, inkl. Pepecoin Arcade mit On-Chain-Gameplay',
+            'Content Creator: Automatisierte Social-Media-Pipelines mit KI-generierten Inhalten'
         ],
-        section7_skills: '<strong>Erworbene Kompetenzen:</strong> Selbstmanagement, schnelles Prototyping, Nutzerverständnis, technische Problemlösung unter Druck und die Fähigkeit, allein von der Idee zum fertigen Produkt zu gelangen.',
-        section8_title: 'Die Zukunft  in 5 Jahren',
-        section8_internship: '<strong>Traumpraktikum:</strong> Eine kreative Tech-Agentur oder ein Startup, wo ich innovative digitale Erlebnisse bauen kann  vorzugsweise mit Fokus auf interaktives Design, Gamification oder Web3.',
-        section8_job: '<strong>Traumjob:</strong> Creative Technologist oder Product Designer in einem Unternehmen, das es wagt, anders zu denken. Alternativ: mein eigenes kreatives Tech-Studio, in dem wir die verrücktesten digitalen Erlebnisse bauen.',
-        section8_vision: '<strong>In 5 Jahren</strong> sehe ich mich als erfahrenen digitalen Schöpfer mit einem Portfolio von Projekten, die einen Unterschied gemacht haben  und mit einem Netzwerk von Kollaborateuren, die meine Leidenschaft teilen, die Grenzen dessen zu verschieben, was Technik und Design können.'
+        section7_skills: 'Erworbene Kompetenzen: Selbstmanagement, schnelles Prototyping, Nutzerverständnis, technische Problemlösung unter Druck und die Fähigkeit, allein von der Idee zum fertigen Produkt zu gelangen.',
+        section8_title: 'Die Zukunft - in 5 Jahren',
+        section8_internship: 'Traumpraktikum: Eine kreative Tech-Agentur oder ein Startup, wo ich innovative digitale Erlebnisse bauen kann - vorzugsweise mit Fokus auf interaktives Design, gamification oder Web3.',
+        section8_job: 'Traumjob: Creative Technologist oder Product Designer in einem Unternehmen, das es wagt, anders zu denken. Alternativ: mein eigenes kreatives Tech-Studio, in dem wir die verrücktesten digitalen Erlebnisse bauen.',
+        section8_vision: 'In 5 Jahren sehe ich mich als erfahrenen digitalen Schöpfer mit einem Portfolio von Projekten, die einen Unterschied gemacht haben - und mit einem Netzwerk von Kollaborateuren, die meine Leidenschaft teilen, die Grenzen dessen zu verschieben, was Technik und Design können.'
     }
 };
 
 function getAboutContent(lang) {
     const t = aboutTranslations[lang] || aboutTranslations.en;
-    const skillTags = ['HTML5', 'CSS3', 'JavaScript', 'Figma', 'UI/UX', 'AI Tools', 'Web3', 'Video'];
-    const tagsHtml = skillTags.map(s => `<span class="skill-tag" style="color:#fff; border-color:rgba(255,255,255,0.4);">${s}</span>`).join('\n                        ');
+    const skillTags = ['HTML', 'CSS', 'JavaScript', 'Figma', 'UI/UX', 'AI Tools', 'Web3', 'Illustrator', 'Video'];
+    const tagsHtml = skillTags.map(s => `<span class="skill-tag" style="color:#000; border-color:rgba(255,255,255,0.4);">${s}</span>`).join('\n                        ');
 
     return `
             <div class="xp-content-wrapper about-win">
                 <div class="sidebar">
-                    <img src="/portfolio/assets/Me-pixel-smile.jpeg" class="profile-pic" style="object-fit: cover;">
+                    <img src="assets/Me-pixel-smile.jpeg" class="profile-pic" style="object-fit: cover;">
                     <h3>Kenneth</h3>
                     <p>24 Years Old</p>
                     <p>Aarhus, Denmark</p>
                     <p style="margin-top:10px; font-size:10px;">${t.sidebar_education}</p>
-                    <p style="font-size:10px;">${t.sidebar_semester}</p>
                     <div style="margin-top:15px;">
                         ${tagsHtml}
                     </div>
                 </div>
                 <div class="main-content">
                     <div class="about-section">
-                        <h3><span class="section-icon">??</span> ${t.section1_title}</h3>
+                        <h3><span class="section-icon">👋😄</span> ${t.section1_title}</h3>
                         <p>${t.section1_text}</p>
                     </div>
                     <div class="about-section">
-                        <h3><span class="section-icon">??</span> ${t.section2_title}</h3>
+                        <h3><span class="section-icon">❤</span> ${t.section2_title}</h3>
                         <p>${t.section2_private}</p>
                         <p>${t.section2_prof}</p>
                     </div>
                     <div class="about-section">
-                        <h3><span class="section-icon">??</span> ${t.section3_title}</h3>
+                        <h3><span class="section-icon">🎨</span> ${t.section3_title}</h3>
                         <p>${t.section3_text}</p>
                     </div>
                     <div class="about-section">
-                        <h3><span class="section-icon">?</span> ${t.section4_title}</h3>
+                        <h3><span class="section-icon">🏆</span> ${t.section4_title}</h3>
                         <p>${t.section4_text}</p>
                     </div>
                     <div class="about-section">
-                        <h3><span class="section-icon">??</span> ${t.section5_title}</h3>
+                        <h3><span class="section-icon">🎯</span> ${t.section5_title}</h3>
                         <ul>${t.section5_items.map(i => '<li>' + i + '</li>').join('')}</ul>
                         <p style="margin-top:8px;">${t.section5_example}</p>
                     </div>
                     <div class="about-section">
-                        <h3><span class="section-icon">??</span> ${t.section6_title}</h3>
+                        <h3><span class="section-icon">💬</span> ${t.section6_title}</h3>
                         ${t.section6_quotes.map(q => '<div class="quote-box">' + q + '</div>').join('')}
                     </div>
                     <div class="about-section">
-                        <h3><span class="section-icon">??</span> ${t.section7_title}</h3>
+                        <h3><span class="section-icon">💼</span> ${t.section7_title}</h3>
                         <ul>${t.section7_items.map(i => '<li>' + i + '</li>').join('')}</ul>
                         <p>${t.section7_skills}</p>
                     </div>
                     <div class="about-section">
-                        <h3><span class="section-icon">??</span> ${t.section8_title}</h3>
+                        <h3><span class="section-icon">🚀</span> ${t.section8_title}</h3>
                         <p>${t.section8_internship}</p>
                         <p>${t.section8_job}</p>
                         <p>${t.section8_vision}</p>
@@ -963,7 +959,7 @@ function makeIconDraggable(icon) {
 const windowContents = {
     'about': {
         title: 'About Kenneth - My Computer',
-        icon: "/portfolio/assets/Me-pixel-smile.jpeg",
+        icon: "assets/Me-pixel-smile.jpeg",
         get content() { return getAboutContent(window.currentLang); }
     },
     'projects': {
@@ -1173,13 +1169,13 @@ const windowContents = {
         content: `
             <div class="photo-viewer">
                 <div class="photo-main">
-                    <img id="photo-current" src="/portfolio/assets/Me-pixel-smile.jpeg" alt="Portfolio Photo">
+                    <img id="photo-current" src="assets/Me-pixel-smile.jpeg" alt="Portfolio Photo">
                 </div>
                 <div class="photo-thumbnails" id="photo-thumbs">
-                    <img class="photo-thumb active" src="/portfolio/assets/Me-pixel-smile.jpeg" onclick="changePhoto(this, '/portfolio/assets/Me-pixel-smile.jpeg')">
-                    <img class="photo-thumb" src="/portfolio/assets/Me-pixel.jpeg" onclick="changePhoto(this, '/portfolio/assets/Me-pixel.jpeg')">
-                    <img class="photo-thumb" src="/portfolio/assets/sitting-me.png" onclick="changePhoto(this, '/portfolio/assets/sitting-me.png')">
-                    <img class="photo-thumb" src="/portfolio/assets/xp-wallpaper.jpg" onclick="changePhoto(this, '/portfolio/assets/xp-wallpaper.jpg')">
+                    <img class="photo-thumb active" src="assets/Me-pixel-smile.jpeg" onclick="changePhoto(this, 'assets/Me-pixel-smile.jpeg')">
+                    <img class="photo-thumb" src="assets/Me-pixel.jpeg" onclick="changePhoto(this, 'assets/Me-pixel.jpeg')">
+                    <img class="photo-thumb" src="assets/sitting-me.png" onclick="changePhoto(this, 'assets/sitting-me.png')">
+                    <img class="photo-thumb" src="assets/xp-wallpaper.jpg" onclick="changePhoto(this, 'assets/xp-wallpaper.jpg')">
                 </div>
             </div>
         `
@@ -1431,11 +1427,11 @@ const windowContents = {
                     </div>
                 </div>
                 <div class="weather-forecast">
-                    <div class="forecast-day"><span>Mon</span><span>??</span><span>14°</span></div>
-                    <div class="forecast-day"><span>Tue</span><span>?</span><span>11°</span></div>
-                    <div class="forecast-day"><span>Wed</span><span>???</span><span>9°</span></div>
-                    <div class="forecast-day"><span>Thu</span><span>??</span><span>13°</span></div>
-                    <div class="forecast-day"><span>Fri</span><span>?</span><span>12°</span></div>
+                    <div class="forecast-day"><span>Mon</span><span>☀</span><span>14°</span></div>
+                    <div class="forecast-day"><span>Tue</span><span>☁</span><span>11°</span></div>
+                    <div class="forecast-day"><span>Wed</span><span>🌧</span><span>9°</span></div>
+                    <div class="forecast-day"><span>Thu</span><span>🌤</span><span>13°</span></div>
+                    <div class="forecast-day"><span>Fri</span><span>☁</span><span>12°</span></div>
                 </div>
             </div>
         `
@@ -1601,7 +1597,7 @@ contextMenu.innerHTML = `
     <div class="ctx-item" onclick="createStickyNote()">New Sticky Note</div>
     <div class="ctx-item" onclick="openWindowById('display-props')">Properties</div>
     <div class="divider"></div>
-    <div class="ctx-item" onclick="alert('Shortcut placeholder')">New ? Shortcut</div>
+    <div class="ctx-item" onclick="alert('Shortcut placeholder')">New ↩ Shortcut</div>
 `;
 
 window.createStickyNote = function () {
@@ -1720,7 +1716,7 @@ windowContents['pinball'] = {
             <div style="display:flex;justify-content:space-between;width:100%;padding:6px 12px;background:#0f0f23;color:#0ff;font-family:'Courier New',monospace;font-size:14px;box-sizing:border-box;">
                 <span>SCORE: <span id="pb-score">0</span></span>
                 <span>BALL: <span id="pb-ball-count">3</span></span>
-                <span style="color:#ff0;font-size:11px;">? ? Flippers | SPACE Launch</span>
+                        <span style="color:#ff0; font-size:11px;">← → Flippers | SPACE Launch</span>
             </div>
             <canvas id="pb-canvas" style="flex:1;"></canvas>
         </div>
@@ -2120,17 +2116,17 @@ window.initMinesweeper = function () {
         const t = tiles[r][c];
         if (gameOver || t.revealed) return;
         t.flagged = !t.flagged;
-        t.el.textContent = t.flagged ? '??' : '';
+        t.el.textContent = t.flagged ? '🚩' : '';
         flags += t.flagged ? 1 : -1;
         document.getElementById('ms-mines').textContent = String(Math.max(0, minesCount - flags)).padStart(3, '0');
     }
 
     function endGame(win) {
         gameOver = true; clearInterval(timerInterval);
-        document.getElementById('ms-reset').textContent = win ? '??' : '??';
+        document.getElementById('ms-reset').textContent = win ? '😎' : '😵';
         tiles.flat().forEach(t => {
             if (t.mine) {
-                t.el.textContent = '??';
+                t.el.textContent = '💣';
                 t.el.style.backgroundColor = win ? '#bdbdbd' : '#ff0000';
             }
         });
@@ -2213,7 +2209,7 @@ windowContents['msn'] = {
     content: `
         <div class="msn-win">
             <div class="msn-header">
-                <img src="/portfolio/assets/Me-pixel-smile.jpeg" class="msn-pfp" style="object-fit: cover;">
+                <img src="assets/Me-pixel-smile.jpeg" class="msn-pfp" style="object-fit: cover;">
                 <div>
                     <div style="font-weight:bold;">Kenneth (Online)</div>
                     <div style="font-size:9px; color:#666;">I'm a multimedia creator!</div>
@@ -2427,7 +2423,7 @@ windowContents['moviemaker'] = {
     clippy.id = 'clippy-companion';
     clippy.innerHTML = `
         <div id="clippy-bubble" class="hidden">It looks like you're browsing a portfolio. Would you like help finding Kenneth's skills?</div>
-        <img id="clippy-agent" src="/portfolio/assets/clippy.png" alt="Clippy" style="width:65px; height:auto; cursor:grab;">
+        <img id="clippy-agent" src="assets/clippy.png" alt="Clippy" style="width:65px; height:auto; cursor:grab;">
     `;
     document.body.appendChild(clippy);
 
@@ -2732,7 +2728,7 @@ window.startErrorAccordion = function () {
         <div id="login-top"></div>
         <div id="login-center">
             <div class="login-user-card" onclick="document.getElementById('login-screen').remove()">
-                <img src="/portfolio/assets/Me-pixel.jpeg" class="login-pfp" style="object-fit: cover; border-radius: 5px;">
+                <img src="assets/Me-pixel.jpeg" class="login-pfp" style="object-fit: cover; border-radius: 5px;">
                 <div class="login-text">
                     <h2>Kenneth</h2>
                     <p>Multimedia Creator</p>
@@ -2836,7 +2832,7 @@ window.addEventListener('keyup', (e) => {
 (function initDesktopPet() {
     const pet = document.createElement('img');
     pet.id = 'desktop-pet';
-    pet.src = '/portfolio/assets/cat.gif';
+    pet.src = 'assets/cat.gif';
     pet.title = "Kenneth's Desktop Cat - Controlled by Joystick";
     pet.style.display = 'block';
     pet.style.position = 'fixed'; // Ensure it's above everything
@@ -3241,7 +3237,7 @@ document.addEventListener('keydown', (e) => {
    ======================================== */
 // Play the authentic old PC booting sound immediately
 (function initBootSound() {
-    const bootSound = new Audio('/portfolio/old-desktop-pc-booting.mp3');
+    const bootSound = new Audio('old-desktop-pc-booting.mp3');
     bootSound.volume = 0.6;
 
     // Try to play immediately (may be blocked by browser)
@@ -3545,9 +3541,9 @@ const fileSystem = {
         { name: 'Projects', type: 'folder', id: 'projects' }
     ],
     pictures: [
-        { name: 'Me-pixel.jpeg', type: 'image', path: '/portfolio/assets/Me-pixel.jpeg' },
-        { name: 'Me-pixel-smile.jpeg', type: 'image', path: '/portfolio/assets/Me-pixel-smile.jpeg' },
-        { name: 'sitting-me.png', type: 'image', path: '/portfolio/assets/sitting-me.png' }
+        { name: 'Me-pixel.jpeg', type: 'image', path: 'assets/Me-pixel.jpeg' },
+        { name: 'Me-pixel-smile.jpeg', type: 'image', path: 'assets/Me-pixel-smile.jpeg' },
+        { name: 'sitting-me.png', type: 'image', path: 'assets/sitting-me.png' }
     ],
     music: [
         { name: 'Kenneth - Bass.mp3', type: 'audio' },
@@ -3563,8 +3559,8 @@ window.navigateFS = function (folder) {
     path.textContent = folder === 'root' ? 'C:\\' : 'C:\\' + folder.charAt(0).toUpperCase() + folder.slice(1);
 
     content.innerHTML = fileSystem[folder].map(item => {
-        const pathPrefix = item.path ? '' : '/portfolio/assets/';
-        const itemPath = item.path || (item.type === 'image' ? '/portfolio/assets/' + item.name : '');
+        const pathPrefix = item.path ? '' : 'assets/';
+        const itemPath = item.path || (item.type === 'image' ? 'assets/' + item.name : '');
         const action = item.type === 'folder' ? `navigateFS('${item.id}')` :
             item.type === 'window' ? `openWindowById('${item.id}')` :
                 item.type === 'image' ? `window.open('${itemPath}', '_blank')` :
@@ -3619,7 +3615,7 @@ window.initCmdLogic = function () {
 windowContents['msn'].content = `
     <div class="msn-win">
         <div class="msn-header">
-            <img src="/portfolio/assets/Me-pixel-smile.jpeg" class="msn-pfp" style="object-fit: cover;">
+            <img src="assets/Me-pixel-smile.jpeg" class="msn-pfp" style="object-fit: cover;">
             <div>
                 <div style="font-weight:bold;">Kenneth (Online)</div>
                 <div style="font-size:9px; color:#666;">I'm a multimedia creator!</div>
