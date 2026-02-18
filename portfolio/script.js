@@ -74,7 +74,9 @@ const translations = {
         'clippy_photo_nice': "What a beautiful photo! Kenneth has great taste.",
         'clippy_photo_next': "Let me show you the next masterpiece!",
         'clippy_notepad_save': "Your note has been saved! I'll remember it for you.",
-        'clippy_notepad_tip': "Did you know? You can save notes and they'll still be here tomorrow!"
+        'clippy_notepad_tip': "Did you know? You can save notes and they'll still be here tomorrow!",
+        'clippy_minesweeper_win': "You won! You're a minesweeping pro.",
+        'clippy_minesweeper_lost': "Kaboom! Better luck next time."
     },
     da: {
         // UI Elements
@@ -143,7 +145,9 @@ const translations = {
         'clippy_photo_nice': "Sikke et smukt billede! Kenneth har god smag.",
         'clippy_photo_next': "Lad mig vise dig det næste mesterværk!",
         'clippy_notepad_save': "Din note er gemt! Jeg skal nok huske den for dig.",
-        'clippy_notepad_tip': "Vidste du det? Du kan gemme noter, og de vil stadig være her i morgen!"
+        'clippy_notepad_tip': "Vidste du det? Du kan gemme noter, og de vil stadig være her i morgen!",
+        'clippy_minesweeper_win': "Du vandt! Du er en minestryger-proff.",
+        'clippy_minesweeper_lost': "Kaboom! Bedre held næste gang."
     },
     de: {
         // UI Elements
@@ -212,7 +216,9 @@ const translations = {
         'clippy_photo_nice': "Was für ein schönes Foto! Kenneth hat guten Geschmack.",
         'clippy_photo_next': "Lass mich dir das nächste Meisterwerk zeigen!",
         'clippy_notepad_save': "Deine Notiz wurde gespeichert! Ich merke sie mir für dich.",
-        'clippy_notepad_tip': "Wusstest du? Du kannst Notizen speichern und sie sind morgen noch da!"
+        'clippy_notepad_tip': "Wusstest du? Du kannst Notizen speichern und sie sind morgen noch da!",
+        'clippy_minesweeper_win': "Du hast gewonnen! Du bist ein Minesweeper-Profi.",
+        'clippy_minesweeper_lost': "Kaboom! Viel Glück beim nächsten Mal."
     }
 };
 
@@ -2014,13 +2020,122 @@ windowContents['paint'] = {
     `
 };
 
-// 5. Minesweeper
+// 5. Minesweeper (Self-contained)
 windowContents['minesweeper'] = {
     title: 'Minesweeper',
     icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ccc'/%3E%3Ccircle cx='16' cy='16' r='6' fill='black'/%3E%3C/svg%3E",
     content: `
-        <iframe src="https://minesweeperapp.com/" style="width:100%; height:100%; border:none;"></iframe>
+        <div id="ms-game" style="display:flex; flex-direction:column; align-items:center; background:#bdbdbd; padding:10px; border:3px outset #eee; height:100%; box-sizing:border-box; user-select:none;">
+            <div style="background:#bdbdbd; border:3px inset #777; padding:5px 10px; margin-bottom:10px; display:flex; justify-content:space-between; width:220px; align-items:center; font-family:'MS Sans Serif', Arial; font-weight:bold;">
+                <div id="ms-mines" style="background:black; color:red; padding:2px 5px; font-family:monospace; font-size:24px; border:2px inset #555; width:45px; text-align:right;">010</div>
+                <div id="ms-reset" style="width:36px; height:36px; border:3px outset #eee; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:24px; background:#bdbdbd;" onclick="window.initMinesweeper()">😊</div>
+                <div id="ms-timer" style="background:black; color:red; padding:2px 5px; font-family:monospace; font-size:24px; border:2px inset #555; width:45px; text-align:right;">000</div>
+            </div>
+            <div id="ms-grid" style="border:3px inset #777; line-height:0; background:#777;"></div>
+        </div>
     `
+};
+
+window.initMinesweeper = function () {
+    const gridEl = document.getElementById('ms-grid');
+    if (!gridEl) return;
+    gridEl.innerHTML = '';
+    const rows = 9, cols = 9, minesCount = 10;
+    let revealed = 0, flags = 0, gameOver = false, timer = 0, timerInterval;
+
+    document.getElementById('ms-mines').textContent = '010';
+    document.getElementById('ms-timer').textContent = '000';
+    document.getElementById('ms-reset').textContent = '😊';
+
+    const tiles = [];
+    for (let r = 0; r < rows; r++) {
+        tiles[r] = [];
+        const rowEl = document.createElement('div'); rowEl.style.display = 'flex';
+        for (let c = 0; c < cols; c++) {
+            const el = document.createElement('div');
+            el.style.width = '24px'; el.style.height = '24px';
+            el.style.border = '2px outset #eee';
+            el.style.backgroundColor = '#bdbdbd';
+            el.style.display = 'flex'; el.style.alignItems = 'center'; el.style.justifyContent = 'center';
+            el.style.fontSize = '14px'; el.style.fontWeight = 'bold';
+
+            el.addEventListener('mousedown', (e) => {
+                if (gameOver) return;
+                if (e.button === 0) reveal(r, c);
+                else if (e.button === 2) { e.preventDefault(); flag(r, c); }
+            });
+            el.addEventListener('contextmenu', e => e.preventDefault());
+
+            const tile = { r, c, mine: false, revealed: false, flagged: false, neighborMines: 0, el };
+            tiles[r][c] = tile;
+            rowEl.appendChild(el);
+        }
+        gridEl.appendChild(rowEl);
+    }
+
+    let placed = 0;
+    while (placed < minesCount) {
+        let r = Math.floor(Math.random() * rows), c = Math.floor(Math.random() * cols);
+        if (!tiles[r][c].mine) { tiles[r][c].mine = true; placed++; }
+    }
+
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+            if (tiles[r][c].mine) continue;
+            let count = 0;
+            for (let dr = -1; dr <= 1; dr++) {
+                for (let dc = -1; dc <= 1; dc++) {
+                    if (tiles[r + dr] && tiles[r + dr][c + dc] && tiles[r + dr][c + dc].mine) count++;
+                }
+            }
+            tiles[r][c].neighborMines = count;
+        }
+    }
+
+    function reveal(r, c) {
+        const t = tiles[r][c];
+        if (gameOver || t.revealed || t.flagged) return;
+        if (!timerInterval) timerInterval = setInterval(() => { timer++; document.getElementById('ms-timer').textContent = String(Math.min(timer, 999)).padStart(3, '0'); }, 1000);
+
+        t.revealed = true;
+        t.el.style.border = '1px solid #777';
+        t.el.style.backgroundColor = '#d1d1d1';
+
+        if (t.mine) { endGame(false); return; }
+        revealed++;
+        if (t.neighborMines > 0) {
+            t.el.textContent = t.neighborMines;
+            t.el.style.color = ['', 'blue', 'green', 'red', 'darkblue', 'darkred', 'teal', 'black', 'gray'][t.neighborMines];
+        } else {
+            for (let dr = -1; dr <= 1; dr++) {
+                for (let dc = -1; dc <= 1; dc++) {
+                    if (tiles[r + dr] && tiles[r + dr][c + dc]) reveal(r + dr, c + dc);
+                }
+            }
+        }
+        if (revealed === rows * cols - minesCount) endGame(true);
+    }
+
+    function flag(r, c) {
+        const t = tiles[r][c];
+        if (gameOver || t.revealed) return;
+        t.flagged = !t.flagged;
+        t.el.textContent = t.flagged ? '🚩' : '';
+        flags += t.flagged ? 1 : -1;
+        document.getElementById('ms-mines').textContent = String(Math.max(0, minesCount - flags)).padStart(3, '0');
+    }
+
+    function endGame(win) {
+        gameOver = true; clearInterval(timerInterval);
+        document.getElementById('ms-reset').textContent = win ? '😎' : '😵';
+        tiles.flat().forEach(t => {
+            if (t.mine) {
+                t.el.textContent = '💣';
+                t.el.style.backgroundColor = win ? '#bdbdbd' : '#ff0000';
+            }
+        });
+        if (window.clippySpeak) window.clippySpeak(win ? "clippy_minesweeper_win" : "clippy_minesweeper_lost");
+    }
 };
 
 // 6. Display Properties (Theme Switcher)
