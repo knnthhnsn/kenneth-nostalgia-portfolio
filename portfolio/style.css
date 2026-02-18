@@ -484,8 +484,8 @@ body.material-cotton #desktop::before {
     left: 0;
     width: 380px;
     height: 480px;
-    <<<<<<< HEAD=======max-height: calc(100vh - var(--taskbar-height) - 4px);
-    >>>>>>>master background: var(--win-bg-color);
+    max-height: calc(100vh - var(--taskbar-height) - 4px);
+    background: var(--win-bg-color);
     /* Use theme variable */
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -528,9 +528,8 @@ body.material-cotton #desktop::before {
 #start-menu-body {
     flex-grow: 1;
     display: flex;
-    <<<<<<< HEAD=======overflow-y: auto;
+    overflow-y: auto;
     min-height: 0;
-    >>>>>>>master
 }
 
 #start-menu-left {
@@ -1175,7 +1174,7 @@ body.xp-luna,
     }
 }
 
-<<<<<<< HEAD=======
+
 /* Height-based responsive: Arcade screen / small viewports */
 @media (max-height: 500px) {
     #start-menu {
@@ -1214,7 +1213,7 @@ body.xp-luna,
     }
 }
 
->>>>>>>master .tray-icon {
+.tray-icon {
     cursor: pointer;
     padding: 2px;
 }

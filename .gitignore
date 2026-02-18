@@ -9,3 +9,4 @@ deploy-cleanup.md
 *.sol
 Brugertest-*.txt
 Portfolio-*.txt
+.vercel
