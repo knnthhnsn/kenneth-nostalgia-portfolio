@@ -408,38 +408,38 @@ function getAboutContent(lang) {
                 </div>
                 <div class="main-content">
                     <div class="about-section">
-                        <h3><span class="section-icon">??</span> ${t.section1_title}</h3>
+                        <h3><span class="section-icon">ℹ</span> ${t.section1_title}</h3>
                         <p>${t.section1_text}</p>
                     </div>
                     <div class="about-section">
-                        <h3><span class="section-icon">??</span> ${t.section2_title}</h3>
+                        <h3><span class="section-icon">❤</span> ${t.section2_title}</h3>
                         <p>${t.section2_private}</p>
                         <p>${t.section2_prof}</p>
                     </div>
                     <div class="about-section">
-                        <h3><span class="section-icon">??</span> ${t.section3_title}</h3>
+                        <h3><span class="section-icon">❓</span> ${t.section3_title}</h3>
                         <p>${t.section3_text}</p>
                     </div>
                     <div class="about-section">
-                        <h3><span class="section-icon">?</span> ${t.section4_title}</h3>
+                        <h3><span class="section-icon">🏆</span> ${t.section4_title}</h3>
                         <p>${t.section4_text}</p>
                     </div>
                     <div class="about-section">
-                        <h3><span class="section-icon">??</span> ${t.section5_title}</h3>
+                        <h3><span class="section-icon">✨</span> ${t.section5_title}</h3>
                         <ul>${t.section5_items.map(i => '<li>' + i + '</li>').join('')}</ul>
                         <p style="margin-top:8px;">${t.section5_example}</p>
                     </div>
                     <div class="about-section">
-                        <h3><span class="section-icon">??</span> ${t.section6_title}</h3>
+                        <h3><span class="section-icon">💬</span> ${t.section6_title}</h3>
                         ${t.section6_quotes.map(q => '<div class="quote-box">' + q + '</div>').join('')}
                     </div>
                     <div class="about-section">
-                        <h3><span class="section-icon">??</span> ${t.section7_title}</h3>
+                        <h3><span class="section-icon">💼</span> ${t.section7_title}</h3>
                         <ul>${t.section7_items.map(i => '<li>' + i + '</li>').join('')}</ul>
                         <p>${t.section7_skills}</p>
                     </div>
                     <div class="about-section">
-                        <h3><span class="section-icon">??</span> ${t.section8_title}</h3>
+                        <h3><span class="section-icon">🚀</span> ${t.section8_title}</h3>
                         <p>${t.section8_internship}</p>
                         <p>${t.section8_job}</p>
                         <p>${t.section8_vision}</p>
@@ -1431,11 +1431,11 @@ const windowContents = {
                     </div>
                 </div>
                 <div class="weather-forecast">
-                    <div class="forecast-day"><span>Mon</span><span>??</span><span>14°</span></div>
-                    <div class="forecast-day"><span>Tue</span><span>?</span><span>11°</span></div>
-                    <div class="forecast-day"><span>Wed</span><span>???</span><span>9°</span></div>
-                    <div class="forecast-day"><span>Thu</span><span>??</span><span>13°</span></div>
-                    <div class="forecast-day"><span>Fri</span><span>?</span><span>12°</span></div>
+                    <div class="forecast-day"><span>Mon</span><span>☀</span><span>14°</span></div>
+                    <div class="forecast-day"><span>Tue</span><span>☁</span><span>11°</span></div>
+                    <div class="forecast-day"><span>Wed</span><span>🌧</span><span>9°</span></div>
+                    <div class="forecast-day"><span>Thu</span><span>🌤</span><span>13°</span></div>
+                    <div class="forecast-day"><span>Fri</span><span>☁</span><span>12°</span></div>
                 </div>
             </div>
         `
@@ -1601,7 +1601,7 @@ contextMenu.innerHTML = `
     <div class="ctx-item" onclick="createStickyNote()">New Sticky Note</div>
     <div class="ctx-item" onclick="openWindowById('display-props')">Properties</div>
     <div class="divider"></div>
-    <div class="ctx-item" onclick="alert('Shortcut placeholder')">New ? Shortcut</div>
+    <div class="ctx-item" onclick="alert('Shortcut placeholder')">New ↩ Shortcut</div>
 `;
 
 window.createStickyNote = function () {
@@ -1720,7 +1720,7 @@ windowContents['pinball'] = {
             <div style="display:flex;justify-content:space-between;width:100%;padding:6px 12px;background:#0f0f23;color:#0ff;font-family:'Courier New',monospace;font-size:14px;box-sizing:border-box;">
                 <span>SCORE: <span id="pb-score">0</span></span>
                 <span>BALL: <span id="pb-ball-count">3</span></span>
-                <span style="color:#ff0;font-size:11px;">? ? Flippers | SPACE Launch</span>
+                        <span style="color:#ff0; font-size:11px;">← → Flippers | SPACE Launch</span>
             </div>
             <canvas id="pb-canvas" style="flex:1;"></canvas>
         </div>
@@ -2120,17 +2120,17 @@ window.initMinesweeper = function () {
         const t = tiles[r][c];
         if (gameOver || t.revealed) return;
         t.flagged = !t.flagged;
-        t.el.textContent = t.flagged ? '??' : '';
+        t.el.textContent = t.flagged ? '🚩' : '';
         flags += t.flagged ? 1 : -1;
         document.getElementById('ms-mines').textContent = String(Math.max(0, minesCount - flags)).padStart(3, '0');
     }
 
     function endGame(win) {
         gameOver = true; clearInterval(timerInterval);
-        document.getElementById('ms-reset').textContent = win ? '??' : '??';
+        document.getElementById('ms-reset').textContent = win ? '😎' : '😵';
         tiles.flat().forEach(t => {
             if (t.mine) {
-                t.el.textContent = '??';
+                t.el.textContent = '💣';
                 t.el.style.backgroundColor = win ? '#bdbdbd' : '#ff0000';
             }
         });
