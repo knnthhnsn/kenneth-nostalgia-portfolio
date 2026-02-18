@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenneth - Multimedia Creator from Aarhus</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Puter.js removed: unused cloud SDK was causing page freeze -->
+</head>
+
+<body class="xp-luna">
+    <!-- XP Boot Screen -->
+    <div id="boot-screen">
+        <div class="boot-content">
+            <div class="boot-logo">
+                <svg viewBox="0 0 100 100" width="80" height="80">
+                    <path d="M5 5l40 5v35H5V5z" fill="#F25022" />
+                    <path d="M55 0l40 5v35H55V0z" fill="#7FBA00" />
+                    <path d="M5 55h40v35l-40-5V55z" fill="#00A4EF" />
+                    <path d="M55 55h40v30l-40 5V55z" fill="#FFB900" />
+                </svg>
+                <div class="boot-text">
+                    <span class="boot-microsoft">Microsoft</span>
+                    <span class="boot-windows">Windows<sup>XP</sup></span>
+                </div>
+            </div>
+            <div class="boot-loading">
+                <div class="boot-bar">
+                    <div class="boot-progress"></div>
+                </div>
+            </div>
+            <div class="boot-copyright">Copyright © Microsoft Corporation</div>
+        </div>
+    </div>
+
+    <div id="desktop">
+        <img id="desktop-char" src="sitting-me.png" alt="" draggable="false">
+        <!-- Desktop Icons -->
+        <div class="desktop-icons" id="icon-grid">
+            <!-- Row 1: Core Apps -->
+            <div class="desktop-icon" data-window="about" id="icon-my-computer">
+                <img src="Me-pixel-smile.jpeg" alt="About Me"
+                    style="border-radius: 4px; border: 1px solid rgba(255,255,255,0.5); object-fit: cover;">
+                <span>About Me</span>
+            </div>
+            <div class="desktop-icon" data-window="projects" id="icon-my-documents">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M10 10v28h28V14H24l-4-4H10z' fill='%23ffcc00'/%3E%3C/svg%3E"
+                    alt="My Portfolio">
+                <span>My Portfolio</span>
+            </div>
+            <div class="desktop-icon" data-window="games" id="icon-games">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='6' y='14' width='36' height='22' rx='11' fill='%23333'/%3E%3Crect x='8' y='16' width='32' height='18' rx='9' fill='%23444'/%3E%3Ccircle cx='31' cy='22' r='2.5' fill='%2300cc00'/%3E%3Ccircle cx='36' cy='27' r='2.5' fill='%23ff3333'/%3E%3Ccircle cx='31' cy='32' r='2.5' fill='%230066ff'/%3E%3Ccircle cx='26' cy='27' r='2.5' fill='%23ffcc00'/%3E%3Crect x='14' y='23' width='8' height='3' rx='1' fill='%23888'/%3E%3Crect x='17' y='20' width='3' height='9' rx='1' fill='%23888'/%3E%3C/svg%3E"
+                    alt="Games">
+                <span>Games</span>
+            </div>
+            <div class="desktop-icon" data-window="tools" id="icon-tools">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='30' cy='18' r='10' fill='none' stroke='%23808080' stroke-width='3'/%3E%3Ccircle cx='30' cy='18' r='4' fill='%23808080'/%3E%3Cpath d='M12 38l12-12' stroke='%23E8A735' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M10 40l3-3' stroke='%23C48820' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M24 26l-4 4' stroke='%23E8A735' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E"
+                    alt="Tools">
+                <span>Tools</span>
+            </div>
+
+            <div class="row-break"></div>
+            <!-- Row 2: Social Media -->
+            <div class="desktop-icon" data-window="facebook" id="icon-facebook">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='8' fill='%231877F2'/%3E%3Cpath d='M32 24h-4v16h-6v-16h-4v-5h4v-3c0-4 2.5-6 6-6 1.5 0 3 .1 3 .1v4h-2c-2 0-2.5 1-2.5 2.5v2.4h4.5l-1 5z' fill='white'/%3E%3C/svg%3E"
+                    alt="Facebook">
+                <span>Facebook</span>
+            </div>
+            <div class="desktop-icon" data-window="instagram" id="icon-instagram">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='url(%23ig-grad)'/%3E%3Cdefs%3E%3ClinearGradient id='ig-grad' x1='0' y1='100%25' x2='100%25' y2='0'%3E%3Cstop offset='0%25' stop-color='%23f09433'/%3E%3Cstop offset='25%25' stop-color='%23e6683c'/%3E%3Cstop offset='50%25' stop-color='%23dc2743'/%3E%3Cstop offset='75%25' stop-color='%23cc2366'/%3E%3Cstop offset='100%25' stop-color='%23bc1888'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='10' y='10' width='28' height='28' rx='7' fill='none' stroke='white' stroke-width='2'/%3E%3Ccircle cx='24' cy='24' r='6' fill='none' stroke='white' stroke-width='2'/%3E%3Ccircle cx='32' cy='16' r='1.5' fill='white'/%3E%3C/svg%3E"
+                    alt="Instagram">
+                <span>Instagram</span>
+            </div>
+            <div class="desktop-icon" data-window="x-social" id="icon-x">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='8' fill='black'/%3E%3Cpath d='M30.5 14h3.5L26 23.5 35 34h-7l-5.5-7.5L16.5 34H13l8.5-10.5L13 14h7l5 6.5L30.5 14zm-1.2 18h2L18.5 16h-2l12.8 16z' fill='white'/%3E%3C/svg%3E"
+                    alt="X">
+                <span>X / Twitter</span>
+            </div>
+            <div class="desktop-icon" data-window="linkedin" id="icon-linkedin">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='4' fill='%230A66C2'/%3E%3Cpath d='M14 18h4v16h-4V18zm2-6a2.2 2.2 0 1 1-2.2 2.2A2.2 2.2 0 0 1 16 12zm8 6h3.8v2.2h.1a4.2 4.2 0 0 1 3.8-2.1c4 0 4.8 2.7 4.8 6.2V34h-4v-6.3c0-1.5 0-3.4-2.1-3.4s-2.4 1.7-2.4 3.3V34h-4V18z' fill='white'/%3E%3C/svg%3E"
+                    alt="LinkedIn">
+                <span>LinkedIn</span>
+            </div>
+            <div class="desktop-icon" data-window="github" id="icon-github">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 4C12.95 4 4 12.95 4 24c0 8.84 5.73 16.33 13.67 18.97.5.09.68-.22.68-.48v-1.7c-5.56 1.21-6.73-2.68-6.73-2.68-.91-2.31-2.21-2.93-2.21-2.93-1.82-1.24.14-1.2.14-1.2 2.01.14 3.07 2.06 3.07 2.06 1.79 3.06 4.69 2.18 5.83 1.67.18-1.3.7-2.18 1.28-2.68-4.44-.5-9.1-2.22-9.1-9.87 0-2.18.78-3.96 2.06-5.35-.2-.5-.89-2.53.2-5.28 0 0 1.68-.54 5.5 2.05a19.1 19.1 0 0 1 10 0c3.82-2.59 5.5-2.05 5.5-2.05 1.09 2.75.4 4.78.2 5.28 1.28 1.39 2.06 3.17 2.06 5.35 0 7.67-4.67 9.36-9.13 9.86.72.62 1.37 1.83 1.37 3.69v5.48c0 .26.18.57.69.47C38.27 40.33 44 32.84 44 24c0-11.05-8.95-20-20-20z' fill='black'/%3E%3C/svg%3E"
+                    alt="GitHub">
+                <span>GitHub</span>
+            </div>
+
+            <div class="row-break"></div>
+            <!-- Row 3: Language -->
+            <div class="desktop-icon lang-icon active-lang" data-lang="en" id="icon-lang-en">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 36'%3E%3Crect width='48' height='36' rx='3' fill='%23012169'/%3E%3Cpath d='M0 0L48 36M48 0L0 36' stroke='white' stroke-width='6'/%3E%3Cpath d='M0 0L48 36M48 0L0 36' stroke='%23C8102E' stroke-width='3'/%3E%3Crect x='0' y='14' width='48' height='8' fill='white'/%3E%3Crect x='20' y='0' width='8' height='36' fill='white'/%3E%3Crect x='0' y='15' width='48' height='6' fill='%23C8102E'/%3E%3Crect x='21' y='0' width='6' height='36' fill='%23C8102E'/%3E%3C/svg%3E"
+                    alt="English">
+                <span>English</span>
+            </div>
+            <div class="desktop-icon lang-icon" data-lang="da" id="icon-lang-da">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 36'%3E%3Crect width='48' height='36' rx='3' fill='%23C8102E'/%3E%3Crect x='14' y='0' width='6' height='36' fill='white'/%3E%3Crect x='0' y='13' width='48' height='6' fill='white'/%3E%3C/svg%3E"
+                    alt="Dansk">
+                <span>Dansk</span>
+            </div>
+            <div class="desktop-icon lang-icon" data-lang="de" id="icon-lang-de">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 36'%3E%3Crect width='48' height='36' rx='3' fill='%23FFCC00'/%3E%3Crect width='48' height='12' rx='3' fill='%23000'/%3E%3Crect y='12' width='48' height='12' fill='%23DD0000'/%3E%3C/svg%3E"
+                    alt="Deutsch">
+                <span>Deutsch</span>
+            </div>
+
+            <div class="row-break"></div>
+            <!-- Row 4: Recycle Bin -->
+            <div class="desktop-icon" data-window="recycle-bin" id="icon-recycle-bin">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M14 16h20l-2 24H16L14 16z' fill='%23B8CFE8' stroke='%23728CA8' stroke-width='1.5'/%3E%3Crect x='12' y='12' width='24' height='4' rx='1' fill='%23728CA8'/%3E%3Crect x='20' y='9' width='8' height='4' rx='1' fill='%23728CA8'/%3E%3Cline x1='20' y1='20' x2='19' y2='36' stroke='%23728CA8' stroke-width='1.5'/%3E%3Cline x1='24' y1='20' x2='24' y2='36' stroke='%23728CA8' stroke-width='1.5'/%3E%3Cline x1='28' y1='20' x2='29' y2='36' stroke='%23728CA8' stroke-width='1.5'/%3E%3Cpath d='M21 26a3 3 0 0 1 6 0' fill='none' stroke='%23006600' stroke-width='1.5'/%3E%3Cpath d='M27 30a3 3 0 0 1-6 0' fill='none' stroke='%23006600' stroke-width='1.5'/%3E%3C/svg%3E"
+                    alt="Recycle Bin">
+                <span>Recycle Bin</span>
+            </div>
+
+        </div>
+
+        <!-- Windows Container -->
+        <div id="windows-container"></div>
+
+        <!-- Taskbar -->
+        <div id="taskbar">
+            <div id="start-button-wrapper">
+                <button id="start-button">
+                    <div class="start-btn-custom">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M3 5l8-1v8H3V5zm9-1l9 1v7h-9V4zM3 14h8v8l-8-1v-7zm9 8V14h9v7l-9-1z" fill="white" />
+                        </svg>
+                        <span>start</span>
+                    </div>
+                </button>
+            </div>
+            <div id="taskbar-divider"></div>
+            <div id="quick-launch">
+                <div class="ql-icon" data-window="ie"><img
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='18' fill='%23003399'/%3E%3Ctext x='24' y='32' font-family='Arial' font-size='24' font-weight='bold' fill='white' text-anchor='middle'%3Ee%3C/text%3E%3C/svg%3E"
+                        alt="IE">
+                </div>
+                <div class="ql-icon" id="show-desktop"><img
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect x='8' y='8' width='32' height='32' fill='%23ccc' stroke='black'/%3E%3C/svg%3E"
+                        alt="Show Desktop"></div>
+            </div>
+            <div id="taskbar-windows">
+                <!-- Taskbar buttons for open windows will appear here -->
+            </div>
+            <div id="system-tray">
+                <div id="tray-icons">
+                    <div class="network-icon tray-icon active">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Crect x='1' y='1' width='9' height='7' rx='1' fill='%23777'/%3E%3Crect x='2' y='2' width='7' height='5' fill='%23222'/%3E%3Crect x='2' y='2' width='7' height='5' fill='%2300ff00' opacity='0.4' class='net-blink'/%3E%3Cpath d='M3 8l-1 2h7l-1-2z' fill='%23777'/%3E%3Crect x='6' y='5' width='9' height='7' rx='1' fill='%23777'/%3E%3Crect x='7' y='6' width='7' height='5' fill='%23222'/%3E%3Crect x='7' y='6' width='7' height='5' fill='%2300ff00' opacity='0.4' class='net-blink' style='animation-delay: 0.5s'/%3E%3Cpath d='M8 12l-1 2h7l-1-2z' fill='%23777'/%3E%3C/svg%3E"
+                            alt="Network">
+                    </div>
+                    <div id="volume-icon" class="tray-icon active">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M2 6v4h3l4 4V2L5 6H2zM12 8c0-2-1-3-2-4v8c1-1 2-2 2-4z' fill='white'/%3E%3C/svg%3E"
+                            alt="Volume">
+                    </div>
+                    <div id="info-icon" class="tray-icon" title="Sound info">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' stroke='white' stroke-width='1.5' fill='none'/%3E%3Ctext x='8' y='11.5' font-family='Arial' font-size='10' fill='white' text-anchor='middle' font-weight='bold'%3Ei%3C/text%3E%3C/svg%3E"
+                            alt="Info">
+                    </div>
+                    <div id="language-switch" class="tray-icon" title="Switch Language"
+                        style="width:20px; display:flex; align-items:center; justify-content:center; cursor:pointer;">
+                        <span style="font-size:10px; font-weight:bold; color:white;">EN</span>
+                    </div>
+                </div>
+                <div id="taskbar-clock"></div>
+            </div>
+        </div>
+
+        <!-- Start Menu -->
+        <div id="start-menu" class="hidden">
+            <div id="start-menu-header">
+                <div id="user-pfp">
+                    <img src="Me-pixel.jpeg" alt="Kenneth"
+                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                </div>
+                <span id="username">Kenneth</span>
+            </div>
+            <div id="start-menu-body">
+                <div id="start-menu-left">
+                    <div class="menu-item" data-window="about"><img
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='6' y='6' width='20' height='14' fill='%23666'/%3E%3Crect x='8' y='8' width='16' height='10' fill='%233a6ea5'/%3E%3Crect x='12' y='20' width='8' height='3' fill='%23666'/%3E%3C/svg%3E">
+                        <span>About Kenneth</span>
+                    </div>
+                    <div class="menu-item" data-window="projects"><img
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 8v16h24V10H16l-2-2H4z' fill='%23ffcc00'/%3E%3C/svg%3E">
+                        <span>Projects</span>
+                    </div>
+                    <div class="menu-item" data-window="msn"><img
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%2300cc00'/%3E%3C/svg%3E">
+                        <span>Windows Messenger</span>
+                    </div>
+                    <div class="menu-item" data-window="wmp"><img
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%23ff6600'/%3E%3Cpath d='M12 10v12l10-6z' fill='white'/%3E%3C/svg%3E">
+                        <span>Windows Media Player</span>
+                    </div>
+                    <div class="menu-item" data-window="paint"><img
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' fill='white' stroke='black'/%3E%3Ccircle cx='10' cy='10' r='3' fill='red'/%3E%3Ccircle cx='22' cy='10' r='3' fill='blue'/%3E%3Ccircle cx='16' cy='22' r='4' fill='yellow'/%3E%3C/svg%3E">
+                        <span>Paint</span>
+                    </div>
+                </div>
+                <div id="start-menu-right">
+                    <div class="menu-item gray-text">My Documents</div>
+                    <div class="menu-item gray-text">My Pictures</div>
+                    <div class="divider"></div>
+                    <div class="menu-item" data-window="control-panel">Control Panel</div>
+                    <div class="menu-item gray-text">Help and Support</div>
+                    <div class="menu-item" data-window="search">Search</div>
+                    <div class="menu-item" data-window="cmd">Run...</div>
+                </div>
+            </div>
+            <div id="start-menu-footer">
+                <button id="log-off-btn"><img
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='2' width='12' height='12' fill='%23ff9900'/%3E%3C/svg%3E">
+                    Log Off</button>
+                <button id="shut-down-btn"><img
+                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='2' y='2' width='12' height='12' fill='%23cc0000'/%3E%3C/svg%3E">
+                    Turn Off Computer</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BSOD Overlay (Hidden) -->
+    <div id="bsod" class="hidden">
+        <div class="bsod-content">
+            <p>A problem has been detected and Windows has been shut down to prevent damage to your computer.</p>
+            <p>The problem seems to be caused by the following file: KENNETH_AWESOME.SYS</p>
+            <p>PAGE_FAULT_IN_NONPAGED_AREA</p>
+            <br>
+            <p>If this is the first time you've seen this stop error screen, restart your computer. If this screen
+                appears again, follow these steps:</p>
+            <br>
+            <p>Check to make sure any new hardware or software is properly installed. If this is a new installation, ask
+                your hardware or software manufacturer for any Windows updates you might need.</p>
+            <br>
+            <p>If problems continue, disable or remove any newly installed hardware or software. Disable BIOS memory
+                options such as caching or shadowing. If you need to use Safe Mode to remove or disable components,
+                restart your computer, press F8 to select Advanced Startup Options, and then select Safe Mode.</p>
+            <br>
+            <p>Technical information:</p>
+            <p>*** STOP: 0x00000050 (0xFD3094C2, 0x00000001, 0xFBFE7617, 0x00000000)</p>
+            <br>
+            <p>Beginning dump of physical memory</p>
+            <p>Physical memory dump complete.</p>
+            <p>Contact your system administrator or technical support group for further assistance.</p>
+            <br>
+            <p>Press any key to restart _</p>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+    <!-- SVG Filters for Materials (V2) -->
+    <svg style="display: none;">
+        <defs>
+            <!-- Plastic: Sharp crinkles -->
+            <filter id="plastic-crinkles">
+                <feTurbulence type="fractalNoise" baseFrequency="0.05 0.1" numOctaves="5" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="12" />
+            </filter>
+
+            <!-- Chrome: High-contrast specular flow (V9 Blur Removed) -->
+            <filter id="chrome-mercury">
+                <feSpecularLighting surfaceScale="8" specularConstant="1.2" specularExponent="80"
+                    lighting-color="#ffffff" in="SourceGraphic" result="spec">
+                    <fePointLight x="-2000" y="-2000" z="5000" />
+                </feSpecularLighting>
+                <feComposite in="spec" in2="SourceGraphic" operator="in" />
+            </filter>
+
+
+
+            <!-- Cotton Surface: Fibrous Organic Texture (V15 Dual-Frequency) -->
+            <filter id="cotton-surface">
+                <!-- Large Billows -->
+                <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" result="billows" />
+                <feColorMatrix type="saturate" values="0" in="billows" result="monoBillows" />
+
+                <!-- Fine Thread Fibers -->
+                <feTurbulence type="fractalNoise" baseFrequency="0.4" numOctaves="4" result="fibers" />
+                <feColorMatrix type="saturate" values="0" in="fibers" result="monoFibers" />
+
+                <!-- Combine -->
+                <feComposite in="monoBillows" in2="monoFibers" operator="arithmetic" k1="0" k2="1" k3="0.3" k4="0"
+                    result="combinedNoise" />
+
+                <feDiffuseLighting in="combinedNoise" lighting-color="#fffaf0" surfaceScale="1.5" result="texture">
+                    <feDistantLight azimuth="45" elevation="65" />
+                </feDiffuseLighting>
+                <feComposite in="texture" in2="SourceGraphic" operator="arithmetic" k1="0" k2="1" k3="0.15" k4="0" />
+            </filter>
+
+            <!-- Cotton Edges: Frayed Organic Displacement (V15) -->
+            <filter id="cotton-fibers">
+                <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="2" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+        </defs>
+    </svg>
+    <!-- Duplicate script removed to prevent issues -->
+</body>
+
+</html>
