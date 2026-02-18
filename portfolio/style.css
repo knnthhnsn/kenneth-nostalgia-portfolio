@@ -276,17 +276,23 @@ body.material-cotton #desktop::before {
     display: grid;
     grid-template-columns: repeat(5, 75px);
     grid-auto-flow: row;
-    gap: 15px;
+    gap: 8px;
+    /* Tighter Windows XP spacing */
     height: calc(100% - var(--taskbar-height));
     width: 100%;
     align-content: start;
 }
 
+/* Force specific icons to start a new row without adding empty space */
+#icon-facebook,
+#icon-lang-en,
+#icon-recycle-bin {
+    grid-column-start: 1;
+}
+
 .row-break {
-    grid-column: 1 / -1;
-    height: 0;
-    margin-bottom: -15px;
-    /* Pull the next row up to negate the double gap */
+    display: none;
+    /* Keep in HTML for logic, but remove from layout to fix gaps */
 }
 
 .desktop-icon {
