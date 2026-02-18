@@ -963,7 +963,7 @@ function makeIconDraggable(icon) {
 const windowContents = {
     'about': {
         title: 'About Kenneth - My Computer',
-        icon: "Me-pixel-smile.jpeg",
+        icon: "assets/Me-pixel-smile.jpeg",
         get content() { return getAboutContent(window.currentLang); }
     },
     'projects': {
@@ -1173,13 +1173,13 @@ const windowContents = {
         content: `
             <div class="photo-viewer">
                 <div class="photo-main">
-                    <img id="photo-current" src="Me-pixel-smile.jpeg" alt="Portfolio Photo">
+                    <img id="photo-current" src="assets/Me-pixel-smile.jpeg" alt="Portfolio Photo">
                 </div>
                 <div class="photo-thumbnails" id="photo-thumbs">
-                    <img class="photo-thumb active" src="Me-pixel-smile.jpeg" onclick="changePhoto(this, 'Me-pixel-smile.jpeg')">
-                    <img class="photo-thumb" src="Me-pixel.jpeg" onclick="changePhoto(this, 'Me-pixel.jpeg')">
-                    <img class="photo-thumb" src="sitting-me.jpeg" onclick="changePhoto(this, 'sitting-me.jpeg')">
-                    <img class="photo-thumb" src="xp-wallpaper.jpg" onclick="changePhoto(this, 'xp-wallpaper.jpg')">
+                    <img class="photo-thumb active" src="assets/Me-pixel-smile.jpeg" onclick="changePhoto(this, 'assets/Me-pixel-smile.jpeg')">
+                    <img class="photo-thumb" src="assets/Me-pixel.jpeg" onclick="changePhoto(this, 'assets/Me-pixel.jpeg')">
+                    <img class="photo-thumb" src="assets/sitting-me.png" onclick="changePhoto(this, 'assets/sitting-me.png')">
+                    <img class="photo-thumb" src="assets/xp-wallpaper.jpg" onclick="changePhoto(this, 'assets/xp-wallpaper.jpg')">
                 </div>
             </div>
         `
@@ -2213,7 +2213,7 @@ windowContents['msn'] = {
     content: `
         <div class="msn-win">
             <div class="msn-header">
-                <img src="Me-pixel-smile.jpeg" class="msn-pfp" style="object-fit: cover;">
+                <img src="assets/Me-pixel-smile.jpeg" class="msn-pfp" style="object-fit: cover;">
                 <div>
                     <div style="font-weight:bold;">Kenneth (Online)</div>
                     <div style="font-size:9px; color:#666;">I'm a multimedia creator!</div>
@@ -2732,7 +2732,7 @@ window.startErrorAccordion = function () {
         <div id="login-top"></div>
         <div id="login-center">
             <div class="login-user-card" onclick="document.getElementById('login-screen').remove()">
-                <img src="Me-pixel.jpeg" class="login-pfp" style="object-fit: cover; border-radius: 5px;">
+                <img src="assets/Me-pixel.jpeg" class="login-pfp" style="object-fit: cover; border-radius: 5px;">
                 <div class="login-text">
                     <h2>Kenneth</h2>
                     <p>Multimedia Creator</p>

@@ -282,7 +282,12 @@ body.material-cotton #desktop::before {
     align-content: start;
 }
 
-
+.row-break {
+    grid-column: 1 / -1;
+    height: 0;
+    margin-bottom: -15px;
+    /* Pull the next row up to negate the double gap */
+}
 
 .desktop-icon {
     width: 75px;
